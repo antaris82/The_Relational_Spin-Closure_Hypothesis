@@ -1,0 +1,37 @@
+prefixes                 : RequestProject.Spine.AlgebraicTopology, RequestProject.Spine.Nerve
+modules                  : 95
+Lean LOC                 : 19401
+internal import edges    : 158
+all project import edges : 165
+max internal depth       : 24
+longest internal chain   :
+    RequestProject.Spine.Nerve.Audit.Stage13Axioms
+    RequestProject.Spine.Nerve.Comparison.RelJ
+    RequestProject.Spine.Nerve.Comparison.FiniteCriterion
+    RequestProject.Spine.Nerve.Comparison.FamilyCompatibility
+    RequestProject.Spine.Nerve.Comparison.SourceDecomposition
+    RequestProject.Spine.Nerve.StandardCell.RelativeComparison
+    RequestProject.Spine.Nerve.StandardCell.CanonicalGenerator
+    RequestProject.Spine.Nerve.StandardCell.BoundaryTwoSetCover
+    RequestProject.Spine.Nerve.StandardCell.FaceMaps
+    RequestProject.Spine.Nerve.StandardCell.Generator
+    RequestProject.Spine.Nerve.StandardCell.FundamentalClass
+    RequestProject.Spine.Nerve.StandardCell.Homology
+    RequestProject.Spine.Nerve.StandardCell.BoundaryHomology
+    RequestProject.Spine.Nerve.StandardCell.BoundaryCover
+    RequestProject.Spine.Nerve.Geometry.BoundarySphere
+    RequestProject.Spine.Nerve.Geometry.StandardSimplex
+    RequestProject.Spine.Nerve.Geometry.RealizedBoundary
+    RequestProject.Spine.Nerve.Geometry.PointModel
+    RequestProject.Spine.Nerve.Skeleton.RealizationMono
+    RequestProject.Spine.Nerve.Skeleton.Pushout
+    RequestProject.Spine.AlgebraicTopology.SkeletalAttachment
+    RequestProject.Spine.AlgebraicTopology.SimplicialSkeleton
+    RequestProject.Spine.AlgebraicTopology.Normalization
+    RequestProject.Spine.AlgebraicTopology.SimplicialChains
+closure of RequestProject.Spine.Nerve.Comparison.GlobalHomology:
+    project-local modules : 71
+    within prefixes       : 71
+closure of RequestProject.Spine.Nerve.Cochain.ComparisonSpec:
+    project-local modules : 102
+    within prefixes       : 5

@@ -1,0 +1,39 @@
+prefixes                 : RequestProject.Spine.AlgebraicTopology, RequestProject.Spine.Nerve
+modules                  : 98
+Lean LOC                 : 20222
+internal import edges    : 165
+all project import edges : 172
+max internal depth       : 26
+longest internal chain   :
+    RequestProject.Spine.Nerve.Audit.Stage13Axioms
+    RequestProject.Spine.Nerve.Comparison.GlobalCohomology
+    RequestProject.Spine.Nerve.Comparison.GlobalHomology
+    RequestProject.Spine.Nerve.Comparison.RelJ
+    RequestProject.Spine.Nerve.Comparison.FiniteCriterion
+    RequestProject.Spine.Nerve.Comparison.FamilyCompatibility
+    RequestProject.Spine.Nerve.Comparison.SourceDecomposition
+    RequestProject.Spine.Nerve.StandardCell.RelativeComparison
+    RequestProject.Spine.Nerve.StandardCell.CanonicalGenerator
+    RequestProject.Spine.Nerve.StandardCell.BoundaryTwoSetCover
+    RequestProject.Spine.Nerve.StandardCell.FaceMaps
+    RequestProject.Spine.Nerve.StandardCell.Generator
+    RequestProject.Spine.Nerve.StandardCell.FundamentalClass
+    RequestProject.Spine.Nerve.StandardCell.Homology
+    RequestProject.Spine.Nerve.StandardCell.BoundaryHomology
+    RequestProject.Spine.Nerve.StandardCell.BoundaryCover
+    RequestProject.Spine.Nerve.Geometry.BoundarySphere
+    RequestProject.Spine.Nerve.Geometry.StandardSimplex
+    RequestProject.Spine.Nerve.Geometry.RealizedBoundary
+    RequestProject.Spine.Nerve.Geometry.PointModel
+    RequestProject.Spine.Nerve.Skeleton.RealizationMono
+    RequestProject.Spine.Nerve.Skeleton.Pushout
+    RequestProject.Spine.AlgebraicTopology.SkeletalAttachment
+    RequestProject.Spine.AlgebraicTopology.SimplicialSkeleton
+    RequestProject.Spine.AlgebraicTopology.Normalization
+    RequestProject.Spine.AlgebraicTopology.SimplicialChains
+closure of RequestProject.Spine.Nerve.Comparison.GlobalHomology:
+    project-local modules : 75
+    within prefixes       : 75
+closure of RequestProject.Spine.Nerve.Comparison.GlobalCohomology:
+    project-local modules : 182
+    within prefixes       : 85

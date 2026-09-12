@@ -1,0 +1,204 @@
+{
+ "schema_version": 1,
+ "milestone": "TASK41_RELEASE_SNAPSHOT_REPAIR",
+ "status": "PASS / FINAL FROZEN",
+ "mathematical_baseline": "TASK39_INTERMEDIATE_CLOSURE, unchanged: Task 40 modified documentation, registries, validators and manifests only, plus one audit-only addition of #print axioms lines to RequestProject/Spine/Closure/AxiomAudit.lean. Task 41 modified documentation, registries, the statement extractor, the documentation validator and the regenerated manifests only. No theorem statement, hypothesis or mathematical construction of Tasks 36-40 was changed.",
+ "task41_note": "Task 40 completed as a historical task; a post-release review then found four snapshot defects (obsolete smooth-Spin blocker wording; definition IDs inside supporting_theorem_ids of CLAIM-S010; a truncated statement_text for THM-G004 caused by an internal haveI :=; the Task-37 cle-0 family presented as an ordinary canonical derived local structure). Task 41 repaired exactly those four; see TASK41_RELEASE_SNAPSHOT_REPAIR_AUDIT.md.",
+ "toolchain": {
+  "lean": "leanprover/lean4:v4.28.0",
+  "lake": "Lake version 5.0.0-src+7e01a1b (Lean version 4.28.0)",
+  "mathlib": "git https://github.com/leanprover-community/mathlib4.git, rev v4.28.0 (see lake-manifest.json)",
+  "repository_commit": "see docs/machine/RELEASE_MANIFEST.json (generated_from_commit) and the git history",
+  "build_command": "lake build RequestProject",
+  "build_result": "PASS",
+  "build_jobs": 8356,
+  "legacy_target": "lake build LegacyProvenance (historical experiment trees; not a default target)"
+ },
+ "taxonomy_note": "Since Task 40 the classification is strict: primitive_local_input contains ONLY genuinely primitive local data; everything constructed from it is derived; data supplied at the global layer are additional_global_data; comparison data whose inhabitance is a gate are global_regularization_or_gate_data; outputs that are conditional on those gates are marked conditional inside derived_global_structures; explicitly constructed control models are control_specific_data. Object IDs in primitive_local_input refer only to objects whose canonical_status is PRIMITIVE.",
+ "primitive_local_input": [
+  "real Euclidean three-space R^3 with the positive definite Euclidean inner product SpinCore.sip (OBJ-001)"
+ ],
+ "derived_local_structures": [
+  "the positive Euclidean quadratic form SpinCore.q3, constructed from sip (OBJ-007)",
+  "SpinCore.LorentzCarrier and the intrinsic quadratic form NS of signature (1,3) (OBJ-002, OBJ-003, CLAIM-L002)",
+  "the polarized form BS (OBJ-004)",
+  "the intrinsic cone and the intrinsic Lorentz group GLor (OBJ-005, OBJ-006)",
+  "the Clifford algebra Cl3, its generators and the paravector embedding spinToCl (OBJ-008, OBJ-009, OBJ-010)",
+  "the intrinsic Spin group and the native projection spinCover, a double cover with central kernel (OBJ-011, OBJ-012, CLAIM-L007)",
+  "topological qualification and continuous local sections of the cover (CLAIM-L008, CLAIM-L009)",
+  "the intrinsic Lorentz-skew Lie algebra gB / gBLie and its linear equivalence with the bivector space of the carrier (OBJ-043, OBJ-044, OBJ-045, OBJ-046, CLAIM-L011)"
+ ],
+ "additional_global_data": [
+  "the base-gluing datum EmergentBase.BaseGluingData: supplied at the global layer and provably not derivable from the local core (OBJ-017, CLAIM-G001)",
+  "its smoothness predicate / certificate SmoothGluing: an extra hypothesis with an explicit counterexample if dropped (OBJ-019, CLAIM-G003)",
+  "the native Spin Cech transition datum over the emergent cover (OBJ-014)"
+ ],
+ "global_regularization_or_gate_data": [
+  "SpinNative.TangentSolderData, the weak fibrewise solder: definition derived, inhabitance NOT derived (OBJ-023, CLAIM-G007)",
+  "SpinNative.SmoothTangentSolderData, the regular solder: definition derived, inhabitance NOT derived and provably failing on the Moebius-type control (OBJ-024, CLAIM-G006, CLAIM-G017, CLAIM-B007, OP-011)"
+ ],
+ "derived_global_structures": [
+  "the emergent base Space B as a charted space (OBJ-018, CLAIM-G002)",
+  "the emergent C-infinity four-manifold (CLAIM-G003, CLAIM-G004)",
+  "the genuine tangent transitions D(phi_ij) (OBJ-021, CLAIM-G005)",
+  "the internal Lorentz bundle of a native Spin datum (OBJ-022)",
+  "the identification of a regular solder with a regular bundle equivalence with TM (CLAIM-G008) [CONDITIONAL on the regular-solder gate]",
+  "the induced smooth tangent Lorentz metric of signature (1,3) (OBJ-025, OBJ-026, CLAIM-G009) [CONDITIONAL on the regular-solder gate]",
+  "the regular gauge torsor of solders (OBJ-027, CLAIM-G016) [CONDITIONAL: the gauge group always exists, the torsor statement is about a non-empty solution space]",
+  "the project-native orientation compatibility and Spin-obstruction triviality consequences (CLAIM-G011, CLAIM-G013) [CONDITIONAL on the regular-solder gate]",
+  "the future-cone (time-orientation) reduction (OBJ-028, CLAIM-G015) [CONDITIONAL on the regular-solder gate]"
+ ],
+ "conditionality_note": "Every entry of derived_global_structures that mentions a solder is the conclusion of an implication whose hypothesis is 'a regular solder is given'. None of them asserts that a solder exists.",
+ "control_specific_data": [
+  "the frozen periodic fixed-cover loop model Task36.loopGluingOf and the orientation-reversing Moebius-type control (OBJ-029, OBJ-030)",
+  "the Task-37 deformation family loopSharedSpin, its admissibility predicate and its explicit witnesses (OBJ-034, OBJ-036, OBJ-037, OBJ-038)",
+  "the Task-38/39 gauge and transport witnesses of the smoke test (OBJ-040, OBJ-041, OBJ-042)",
+  "DERIVED_CONTROL_CONSTRUCTION: the native one-parameter Spin subgroup transportState, its projection projectedTransportState and its projected closed form paraMap (OBJ-031, OBJ-032, OBJ-033, CLAIM-L010). The family is constructed from the intrinsic Spin/Clifford core, but it is generated by the deliberately selected Clifford direction cle 0 (transportElem l = cosh(l/2) + sinh(l/2) . cle 0): canonical_status SELECTED_CONTROL, exhaustive false. It is a control slice through the intrinsic Spin structure, not a theorem that this direction is canonical, exhaustive, or the full deformation space."
+ ],
+ "principal_results": [
+  {
+   "claim_id": "CLAIM-L007",
+   "summary": "intrinsic Spin double cover of the intrinsic Lorentz group, built from a positive Euclidean three-space"
+  },
+  {
+   "claim_id": "CLAIM-G004",
+   "summary": "emergent smooth four-dimensional manifold from a smooth base gluing"
+  },
+  {
+   "claim_id": "CLAIM-G008",
+   "summary": "regular solder = regular bundle equivalence internal Lorentz bundle ~ TM"
+  },
+  {
+   "claim_id": "CLAIM-G009",
+   "summary": "regular solder induces a smooth tangent Lorentz metric of signature (1,3)"
+  },
+  {
+   "claim_id": "CLAIM-G011",
+   "summary": "regular solder forces project-native orientation compatibility"
+  },
+  {
+   "claim_id": "CLAIM-G013",
+   "summary": "regular solder forces triviality of the project-native Spin obstruction"
+  },
+  {
+   "claim_id": "CLAIM-G018",
+   "summary": "the discrete fixed-cover Spin-lift freedom survives"
+  },
+  {
+   "claim_id": "CLAIM-S001",
+   "summary": "the tested native transition deformation is globally admissible on the frozen control, for every finite parameter value"
+  },
+  {
+   "claim_id": "CLAIM-S004",
+   "summary": "the tested family lies in one full-Spin Cech gauge orbit on that control"
+  },
+  {
+   "claim_id": "CLAIM-S009",
+   "summary": "the projected Lorentz gauge is C-infinity; the Spin-side gauge is continuous only"
+  },
+  {
+   "claim_id": "CLAIM-S010",
+   "summary": "the regular solder solution spaces at two parameter values correspond, with equal induced tangent metrics"
+  },
+  {
+   "claim_id": "CLAIM-G023",
+   "summary": "one Lean certificate aggregates the frozen intermediate state"
+  },
+  {
+   "claim_id": "CLAIM-L011",
+   "summary": "an intrinsic six-dimensional Lorentz-skew Lie algebra gB / gBLie, linearly equivalent to the bivector space of the intrinsic carrier; NOT identified with Lie(SpinGroup)"
+  }
+ ],
+ "negative_controls": [
+  "NC-001",
+  "NC-002",
+  "NC-003",
+  "NC-004",
+  "NC-005",
+  "NC-006",
+  "NC-007",
+  "NC-008",
+  "NC-009",
+  "NC-010",
+  "NC-011"
+ ],
+ "smoketest_result": {
+  "experiment": "CONTROL A — frozen periodic fixed-cover base, native Spin Cech transition deformation only",
+  "deformation_direction": "SELECTED_CONTROL: the one-parameter family generated by the chosen Clifford direction cle 0 (OBJ-031, CLAIM-L010); exhaustive = false. The Task-38/39 result is about this direction on this control and classifies neither the full native Spin deformation space nor every possible native Spin deformation.",
+  "outcome": "C — universally admissible and gauge absorbable on the tested control",
+  "admissibility_locus": "all of R",
+  "spin_cocycle_gauge": "single full-group orbit, continuous gauge",
+  "projected_lorentz_gauge": "single orbit; the gauge is C-infinity on each chart domain (Task 39)",
+  "kernel_valued_equivalence": "separates nonzero parameter values (a statement about lift labels only)",
+  "tangent_metric": "identical along the explicit branch, and preserved by the transport of arbitrary regular solutions (Task 39)",
+  "transport_form_or_curvature": "NOT DEFINED in the project",
+  "scope": "the frozen periodic control base loopGluingOf kappa LoopTwist.id' and the family loopSharedSpin only",
+  "claim_ids": [
+   "CLAIM-S001",
+   "CLAIM-S002",
+   "CLAIM-S003",
+   "CLAIM-S004",
+   "CLAIM-S005",
+   "CLAIM-S006",
+   "CLAIM-S007",
+   "CLAIM-S008",
+   "CLAIM-S009",
+   "CLAIM-S010",
+   "CLAIM-S011",
+   "CLAIM-S012"
+  ]
+ },
+ "open_blockers": [
+  "OP-001",
+  "OP-002",
+  "OP-003",
+  "OP-004",
+  "OP-005",
+  "OP-006",
+  "OP-007",
+  "OP-008",
+  "OP-009",
+  "OP-010",
+  "OP-011",
+  "OP-012"
+ ],
+ "next_research_layer": "The next phase does NOT begin at 'construct a Lie algebra': the intrinsic Lorentz-skew Lie algebra gB / gBLie exists (CLAIM-L011). It begins at the missing infinitesimal bridge between the intrinsic SpinGroup and gB (CLAIM-B010, OP-012) and at the missing differential d-rho-e of the native cover (CLAIM-B011, OP-012); only then come a connection, parallel transport, holonomy and curvature (OP-002 to OP-005). This is a research direction (CLAIM-B009), not a proved conclusion, and it belongs to a new phase. Specification: NEXT_PHASE_TRANSPORT_GATE.md.",
+ "next_phase_open_edges": [
+  {
+   "edge": "Lie(SpinGroup) =~ gB",
+   "status": "OPEN",
+   "claim_id": "CLAIM-B010",
+   "problem_id": "OP-012"
+  },
+  {
+   "edge": "d-rho-e : Lie(SpinGroup) -> gB (differential of the native cover)",
+   "status": "OPEN",
+   "claim_id": "CLAIM-B011",
+   "problem_id": "OP-012"
+  },
+  {
+   "edge": "native shared Spin connection",
+   "status": "OPEN",
+   "claim_id": "CLAIM-B003",
+   "problem_id": "OP-002"
+  }
+ ],
+ "proof_policy": {
+  "sorry": "none",
+  "admit": "none",
+  "new_axioms": "none",
+  "native_decide": "none",
+  "unsafe": "none",
+  "partial": "none",
+  "implemented_by": "none",
+  "Matrix.inv": "none",
+  "allowed_axioms": [
+   "propext",
+   "Classical.choice",
+   "Quot.sound"
+  ],
+  "axiom_audit": "docs/machine/AXIOM_AUDIT.json, TASK39_AXIOM_AUDIT.md; 67 endpoints (62 at Task 39, plus the four Lorentz-skew Lie-algebra endpoints and loopSolderTransport_involutive registered at Task 40), all on the allowed set",
+  "classical_exceptions": "localized 'open Classical in' occurrences, listed exactly in TASK39_CODE_HYGIENE.md",
+  "simp_policy": "the project avoids simp/simpa in new code; pre-existing uses are inherited and listed in the per-task hygiene reports"
+ }
+}

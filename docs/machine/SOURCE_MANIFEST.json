@@ -1,0 +1,2552 @@
+{
+ "schema_version": 1,
+ "milestone": "TASK41_RELEASE_SNAPSHOT_REPAIR",
+ "mathematical_baseline": "TASK39_INTERMEDIATE_CLOSURE (unchanged)",
+ "generated_from_commit": "1bb736a53d514397380d0c52231667304278cb97",
+ "note": "generated_from_commit is the commit this manifest was computed from; the manifest itself is committed in its child commit.",
+ "lean_source_files": [
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/AffineSimplices.lean",
+   "size": 12996,
+   "sha256": "0c573a80c574ccae017f4763800f8f306ba1ca4e0c2d68fc690b3ad9d0baa067",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/ChainHomotopy.lean",
+   "size": 21104,
+   "sha256": "6b2c98a25978a6918bf2baccaa138d654c64b0e375ca281482dc156ffba4db62",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/Contractible.lean",
+   "size": 8015,
+   "sha256": "3a3ceb7b7172eb5136b918f9953f576e8e3f59f984a2b441abf3e7bb4fd9edda",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/DirectSumComplex.lean",
+   "size": 6186,
+   "sha256": "756eaa82470fd38d08b328b6a25751916fb71e3f40b19edcb6fb82fec5130e16",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/DirectSumHomology.lean",
+   "size": 12027,
+   "sha256": "abedd9ed0f3ec559935f7850282cf059208502a61929854ead0a313bc0fbb0d3",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/DirectedUnionColimit.lean",
+   "size": 3198,
+   "sha256": "54e655ae798d059bb0e33c2e00269378a5204298e7e63e083647346b767279c5",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/DiscreteHomology.lean",
+   "size": 9621,
+   "sha256": "2e49b379d0ab0d62ad6d945e978886073627335d693bb48200d683c8cda52124",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/DualCohomology.lean",
+   "size": 21364,
+   "sha256": "fb3c3a821063a4d335fe8930300f661ca428143126e767b6d2c3e41627555f11",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/Excision.lean",
+   "size": 27401,
+   "sha256": "167d67d4c27af8fdac4ec233d0c7c4f936aeda21246592e343ce7f094df9c871",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/ExhaustiveHomology.lean",
+   "size": 13652,
+   "sha256": "0e7450c1b8ff4e6176d05d67da9a81d44349ac0f813cd612c91ddad8858afd59",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/FamilyChainMap.lean",
+   "size": 12592,
+   "sha256": "9ad4c09283eecbd95030cebc9ffc965a8a2983811f8949d74c22fddb055e3b33",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/HomologyElements.lean",
+   "size": 4886,
+   "sha256": "512d9b6584522a110067cfaa39fd905ede21793be09f329f9a21f4499baeb9c7",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/LinearSubdivision.lean",
+   "size": 10577,
+   "sha256": "a46dac2515380796f9a8cdce33f5e779a5ea64b8aa86f09c8bf0d24380c4781f",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/MayerVietoris.lean",
+   "size": 3921,
+   "sha256": "811ba27deefefa5f05140866498c5bfb66b036ce5dfa8faa37df894daef46e23",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/Mesh.lean",
+   "size": 12700,
+   "sha256": "88f2f90f92fdb9f4179fdd9439f8fa72dedf5a2af18c6a2d4268e98d8507c2d5",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/NaiveHomology.lean",
+   "size": 12401,
+   "sha256": "516decfffd67db7098f3076a7357f45056e14743609db0d993884fb3d99cfe9b",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/Normalization.lean",
+   "size": 20910,
+   "sha256": "8a29d5361229416973fdfdee1b4063dfbc527b58ccbae02486c635d66294a631",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/NormalizationNaturality.lean",
+   "size": 2814,
+   "sha256": "75a7a1fb168421ffba769d2a9c1ab4948419f874ca27ec54b04fdb4176361933",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/PairLES.lean",
+   "size": 3177,
+   "sha256": "a7e746bcc400623e3363dee403bb19b0c540e46d258f1648a91e1cff3144819c",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/RealizationColimits.lean",
+   "size": 2059,
+   "sha256": "578f6288822f896c508d6677e9bdca86129cc5b63fe0ec71e7a43a079a9abe42",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/ReducedHomology.lean",
+   "size": 5416,
+   "sha256": "cac969eb73db55b3d19844c3df7ad8110dcac1e640292f71b0639cefa252c93f",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/RelativeAcyclicity.lean",
+   "size": 3395,
+   "sha256": "9c953a01420c58f471c41e0ea833c7ff3f47599d6bb446302c31494492bbd7bd",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/RelativeChainCalculus.lean",
+   "size": 2543,
+   "sha256": "ae7138277d9e2e676617b90b9e2d8ac3dc8c31c1dcf9c3a6ece317ae9e53d50a",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/RelativeChains.lean",
+   "size": 12353,
+   "sha256": "7761b276871bbb726dd84dc91501186b1706f11679ec96c3307166bae03c3464",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/RelativeLES.lean",
+   "size": 8790,
+   "sha256": "a5be434701773fec2e7fb67578ed842982361122225b3f1f8f5d1a39836516e8",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/SimplicialChains.lean",
+   "size": 3506,
+   "sha256": "b9831c1b4935cbf28ca8a1995a8c75510125e39cb4b67daee37a466cb4c1482a",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/SimplicialSkeleton.lean",
+   "size": 13581,
+   "sha256": "6d668c0a217b02910bae7417edd6f4776769863aac77bd8b5195311b9baa951a",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/SingularHZero.lean",
+   "size": 8439,
+   "sha256": "aab4e0b1ebd9ac3916d410b2795af9ffeb94095527716544b579c2c47c1bc953",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/SingularHomology.lean",
+   "size": 8904,
+   "sha256": "93b507b1cc59635b37ecba0caae1c7d9c6132a05dfc1fd867edc348c3f342558",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/SingularHomotopy.lean",
+   "size": 4496,
+   "sha256": "e91bf0e1807720e795fd22de92b21d52a2ef966cdd1edf5364cc092fc745400b",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/SkeletalAttachment.lean",
+   "size": 14290,
+   "sha256": "d4780c719c4ac3f41faa6f3fbe22507f95f658d75bcafbb672738272a0217d9f",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/SmallSimplices.lean",
+   "size": 11992,
+   "sha256": "be6f9213f285a9125e46581ebba54bb08e039e97e1c2392b63acdb70b61dbffe",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/SphereCover.lean",
+   "size": 14363,
+   "sha256": "8ed177320d7ca094de1894f2e6116cca7b985c6e23aabf031b933e4e89a4e606",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/AlgebraicTopology/Subdivision.lean",
+   "size": 10298,
+   "sha256": "889fc3d1f6421e5007b900224cd7b2c213edd922c914f1604eb74c689ef49007",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Audit/ArchitectureDAG.lean",
+   "size": 32135,
+   "sha256": "7ae081c6dbada062f69cfe81ec49dd91ac971389e7580688fa4cac10b2cba1d7",
+   "task_origin": "T25-T39",
+   "module_classification": "audit"
+  },
+  {
+   "path": "RequestProject/Spine/Audit/Firewall.lean",
+   "size": 33928,
+   "sha256": "8b5931bd51962ca07aa18c66feba916ea6c493d772c2283c63af5f78e488f3c4",
+   "task_origin": "T25-T39",
+   "module_classification": "audit"
+  },
+  {
+   "path": "RequestProject/Spine/Cech/Coboundary.lean",
+   "size": 7595,
+   "sha256": "b86487d4dc0b81d4c639009d0a41120ad99afe121c5ecd9dc40e327ed30dc87c",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cech/Cochain.lean",
+   "size": 7614,
+   "sha256": "3632481f01e4342cb39a0440c8e5ba3db75a18945863a54770548761eba5436f",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cech/Cohomology.lean",
+   "size": 5086,
+   "sha256": "d4f6e99828bb6ed0efec229262481bbb9f59e2cf397ef7ff0fbe6a84fdfae9c9",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cech/Comparison.lean",
+   "size": 16292,
+   "sha256": "13958b10a5afeb7b70cef8400fc7de2949868c0a669807d64200a552eaaf0fa1",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cech/Core.lean",
+   "size": 4986,
+   "sha256": "a28c681d9c72e24ffff03c2fc96b9c8c1f5f86145bbc4cb997b25ca8810c512d",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cech/CoverNerve.lean",
+   "size": 8588,
+   "sha256": "d8ce7b7da7464cd6585fddc4437e02dfa43c5221a20ccd0650a5410426386d08",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cech/FullNerve.lean",
+   "size": 3307,
+   "sha256": "9ad0342f087fec732569041afa2680a106a1f2fd301fff851644fbeb6ab6d19d",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cech/KernelSign.lean",
+   "size": 4391,
+   "sha256": "1707f2f28172b5462d9c141be19042f45ecc2be1899d904907a53283e868c900",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cech/Refinement.lean",
+   "size": 5717,
+   "sha256": "42613be05abe75bbb3d99722b5281eebaaecb5c12d1249d950d85a13a31f36bc",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cech/SingularBridgeSpec.lean",
+   "size": 5487,
+   "sha256": "af445ec1e9ae29e2c325586aaf61ebed7443738f5fd54002bb083899d805a704",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cech/SpinCocycle.lean",
+   "size": 22894,
+   "sha256": "def91eb2e176c1016686287a1e34802f9bbe5761cbd2f600fc57c64c86596cf2",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cech/SpinInstance.lean",
+   "size": 5198,
+   "sha256": "28d19faca5c8038466f2361ea64654214378c174c3e31e55f6a104607f5ed9f5",
+   "task_origin": "T30-T31",
+   "module_classification": "spin"
+  },
+  {
+   "path": "RequestProject/Spine/Cech/SpinKernelSign.lean",
+   "size": 2234,
+   "sha256": "c36a685aa3675d97860a0b0c4894937627ba82924952a7629b842b3306b8fc37",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Closure/AxiomAudit.lean",
+   "size": 5570,
+   "sha256": "9abca6d5c033a095a1d1547e436816bac9827a5df415360418590028cc139722",
+   "task_origin": "T39",
+   "module_classification": "audit"
+  },
+  {
+   "path": "RequestProject/Spine/Closure/IntermediateMilestone.lean",
+   "size": 15469,
+   "sha256": "71478dc4c2bf8e78cfcdc6063b3d3e5dc465d3f55aa00ea8e5e07d42b4e1b1b3",
+   "task_origin": "T39",
+   "module_classification": "closure"
+  },
+  {
+   "path": "RequestProject/Spine/Cohomology/AlexanderWhitney.lean",
+   "size": 5556,
+   "sha256": "6b970752c6f9e6f43c6ba19aec17f046e7e31360b8186e7c97921ba4ea7ccb68",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cohomology/CechBridgeSpec.lean",
+   "size": 4633,
+   "sha256": "f9f4d28b113864687569708796f394d9ace5a4c379dee9703af3381369c392ff",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cohomology/CharTwo.lean",
+   "size": 3312,
+   "sha256": "f8e3d89efbc3f050ad3e7d04a794cc576bbd95f64078e15f48cddda3bed08546",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cohomology/Coboundary.lean",
+   "size": 6113,
+   "sha256": "233d94f4910e84b2e6e3ea5d1c09c7cce0c9b07986862a6c886e0d88d54cd81b",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cohomology/Cochain.lean",
+   "size": 4772,
+   "sha256": "9f075faea12677e7dc3d000a2a0a1d051238de3c5c6d1948e0a96fa538b11f09",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cohomology/Cohomology.lean",
+   "size": 5089,
+   "sha256": "39549f39546c941612717dd4dda63c2a0faabfa9c413ea3d1fd9a3abd057115f",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cohomology/Core.lean",
+   "size": 3864,
+   "sha256": "a62a7ebe7736092c4d1d6389df421fd73560c181f8c45a1c82c57ff9426104ae",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cohomology/Cup.lean",
+   "size": 7843,
+   "sha256": "a1c5b8fdb7b567a555bb282b4ba98a68ab2bee1f6d9ec70800672dc7f711d3dc",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cohomology/CupDescent.lean",
+   "size": 9528,
+   "sha256": "3ef14e12397c63d036c7c4e27367cc70496f0213f5d901867cfc49bb5afb34df",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cohomology/Functorial.lean",
+   "size": 5915,
+   "sha256": "eba8e9549232c3863ae8d6b8c56650118f631524d26b00814a47fc868a54fd8f",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cohomology/HomotopyInvariance.lean",
+   "size": 8665,
+   "sha256": "c29e17a7fdbf26e7a430e82e7a4eab7bba7247e0e38602ff424f9559dc389593",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cohomology/Prism.lean",
+   "size": 22653,
+   "sha256": "bda5a74e09e890e9ed4dd7defdcf6820bcf1f5943212c656887577afb71628ac",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Cohomology/PrismMaps.lean",
+   "size": 7501,
+   "sha256": "d56ee0c5efdb07dcd304810e1c5cee2b8ada14f0a4f193699825f0840b363ed8",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Comparison/CanonicalSpinSeed.lean",
+   "size": 8270,
+   "sha256": "7f56d1c0ecfc359791a34915bfaf14c7160f3222a540b9d67785f265b18fa55a",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Comparison/EmergentSpinGate.lean",
+   "size": 12406,
+   "sha256": "07ca91328500512bee76db0ee42212ae68a28e766a05ebed3ac21e7de5541efd",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Comparison/KernelTwistCohomology.lean",
+   "size": 9599,
+   "sha256": "26d22bf204f0ead12dfc690a800f096b1c3176565f00aa3742d695ed11570978",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Comparison/LorentzSpinUniqueness.lean",
+   "size": 6929,
+   "sha256": "5d00d354346ddcc3a5914259a7c40228a1f31e98207bf8ab0466e1dd92b65e65",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Comparison/SmoothSolderGate.lean",
+   "size": 11794,
+   "sha256": "97849a85f6739e92581f2f36c2c04149642417185bdb9e23d53b41de6c72c506",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Comparison/SolderTangentGate.lean",
+   "size": 11827,
+   "sha256": "ad0c0dc20414c6edd90a65eda15314064f7ce04da6589ecfc3cfd1104d679ff7",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Comparison/SpinNativeVsSO.lean",
+   "size": 13437,
+   "sha256": "9d79a13d2910a7c8b3fddbc2bf8166f2ceaf88d2d81a24983592763501a66fc2",
+   "task_origin": "T30-T35",
+   "module_classification": "audit"
+  },
+  {
+   "path": "RequestProject/Spine/Controls/CircleDoubleCover.lean",
+   "size": 10254,
+   "sha256": "606a1bef012bb3b10115ee5520e29d9f4a91a6e087c26869e4ab3cbd1de088bd",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Controls/E2/CechObstructionControl.lean",
+   "size": 3578,
+   "sha256": "430b0f91025e5b5f8d1c3230eac508f97b97732809c4babad074f33306fa3ec8",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Controls/E2/DescentCounterexample.lean",
+   "size": 7333,
+   "sha256": "2a8fa70798b830cf5f46d6f04f7bafd13ed7e885bbed29b17fe95991f389a132",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Controls/E2/FamilyDefectControl.lean",
+   "size": 6972,
+   "sha256": "075d896ec07bf1122f3ec2e1f1e89238f61332ea5266e8e75a5f3dfe19d1f518",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Controls/E2/GoodBadAtlas.lean",
+   "size": 12919,
+   "sha256": "461e54d72273b8b014d9cb2ae96dc01b803d3df277c82f878b8e9f61aeefd6f3",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Controls/E2/NativeLiftControl.lean",
+   "size": 4715,
+   "sha256": "8ec7e4c7c0cb9957334fcb4859fd7944a1201cbe245f5a1fd61a7a91c505c0d7",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Controls/Geometry/FlatFrameControl.lean",
+   "size": 5836,
+   "sha256": "713b440db5a94cb20ee1f6dcb95130f221e630c52edb379648215b73ebaa32fd",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Controls/SpinNative/KernelTwistControl.lean",
+   "size": 9396,
+   "sha256": "df266fdc71952eb53e144207001698a33973216cf270eed1b2400698a31698df",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Core.lean",
+   "size": 6588,
+   "sha256": "1e1feb62bd3c09e9c6e36d397c8a2976b61e584a7e0ba756ed77b09ca310c96c",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Deformation/ClosureAdmissibility.lean",
+   "size": 13826,
+   "sha256": "5e63f9e5c6e93922cf170a65339a496338848bae176ba88fdcb9af53682c18bd",
+   "task_origin": "T37",
+   "module_classification": "deformation"
+  },
+  {
+   "path": "RequestProject/Spine/Deformation/CocycleGaugeOrbit.lean",
+   "size": 14330,
+   "sha256": "d8af5523f4af2254adb89bfa362251a6b673972c26dfb6f162605bf0fe4581e3",
+   "task_origin": "T38",
+   "module_classification": "smoketest"
+  },
+  {
+   "path": "RequestProject/Spine/Deformation/Firewall.lean",
+   "size": 9769,
+   "sha256": "12ce248347be6419858ecaeadf133828c422c9eb318191dab288b55c0a78474d",
+   "task_origin": "T37-T39",
+   "module_classification": "audit"
+  },
+  {
+   "path": "RequestProject/Spine/Deformation/FixedBaseSmokeTest.lean",
+   "size": 18966,
+   "sha256": "05cd3edd2abd149041c30b1b3a8e0d2d4fe22b910cc98574096c160d63ab911b",
+   "task_origin": "T38",
+   "module_classification": "smoketest"
+  },
+  {
+   "path": "RequestProject/Spine/Deformation/LoopSharedTransport.lean",
+   "size": 12279,
+   "sha256": "73609cc4cd870abe4c1058e3ddb023ef34cffe4ed937b7239cb7646bd8c1d2c9",
+   "task_origin": "T37",
+   "module_classification": "deformation"
+  },
+  {
+   "path": "RequestProject/Spine/Deformation/NeutralRegression.lean",
+   "size": 6586,
+   "sha256": "6243fae40df0176e422ce8bcd4f5ec06c16d62331f731c911ab3299529cdaf2b",
+   "task_origin": "T37",
+   "module_classification": "deformation"
+  },
+  {
+   "path": "RequestProject/Spine/Deformation/ProjectedParaAction.lean",
+   "size": 12925,
+   "sha256": "c0c9255c239b44f901148bc68a8977209fe97c973b80fc1a90759f055463d0d5",
+   "task_origin": "T38",
+   "module_classification": "smoketest"
+  },
+  {
+   "path": "RequestProject/Spine/Deformation/SharedTransport.lean",
+   "size": 17348,
+   "sha256": "b627c4d0c45d9c54b471aea3c721d0abb0fb4cc27fc71eff7eee5e6d29338ebb",
+   "task_origin": "T37",
+   "module_classification": "deformation"
+  },
+  {
+   "path": "RequestProject/Spine/Deformation/SmokeTestCertificate.lean",
+   "size": 9513,
+   "sha256": "cdd71b74d22a9c95831137b9bf061d5ec8685e36f3ad57398b0ddce214685aaf",
+   "task_origin": "T38",
+   "module_classification": "smoketest"
+  },
+  {
+   "path": "RequestProject/Spine/Deformation/SmoothProjectedGauge.lean",
+   "size": 6785,
+   "sha256": "30b21766e3812672b1e11b557bf95a2bd4c3ca02de37cd90242781fdb4e042d4",
+   "task_origin": "T39",
+   "module_classification": "smoketest"
+  },
+  {
+   "path": "RequestProject/Spine/Deformation/SolderTransport.lean",
+   "size": 13911,
+   "sha256": "ba76dcba46f5c7a08d9f7973ab98dd60471d1c9ff4cb023fa7568521e4709534",
+   "task_origin": "T39",
+   "module_classification": "smoketest"
+  },
+  {
+   "path": "RequestProject/Spine/Deformation/TangentMetricComparison.lean",
+   "size": 7277,
+   "sha256": "2e1dde0700e8dcfdddc8680ef4fc9e844c367f6a0dc3d7dbd398a15afd148ef5",
+   "task_origin": "T38",
+   "module_classification": "smoketest"
+  },
+  {
+   "path": "RequestProject/Spine/E1/Bivector.lean",
+   "size": 7020,
+   "sha256": "a3211914ba586d13d6585223e6be17cd7a630499270554f9934606a8f7bfee07",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/Carrier.lean",
+   "size": 10579,
+   "sha256": "6847344745ba91125b90780c086a9b7c728a8a15ead3bfd5a04fd4c3adf13407",
+   "task_origin": "T1-T9",
+   "module_classification": "primitive"
+  },
+  {
+   "path": "RequestProject/Spine/E1/Clifford.lean",
+   "size": 10386,
+   "sha256": "dcd0e44aaaf30a7037c76f4f0f8b5d755d00ffe34b8082737f08e92f98aba007",
+   "task_origin": "T1-T9",
+   "module_classification": "clifford"
+  },
+  {
+   "path": "RequestProject/Spine/E1/CliffordHodgeBridge.lean",
+   "size": 8199,
+   "sha256": "299cf5498b99aec5d4237103f054af3c7ff816e1ec37902cdc2544e3559bf9f9",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/CliffordMonomial.lean",
+   "size": 13474,
+   "sha256": "2419dfbab200ca6b9c5c88792a428348de6c57cb330aedf64a12d985976c86a2",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/Coords.lean",
+   "size": 8731,
+   "sha256": "db50d55f17c75be4e2e7e9c82f86d4546c5f4ceab63d9b9f6b5c7e0e7cba35cb",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/Core.lean",
+   "size": 8009,
+   "sha256": "cd9d7904c16d5dfcd07859c522b91f7f19ae70c9bfdea52cbd3be4b74156a3a8",
+   "task_origin": "T1-T27",
+   "module_classification": "spin"
+  },
+  {
+   "path": "RequestProject/Spine/E1/DoubleCover.lean",
+   "size": 14850,
+   "sha256": "f2f4e971766e43094eb7c1478dbd184a55a01f8388744f770695c7171e6f1c56",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/Hodge.lean",
+   "size": 12554,
+   "sha256": "6a001ec5bb9773b5975883c0ff3cb7b1c0fd65fada9ad1bb1d3eb8f855c752d3",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/Hyperbolic.lean",
+   "size": 8869,
+   "sha256": "10ec536adf458fca6814780b8193844bf06d491cf731c18f47dcceae09cdd933",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/LieAlgebra.lean",
+   "size": 13477,
+   "sha256": "689d01b19a474c508e987490a841ce2bdb69e7b1760ab3c5424d13ff4aaabc59",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/LorentzClifford.lean",
+   "size": 11923,
+   "sha256": "aeb5e067f92a64c9d9ccebe85a54bd51b2d2ee86dbc9b72ce2273a502059fa42",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/LorentzGroup.lean",
+   "size": 14457,
+   "sha256": "25c92611aaebc560dcf88587812c5a3234640798a85cb42cd69f4487f895e74c",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/MatrixModel.lean",
+   "size": 4234,
+   "sha256": "822e88d187c7bea889691de85a1a2378e54b074abfc28c2ce07a3453efe745e0",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/Paravector.lean",
+   "size": 21712,
+   "sha256": "4240b5562798f9eff7009f063eeaed6346cf2e8b281a30aede31371ec41da638",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/PauliRepresentation.lean",
+   "size": 12973,
+   "sha256": "8525d10411b940449c35627b0587f024437792dffcc2bf436ba7b715da458585",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/SL2Comparison.lean",
+   "size": 8619,
+   "sha256": "775886864da6e56f3c9065070966ce2819ee88e1c082341932302c2844a4e42c",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/Shell.lean",
+   "size": 15910,
+   "sha256": "46adb31f376b94480c6c46b86aff3e1eeba4cb54d5ab0b3cadffb5432c01660a",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/ShellTransitivity.lean",
+   "size": 6430,
+   "sha256": "3fc9259a0170dc9c8907d66e81e0329638c8c118a18a9455e41214948caa7c75",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/SpinCover.lean",
+   "size": 3617,
+   "sha256": "7f180ef7b9f359b3ab07cef67aa4f73fad79b9b989c35eb4f12b111cac631092",
+   "task_origin": "T1-T9",
+   "module_classification": "spin"
+  },
+  {
+   "path": "RequestProject/Spine/E1/SpinDeterminant.lean",
+   "size": 20325,
+   "sha256": "fc0abbe360a5010975b0b38d3002e393ad57c9e2e84154d8b9183a200b2d5b36",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/SpinElement.lean",
+   "size": 6363,
+   "sha256": "09720db81e397356ed084e7ed14b17003c1b64c6e90eed0d46a397c9381a1ba1",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/SpinGroup.lean",
+   "size": 4594,
+   "sha256": "35a9c242ad3c0570528b8a58c89e8ddba627c1659081cdf291b91a6538506dc8",
+   "task_origin": "T1-T9",
+   "module_classification": "spin"
+  },
+  {
+   "path": "RequestProject/Spine/E1/SpinKernel.lean",
+   "size": 5047,
+   "sha256": "06385686b95c5830f457c8a889677ed24f155fa8ac5bd178819925c945191efd",
+   "task_origin": "T1-T9",
+   "module_classification": "spin"
+  },
+  {
+   "path": "RequestProject/Spine/E1/Topology/CliffordTopology.lean",
+   "size": 7002,
+   "sha256": "53724ffbaabe54a834691590593c90d53e3382a1d8686327312893f2e69fd334",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/Topology/Core.lean",
+   "size": 3796,
+   "sha256": "2841807d2b6a0ea08ad3667caf982980d760465a00f6e56ea8b3ed0c998cac0c",
+   "task_origin": "T20-T27",
+   "module_classification": "spin"
+  },
+  {
+   "path": "RequestProject/Spine/E1/Topology/FiniteDimTools.lean",
+   "size": 3890,
+   "sha256": "7568e5ba6ed8bc3ce7b4dd5b439cd9175ad7d3fce3d8586e8926b28247ef3043",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/Topology/LocalSection.lean",
+   "size": 31543,
+   "sha256": "54f6195ba71f26742c8974c6e5c9ec056e6d039707f079a40ce1bd663961aaad",
+   "task_origin": "T20-T27",
+   "module_classification": "spin"
+  },
+  {
+   "path": "RequestProject/Spine/E1/Topology/LorentzTopology.lean",
+   "size": 6573,
+   "sha256": "5d236a2442e4cc8715e46df3442f9a36bb5e71e7d26a471034a670a6f50b60dc",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/Topology/SpinCoverTopology.lean",
+   "size": 11934,
+   "sha256": "043132efc05fcc1e341a256805d3c4b9cea26e21d1c9b82637ee8c03c6a2b1bc",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/Topology/SpinTopology.lean",
+   "size": 4016,
+   "sha256": "d9c6cc81dd9025ffb2080a29a55b1187caa229c53943e28b495f1ef2a25ff798",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E1/WeylSpinorModule.lean",
+   "size": 6466,
+   "sha256": "43db4be6cd76eee808fcb8cc454c74d80bdaf14485540daf43f3bf619763b689",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/AtlasChange/AtlasChangeLiftability.lean",
+   "size": 11417,
+   "sha256": "71dd410904b2e7e7695e3b1a11722a8f0869ebd0fb9838b1b46913255769e92e",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/AtlasChange/FamilyDefectNeutrality.lean",
+   "size": 6456,
+   "sha256": "dfb6514fccf5d46a01f372ddd8db84996f7e14906d66e886e005b901d9835199",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/AtlasChange/FamilyExistenceClassification.lean",
+   "size": 6143,
+   "sha256": "20afea68a49af1e615fd8053c541e90d0a96ff6e4ed65174523cc5b1ecf05982",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/AtlasChange/FamilyLiftability.lean",
+   "size": 8096,
+   "sha256": "0ce9bb2295391a870db052424aec2995abf855de090da214886f3093276c233c",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/AtlasChange/OrdinaryAtlasChange.lean",
+   "size": 16686,
+   "sha256": "c13e5446ff2963dfe69e10dd35ebe14a9a75dcf86cd9b8c6a75c874060df5543",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/AtlasChange/OrdinaryAtlasEquivalence.lean",
+   "size": 4703,
+   "sha256": "7765ff8330bf25137db473d2119bd238854e174403b107ab3eb33416353b2bd2",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/AtlasChange/OrdinaryCoverRefinement.lean",
+   "size": 9444,
+   "sha256": "b33fb9c53397f206ba6c76b9c6f2dc091620182b0bd0ac0a72ece1d838279333",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/AtlasChange/Task32.lean",
+   "size": 8167,
+   "sha256": "a6108e965bea0eb5f83ffa3abfea8e940b34d0d1dacef3532a5576f8555470b8",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/AtlasChange/UnderlyingFrameGeometry.lean",
+   "size": 5757,
+   "sha256": "a1145dbba1e970485210d392b6813cd90b678bda3dabf6c4dcaac70cf82fbfdc",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Cech/Coboundary.lean",
+   "size": 10128,
+   "sha256": "a93603ffb13ed84e6af3a033d77115ee4d6b715da1fda3af260d088723582c99",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Cech/Core.lean",
+   "size": 4210,
+   "sha256": "ec964cbf22b158fee9d01330e59f810559f9bfc8bb1843a6d8c91713667fbf28",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Cech/Cover.lean",
+   "size": 10673,
+   "sha256": "33c77ba6ae7a417508ee3397646dfec2d0c6467432687b27a992f87907ba52af",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Cech/Defect.lean",
+   "size": 11398,
+   "sha256": "cbd40b1945c4875e50ecbdc71cc3a653ab092fb886a6cb6033aa38e628817dae",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Cech/LocalLifts.lean",
+   "size": 8476,
+   "sha256": "727a59dc310f2e622c1d0f3ead586bd31aa1e2ac036ee2b1d445220cd4c5e4fb",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Cech/Obstruction.lean",
+   "size": 10054,
+   "sha256": "b2673ba79c867f211230fb0d33d695511837fb00e23450943acf303becc6c90d",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Cech/Refinement.lean",
+   "size": 10952,
+   "sha256": "5aad5d2edf0b666e20eb4d55deb806991c2b3c4bd89b5973593841c3fe1da32a",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Cech/SpinInstance.lean",
+   "size": 5984,
+   "sha256": "41c21c8a0d68b929553afaafb3b2cf96311b702a4330d5f8584392c063ee51c3",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/CentralDoubleCover.lean",
+   "size": 4600,
+   "sha256": "f9a887b4a0b4868f1c1438f67dab433cf0a5a25e6c10b26127fd343567fe3e77",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Core.lean",
+   "size": 3693,
+   "sha256": "a42f9a1e81d577539520ff2eb8ac0f0d67f1e68e1262373051a038305470ba8a",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Defect/DefectNeutrality.lean",
+   "size": 8523,
+   "sha256": "fd2c477d2e4736401dcb2331bda95ca7785bd70d3a8f2e945fe47fe6960a41f2",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Defect/ExistenceClassification.lean",
+   "size": 4877,
+   "sha256": "6ce56739655b0eabce875877f67a3bf45dee0edc9a87a4c2eb8269c91d2e70ee",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Defect/FrameFamilyRealization.lean",
+   "size": 8529,
+   "sha256": "847da4a0be8614d0e0d0af5041d2ea79d9d49b0951d995f0f365aac6d18ff46f",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Defect/GlobalCoveringHardening.lean",
+   "size": 11792,
+   "sha256": "0b36c7b2875b3b560daadbaec493a74806c5c7719dafec2f3da6fb2319d58d12",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Defect/GlobalMapHardening.lean",
+   "size": 13697,
+   "sha256": "a926c9b78927fd6e1d1a09d007351927ded37d572bf30cbad0209d9e25450763",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Defect/IntrinsicDefectState.lean",
+   "size": 12408,
+   "sha256": "c2a4aa74ee2745b8538e11c667a9dfba146eb7033c17489bd05fb70e01fddd4f",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Defect/LiftabilityPredicate.lean",
+   "size": 9471,
+   "sha256": "23b7cdf34e87ccfe907067d1512aed0b4b7383a9a3c3320008335db42482166c",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Defect/SpatialClosureInterface.lean",
+   "size": 7652,
+   "sha256": "aedb18de447e6b279a353ad2978526f49c344db3a7911da0845867b04fc75b06",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Defect/Task31.lean",
+   "size": 11143,
+   "sha256": "a6206b6866aefa10010aaeddf4a18373d79a7e40ff104bcd0cb1c536d175a731",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Defect/UniversalExistenceAudit.lean",
+   "size": 9316,
+   "sha256": "10b4b4c421c71732ed1baa2bf13603d43e0fa4e18588c7f9676f30038e501892",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Descent/ChoiceInvariance.lean",
+   "size": 6924,
+   "sha256": "255151edf777afd5100f0693441451db8f49648eb0c4e9e158ccb65776666ebb",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Descent/CombinedCompatibility.lean",
+   "size": 7392,
+   "sha256": "7c7b1c732de60dd53af5ee9a563911a8c96d47cf6955ab118531d931eeb9acee",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Descent/CompatibleTransitions.lean",
+   "size": 11562,
+   "sha256": "b7cfc5d9a31743966770a06f1dfbb7010e368503e8c876c21793753dbc713fec",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Descent/DefectFreeHardening.lean",
+   "size": 10397,
+   "sha256": "40b06bc4a9c3e1a2806abe3c3ec3a03bdc09a7ccfea1b055b3fb0508ae4e3dfb",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Descent/Inherited.lean",
+   "size": 4258,
+   "sha256": "0d010904853e855f8d87366e269884888a6a5855dfaff81e08ce024dee7bd8d8",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Descent/KernelAdjustment.lean",
+   "size": 9594,
+   "sha256": "c2b5ea008994016d10ca1c08d0401cfe2a7e6c98737632fd6a40d6f3a4d19aec",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Descent/PairwiseDescent.lean",
+   "size": 13304,
+   "sha256": "360e92fbc03a29acce923dcaa91c5cd7e1abc0cff4f3f9ef1866a0b571eab71d",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Descent/RefinementBehavior.lean",
+   "size": 13639,
+   "sha256": "72918712a1104f9e71b8d9deb043c3b4d81c11ac9172ea95575f209a8b252622",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Descent/SimultaneousTrivialisation.lean",
+   "size": 12011,
+   "sha256": "4a04cac441113dc3c6e6b5e56dac6552ddea81dc7a4f191007882339fc732af8",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Descent/Task29.lean",
+   "size": 7804,
+   "sha256": "e82e624eaf4b9c34128e5e3fd4208a1910780df37759824be6b68bf831b3ad0e",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Family/FamilyBase.lean",
+   "size": 10633,
+   "sha256": "ebe3842995ec22ce0c0142b554c45bde81ff6b7e12aa41bda95e00367e216a60",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Family/FiberFrames.lean",
+   "size": 6156,
+   "sha256": "035dc08166e3505333f32549828618baa36706ceafab145b74d9d53468b7dad8",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Family/FiberIsometryGroup.lean",
+   "size": 10615,
+   "sha256": "c6a6ff95b0df2e07321e9c3e000d0ca96173c91c4e665e068c33c7e049eacc9b",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Family/FrameTotal.lean",
+   "size": 4289,
+   "sha256": "c65242e34ffb033c47a1b87218bc6a3f078f72608a68e0de47fb9c3c6a86f775",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Family/FrameTrivialization.lean",
+   "size": 8141,
+   "sha256": "86ff431b9ee25f19a312b96fa59a0c3908d27476cecdb74f753eb3986379f58c",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Family/LocalTrivialization.lean",
+   "size": 6933,
+   "sha256": "13ffd4a0726fd3e511f97974c7e78fd3c5330eb3fbdea0de531c8e8666f9275d",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Family/TransitionData.lean",
+   "size": 6339,
+   "sha256": "b21f9b82dcc83c84b24be3775b7890d472849851f054ce8eef38a79b5ed0bfa0",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Global/ConditionalGlobalInterface.lean",
+   "size": 16691,
+   "sha256": "e943a9b5158dbb7603519631c3b0e27ec1dfe1d4c52b696c9fb36c9f9f5d0701",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Global/GlobalFrameProjection.lean",
+   "size": 8266,
+   "sha256": "c7a57f44674ca7b934088fd814eea58c8c09e5273b64114d14599eb9c376cf0d",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Global/GlobalGlueBase.lean",
+   "size": 10559,
+   "sha256": "f47b25929c74f08d888308ef26faece7768619b27b2608d1d2e2c04658a7bf7d",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Global/InternalGlueRelation.lean",
+   "size": 7983,
+   "sha256": "20bfc42d577fb669e9d2c57af895b0716117e98ace7b78fc2095db6f997b23c3",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Global/InternalGroupAction.lean",
+   "size": 12443,
+   "sha256": "74fa59fb6d1336c90dc8e412e8d216a779ca4e68d0204d7009c3ca5ea6e64350",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Global/InternalQuotient.lean",
+   "size": 8168,
+   "sha256": "b03cfef0b952bc046f7829c7dad3f245394f24b0821bf0d1f5434fc02537c7be",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Global/InternalTopology.lean",
+   "size": 12223,
+   "sha256": "afc66f4e661a08282c0602420239f17d14e8230640aef2c161ff8cefd837ab38",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Global/KernelFibres.lean",
+   "size": 7243,
+   "sha256": "db4bf02319cd36cdd009e0202eec34e21f158047e7c8118af3a17a66ab1e1468",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Global/LocalComparison.lean",
+   "size": 5666,
+   "sha256": "66a1cd9da7e5f7142fd338c9ad29eaf75ba48271f52837512b162e445c469017",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Global/OrdinaryFrameSideInstance.lean",
+   "size": 4226,
+   "sha256": "8920b43f36d51bb53b7867c3203f72a234bd7916ce64b04df867a6ec4673193f",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Global/PresentationIndependence.lean",
+   "size": 8043,
+   "sha256": "fc3a2be9f50d4f1b63d95d6a2d63097b6c7431be817e987a769773607b118075",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Global/Task30.lean",
+   "size": 11056,
+   "sha256": "77585d2644416bb3fd15cd93a7ca547f54df0de586f3c4a8f2ad519db3557ce6",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Lift/KernelAmbiguity.lean",
+   "size": 12603,
+   "sha256": "bd4cf11e711049ccaa1acd2c0ce45ba1ab5f9f19213d3e2f3e89d03a99aea875",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Lift/LiftLevels.lean",
+   "size": 10914,
+   "sha256": "6830f8fd71bb21edc7f779a5fdd6695aa10eb3bef05fb9cee518282775902986",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Lift/LocalInternalRepresentatives.lean",
+   "size": 8727,
+   "sha256": "71698724a95e631d9620686383468c8f7d3badc9cdae56bb1a5252b8ceb4b1c4",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Lift/RepresentativeChange.lean",
+   "size": 10498,
+   "sha256": "a117abb0c95394d10f16eb9807bd45c575e0c3ef91695f109d5472bf6a5513fd",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Lift/TransitionLiftBase.lean",
+   "size": 2367,
+   "sha256": "5447f77b38f1d6e1bdbaddef1c295753e2d0b1ea6048324fd17bddca4d51a534",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Lift/TransitionSystem.lean",
+   "size": 15130,
+   "sha256": "771d0354ef1783a96bb7e05aee8799382fa19e4480b0a89fe5a2aeb7677c4188",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Lift/TripleOverlapDefect.lean",
+   "size": 7647,
+   "sha256": "b809b81102f4348f806bec358645320ecd426a5dba6fc43193df055fecefcde4",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/SpinProjection.lean",
+   "size": 3834,
+   "sha256": "0f2236ebdc10b673e675f0673de28b521ec054fda8510a75ac5960646898bbff",
+   "task_origin": "T20-T30",
+   "module_classification": "spin"
+  },
+  {
+   "path": "RequestProject/Spine/E2/SpinProjectionIntegration.lean",
+   "size": 5193,
+   "sha256": "42dfc277ecd430e2e3cb3b2d007aedb78eeb3e87ceb87b5c491b622252af4dd5",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Topology/AtlasExtension.lean",
+   "size": 4682,
+   "sha256": "937692faa87ed43b10719c9bd7fc0e44729dae0db03880744e38c97dd8eab327",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Topology/AtlasTopology.lean",
+   "size": 13306,
+   "sha256": "701a919172aa6e8719788eb1d8ce0b83f1edfb7788c4a24da8968ae245ae2829",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Topology/ContinuousTransitions.lean",
+   "size": 8620,
+   "sha256": "82c39660c216116c936415b6510d92f94fc3efcb2352f1016387be2e7b02c848",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Topology/FiberTopology.lean",
+   "size": 16042,
+   "sha256": "66b317b72d010b3cd26361b097d4ce6c00007577cfb8252adfeb81dd740c386a",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Topology/FrameRightAction.lean",
+   "size": 12573,
+   "sha256": "43eaa5c770e308aa0ecb87b8c78a3a9342280e313bb4719d92ac80d7de3e11e0",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Topology/FrameTopology.lean",
+   "size": 14119,
+   "sha256": "5adae6e2167ed6a7e54e3e6faca39c66a6d221f30d585c227c686b4aedca6e2c",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Topology/ModelTopology.lean",
+   "size": 11140,
+   "sha256": "ba02fd1ce10323e8c1b9114b4f3a7e993ea8971161bc5bd5d73e93af7e1a138e",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Topology/ReverseReconstruction.lean",
+   "size": 20178,
+   "sha256": "ef18e54236e8dc10fc4f36e74557b9db58fb10102f37f42addeabcb37e9bad92",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Topology/Task27.lean",
+   "size": 15066,
+   "sha256": "8dac034e33e1eb50ff8c7a26b6345b56032d152c4d43d3815b77b05fe6be7350",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/E2/Topology/TopologicalFrameFamily.lean",
+   "size": 8741,
+   "sha256": "49570694a427e58b4f9e918ffe4e656db36fa935b1295b0cd6e26546b35566d7",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Emergent/BaseGluing.lean",
+   "size": 9314,
+   "sha256": "1d435d365df5938895ed0a73d846247d47caadc63a9f04d797a8b7fbcb860a56",
+   "task_origin": "T32",
+   "module_classification": "gluing"
+  },
+  {
+   "path": "RequestProject/Spine/Emergent/CoverAdapter.lean",
+   "size": 3824,
+   "sha256": "d8509d8df3b3ec87a56a80c92e1db2648c4c979c4e0288afbefe7c2ba2348787",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Emergent/LocalModel.lean",
+   "size": 3894,
+   "sha256": "8ee0b540c1c6f7ae84d7e7a085bbf70f957f7bb800c63a265b41ef87e57c9ea7",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Emergent/LocalPieceData.lean",
+   "size": 5346,
+   "sha256": "9e3de378bf6a4d05d8ea852cbc59cd229df65dfa5418a4fa2aa16d368b94fc56",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Emergent/NonDerivability.lean",
+   "size": 6765,
+   "sha256": "fd525ced07e107838fe060e2a879c5c7831a396a227599f10ab315758adb754a",
+   "task_origin": "T32",
+   "module_classification": "gluing"
+  },
+  {
+   "path": "RequestProject/Spine/Emergent/Reconstruction.lean",
+   "size": 11680,
+   "sha256": "25108650fefce09d055dab7cc199c02ce5552f9bb97a9a7d91f779f1dc58579f",
+   "task_origin": "T32",
+   "module_classification": "manifold"
+  },
+  {
+   "path": "RequestProject/Spine/Emergent/SmoothGate.lean",
+   "size": 4734,
+   "sha256": "38c644f846f31dffc4a664e1a16b93a7097c1823cd2ebecc27c29ef1e1a754a9",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Emergent/SmoothStructure.lean",
+   "size": 16781,
+   "sha256": "88a09e430ce4658691ec10872adc4fc3ce3a780e6b77b944a399892b85884c24",
+   "task_origin": "T33",
+   "module_classification": "manifold"
+  },
+  {
+   "path": "RequestProject/Spine/Emergent/Symmetric.lean",
+   "size": 9736,
+   "sha256": "bd50940e7e89d2910f5eb0885105b5a3aa1d504a1f6b31b3fa9d3f648f448ce9",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Emergent/SymmetricCanonical.lean",
+   "size": 9470,
+   "sha256": "057a65a3741c450c798269c6fc70503418c1005028eadca6d3d296a8436753e0",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Emergent/SymmetricSmooth.lean",
+   "size": 11272,
+   "sha256": "95dff784a3c51021be9664a97e37929928e44ef26cad79ba4d017775895476cf",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Emergent/TangentTransition.lean",
+   "size": 11890,
+   "sha256": "f0c05f7f899f84a9b061633cb9c45dbe52f548f0d160f0faeac6aed2abba56ec",
+   "task_origin": "T34",
+   "module_classification": "tangent"
+  },
+  {
+   "path": "RequestProject/Spine/Foundation/MinkowskiMatrix.lean",
+   "size": 20262,
+   "sha256": "cf9df2a0ad787f092f47ef6314f6abc5b3f579a73b76fc55a1893fbce80f8bb6",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Geometry/CausalAlgebra.lean",
+   "size": 11005,
+   "sha256": "1312a03cb19d976b70ffab532bb2285bf0525c85408f0e44d372601859440d7f",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Geometry/Core.lean",
+   "size": 5823,
+   "sha256": "3efc0792f430e6f7379f146ad6dd3e329b24fb8c172ab18ea33c94dce629f0ad",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Geometry/FrameField.lean",
+   "size": 13845,
+   "sha256": "38bf568105e1590741ac766cee53f644831e899e12d95bc93cbfb9db0add78de",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Geometry/SpinStructure.lean",
+   "size": 12110,
+   "sha256": "82eb1ef6aaae5de174f847010f442a613b2959d7f49fa18cd29c7bac7ca38bb2",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Geometry/TangentInstance.lean",
+   "size": 6274,
+   "sha256": "de1809caa6757627dc69a68925fae8771003f41a9a261a5d4cfe992587952828",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Geometry/Z2Class.lean",
+   "size": 11175,
+   "sha256": "37eac143b5207abc23907a767ce60392ad0a85a23881c7a2516a2fc0e593e38d",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/GoodCover/AcyclicCover.lean",
+   "size": 4169,
+   "sha256": "090e695197c6f7a0804f85e7e9ac6cf51c4355425b887964e8997db2af323468",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/GoodCover/Constancy.lean",
+   "size": 7044,
+   "sha256": "11feaea86a4d208dcfb6523273ac674dcfeaaaf4503a7dd324d0782874b3faf7",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/GoodCover/Core.lean",
+   "size": 6216,
+   "sha256": "afb744011e51701c1f94cec0dba3b9fafc38d44b82c5b63a02390aba2590d957",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/GoodCover/GoodCover.lean",
+   "size": 6416,
+   "sha256": "da8e074b40b9b325b0b51c0f642f50ee6d0ac7b0f9dbb82033d082ac30e4b987",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/GoodCover/GoodCoverAcyclic.lean",
+   "size": 2673,
+   "sha256": "8bf258523940903acd20576f4a25ac327cd07ac7843141660ed8f278034fd26c",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/GoodCover/HardenedSpec.lean",
+   "size": 16283,
+   "sha256": "0198fb67c2948de9f149cba36200790c0c32c51cb538b1f252c304d1df37cb9a",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/GoodCover/ManifoldCovers.lean",
+   "size": 10680,
+   "sha256": "49f27fb7bc41eee9bc1c3bdd27984f0e17c9b089c5e8d38775a3faaf115de071",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/GoodCover/NerveIdentification.lean",
+   "size": 4360,
+   "sha256": "df76a2048e2acde3af5b3794e4a3dac2bfec4c99fd8b1f15ced16c528e5678c5",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/GoodCover/PointCohomology.lean",
+   "size": 4447,
+   "sha256": "6c89457527fd5c7ebbeeb4b46c55dfe9bfc9dde9b7c667dff4070ce3a85102b2",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/GoodCover/Presimplicial.lean",
+   "size": 8394,
+   "sha256": "35f85f9be73174009c733dc1f0bcfd6128d9295eace5ae3bcafed1a214f51afa",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/GoodCover/SingularComparisonSpec.lean",
+   "size": 17360,
+   "sha256": "7b4c84e4ce33e3291367c0475b1ebc552cabd1d4a3111239fb21c34debc2fcb1",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/GoodCover/W2Interface.lean",
+   "size": 4808,
+   "sha256": "d8a123504d3ba58033e35cc7d272436865689ce4e88f50138c35af3b6e698f48",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Audit/CanonicalPin.lean",
+   "size": 6528,
+   "sha256": "4e818d9a7a9e10ac2c1be2caa8d96a6ac967a76cc8a80e7c73972ff8f1dc71f6",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Audit/ManifoldAssumptions.lean",
+   "size": 7218,
+   "sha256": "c9b781d37bba778e3ab1be8f3a77c420a6be1123e249be3028ca3fb2c84c321a",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Audit/Stage13Axioms.lean",
+   "size": 24760,
+   "sha256": "715be2d0c0f2a12e491c1733841359349ff071d663982c62acb303656f8f264c",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Basic/CanonicalMap.lean",
+   "size": 5344,
+   "sha256": "7b460e076b9c780ae8310eaef642ca64c5602003eeeecf59853242cb7a07ad22",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Basic/ChainMap.lean",
+   "size": 4112,
+   "sha256": "35a5029bbb8381af49c536a2b11211f816f34819753a4958daa60574f25c2893",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Basic/Cover.lean",
+   "size": 8876,
+   "sha256": "18ac4447e177fc7ed5519d249a47767d0ea16073f9e5f755d113bf5135c62ff4",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Basic/Realization.lean",
+   "size": 6860,
+   "sha256": "4d3817e2ddb313d3b863700f5cdb4f81485f3c78a5d2ce6c3a4b0fe262710f35",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Basic/UnitChainMap.lean",
+   "size": 3149,
+   "sha256": "5e6261243552107118de215689eaebf0655574b64152f3cd3b00e83452775881",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/CellFamily/ExcisionCompatibility.lean",
+   "size": 5360,
+   "sha256": "566515a44a4136eb053c84afd4e42ffad7c56190141423bd6664c9bd0f43a632",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/CellFamily/RelativeChainDecomposition.lean",
+   "size": 7564,
+   "sha256": "45e49d177dfc3d5edaba745898cd2c2eed6292e26ec3b881467e15ae352f11b9",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/CellFamily/SingularFactorization.lean",
+   "size": 18898,
+   "sha256": "1297819c11d52160e023190c4a616f083238977c792292f90a92d5fd3e6c7d31",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/CellFamily/TargetDecomposition.lean",
+   "size": 10152,
+   "sha256": "c50aa6dc6f51632af118b5382f4e71c1ba18bc0418d19082ba290bf198a90382",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/CellFamily/TargetMap.lean",
+   "size": 2951,
+   "sha256": "fb4773d26a6ebc7d9c4fbd3f204b30b26bb8e5538e6a48995d9bda1c8b49262c",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Cochain/ChainHomotopyComparison.lean",
+   "size": 18730,
+   "sha256": "9efb33e332a1db2ab9ac57745928ab52f670a558b595bc69d89783c7eb9e497b",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Cochain/CochainComparison.lean",
+   "size": 8837,
+   "sha256": "0ef8ec6ff3bdfe11699dc27d2a695b40ae27bec5ae2aed0b24f5a6c74031622f",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Cochain/CochainMap.lean",
+   "size": 6035,
+   "sha256": "75242bc77054b21a92c64c59711b569278609d1dfefbce8b0ac702338a6e5460",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Cochain/ComparisonSpec.lean",
+   "size": 16437,
+   "sha256": "59c44045ec2fad1e53b342d6ef84acc97316790d284e47e31d99104846a849b4",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Cochain/Dualization.lean",
+   "size": 3579,
+   "sha256": "58ebb9239e5630b2aaf1e3324a785c64d12585b32bfd527bc5e2a86e1bd44b10",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Comparison/BaseCase.lean",
+   "size": 7404,
+   "sha256": "a622b866207033e2210cb830f0eddb869bdbe468fcaa440e6c86c9ca7aa108f5",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Comparison/Blockers.lean",
+   "size": 2986,
+   "sha256": "59185c678695d0d16a0347be0eb53b8f963a815308dd0fddb815f7fc66a2d7db",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Comparison/FamilyCompatibility.lean",
+   "size": 10852,
+   "sha256": "6c094c4d7689e991633ec9afca95bb602227f5353f1b0406c720b6bed7c8530d",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Comparison/FiniteCriterion.lean",
+   "size": 3523,
+   "sha256": "9a504e6ad08467dd306a84df3996625505c3d3ea12bc985fa7cc7895efa42760",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Comparison/GlobalCohomology.lean",
+   "size": 4648,
+   "sha256": "fa5effc9ad7ad2515760c846532748105e771761ef1c1f43c5678034c9544899",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Comparison/GlobalHomology.lean",
+   "size": 12216,
+   "sha256": "90fa2d8b419b8533bf7820936c84aff9411e0eecf7b8d2065ddbd701f2e00b24",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Comparison/RelJ.lean",
+   "size": 2649,
+   "sha256": "d5d9d839d15acc25fcd3daea98de322c5ea66531e6d0878a925c6aec01d5b422",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Comparison/RelativeMap.lean",
+   "size": 6473,
+   "sha256": "14f6fafe5c946c81327b3be944af136bd2fb4ba2fcc1d9915fd137b3b9198452",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Comparison/SkeletalInduction.lean",
+   "size": 2850,
+   "sha256": "1c500ea6930cfac06ce1a3b7cdc743cb9dcd11a20bc4f746a6221fbf2b73ddd1",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Comparison/SkeletalStep.lean",
+   "size": 2660,
+   "sha256": "4092afc90333601334cec7975268dd75193683c73b80a5f24f9e923cd214f086",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Comparison/SourceDecomposition.lean",
+   "size": 22448,
+   "sha256": "ab647fe7004c7706ad3ddfcbc6cab176668e34761aef50a0442b2e385a959624",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Controls/ComparisonControls.lean",
+   "size": 4247,
+   "sha256": "096d2ad543d9aa7e39ef0275ec7894b71530876013a8508216ba9d456e83ae19",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Controls/GeneratorProbe.lean",
+   "size": 27573,
+   "sha256": "20f646ec983a63bdfb9d3a1484e61a06d198d6e5c5bf35d19520862c59610831",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Controls/UnitProbe.lean",
+   "size": 6189,
+   "sha256": "bef900f8b49f60514a07e543df67b7cee53fe001b230be880e4cc4d52f39cbff",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Core.lean",
+   "size": 10471,
+   "sha256": "c595c4bc7cd383711500f3f2ab13a7e7fba8a86f4d17d173eab792d1d603f972",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Geometry/BarycentricRetraction.lean",
+   "size": 12971,
+   "sha256": "9519977d36f88f13657a94cf7aafa4c03208b1396f4bb015ebd372ef6e355af4",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Geometry/BoundarySphere.lean",
+   "size": 14527,
+   "sha256": "c3a9f0f26923a503731f19afe96d5c2fe267890a8d7d9f619d77791d5b4e0ff2",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Geometry/CarrierDim.lean",
+   "size": 7931,
+   "sha256": "c085f3005267cee7d711e2da68c937bb5ab49a8d99a94d709a3a4e5368cfc499",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Geometry/CellNeighborhood.lean",
+   "size": 15909,
+   "sha256": "7a0514fd494f4ed1cbeeabb49890d3332cbff5ab32856fb232961029782ad57f",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Geometry/CellSeparation.lean",
+   "size": 9263,
+   "sha256": "f39425b37e40ec189e15c04ce6ed5b588b807b1c1e2dde8922ec3db5254f24ce",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Geometry/NormalForm.lean",
+   "size": 17849,
+   "sha256": "b6247739e889a4871913952726202e57fb7cbdd8486c4b5217f6b22f722c8e62",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Geometry/OpenStandardCell.lean",
+   "size": 1502,
+   "sha256": "cf39e5a142950cebe668b95aff8fe148fabcbf9cc03a60c4546d6247b2529bbe",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Geometry/PointModel.lean",
+   "size": 20489,
+   "sha256": "03f577d1c916328e47a41aebdb9e2c027bdf86cd4cb5c376fce03786ba497a13",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Geometry/PuncturedSimplex.lean",
+   "size": 20263,
+   "sha256": "2d7e773bb055851866769adeac9404fb17ef6af9a1db0dcc43e88b626d939368",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Geometry/PushoutRetraction.lean",
+   "size": 25380,
+   "sha256": "730895d078b319914cc31117c03739dc65c63a9563c11bad485e76bd7794d7ab",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Geometry/RealizationTopology.lean",
+   "size": 9554,
+   "sha256": "aad6777734554ef5d08690100c3907b3b9a92da4df7ece15fb4ffd78ba04b34b",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Geometry/RealizedBoundary.lean",
+   "size": 6491,
+   "sha256": "62fe6e56d7a116023e824ca2d81c8928776b1bf1d53321b19585113a61334d73",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Geometry/RelativeHomotopy.lean",
+   "size": 2979,
+   "sha256": "d1070126ee689e8a5ead0b5875aaa0072ce139c2fb837595d727972aa06ec80c",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Geometry/SkeletalFactorization.lean",
+   "size": 5545,
+   "sha256": "cfba74caddb7fba96a693cbb57ab38708b27baea6fe0079fd84eaab29347cab5",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Geometry/StandardSimplex.lean",
+   "size": 15636,
+   "sha256": "19a9818064084e7442b6f47a3f8d0a873e8d0454b760b7e40e9e26c889e7d986",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Skeleton/Filtration.lean",
+   "size": 2548,
+   "sha256": "1a15a91d4af504884e8e27cd6c2a81e6b6dfb827253ece0005c6ff7e899824e4",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Skeleton/Pushout.lean",
+   "size": 13407,
+   "sha256": "509cf82e232b3f2e50ef34380865c569f868db5b9c1b335fe9125c356f2587e2",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Skeleton/RealizationMono.lean",
+   "size": 7951,
+   "sha256": "0f6aef6e925de6d8ea8b989106566ab4786f72a3bf5967ae4369f56af466374a",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/Skeleton/SkeletalSupport.lean",
+   "size": 5617,
+   "sha256": "31cd3be3c0a61252c77e49bb2f2ec19675ee4da326d079f4b4d329ffdf3989ab",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/StandardCell/BoundaryCover.lean",
+   "size": 4473,
+   "sha256": "d96e446f28e38292ba2353b5f79e9fcb1f413be30206bed7e2ed1174a8a13204",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/StandardCell/BoundaryHomology.lean",
+   "size": 9287,
+   "sha256": "46345bebc98895c3905aaf14d4d06e73106f50693acc0e2c6b44b9d91ac77c9f",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/StandardCell/BoundaryTwoSetCover.lean",
+   "size": 5923,
+   "sha256": "000bb4fafcc1c8e89468c6e8aec3fa1e3512da0f3611174c1c047c8d3ae9d2bb",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/StandardCell/CanonicalGenerator.lean",
+   "size": 21559,
+   "sha256": "e956602dcbc38fbf4d7cec77893afdb30277e4902e84e16552ea7d19183e185a",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/StandardCell/Excision.lean",
+   "size": 5694,
+   "sha256": "f8cdbea9f150e5c9f89c295c74b6db3a4db0c16f79ce72c297c66cc571709f1b",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/StandardCell/FaceMaps.lean",
+   "size": 9328,
+   "sha256": "b2598b7ef68bde898ad87cfea3240f5aa51a636204999f8628279b733a6e75d4",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/StandardCell/FundamentalClass.lean",
+   "size": 8731,
+   "sha256": "ec778aa50aa9092a1f32c14524b14cbe89ae0d44d3331ef605524fcace49406a",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/StandardCell/Generator.lean",
+   "size": 6646,
+   "sha256": "f9c5367c606102069212fa7eae96e11ee2cb417bebb76e7f0ae68ae9a0717991",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/StandardCell/Homology.lean",
+   "size": 7992,
+   "sha256": "e2f77b1089956cd92604b118b98246768a2b831b4c2c348e31492f6090e38ba3",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/StandardCell/Pair.lean",
+   "size": 2204,
+   "sha256": "eaa7ce0609eeefa25a16b6ea8661eb4568d1c853a1f00d0854c56744b8572dd0",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/StandardCell/RealizedSimplexHomology.lean",
+   "size": 1108,
+   "sha256": "8ebe0090a8cdfe1c08d4f74e424da3365d4e29cfbfb4f070ee1f35ac8a9c94da",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Nerve/StandardCell/RelativeComparison.lean",
+   "size": 14398,
+   "sha256": "8955ccdb9330d7bc0dc8b4c83c378cbbe723ce80ece7b2c47795d7d553c77754",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Solder/BundleEquivalence.lean",
+   "size": 32809,
+   "sha256": "ad09e37e19dc3b3d8d94c4a2d1c8e5c0ec5885cd14828504119764a2a197abc0",
+   "task_origin": "T35",
+   "module_classification": "solder"
+  },
+  {
+   "path": "RequestProject/Spine/Solder/Independence.lean",
+   "size": 9086,
+   "sha256": "c917550551fc15d0009f96d194ee877935f5fcd9966b3ae49c1e26db80d2806e",
+   "task_origin": "T34",
+   "module_classification": "solder"
+  },
+  {
+   "path": "RequestProject/Spine/Solder/InternalLorentz.lean",
+   "size": 11034,
+   "sha256": "715c727853d6abb46576c290978e7ff6ffedfd4f0a94a6cf0902e46eb34daecf",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Solder/LorentzBundle.lean",
+   "size": 7762,
+   "sha256": "b649b674b4d97dad3b4544bdd00e450d551d1bea6d87423209c7e560eaea3539",
+   "task_origin": "T35",
+   "module_classification": "solder"
+  },
+  {
+   "path": "RequestProject/Spine/Solder/OrientationTime.lean",
+   "size": 14103,
+   "sha256": "6f88f59a7235bceac1b0075e5aa03c67b0636822c1fc6e448216b473cfcf0b0d",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Solder/RegularExamples.lean",
+   "size": 9222,
+   "sha256": "f44c5d62fc812039b70917406d03f886a406a5f6d45c1527ed75090c35a626da",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/Solder/RegularGauge.lean",
+   "size": 8872,
+   "sha256": "b6be59367005d08285809ce168a1fbe70c49718c4eacc13b945426a19cd28260",
+   "task_origin": "T35",
+   "module_classification": "solder"
+  },
+  {
+   "path": "RequestProject/Spine/Solder/RegularSolder.lean",
+   "size": 21225,
+   "sha256": "2f5b0ff3c96c9b2933ffc9323897ff0d796306fc2fd76a63f573594e0f4d9198",
+   "task_origin": "T35",
+   "module_classification": "solder"
+  },
+  {
+   "path": "RequestProject/Spine/Solder/SmoothMetric.lean",
+   "size": 12076,
+   "sha256": "303f1669fed95c9c1d0a6bbfa2ab038e34976cf41952f914d28c77a31d1f6883",
+   "task_origin": "T35",
+   "module_classification": "solder"
+  },
+  {
+   "path": "RequestProject/Spine/Solder/Solder.lean",
+   "size": 20076,
+   "sha256": "2dbfd8d5612a77c633ea92411b0168ac376cc1ed87d626c113ea3c2faa3a7f02",
+   "task_origin": "T34",
+   "module_classification": "solder"
+  },
+  {
+   "path": "RequestProject/Spine/Solder/WeakInsufficiency.lean",
+   "size": 14877,
+   "sha256": "4c2557f8b8d118709e459b4db04a46cc00d5615be80429935a6a3a071c7c6529",
+   "task_origin": "T35",
+   "module_classification": "solder"
+  },
+  {
+   "path": "RequestProject/Spine/SpinNative/Canonical.lean",
+   "size": 7196,
+   "sha256": "58c659f4e5562ba1bd1dfd92605c4378072a860efb9c3b0ae56112e3e708e3af",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/SpinNative/GaugeEquivalence.lean",
+   "size": 6498,
+   "sha256": "ecf2302a8c98fac550f5495f9f5c979429c2ff6bbac3d335626d0dce245a4e4f",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/SpinNative/KernelTwist.lean",
+   "size": 14241,
+   "sha256": "76dbab09e8508b660484fa6afc8d651d4dd4ba63fb2f6553d3bec91d2c704227",
+   "task_origin": "T31",
+   "module_classification": "spin"
+  },
+  {
+   "path": "RequestProject/Spine/SpinNative/Projection.lean",
+   "size": 3537,
+   "sha256": "60769522d34614ff8f7ea5dbae82f59f7da969d9c068dfa7f1347a8265c6bedf",
+   "task_origin": null,
+   "module_classification": "supporting"
+  },
+  {
+   "path": "RequestProject/Spine/SpinNative/Rigidity.lean",
+   "size": 9114,
+   "sha256": "c8a910f266e5fbedd2af8d2c3e938c9cad529b7bec2f1818b785c60bbc2c9ee3",
+   "task_origin": "T31",
+   "module_classification": "spin"
+  },
+  {
+   "path": "RequestProject/Spine/SpinNative/TransitionData.lean",
+   "size": 4181,
+   "sha256": "62c3125bd6e9a8f9440abea4f39f95eb3d22727d87c2f76e4a2ea8844caefb3e",
+   "task_origin": "T31",
+   "module_classification": "spin"
+  },
+  {
+   "path": "RequestProject/Spine/Task36/Certificate.lean",
+   "size": 8933,
+   "sha256": "1b3cb3f85c1e414babad8cba3ab14a212bbe0b62279ca8bc58ee46835364a88d",
+   "task_origin": "T36",
+   "module_classification": "topology_control"
+  },
+  {
+   "path": "RequestProject/Spine/Task36/Firewall.lean",
+   "size": 8392,
+   "sha256": "d2af4edf04fb45f972091a6bc5c21c5fb5696bc844b1a9b22d4ce457b23f2091",
+   "task_origin": "T36",
+   "module_classification": "audit"
+  },
+  {
+   "path": "RequestProject/Spine/Task36/GaugeGroup.lean",
+   "size": 10786,
+   "sha256": "47ecc466b2be87f9d79bb1494a667047a857952345a23d6bdeb7764861ae10ea",
+   "task_origin": "T36",
+   "module_classification": "topology_control"
+  },
+  {
+   "path": "RequestProject/Spine/Task36/LoopModel.lean",
+   "size": 23844,
+   "sha256": "ad021f52d4f08bd83088761cddbea10a932a2dfeab3a0e91c1eacaa008dc9ddf",
+   "task_origin": "T36",
+   "module_classification": "topology_control"
+  },
+  {
+   "path": "RequestProject/Spine/Task36/LoopSolder.lean",
+   "size": 5861,
+   "sha256": "c6f2a61d6a521689b4cfb7d3250ab6b77c3ac1cd214154ca484099e665f70a71",
+   "task_origin": "T36",
+   "module_classification": "topology_control"
+  },
+  {
+   "path": "RequestProject/Spine/Task36/LoopSpinFreedom.lean",
+   "size": 23445,
+   "sha256": "539790612f6edd2c6a61972bd514553ea8cc429c507022d44d08405ae835d5aa",
+   "task_origin": "T36",
+   "module_classification": "topology_control"
+  },
+  {
+   "path": "RequestProject/Spine/Task36/LoopTimeOrientation.lean",
+   "size": 2646,
+   "sha256": "7df87fdc820dfbffba108867ee53d2350eb05342ede2a3a95f4a3e2ca0bb4b8c",
+   "task_origin": "T36",
+   "module_classification": "topology_control"
+  },
+  {
+   "path": "RequestProject/Spine/Task36/OrientationGate.lean",
+   "size": 12167,
+   "sha256": "971bccbb6bbda4dd85576623a3072fd7964a8d51601e89afda4f64800b182b86",
+   "task_origin": "T36",
+   "module_classification": "topology_control"
+  },
+  {
+   "path": "RequestProject/Spine/Task36/OrientationReversing.lean",
+   "size": 5450,
+   "sha256": "244ca3c6ab3967bd7b904e0046e37c6a7a262bb124d3063b0276d8678c957d63",
+   "task_origin": "T36",
+   "module_classification": "topology_control"
+  },
+  {
+   "path": "RequestProject/Spine/Task36/SmoothBundlePackaging.lean",
+   "size": 11554,
+   "sha256": "372eb9e012576d767f64d510f21e71eff2cd9ff18f3f706030bbee6c831962de",
+   "task_origin": "T36",
+   "module_classification": "topology_control"
+  },
+  {
+   "path": "RequestProject/Spine/Task36/SpinFoamControl.lean",
+   "size": 5095,
+   "sha256": "1b05a9cf8751f2968a741016486c48cbb56bcf7c36d20a7c52e8fdcf87f29ebc",
+   "task_origin": "T36",
+   "module_classification": "topology_control"
+  },
+  {
+   "path": "RequestProject/Spine/Task36/SpinNotLorentz.lean",
+   "size": 5657,
+   "sha256": "f76b1dd5e0fd60eb8e90b46504d688ec20d36edd4e3ea940509851404f6118f7",
+   "task_origin": "T36",
+   "module_classification": "topology_control"
+  },
+  {
+   "path": "RequestProject/Spine/Task36/SpinObstruction.lean",
+   "size": 8847,
+   "sha256": "9b088301b3d2667dc16e92e37824810f1b94aecde5d4478d1865bb60a232e290",
+   "task_origin": "T36",
+   "module_classification": "topology_control"
+  },
+  {
+   "path": "RequestProject/Spine/Task36/TimeOrientation.lean",
+   "size": 7097,
+   "sha256": "08bf02d7e118c6c73507e57bbe32184f87d93e9857ad904fa452a2ac12707dc7",
+   "task_origin": "T36",
+   "module_classification": "topology_control"
+  },
+  {
+   "path": "RequestProject/Spine/Task36/TrivialControl.lean",
+   "size": 6859,
+   "sha256": "9b9991198e5d86a13613a5352ebe431cba4893ddff697b9eb6d6ce84a358fc94",
+   "task_origin": "T36",
+   "module_classification": "topology_control"
+  }
+ ],
+ "documentation_files": [
+  {
+   "path": "INTERMEDIATE_MILESTONE_README.md",
+   "size": 13630,
+   "sha256": "207fb9ea5c7d5ed573804e03bb7478beec0bd898a29789121c5dcecbd3468ab0",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "PROJECT_INTERMEDIATE_HANDOFF.md",
+   "size": 9060,
+   "sha256": "38f2e9c32aac9b7992ae96d618c4e09e60450235abe047ae04d403a87248aae7",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "NEXT_PHASE_TRANSPORT_GATE.md",
+   "size": 11004,
+   "sha256": "ce6fdb5dfcd9cb3dff5d2fb13453af6babd11eee8372fda2928521845c6966dc",
+   "task_origin": "T40",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "TASK41_RELEASE_SNAPSHOT_REPAIR_AUDIT.md",
+   "size": 20221,
+   "sha256": "51969056a35c16eae13f35075a48bcf3818650cf46fed03d16df24e702e93a03",
+   "task_origin": "T41",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "TASK41_FAILBUILDS.md",
+   "size": 9076,
+   "sha256": "571e6c66f436c72ecb5199dae7256a223e0ba00cdb2ddfc8aa2cd30162a78b0a",
+   "task_origin": "T41",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "TASK40_RELEASE_HARDENING_AUDIT.md",
+   "size": 13838,
+   "sha256": "79f2560088f3ef108a75b9431004bd629bb88b929ae7a2c175d9268cf2a7bf37",
+   "task_origin": "T40",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "TASK40_FAILBUILDS.md",
+   "size": 8328,
+   "sha256": "ac1c8f7045e59931b2d39f3bf47edbe38b5c2883eb3142864b9f20eeb08a6900",
+   "task_origin": "T40",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/machine/REGISTRY_SCHEMA.md",
+   "size": 7869,
+   "sha256": "6a1eaca3c879440bd796db0f94c5c3a019052341106571d05b820dabab448730",
+   "task_origin": "T40",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "TASK39_AUDIT.md",
+   "size": 9645,
+   "sha256": "344ff364a0d70e8112f73f7ff6d7f2039def1906467129e2a4f18805aa060527",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "TASK39_AXIOM_AUDIT.md",
+   "size": 4037,
+   "sha256": "3c391e14fd5ea6dcdaba3ccd76b2ad7af3bcde3f72917d57f741aa66d082ec71",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "TASK39_CODE_HYGIENE.md",
+   "size": 4595,
+   "sha256": "b7a72595a298747252c74091a077f038ae5c5ca97fcc6885569fddd3330929c5",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "TASK39_FAILBUILDS.md",
+   "size": 4616,
+   "sha256": "afe3950ffcb0ae7ce24f34cd60ae3e585b4152a9e81f6bfd50abff8f0db6d463",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "TASK39_PROVENANCE.md",
+   "size": 6881,
+   "sha256": "6d9396b13aa6938764b159ccca4d3b3acbb07a568a8b612400a8325ea25dccf3",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/mathematics/LOCAL_MATHEMATICS.md",
+   "size": 14419,
+   "sha256": "9aabb9a6318c7200ea6a4a79fb4d6df6ca9e8e20dab6af300dc4d57bf3cab535",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/mathematics/GLOBAL_MATHEMATICS.md",
+   "size": 17270,
+   "sha256": "a5817b82d4f239e7dfecc3816ed14dd7e1a51ad5b4355ba3427e212366dcb6cc",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/mathematics/LOCAL_GLOBAL_INTERFACE.md",
+   "size": 7852,
+   "sha256": "d62ba03111a2ab6e8670f376b526aa4e3460534a7ffde5be256d405ffdf230b5",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/paper/PAPER_I_FACT_SHEET.md",
+   "size": 15318,
+   "sha256": "28bb1deda5c663c8cfabe4c6e61d2fca428121675bb8c27bf7129e549e5987f6",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/paper/PAPER_I_DO_NOT_CLAIM.md",
+   "size": 11186,
+   "sha256": "2ca7e86c649b2b9eccfcba59128f26d945441c1b0f29ae681b1d7c7a3888d30d",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/machine/SCHEMA_VERSION",
+   "size": 2,
+   "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/machine/PROJECT_STATE.json",
+   "size": 11579,
+   "sha256": "14421c7aba4d293a258810f107fff9f43c9e4dae3ac41cfdddcfc4d1bc5abff4",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/machine/MODULE_REGISTRY.jsonl",
+   "size": 35767,
+   "sha256": "8487456ad1668cf1e81ce6366e733c53d1920610ae466f28ba7e09cb54eaebca",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/machine/THEOREM_REGISTRY.jsonl",
+   "size": 109170,
+   "sha256": "f1308a6a90a603dde5b1258517810a6761080e4f0abec55ccd3da3d46cb985e1",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/machine/CLAIM_REGISTRY.jsonl",
+   "size": 56414,
+   "sha256": "b0e3dcb62b62ebd734ce7b2cea975f192375cc676e786d18213383267f9f37cf",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/machine/OBJECT_REGISTRY.jsonl",
+   "size": 36832,
+   "sha256": "a36f10ba38de5d80bee2e6b5fb7bc28ef957cbca559f244491ef28eaec32c4af",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/machine/OPEN_PROBLEMS.jsonl",
+   "size": 12339,
+   "sha256": "83d56ef2da062334d8e4fffc3448db6f27a77c97d7bae1a3f5d5feb43113f2d6",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/machine/NEGATIVE_CONTROLS.jsonl",
+   "size": 7713,
+   "sha256": "fc351e705f5a71268610912193dad0e2c5cda5edeaa51ac8719ee8054c258fe8",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/machine/FAILBUILD_LEDGER.jsonl",
+   "size": 260385,
+   "sha256": "8b55b64febd36b6121ecacc6ff12921f092b55f4f4e7c2a64b12122243db6b8b",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/machine/PROVENANCE_LEDGER.jsonl",
+   "size": 11411,
+   "sha256": "db000ed98c9c217fe434ad1afbf89721e69b9a90ec981d17cde82fbd81c06c31",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/machine/AXIOM_AUDIT.json",
+   "size": 10870,
+   "sha256": "e73739bc97052202cd2d0e466fc85ed51f465e919c80aba0720593c2f9cc9f28",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/machine/MATHEMATICAL_DAG.json",
+   "size": 36061,
+   "sha256": "3f59d3cdac75cf1de3add8b2ecdf87eae4aaac1545523238d7e36ff657256de6",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/machine/PROVENANCE_DAG.json",
+   "size": 4015,
+   "sha256": "3dec0a075f5e0189823d89c93827d2083ef090f24d9baff42f43d2ce3b75a699",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/machine/VERIFICATION_DAG.json",
+   "size": 46009,
+   "sha256": "eb8de2f29851c3c8b88e30dff385b718be894345346a1993fad7aad80ef884fe",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/graphs/MATHEMATICAL_DAG.dot",
+   "size": 16623,
+   "sha256": "10702597d56b86555f62baf1e4fb6db7603116c9560b59937503933ca72516d6",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/graphs/PROVENANCE_DAG.dot",
+   "size": 2782,
+   "sha256": "09e0a23ebda196c5d6c1eae4afee03a0282a797e11ae7067fdd80b4edea00bf5",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  },
+  {
+   "path": "docs/graphs/VERIFICATION_DAG.dot",
+   "size": 31998,
+   "sha256": "5424f1654ee7c6de4f1f54e35671fd6175eb1f6a6ab59a6e9be84d6c1554d452",
+   "task_origin": "T39",
+   "module_classification": "documentation"
+  }
+ ]
+}

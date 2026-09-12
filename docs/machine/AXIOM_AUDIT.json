@@ -1,0 +1,550 @@
+{
+ "schema_version": 1,
+ "audit_module": "RequestProject/Spine/Closure/AxiomAudit.lean",
+ "command": "lake build RequestProject.Spine.Closure.AxiomAudit",
+ "allowed_axioms": [
+  "propext",
+  "Classical.choice",
+  "Quot.sound"
+ ],
+ "endpoints_audited": 67,
+ "result": "PASS",
+ "endpoints": [
+  {
+   "lean_name": "SpinCore.lorentz_quadratic_form",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "SpinCore.clifford_generator_square",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "SpinCore.paravector_norm",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "SpinCore.clifford_jordan",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "SpinCore.adjoin_spinToCl_eq_top",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "SpinCore.spin_double_cover_of_lorentz",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "SpinCore.spin_double_cover_bundled",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "SpinCore.spin_double_cover_topological_endpoint",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "SpinCore.spin_double_cover_local_section_endpoint",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "SpinCore.gB_bracket_mem",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "SpinCore.gBLie_bracket",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "SpinCore.bivectorEquivSkew_wedge",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "SpinCore.finrank_gB",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "EmergentBase.base_not_determined_by_local_pieces",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "EmergentBase.BaseGluingData.isManifold_of_smoothGluing",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "EmergentBase.BaseGluingData.smoothEmergentManifoldCertificate",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "EmergentBase.BaseGluingData.tangentTransition_eq_derivative_baseTransition",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "SpinNative.tangent_spin_base_data_do_not_force_transition_identification",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "SpinNative.TangentSolderData.tangentMetric_wellDefined",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "SpinNative.weak_solder_not_regular",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "SpinNative.smooth_solder_iff_regular_bundle_equivalence",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "SpinNative.SmoothTangentSolderData.smooth_tangent_lorentz_metric",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task36.smooth_solder_implies_orientation_compatible",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task36.orientation_obstruction_nonzero_implies_no_solder",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task36.smooth_solder_implies_spin_obstruction_trivial",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task36.spin_obstruction_nonzero_implies_no_solder",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task36.classical_reconvergence",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task36.nonempty_regularBundleCertificate_iff",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task36.nonempty_timeOrientationReduction_of_solder",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task36.loop_timeOrientationReduction_isGlued",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task36.regular_solder_is_gauge_torsor",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "SpinNative.SmoothTangentSolderData.regular_solder_torsor",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task36.one_loop_has_kernel_sign_freedom",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task36.two_loop_spin_choice_family",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task36.orientation_reversing_gluing_no_solder",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task36.spin_does_not_imply_lorentz_moebius",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task36.spin_foam_labels_do_not_determine_solder",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task36.oneChart_positive_control",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task36.adversarial_global_topology_certificate",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.transportState_add",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.projectedTransportState_apply",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.not_forall_regularClosureAdmissible",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.selective_family_not_admissible_of_ne",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.controlA_interface_certificate",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.controlAAdmissible_zero",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.controlAAdmissible_all",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.regularRegion_loopTransportFamily",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.controlAAdmissible_neg_iff",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.spinCocycle_gaugeEquiv",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.projectedCocycle_gaugeEquiv",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.not_kernelGaugeEquiv_of_ne_zero",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.loopParaSolder_A_comparison",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.tangentMetric_loopParaSolder_eq",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.native_transport_knob_smoketest_certificate",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.smoketest_negative_records",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.contDiffOn_loopProjectedGauge",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.loopProjectedGauge_eq",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.loopSolderTransport",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.loopSolderEquiv",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.loopSolderTransport_involutive",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.tangentMetric_loopSolderTransport",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Task37.Deformation.loopSolderSolutionSpace_correspondence",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Closure.local_core_certificate",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Closure.global_layer_certificate",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Closure.fixed_cover_lift_freedom_certificate",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Closure.smoketest_certificate",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "lean_name": "Closure.intermediate_milestone_certificate",
+   "observed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  }
+ ]
+}

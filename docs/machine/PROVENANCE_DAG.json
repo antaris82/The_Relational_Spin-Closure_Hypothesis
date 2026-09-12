@@ -1,0 +1,190 @@
+{
+ "schema_version": 1,
+ "graph": "PROVENANCE_DAG",
+ "question": "How did the research and discovery path actually develop?",
+ "warning": "This is chronology, not mathematical dependency; compare MATHEMATICAL_DAG.json.",
+ "nodes": [
+  {
+   "id": "PRV-E1",
+   "kind": "event",
+   "label": "Experiment 1 — intrinsic branching from a derived Lorentz structure (vendored tree)"
+  },
+  {
+   "id": "PRV-E2",
+   "kind": "event",
+   "label": "Experiment 2 — split-complex Lorentzian dynamics (vendored tree)"
+  },
+  {
+   "id": "PRV-MERGE",
+   "kind": "event",
+   "label": "Combined repository: both experiment trees vendored into one Lake project"
+  },
+  {
+   "id": "PRV-T25",
+   "kind": "event",
+   "label": "Spine extraction refactor: a single self-contained production tree"
+  },
+  {
+   "id": "PRV-LEGACY",
+   "kind": "event",
+   "label": "Provenance ledger of removed modules (superseded / premature / out of scope)"
+  },
+  {
+   "id": "PRV-T27",
+   "kind": "event",
+   "label": "Topological qualification of the intrinsic cover; local sections"
+  },
+  {
+   "id": "PRV-T30",
+   "kind": "event",
+   "label": "Abstract Cech lifting layer instantiated with the native projection"
+  },
+  {
+   "id": "PRV-T31",
+   "kind": "event",
+   "label": "Native Spin transition data, kernel twists, fixed-cover rigidity"
+  },
+  {
+   "id": "PRV-T32",
+   "kind": "event",
+   "label": "Emergent base from a base-gluing datum; non-derivability of the global datum"
+  },
+  {
+   "id": "PRV-T33",
+   "kind": "event",
+   "label": "Smooth gate: the emergent smooth four-manifold"
+  },
+  {
+   "id": "PRV-T34",
+   "kind": "event",
+   "label": "Tangent transitions and the weak solder"
+  },
+  {
+   "id": "PRV-T35",
+   "kind": "event",
+   "label": "Regular solder, smooth tangent Lorentz metric, bundle equivalence"
+  },
+  {
+   "id": "PRV-T36",
+   "kind": "event",
+   "label": "Adversarial global-topology battery and the reconvergence theorems"
+  },
+  {
+   "id": "PRV-T37",
+   "kind": "event",
+   "label": "Deformation interface: one shared native Spin source, closure observable"
+  },
+  {
+   "id": "PRV-T38",
+   "kind": "event",
+   "label": "Fixed-base smoke test; outcome C (universally admissible, pure gauge on the control)"
+  },
+  {
+   "id": "PRV-T39",
+   "kind": "event",
+   "label": "Intermediate closure: strengthenings, certificate, documentation snapshot"
+  },
+  {
+   "id": "PRV-PREM",
+   "kind": "event",
+   "label": "Historically premature layers (connection/curvature-style modules built before their base existed) — removed, recorded, never used"
+  }
+ ],
+ "edges": [
+  {
+   "from": "PRV-E1",
+   "to": "PRV-MERGE",
+   "kind": "vendored_into"
+  },
+  {
+   "from": "PRV-E2",
+   "to": "PRV-MERGE",
+   "kind": "vendored_into"
+  },
+  {
+   "from": "PRV-MERGE",
+   "to": "PRV-T25",
+   "kind": "refactored_into"
+  },
+  {
+   "from": "PRV-T25",
+   "to": "PRV-LEGACY",
+   "kind": "produced_record"
+  },
+  {
+   "from": "PRV-E1",
+   "to": "PRV-PREM",
+   "kind": "contained"
+  },
+  {
+   "from": "PRV-E2",
+   "to": "PRV-PREM",
+   "kind": "contained"
+  },
+  {
+   "from": "PRV-PREM",
+   "to": "PRV-LEGACY",
+   "kind": "recorded_in"
+  },
+  {
+   "from": "PRV-T25",
+   "to": "PRV-T27",
+   "kind": "next_task"
+  },
+  {
+   "from": "PRV-T27",
+   "to": "PRV-T30",
+   "kind": "next_task"
+  },
+  {
+   "from": "PRV-T30",
+   "to": "PRV-T31",
+   "kind": "next_task"
+  },
+  {
+   "from": "PRV-T31",
+   "to": "PRV-T32",
+   "kind": "next_task"
+  },
+  {
+   "from": "PRV-T32",
+   "to": "PRV-T33",
+   "kind": "next_task"
+  },
+  {
+   "from": "PRV-T33",
+   "to": "PRV-T34",
+   "kind": "next_task"
+  },
+  {
+   "from": "PRV-T34",
+   "to": "PRV-T35",
+   "kind": "next_task"
+  },
+  {
+   "from": "PRV-T35",
+   "to": "PRV-T36",
+   "kind": "next_task"
+  },
+  {
+   "from": "PRV-T36",
+   "to": "PRV-T37",
+   "kind": "next_task"
+  },
+  {
+   "from": "PRV-T37",
+   "to": "PRV-T38",
+   "kind": "next_task"
+  },
+  {
+   "from": "PRV-T38",
+   "to": "PRV-T39",
+   "kind": "next_task"
+  },
+  {
+   "from": "PRV-T38",
+   "to": "PRV-T39",
+   "kind": "outcome_C_triggered_closure"
+  }
+ ]
+}

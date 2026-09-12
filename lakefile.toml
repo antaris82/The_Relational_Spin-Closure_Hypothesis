@@ -1,0 +1,22 @@
+name = "RequestProject"
+defaultTargets = ["RequestProject"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.28.0"
+
+# The new, self-contained mathematical project.  This is the only default target:
+# `lake build` builds the Spine and nothing else.
+[[lean_lib]]
+name = "RequestProject"
+globs = ["RequestProject.Spine.+", "RequestProject.Main", "RequestProject.CombinedDemo"]
+
+# The historical experiment trees.  They are kept for provenance only and are *not* a
+# default target; no module of `RequestProject.Spine` depends on them.  Build them
+# explicitly with `lake build LegacyProvenance`.
+[[lean_lib]]
+name = "LegacyProvenance"
+srcDir = "."
+roots = ["RequestProject.Experiment1.SpinFinal"]
+globs = ["RequestProject.Experiment1.+", "RequestProject.Experiment2.+"]

@@ -1,0 +1,74 @@
+prefixes                 : RequestProject.Spine
+modules                  : 264
+Lean LOC                 : 52388
+internal import edges    : 448
+all project import edges : 448
+max internal depth       : 67
+longest internal chain   :
+    RequestProject.Spine.Audit.ArchitectureDAG
+    RequestProject.Spine.Audit.Firewall
+    RequestProject.Spine.Core
+    RequestProject.Spine.E2.Core
+    RequestProject.Spine.E2.AtlasChange.Task32
+    RequestProject.Spine.E2.AtlasChange.FamilyExistenceClassification
+    RequestProject.Spine.E2.AtlasChange.FamilyDefectNeutrality
+    RequestProject.Spine.E2.AtlasChange.AtlasChangeLiftability
+    RequestProject.Spine.E2.AtlasChange.FamilyLiftability
+    RequestProject.Spine.E2.AtlasChange.OrdinaryAtlasEquivalence
+    RequestProject.Spine.E2.AtlasChange.OrdinaryCoverRefinement
+    RequestProject.Spine.E2.AtlasChange.OrdinaryAtlasChange
+    RequestProject.Spine.E2.AtlasChange.UnderlyingFrameGeometry
+    RequestProject.Spine.E2.Defect.FrameFamilyRealization
+    RequestProject.Spine.E2.Defect.GlobalCoveringHardening
+    RequestProject.Spine.E2.Defect.SpatialClosureInterface
+    RequestProject.Spine.E2.Defect.ExistenceClassification
+    RequestProject.Spine.E2.Defect.DefectNeutrality
+    RequestProject.Spine.E2.Defect.IntrinsicDefectState
+    RequestProject.Spine.E2.Defect.UniversalExistenceAudit
+    RequestProject.Spine.E2.Defect.GlobalMapHardening
+    RequestProject.Spine.E2.Defect.LiftabilityPredicate
+    RequestProject.Spine.E2.Global.Task30
+    RequestProject.Spine.E2.Global.OrdinaryFrameSideInstance
+    RequestProject.Spine.E2.Global.PresentationIndependence
+    RequestProject.Spine.E2.Global.ConditionalGlobalInterface
+    RequestProject.Spine.E2.Global.LocalComparison
+    RequestProject.Spine.E2.Global.KernelFibres
+    RequestProject.Spine.E2.Global.GlobalFrameProjection
+    RequestProject.Spine.E2.Global.InternalGroupAction
+    RequestProject.Spine.E2.Global.InternalTopology
+    RequestProject.Spine.E2.Global.InternalQuotient
+    RequestProject.Spine.E2.Global.InternalGlueRelation
+    RequestProject.Spine.E2.Global.GlobalGlueBase
+    RequestProject.Spine.E2.Descent.Task29
+    RequestProject.Spine.E2.Descent.CompatibleTransitions
+    RequestProject.Spine.E2.Descent.CombinedCompatibility
+    RequestProject.Spine.E2.Descent.RefinementBehavior
+    RequestProject.Spine.E2.Descent.ChoiceInvariance
+    RequestProject.Spine.E2.Descent.SimultaneousTrivialisation
+    RequestProject.Spine.E2.Descent.KernelAdjustment
+    RequestProject.Spine.E2.Descent.PairwiseDescent
+    RequestProject.Spine.E2.Descent.DefectFreeHardening
+    RequestProject.Spine.E2.Descent.Inherited
+    RequestProject.Spine.E2.Lift.LiftLevels
+    RequestProject.Spine.E2.Lift.TransitionSystem
+    RequestProject.Spine.E2.Lift.RepresentativeChange
+    RequestProject.Spine.E2.Lift.TripleOverlapDefect
+    RequestProject.Spine.E2.Lift.KernelAmbiguity
+    RequestProject.Spine.E2.Lift.LocalInternalRepresentatives
+    RequestProject.Spine.E2.Lift.TransitionLiftBase
+    RequestProject.Spine.E2.Topology.Task27
+    RequestProject.Spine.E2.Topology.TopologicalFrameFamily
+    RequestProject.Spine.E2.Topology.ReverseReconstruction
+    RequestProject.Spine.E2.Topology.FrameRightAction
+    RequestProject.Spine.E2.Topology.ContinuousTransitions
+    RequestProject.Spine.E2.Topology.FrameTopology
+    RequestProject.Spine.E2.Topology.AtlasExtension
+    RequestProject.Spine.E2.Topology.AtlasTopology
+    RequestProject.Spine.E2.Topology.ModelTopology
+    RequestProject.Spine.E2.Family.TransitionData
+    RequestProject.Spine.E2.Family.FrameTrivialization
+    RequestProject.Spine.E2.Family.LocalTrivialization
+    RequestProject.Spine.E2.Family.FiberIsometryGroup
+    RequestProject.Spine.E2.Family.FrameTotal
+    RequestProject.Spine.E2.Family.FiberFrames
+    RequestProject.Spine.E2.Family.FamilyBase

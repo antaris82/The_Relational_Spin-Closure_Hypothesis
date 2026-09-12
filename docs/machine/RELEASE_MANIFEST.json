@@ -1,0 +1,71 @@
+{
+ "schema_version": 1,
+ "milestone_name": "TASK 41 — RELEASE SNAPSHOT REPAIR: PASS / FINAL FROZEN",
+ "previous_milestone_name": "TASK 40 — INTERMEDIATE RELEASE HARDENING: PASS / FROZEN (completed; four post-release snapshot defects were found afterwards and repaired in Task 41)",
+ "mathematical_baseline": "TASK 39 — INTERMEDIATE PROJECT CLOSURE (mathematics unchanged)",
+ "generated_from_commit": "1bb736a53d514397380d0c52231667304278cb97",
+ "toolchain": {
+  "lean": "leanprover/lean4:v4.28.0",
+  "lake": "Lake version 5.0.0-src+7e01a1b (Lean version 4.28.0)",
+  "mathlib_rev": "v4.28.0 (see lake-manifest.json)"
+ },
+ "build_command": "lake build RequestProject",
+ "successful_build_jobs": 8356,
+ "audit_commands": [
+  "lake build RequestProject.Spine.Closure.AxiomAudit",
+  "lake build RequestProject.Spine.Audit.ArchitectureDAG"
+ ],
+ "firewall_commands": [
+  "lake build RequestProject.Spine.Audit.Firewall",
+  "lake build RequestProject.Spine.Task36.Firewall",
+  "lake build RequestProject.Spine.Deformation.Firewall"
+ ],
+ "documentation_validator_command": "python3 audit/verify_documentation_snapshot.py",
+ "statement_extraction_regression_command": "python3 audit/test_statement_extraction.py",
+ "registry_build_commands": [
+  "python3 audit/build_theorem_registry.py",
+  "python3 audit/build_module_registry.py",
+  "python3 audit/build_failbuild_ledger.py",
+  "python3 audit/build_dags.py",
+  "python3 audit/build_manifests.py"
+ ],
+ "principal_certificate_module": "RequestProject/Spine/Closure/IntermediateMilestone.lean",
+ "principal_theorem_names": [
+  "Closure.intermediate_milestone_certificate",
+  "Closure.local_core_certificate",
+  "Closure.global_layer_certificate",
+  "Closure.fixed_cover_lift_freedom_certificate",
+  "Closure.smoketest_certificate",
+  "Task36.adversarial_global_topology_certificate",
+  "Task37.Deformation.native_transport_knob_smoketest_certificate"
+ ],
+ "source_manifest_sha256": "031dde8114d677a0dd63abefdd437929c85a6fe9cab4f360a1fd2be5460df6a5",
+ "documentation_snapshot": {
+  "docs/machine/SCHEMA_VERSION": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+  "docs/machine/PROJECT_STATE.json": "14421c7aba4d293a258810f107fff9f43c9e4dae3ac41cfdddcfc4d1bc5abff4",
+  "docs/machine/MODULE_REGISTRY.jsonl": "8487456ad1668cf1e81ce6366e733c53d1920610ae466f28ba7e09cb54eaebca",
+  "docs/machine/THEOREM_REGISTRY.jsonl": "f1308a6a90a603dde5b1258517810a6761080e4f0abec55ccd3da3d46cb985e1",
+  "docs/machine/CLAIM_REGISTRY.jsonl": "b0e3dcb62b62ebd734ce7b2cea975f192375cc676e786d18213383267f9f37cf",
+  "docs/machine/OBJECT_REGISTRY.jsonl": "a36f10ba38de5d80bee2e6b5fb7bc28ef957cbca559f244491ef28eaec32c4af",
+  "docs/machine/OPEN_PROBLEMS.jsonl": "83d56ef2da062334d8e4fffc3448db6f27a77c97d7bae1a3f5d5feb43113f2d6",
+  "docs/machine/NEGATIVE_CONTROLS.jsonl": "fc351e705f5a71268610912193dad0e2c5cda5edeaa51ac8719ee8054c258fe8",
+  "docs/machine/FAILBUILD_LEDGER.jsonl": "8b55b64febd36b6121ecacc6ff12921f092b55f4f4e7c2a64b12122243db6b8b",
+  "docs/machine/PROVENANCE_LEDGER.jsonl": "db000ed98c9c217fe434ad1afbf89721e69b9a90ec981d17cde82fbd81c06c31",
+  "docs/machine/AXIOM_AUDIT.json": "e73739bc97052202cd2d0e466fc85ed51f465e919c80aba0720593c2f9cc9f28",
+  "docs/machine/MATHEMATICAL_DAG.json": "3f59d3cdac75cf1de3add8b2ecdf87eae4aaac1545523238d7e36ff657256de6",
+  "docs/machine/PROVENANCE_DAG.json": "3dec0a075f5e0189823d89c93827d2083ef090f24d9baff42f43d2ce3b75a699",
+  "docs/machine/VERIFICATION_DAG.json": "eb8de2f29851c3c8b88e30dff385b718be894345346a1993fad7aad80ef884fe",
+  "docs/graphs/MATHEMATICAL_DAG.dot": "10702597d56b86555f62baf1e4fb6db7603116c9560b59937503933ca72516d6",
+  "docs/graphs/PROVENANCE_DAG.dot": "09e0a23ebda196c5d6c1eae4afee03a0282a797e11ae7067fdd80b4edea00bf5",
+  "docs/graphs/VERIFICATION_DAG.dot": "5424f1654ee7c6de4f1f54e35671fd6175eb1f6a6ab59a6e9be84d6c1554d452"
+ },
+ "known_localized_proof_policy_exceptions": [
+  "twelve localized 'open Classical in' occurrences in RequestProject/Spine, listed exactly in TASK39_CODE_HYGIENE.md",
+  "two 'partial def' declarations in the meta-level audit code of RequestProject/Spine/Audit/Firewall.lean; they are elaboration-time audit helpers and carry no mathematical content"
+ ],
+ "allowed_axioms": [
+  "propext",
+  "Classical.choice",
+  "Quot.sound"
+ ]
+}

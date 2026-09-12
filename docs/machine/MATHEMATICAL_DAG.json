@@ -1,0 +1,1744 @@
+{
+ "schema_version": 1,
+ "graph": "MATHEMATICAL_DAG",
+ "question": "What mathematically depends on what?",
+ "excludes": "historical discovery chronology",
+ "node_status_values": [
+  "CERTIFIED"
+ ],
+ "node_status_note": "Every node of this graph is a certified object or a proved/constructed declaration of the repository. Missing structures are not nodes; they appear in open_edges.",
+ "open_edges_note": "open_edges are NOT dependencies and NOT proved: they are the missing bridges recorded in OPEN_PROBLEMS.jsonl.",
+ "nodes": [
+  {
+   "id": "OBJ-001",
+   "kind": "object",
+   "label": "SpinCore.sip",
+   "layer": "primitive",
+   "status": "CERTIFIED",
+   "canonical_status": "PRIMITIVE",
+   "existence_status": "PRIMITIVE_INPUT"
+  },
+  {
+   "id": "OBJ-002",
+   "kind": "object",
+   "label": "SpinCore.LorentzCarrier",
+   "layer": "local_lorentz",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-003",
+   "kind": "object",
+   "label": "SpinCore.NS",
+   "layer": "local_lorentz",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-004",
+   "kind": "object",
+   "label": "SpinCore.BS",
+   "layer": "local_lorentz",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-005",
+   "kind": "object",
+   "label": "SpinCore.ConeS",
+   "layer": "local_lorentz",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-006",
+   "kind": "object",
+   "label": "SpinCore.GLor",
+   "layer": "local_lorentz",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-007",
+   "kind": "object",
+   "label": "SpinCore.q3",
+   "layer": "clifford",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-008",
+   "kind": "object",
+   "label": "SpinCore.Cl3",
+   "layer": "clifford",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-009",
+   "kind": "object",
+   "label": "SpinCore.cle",
+   "layer": "clifford",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-010",
+   "kind": "object",
+   "label": "SpinCore.spinToCl",
+   "layer": "clifford",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-011",
+   "kind": "object",
+   "label": "SpinCore.SpinGroup",
+   "layer": "spin",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-012",
+   "kind": "object",
+   "label": "SpinCore.spinCover",
+   "layer": "spin",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-013",
+   "kind": "object",
+   "label": "SpinCore.internalSpinProjection",
+   "layer": "spin",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-014",
+   "kind": "object",
+   "label": "SpinNative.NativeSpinTransitionData",
+   "layer": "spin",
+   "status": "CERTIFIED",
+   "canonical_status": "ADDITIONAL_GLOBAL_DATUM",
+   "existence_status": "SUPPLIED_DATUM"
+  },
+  {
+   "id": "OBJ-015",
+   "kind": "object",
+   "label": "SpinNative.projectedLorentzTransition",
+   "layer": "spin",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-016",
+   "kind": "object",
+   "label": "SpinNative.GaugeEquiv",
+   "layer": "spin",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-017",
+   "kind": "object",
+   "label": "EmergentBase.BaseGluingData",
+   "layer": "gluing",
+   "status": "CERTIFIED",
+   "canonical_status": "ADDITIONAL_GLOBAL_DATUM",
+   "existence_status": "SUPPLIED_DATUM"
+  },
+  {
+   "id": "OBJ-018",
+   "kind": "object",
+   "label": "EmergentBase.BaseGluingData.Space",
+   "layer": "manifold",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-019",
+   "kind": "object",
+   "label": "EmergentBase.BaseGluingData.SmoothGluing",
+   "layer": "manifold",
+   "status": "CERTIFIED",
+   "canonical_status": "ADDITIONAL_GLOBAL_DATUM",
+   "existence_status": "NOT_DERIVED_GATE"
+  },
+  {
+   "id": "OBJ-020",
+   "kind": "object",
+   "label": "EmergentBase.LocalModel",
+   "layer": "manifold",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-021",
+   "kind": "object",
+   "label": "EmergentBase.BaseGluingData.tangentTransitionMap",
+   "layer": "tangent",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-022",
+   "kind": "object",
+   "label": "SpinNative.internalLorentzBundleCore",
+   "layer": "solder",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-023",
+   "kind": "object",
+   "label": "SpinNative.TangentSolderData",
+   "layer": "solder",
+   "status": "CERTIFIED",
+   "canonical_status": "GATE_DATA",
+   "existence_status": "NOT_DERIVED_GATE"
+  },
+  {
+   "id": "OBJ-024",
+   "kind": "object",
+   "label": "SpinNative.SmoothTangentSolderData",
+   "layer": "solder",
+   "status": "CERTIFIED",
+   "canonical_status": "GATE_DATA",
+   "existence_status": "NOT_DERIVED_GATE"
+  },
+  {
+   "id": "OBJ-025",
+   "kind": "object",
+   "label": "SpinNative.TangentSolderData.tangentMetric",
+   "layer": "solder",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-026",
+   "kind": "object",
+   "label": "SpinNative.SmoothTangentSolderData.metricCoeff",
+   "layer": "solder",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-027",
+   "kind": "object",
+   "label": "Task36.RegularTangentGauge",
+   "layer": "solder",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-028",
+   "kind": "object",
+   "label": "Task36.TimeOrientationReduction",
+   "layer": "topology_control",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-029",
+   "kind": "object",
+   "label": "Task36.loopGluingOf",
+   "layer": "topology_control",
+   "status": "CERTIFIED",
+   "canonical_status": "CONTROL_MODEL",
+   "existence_status": "EXPLICIT_CONTROL_INSTANCE"
+  },
+  {
+   "id": "OBJ-030",
+   "kind": "object",
+   "label": "Task36.moebiusGluing",
+   "layer": "topology_control",
+   "status": "CERTIFIED",
+   "canonical_status": "CONTROL_MODEL",
+   "existence_status": "EXPLICIT_CONTROL_INSTANCE"
+  },
+  {
+   "id": "OBJ-031",
+   "kind": "object",
+   "label": "Task37.Deformation.transportState",
+   "layer": "deformation",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-032",
+   "kind": "object",
+   "label": "Task37.Deformation.projectedTransportState",
+   "layer": "deformation",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-033",
+   "kind": "object",
+   "label": "Task37.Deformation.paraMap",
+   "layer": "deformation",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-034",
+   "kind": "object",
+   "label": "Task37.Deformation.loopSharedSpin",
+   "layer": "deformation",
+   "status": "CERTIFIED",
+   "canonical_status": "CONTROL_MODEL",
+   "existence_status": "EXPLICIT_CONTROL_INSTANCE"
+  },
+  {
+   "id": "OBJ-035",
+   "kind": "object",
+   "label": "Task37.Deformation.RegularClosureSolution",
+   "layer": "deformation",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-036",
+   "kind": "object",
+   "label": "Task37.Deformation.ControlAAdmissible",
+   "layer": "smoketest",
+   "status": "CERTIFIED",
+   "canonical_status": "CONTROL_MODEL",
+   "existence_status": "EXPLICIT_CONTROL_INSTANCE"
+  },
+  {
+   "id": "OBJ-037",
+   "kind": "object",
+   "label": "Task37.Deformation.wrapProfile",
+   "layer": "smoketest",
+   "status": "CERTIFIED",
+   "canonical_status": "CONTROL_MODEL",
+   "existence_status": "EXPLICIT_CONTROL_INSTANCE"
+  },
+  {
+   "id": "OBJ-038",
+   "kind": "object",
+   "label": "Task37.Deformation.loopParaSolder",
+   "layer": "smoketest",
+   "status": "CERTIFIED",
+   "canonical_status": "CONTROL_MODEL",
+   "existence_status": "EXPLICIT_CONTROL_INSTANCE"
+  },
+  {
+   "id": "OBJ-039",
+   "kind": "object",
+   "label": "Task37.Deformation.CocycleGaugeEquiv",
+   "layer": "smoketest",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-040",
+   "kind": "object",
+   "label": "Task37.Deformation.loopGaugeFun",
+   "layer": "smoketest",
+   "status": "CERTIFIED",
+   "canonical_status": "CONTROL_MODEL",
+   "existence_status": "EXPLICIT_CONTROL_INSTANCE"
+  },
+  {
+   "id": "OBJ-041",
+   "kind": "object",
+   "label": "Task37.Deformation.loopProjectedGauge",
+   "layer": "smoketest",
+   "status": "CERTIFIED",
+   "canonical_status": "CONTROL_MODEL",
+   "existence_status": "EXPLICIT_CONTROL_INSTANCE"
+  },
+  {
+   "id": "OBJ-042",
+   "kind": "object",
+   "label": "Task37.Deformation.loopSolderTransport",
+   "layer": "smoketest",
+   "status": "CERTIFIED",
+   "canonical_status": "CONTROL_MODEL",
+   "existence_status": "EXPLICIT_CONTROL_INSTANCE"
+  },
+  {
+   "id": "OBJ-043",
+   "kind": "object",
+   "label": "SpinCore.gB",
+   "layer": "local_lorentz",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-044",
+   "kind": "object",
+   "label": "SpinCore.gBLie",
+   "layer": "local_lorentz",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-045",
+   "kind": "object",
+   "label": "SpinCore.wedge",
+   "layer": "local_lorentz",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "OBJ-046",
+   "kind": "object",
+   "label": "SpinCore.bivectorEquivSkew",
+   "layer": "local_lorentz",
+   "status": "CERTIFIED",
+   "canonical_status": "DERIVED",
+   "existence_status": "DERIVED_WITH_THE_DEFINITION"
+  },
+  {
+   "id": "THM-L001",
+   "kind": "theorem",
+   "label": "SpinCore.lorentz_quadratic_form",
+   "layer": "local_lorentz",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-L002",
+   "kind": "theorem",
+   "label": "SpinCore.clifford_generator_square",
+   "layer": "clifford",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-L003",
+   "kind": "theorem",
+   "label": "SpinCore.paravector_norm",
+   "layer": "clifford",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-L004",
+   "kind": "theorem",
+   "label": "SpinCore.clifford_jordan",
+   "layer": "clifford",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-L005",
+   "kind": "theorem",
+   "label": "SpinCore.adjoin_spinToCl_eq_top",
+   "layer": "clifford",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-L006",
+   "kind": "theorem",
+   "label": "SpinCore.spin_double_cover_of_lorentz",
+   "layer": "spin",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-L007",
+   "kind": "theorem",
+   "label": "SpinCore.spin_double_cover_bundled",
+   "layer": "spin",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-L008",
+   "kind": "theorem",
+   "label": "SpinCore.spin_double_cover_topological_endpoint",
+   "layer": "spin",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-L009",
+   "kind": "theorem",
+   "label": "SpinCore.spin_double_cover_local_section_endpoint",
+   "layer": "spin",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-L012",
+   "kind": "theorem",
+   "label": "SpinCore.finrank_gB",
+   "layer": "local_lorentz",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-L013",
+   "kind": "theorem",
+   "label": "SpinCore.gBLie_bracket",
+   "layer": "local_lorentz",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-L014",
+   "kind": "theorem",
+   "label": "SpinCore.bivectorEquivSkew_wedge",
+   "layer": "local_lorentz",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-L015",
+   "kind": "theorem",
+   "label": "SpinCore.gB_bracket_mem",
+   "layer": "local_lorentz",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-L010",
+   "kind": "theorem",
+   "label": "Task37.Deformation.transportState_add",
+   "layer": "spin",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-L011",
+   "kind": "theorem",
+   "label": "Task37.Deformation.projectedTransportState_apply",
+   "layer": "spin",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G001",
+   "kind": "theorem",
+   "label": "EmergentBase.base_not_determined_by_local_pieces",
+   "layer": "gluing",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G002",
+   "kind": "theorem",
+   "label": "EmergentBase.BaseGluingData.isManifold_of_smoothGluing",
+   "layer": "manifold",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G003",
+   "kind": "theorem",
+   "label": "EmergentBase.BaseGluingData.smoothEmergentManifoldCertificate",
+   "layer": "manifold",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G004",
+   "kind": "theorem",
+   "label": "EmergentBase.BaseGluingData.tangentTransition_eq_derivative_baseTransition",
+   "layer": "tangent",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G005",
+   "kind": "theorem",
+   "label": "SpinNative.tangent_spin_base_data_do_not_force_transition_identification",
+   "layer": "solder",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G006",
+   "kind": "theorem",
+   "label": "SpinNative.TangentSolderData.tangentMetric_wellDefined",
+   "layer": "solder",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G007",
+   "kind": "theorem",
+   "label": "SpinNative.weak_solder_not_regular",
+   "layer": "solder",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G008",
+   "kind": "theorem",
+   "label": "SpinNative.smooth_solder_iff_regular_bundle_equivalence",
+   "layer": "solder",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G009",
+   "kind": "theorem",
+   "label": "SpinNative.SmoothTangentSolderData.smooth_tangent_lorentz_metric",
+   "layer": "solder",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G010",
+   "kind": "theorem",
+   "label": "Task36.smooth_solder_implies_orientation_compatible",
+   "layer": "topology_control",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G011",
+   "kind": "theorem",
+   "label": "Task36.orientation_obstruction_nonzero_implies_no_solder",
+   "layer": "topology_control",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G012",
+   "kind": "theorem",
+   "label": "Task36.smooth_solder_implies_spin_obstruction_trivial",
+   "layer": "topology_control",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G013",
+   "kind": "theorem",
+   "label": "Task36.spin_obstruction_nonzero_implies_no_solder",
+   "layer": "topology_control",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G014",
+   "kind": "theorem",
+   "label": "Task36.classical_reconvergence",
+   "layer": "topology_control",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G015",
+   "kind": "theorem",
+   "label": "Task36.nonempty_regularBundleCertificate_iff",
+   "layer": "solder",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G016",
+   "kind": "theorem",
+   "label": "Task36.nonempty_timeOrientationReduction_of_solder",
+   "layer": "topology_control",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G017",
+   "kind": "theorem",
+   "label": "Task36.loop_timeOrientationReduction_isGlued",
+   "layer": "topology_control",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G018",
+   "kind": "theorem",
+   "label": "Task36.regular_solder_is_gauge_torsor",
+   "layer": "solder",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G019",
+   "kind": "theorem",
+   "label": "SpinNative.SmoothTangentSolderData.regular_solder_torsor",
+   "layer": "solder",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G020",
+   "kind": "theorem",
+   "label": "Task36.one_loop_has_kernel_sign_freedom",
+   "layer": "topology_control",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G021",
+   "kind": "theorem",
+   "label": "Task36.two_loop_spin_choice_family",
+   "layer": "topology_control",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G022",
+   "kind": "theorem",
+   "label": "Task36.orientation_reversing_gluing_no_solder",
+   "layer": "topology_control",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G023",
+   "kind": "theorem",
+   "label": "Task36.spin_does_not_imply_lorentz_moebius",
+   "layer": "topology_control",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G024",
+   "kind": "theorem",
+   "label": "Task36.spin_foam_labels_do_not_determine_solder",
+   "layer": "topology_control",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G025",
+   "kind": "theorem",
+   "label": "Task36.oneChart_positive_control",
+   "layer": "topology_control",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-G026",
+   "kind": "theorem",
+   "label": "Task36.adversarial_global_topology_certificate",
+   "layer": "topology_control",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-S001",
+   "kind": "theorem",
+   "label": "Task37.Deformation.not_forall_regularClosureAdmissible",
+   "layer": "deformation",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-S002",
+   "kind": "theorem",
+   "label": "Task37.Deformation.selective_family_not_admissible_of_ne",
+   "layer": "deformation",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-S003",
+   "kind": "theorem",
+   "label": "Task37.Deformation.controlA_interface_certificate",
+   "layer": "smoketest",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-S004",
+   "kind": "theorem",
+   "label": "Task37.Deformation.controlAAdmissible_zero",
+   "layer": "smoketest",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-S005",
+   "kind": "theorem",
+   "label": "Task37.Deformation.controlAAdmissible_all",
+   "layer": "smoketest",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-S006",
+   "kind": "theorem",
+   "label": "Task37.Deformation.regularRegion_loopTransportFamily",
+   "layer": "smoketest",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-S007",
+   "kind": "theorem",
+   "label": "Task37.Deformation.controlAAdmissible_neg_iff",
+   "layer": "smoketest",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-S008",
+   "kind": "theorem",
+   "label": "Task37.Deformation.spinCocycle_gaugeEquiv",
+   "layer": "smoketest",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-S009",
+   "kind": "theorem",
+   "label": "Task37.Deformation.projectedCocycle_gaugeEquiv",
+   "layer": "smoketest",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-S010",
+   "kind": "theorem",
+   "label": "Task37.Deformation.not_kernelGaugeEquiv_of_ne_zero",
+   "layer": "smoketest",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-S011",
+   "kind": "theorem",
+   "label": "Task37.Deformation.loopParaSolder_A_comparison",
+   "layer": "smoketest",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-S012",
+   "kind": "theorem",
+   "label": "Task37.Deformation.tangentMetric_loopParaSolder_eq",
+   "layer": "smoketest",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-S013",
+   "kind": "theorem",
+   "label": "Task37.Deformation.native_transport_knob_smoketest_certificate",
+   "layer": "smoketest",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-S014",
+   "kind": "theorem",
+   "label": "Task37.Deformation.smoketest_negative_records",
+   "layer": "smoketest",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-S015",
+   "kind": "theorem",
+   "label": "Task37.Deformation.loopProjectedGauge_eq",
+   "layer": "smoketest",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-S016",
+   "kind": "theorem",
+   "label": "Task37.Deformation.contDiffOn_loopProjectedGauge",
+   "layer": "smoketest",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-S017",
+   "kind": "definition",
+   "label": "Task37.Deformation.loopSolderTransport",
+   "layer": "smoketest",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-S018",
+   "kind": "definition",
+   "label": "Task37.Deformation.loopSolderEquiv",
+   "layer": "smoketest",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-S019",
+   "kind": "theorem",
+   "label": "Task37.Deformation.tangentMetric_loopSolderTransport",
+   "layer": "smoketest",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-S020",
+   "kind": "theorem",
+   "label": "Task37.Deformation.loopSolderSolutionSpace_correspondence",
+   "layer": "smoketest",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-S021",
+   "kind": "theorem",
+   "label": "Task37.Deformation.loopSolderTransport_involutive",
+   "layer": "smoketest",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-C001",
+   "kind": "theorem",
+   "label": "Closure.local_core_certificate",
+   "layer": "closure",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-C002",
+   "kind": "theorem",
+   "label": "Closure.global_layer_certificate",
+   "layer": "closure",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-C003",
+   "kind": "theorem",
+   "label": "Closure.fixed_cover_lift_freedom_certificate",
+   "layer": "closure",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-C004",
+   "kind": "theorem",
+   "label": "Closure.smoketest_certificate",
+   "layer": "closure",
+   "status": "CERTIFIED"
+  },
+  {
+   "id": "THM-C005",
+   "kind": "theorem",
+   "label": "Closure.intermediate_milestone_certificate",
+   "layer": "closure",
+   "status": "CERTIFIED"
+  }
+ ],
+ "edges": [
+  {
+   "from": "OBJ-001",
+   "to": "OBJ-002",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-002",
+   "to": "OBJ-003",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-003",
+   "to": "OBJ-004",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-003",
+   "to": "OBJ-005",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-003",
+   "to": "OBJ-006",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-005",
+   "to": "OBJ-006",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-001",
+   "to": "OBJ-007",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-007",
+   "to": "OBJ-008",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-008",
+   "to": "OBJ-009",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-002",
+   "to": "OBJ-010",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-008",
+   "to": "OBJ-010",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-008",
+   "to": "OBJ-011",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-011",
+   "to": "OBJ-012",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-006",
+   "to": "OBJ-012",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-012",
+   "to": "OBJ-013",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-011",
+   "to": "OBJ-014",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-014",
+   "to": "OBJ-015",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-012",
+   "to": "OBJ-015",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-014",
+   "to": "OBJ-016",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-017",
+   "to": "OBJ-018",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-017",
+   "to": "OBJ-019",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-002",
+   "to": "OBJ-020",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-019",
+   "to": "OBJ-021",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-015",
+   "to": "OBJ-022",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-021",
+   "to": "OBJ-023",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-015",
+   "to": "OBJ-023",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-023",
+   "to": "OBJ-024",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-023",
+   "to": "OBJ-025",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-004",
+   "to": "OBJ-025",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-024",
+   "to": "OBJ-026",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-025",
+   "to": "OBJ-026",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-024",
+   "to": "OBJ-027",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-024",
+   "to": "OBJ-028",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-005",
+   "to": "OBJ-028",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-017",
+   "to": "OBJ-029",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-029",
+   "to": "OBJ-030",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-011",
+   "to": "OBJ-031",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-031",
+   "to": "OBJ-032",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-012",
+   "to": "OBJ-032",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-032",
+   "to": "OBJ-033",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-031",
+   "to": "OBJ-034",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-029",
+   "to": "OBJ-034",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-019",
+   "to": "OBJ-035",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-024",
+   "to": "OBJ-035",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-035",
+   "to": "OBJ-036",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-034",
+   "to": "OBJ-036",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-029",
+   "to": "OBJ-037",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-024",
+   "to": "OBJ-038",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-033",
+   "to": "OBJ-038",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-037",
+   "to": "OBJ-038",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-014",
+   "to": "OBJ-039",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-031",
+   "to": "OBJ-040",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-037",
+   "to": "OBJ-040",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-040",
+   "to": "OBJ-041",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-033",
+   "to": "OBJ-041",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-041",
+   "to": "OBJ-042",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-024",
+   "to": "OBJ-042",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-002",
+   "to": "OBJ-043",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-004",
+   "to": "OBJ-043",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-043",
+   "to": "OBJ-044",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-002",
+   "to": "OBJ-045",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-045",
+   "to": "OBJ-046",
+   "kind": "constructs"
+  },
+  {
+   "from": "OBJ-043",
+   "to": "OBJ-046",
+   "kind": "constructs"
+  },
+  {
+   "from": "THM-L002",
+   "to": "THM-L003",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-L003",
+   "to": "THM-L004",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-L003",
+   "to": "THM-L005",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-L003",
+   "to": "THM-L006",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-L006",
+   "to": "THM-L007",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-L007",
+   "to": "THM-L008",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-L008",
+   "to": "THM-L009",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-L014",
+   "to": "THM-L012",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-L015",
+   "to": "THM-L013",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-L015",
+   "to": "THM-L014",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-L007",
+   "to": "THM-L010",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-L010",
+   "to": "THM-L011",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-L006",
+   "to": "THM-L011",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G001",
+   "to": "THM-G002",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G002",
+   "to": "THM-G003",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G002",
+   "to": "THM-G004",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G004",
+   "to": "THM-G005",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G005",
+   "to": "THM-G006",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G006",
+   "to": "THM-G007",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G004",
+   "to": "THM-G008",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G005",
+   "to": "THM-G008",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G008",
+   "to": "THM-G009",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G006",
+   "to": "THM-G009",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G009",
+   "to": "THM-G010",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G010",
+   "to": "THM-G011",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G009",
+   "to": "THM-G012",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G012",
+   "to": "THM-G013",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G010",
+   "to": "THM-G014",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G012",
+   "to": "THM-G014",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G008",
+   "to": "THM-G015",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G009",
+   "to": "THM-G016",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G016",
+   "to": "THM-G017",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G009",
+   "to": "THM-G018",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G018",
+   "to": "THM-G019",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G009",
+   "to": "THM-G020",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G020",
+   "to": "THM-G021",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G011",
+   "to": "THM-G022",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G022",
+   "to": "THM-G023",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G009",
+   "to": "THM-G025",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G014",
+   "to": "THM-G026",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G015",
+   "to": "THM-G026",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G016",
+   "to": "THM-G026",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G020",
+   "to": "THM-G026",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G021",
+   "to": "THM-G026",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G022",
+   "to": "THM-G026",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G023",
+   "to": "THM-G026",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G025",
+   "to": "THM-G026",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G022",
+   "to": "THM-S001",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S001",
+   "to": "THM-S002",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-L011",
+   "to": "THM-S003",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G009",
+   "to": "THM-S004",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S004",
+   "to": "THM-S005",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-L011",
+   "to": "THM-S005",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S005",
+   "to": "THM-S006",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S005",
+   "to": "THM-S007",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S005",
+   "to": "THM-S008",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S008",
+   "to": "THM-S009",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S008",
+   "to": "THM-S010",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S005",
+   "to": "THM-S011",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S011",
+   "to": "THM-S012",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G006",
+   "to": "THM-S012",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S004",
+   "to": "THM-S013",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S005",
+   "to": "THM-S013",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S006",
+   "to": "THM-S013",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S007",
+   "to": "THM-S013",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S008",
+   "to": "THM-S013",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S009",
+   "to": "THM-S013",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S011",
+   "to": "THM-S013",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S012",
+   "to": "THM-S013",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S010",
+   "to": "THM-S014",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-L011",
+   "to": "THM-S015",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S008",
+   "to": "THM-S015",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S015",
+   "to": "THM-S016",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S016",
+   "to": "THM-S017",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S017",
+   "to": "THM-S018",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S018",
+   "to": "THM-S019",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G006",
+   "to": "THM-S019",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S018",
+   "to": "THM-S020",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S019",
+   "to": "THM-S020",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-L001",
+   "to": "THM-C001",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-L004",
+   "to": "THM-C001",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-L007",
+   "to": "THM-C001",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-L008",
+   "to": "THM-C001",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-L009",
+   "to": "THM-C001",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G003",
+   "to": "THM-C002",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G009",
+   "to": "THM-C002",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G014",
+   "to": "THM-C002",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G015",
+   "to": "THM-C002",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G016",
+   "to": "THM-C002",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-G020",
+   "to": "THM-C003",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S005",
+   "to": "THM-C004",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S006",
+   "to": "THM-C004",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S008",
+   "to": "THM-C004",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S009",
+   "to": "THM-C004",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S016",
+   "to": "THM-C004",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S020",
+   "to": "THM-C004",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-S012",
+   "to": "THM-C004",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-C001",
+   "to": "THM-C005",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-C002",
+   "to": "THM-C005",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-C003",
+   "to": "THM-C005",
+   "kind": "proof_depends_on"
+  },
+  {
+   "from": "THM-C004",
+   "to": "THM-C005",
+   "kind": "proof_depends_on"
+  }
+ ],
+ "open_edges": [
+  {
+   "edge": "intrinsic Spin infinitesimal structure <-> gB / gBLie",
+   "from_label": "Lie(SpinGroup) (does not exist in this repository)",
+   "to_label": "OBJ-043 / OBJ-044 (gB / gBLie)",
+   "status": "OPEN",
+   "claim_id": "CLAIM-B010",
+   "problem_id": "OP-012"
+  },
+  {
+   "edge": "d-rho-e : differential of the native Spin cover",
+   "from_label": "Lie(SpinGroup) (does not exist in this repository)",
+   "to_label": "OBJ-043 (gB)",
+   "status": "OPEN",
+   "claim_id": "CLAIM-B011",
+   "problem_id": "OP-012"
+  },
+  {
+   "edge": "native shared Spin connection built from that infinitesimal structure",
+   "from_label": "infinitesimal Spin -> Lorentz map (does not exist)",
+   "to_label": "connection, parallel transport, holonomy, curvature (do not exist)",
+   "status": "OPEN",
+   "claim_id": "CLAIM-B003",
+   "problem_id": "OP-002"
+  }
+ ]
+}

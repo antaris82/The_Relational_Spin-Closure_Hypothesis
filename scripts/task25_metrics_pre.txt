@@ -1,0 +1,61 @@
+prefixes                 : RequestProject.Spine.Nerve
+modules                  : 81
+Lean LOC                 : 17208
+internal import edges    : 117
+all project import edges : 122
+max internal depth       : 45
+longest internal chain   :
+    RequestProject.Spine.Nerve.Task24AxiomAudit
+    RequestProject.Spine.Nerve.Task24FiniteTargetDecomp
+    RequestProject.Spine.Nerve.Task24RelativeCellSum
+    RequestProject.Spine.Nerve.Task23CellSum
+    RequestProject.Spine.Nerve.Task23StandardCellExcision
+    RequestProject.Spine.Nerve.Task23Excision
+    RequestProject.Spine.Nerve.Task23RelativeHomotopy
+    RequestProject.Spine.Nerve.Task23PushoutRetraction
+    RequestProject.Spine.Nerve.Task23SkeletonTopology
+    RequestProject.Spine.Nerve.Task22CellSeparation
+    RequestProject.Spine.Nerve.Task22RelJCompatibility
+    RequestProject.Spine.Nerve.Task22FiniteCellAdditivity
+    RequestProject.Spine.Nerve.Task21SingleCellRelJ
+    RequestProject.Spine.Nerve.Task21Normalization
+    RequestProject.Spine.Nerve.Task20CanonicalGenerator
+    RequestProject.Spine.Nerve.Task20Cover
+    RequestProject.Spine.Nerve.Task20FaceMaps
+    RequestProject.Spine.Nerve.Task19StandardCellGenerator
+    RequestProject.Spine.Nerve.Task19FundamentalClass
+    RequestProject.Spine.Nerve.Task19StandardCellHomology
+    RequestProject.Spine.Nerve.Task19BoundaryHomology
+    RequestProject.Spine.Nerve.Task19BoundaryCover
+    RequestProject.Spine.Nerve.Task19MayerVietoris
+    RequestProject.Spine.Nerve.Task19PairLES
+    RequestProject.Spine.Nerve.Task19Transport
+    RequestProject.Spine.Nerve.Task19HZero
+    RequestProject.Spine.Nerve.Task18Contractible
+    RequestProject.Spine.Nerve.Task17StandardCellTopology
+    RequestProject.Spine.Nerve.Task16Consequences
+    RequestProject.Spine.Nerve.Task16PointModel
+    RequestProject.Spine.Nerve.Task15RealizationMono
+    RequestProject.Spine.Nerve.Task15Pushout
+    RequestProject.Spine.Nerve.Task14Blocker
+    RequestProject.Spine.Nerve.Task14Comparison
+    RequestProject.Spine.Nerve.Task14RelativeLES
+    RequestProject.Spine.Nerve.Task14RelativeChains
+    RequestProject.Spine.Nerve.Task13CanonicalMap
+    RequestProject.Spine.Nerve.Task13Skeletal
+    RequestProject.Spine.Nerve.Task13Normalization
+    RequestProject.Spine.Nerve.UnitChainMap
+    RequestProject.Spine.Nerve.CochainMap
+    RequestProject.Spine.Nerve.ChainMap
+    RequestProject.Spine.Nerve.Realization
+    RequestProject.Spine.Nerve.CochainComparison
+    RequestProject.Spine.Nerve.CoverNerveSSet
+closure of RequestProject.Spine.Nerve.Task24FiniteTargetDecomp:
+    project-local modules : 69
+    within prefixes       : 61
+closure of RequestProject.Spine.Nerve.Task23FiniteTargetDecomp:
+    project-local modules : 65
+    within prefixes       : 57
+closure of RequestProject.Spine.Nerve.Task22RelJCompatibility:
+    project-local modules : 57
+    within prefixes       : 49

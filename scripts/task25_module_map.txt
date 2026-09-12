@@ -1,0 +1,80 @@
+# Task 25 : old (chronological) module -> new (content-based) module.
+# Generic algebraic topology (no Nerve-specific object in any statement).
+RequestProject.Spine.Nerve.Task13Normalization      RequestProject.Spine.AlgebraicTopology.Normalization
+RequestProject.Spine.Nerve.Task13Skeletal           RequestProject.Spine.AlgebraicTopology.SimplicialSkeleton
+RequestProject.Spine.Nerve.Task14SkeletalAttachment RequestProject.Spine.AlgebraicTopology.SkeletalAttachment
+RequestProject.Spine.Nerve.Task14RelativeChains     RequestProject.Spine.AlgebraicTopology.RelativeChains
+RequestProject.Spine.Nerve.Task14RelativeLES        RequestProject.Spine.AlgebraicTopology.RelativeLES
+RequestProject.Spine.Nerve.Task18Affine             RequestProject.Spine.AlgebraicTopology.AffineSimplices
+RequestProject.Spine.Nerve.Task18LinearSubdivision  RequestProject.Spine.AlgebraicTopology.LinearSubdivision
+RequestProject.Spine.Nerve.Task18Subdivision        RequestProject.Spine.AlgebraicTopology.Subdivision
+RequestProject.Spine.Nerve.Task18Mesh               RequestProject.Spine.AlgebraicTopology.Mesh
+RequestProject.Spine.Nerve.Task18ChainPrism         RequestProject.Spine.AlgebraicTopology.ChainHomotopy
+RequestProject.Spine.Nerve.Task18SmallSimplices     RequestProject.Spine.AlgebraicTopology.SmallSimplices
+RequestProject.Spine.Nerve.Task18Excision           RequestProject.Spine.AlgebraicTopology.Excision
+RequestProject.Spine.Nerve.Task18Contractible       RequestProject.Spine.AlgebraicTopology.Contractible
+RequestProject.Spine.Nerve.Task19Homology           RequestProject.Spine.AlgebraicTopology.SingularHomology
+RequestProject.Spine.Nerve.Task19Transport          RequestProject.Spine.AlgebraicTopology.SingularHomotopy
+RequestProject.Spine.Nerve.Task19HZero              RequestProject.Spine.AlgebraicTopology.SingularHZero
+RequestProject.Spine.Nerve.Task19PairLES            RequestProject.Spine.AlgebraicTopology.PairLES
+RequestProject.Spine.Nerve.Task19Discrete           RequestProject.Spine.AlgebraicTopology.DiscreteHomology
+RequestProject.Spine.Nerve.Task19Reduced            RequestProject.Spine.AlgebraicTopology.ReducedHomology
+RequestProject.Spine.Nerve.Task19MayerVietoris      RequestProject.Spine.AlgebraicTopology.MayerVietoris
+RequestProject.Spine.Nerve.Task19SphereGeometry     RequestProject.Spine.AlgebraicTopology.SphereCover
+RequestProject.Spine.Nerve.Task21Normalization      RequestProject.Spine.AlgebraicTopology.NormalizationNaturality
+RequestProject.Spine.Nerve.Task23FinsuppComplex     RequestProject.Spine.AlgebraicTopology.DirectSumComplex
+# Nerve : basic cover / realization / canonical comparison
+RequestProject.Spine.Nerve.CoverNerveSSet           RequestProject.Spine.Nerve.Basic.Cover
+RequestProject.Spine.Nerve.Realization              RequestProject.Spine.Nerve.Basic.Realization
+RequestProject.Spine.Nerve.ChainMap                 RequestProject.Spine.Nerve.Basic.ChainMap
+RequestProject.Spine.Nerve.UnitChainMap             RequestProject.Spine.Nerve.Basic.UnitChainMap
+RequestProject.Spine.Nerve.Task13CanonicalMap       RequestProject.Spine.Nerve.Basic.CanonicalMap
+# Nerve : the Cech cochain comparison branch
+RequestProject.Spine.Nerve.CochainMap               RequestProject.Spine.Nerve.Cochain.CochainMap
+RequestProject.Spine.Nerve.CochainComparison        RequestProject.Spine.Nerve.Cochain.CochainComparison
+RequestProject.Spine.Nerve.Dualization              RequestProject.Spine.Nerve.Cochain.Dualization
+RequestProject.Spine.Nerve.ComparisonSpec           RequestProject.Spine.Nerve.Cochain.ComparisonSpec
+RequestProject.Spine.Nerve.ChainHomotopyComparison  RequestProject.Spine.Nerve.Cochain.ChainHomotopyComparison
+# Nerve : skeleton / pushout geometry
+RequestProject.Spine.Nerve.Task15Pushout            RequestProject.Spine.Nerve.Skeleton.Pushout
+RequestProject.Spine.Nerve.Task15RealizationMono    RequestProject.Spine.Nerve.Skeleton.RealizationMono
+# Nerve : point-set geometry of realizations
+RequestProject.Spine.Nerve.Task16PointModel         RequestProject.Spine.Nerve.Geometry.PointModel
+RequestProject.Spine.Nerve.Task16Consequences       RequestProject.Spine.Nerve.Geometry.RealizedBoundary
+RequestProject.Spine.Nerve.Task17StandardCellTopology RequestProject.Spine.Nerve.Geometry.StandardSimplex
+RequestProject.Spine.Nerve.Task17BoundarySphere     RequestProject.Spine.Nerve.Geometry.BoundarySphere
+RequestProject.Spine.Nerve.Task20Coords             RequestProject.Spine.Nerve.Geometry.BarycentricRetraction
+RequestProject.Spine.Nerve.Task22CellSeparation     RequestProject.Spine.Nerve.Geometry.CellSeparation
+RequestProject.Spine.Nerve.Task23PuncturedCell      RequestProject.Spine.Nerve.Geometry.PuncturedSimplex
+RequestProject.Spine.Nerve.Task23SkeletonTopology   RequestProject.Spine.Nerve.Geometry.CellNeighborhood
+RequestProject.Spine.Nerve.Task23PushoutRetraction  RequestProject.Spine.Nerve.Geometry.PushoutRetraction
+RequestProject.Spine.Nerve.Task23RelativeHomotopy   RequestProject.Spine.Nerve.Geometry.RelativeHomotopy
+# Nerve : the standard cell
+RequestProject.Spine.Nerve.Task19BoundaryCover      RequestProject.Spine.Nerve.StandardCell.BoundaryCover
+RequestProject.Spine.Nerve.Task19BoundaryHomology   RequestProject.Spine.Nerve.StandardCell.BoundaryHomology
+RequestProject.Spine.Nerve.Task19StandardCellHomology RequestProject.Spine.Nerve.StandardCell.Homology
+RequestProject.Spine.Nerve.Task19FundamentalClass   RequestProject.Spine.Nerve.StandardCell.FundamentalClass
+RequestProject.Spine.Nerve.Task19StandardCellGenerator RequestProject.Spine.Nerve.StandardCell.Generator
+RequestProject.Spine.Nerve.Task20FaceMaps           RequestProject.Spine.Nerve.StandardCell.FaceMaps
+RequestProject.Spine.Nerve.Task20Cover              RequestProject.Spine.Nerve.StandardCell.BoundaryTwoSetCover
+RequestProject.Spine.Nerve.Task20CanonicalGenerator RequestProject.Spine.Nerve.StandardCell.CanonicalGenerator
+RequestProject.Spine.Nerve.Task21SingleCellRelJ     RequestProject.Spine.Nerve.StandardCell.RelativeComparison
+RequestProject.Spine.Nerve.Task23StandardCellExcision RequestProject.Spine.Nerve.StandardCell.Excision
+# Nerve : the cell family
+RequestProject.Spine.Nerve.Task23CellSum            RequestProject.Spine.Nerve.CellFamily.SingularFactorization
+RequestProject.Spine.Nerve.Task23Excision           RequestProject.Spine.Nerve.CellFamily.ExcisionCompatibility
+RequestProject.Spine.Nerve.Task24RelativeCellSum    RequestProject.Spine.Nerve.CellFamily.RelativeChainDecomposition
+RequestProject.Spine.Nerve.Task24FiniteTargetDecomp RequestProject.Spine.Nerve.CellFamily.TargetDecomposition
+# Nerve : the canonical simplicial-singular comparison
+RequestProject.Spine.Nerve.Task14Comparison         RequestProject.Spine.Nerve.Comparison.RelativeMap
+RequestProject.Spine.Nerve.Task14Blocker            RequestProject.Spine.Nerve.Comparison.Blockers
+RequestProject.Spine.Nerve.Task15BaseCase           RequestProject.Spine.Nerve.Comparison.BaseCase
+RequestProject.Spine.Nerve.Task22FiniteCellAdditivity RequestProject.Spine.Nerve.Comparison.SourceDecomposition
+RequestProject.Spine.Nerve.Task22RelJCompatibility  RequestProject.Spine.Nerve.Comparison.FamilyCompatibility
+RequestProject.Spine.Nerve.Task23FiniteTargetDecomp RequestProject.Spine.Nerve.Comparison.FiniteCriterion
+# Controls, probes and audits (leaves; never imported by production)
+RequestProject.Spine.Nerve.Task11Probe              RequestProject.Spine.Nerve.Controls.UnitProbe
+RequestProject.Spine.Nerve.Task12Probe              RequestProject.Spine.Nerve.Controls.GeneratorProbe
+RequestProject.Spine.Nerve.Task14Controls           RequestProject.Spine.Nerve.Controls.ComparisonControls
+RequestProject.Spine.Nerve.Task13PinAudit           RequestProject.Spine.Nerve.Audit.CanonicalPin
+RequestProject.Spine.Nerve.ManifoldAssumptionAudit  RequestProject.Spine.Nerve.Audit.ManifoldAssumptions

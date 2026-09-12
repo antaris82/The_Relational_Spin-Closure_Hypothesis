@@ -1,0 +1,96 @@
+claim_id	formal_status	theorem_id	lean_name	module	task	scope
+CLAIM-L001	DOCUMENTED_ONLY	-	-	-	-	Definitional; it fixes what 'primitive' means for every later claim.
+CLAIM-L002	PROVED	THM-L001	SpinCore.lorentz_quadratic_form	RequestProject.Spine.E1.Core	T1-T9	Pure linear algebra of the carrier.
+CLAIM-L003	PROVED	THM-L002	SpinCore.clifford_generator_square	RequestProject.Spine.E1.Core	T1-T9	The intrinsic Clifford layer.
+CLAIM-L004	PROVED	THM-L003	SpinCore.paravector_norm	RequestProject.Spine.E1.Core	T1-T9	Bridge from the Euclidean Clifford algebra to Lorentz signature.
+CLAIM-L005	PROVED	THM-L004	SpinCore.clifford_jordan	RequestProject.Spine.E1.Clifford	T1-T9	Consistency of the two algebraic layers used by the project.
+CLAIM-L006	PROVED	THM-L005	SpinCore.adjoin_spinToCl_eq_top	RequestProject.Spine.E1.Clifford	T1-T9	Minimality of the Clifford layer over the carrier.
+CLAIM-L007	PROVED	THM-L006	SpinCore.spin_double_cover_of_lorentz	RequestProject.Spine.E1.Core	T1-T9	The local Spin/Lorentz core.
+CLAIM-L007	PROVED	THM-L007	SpinCore.spin_double_cover_bundled	RequestProject.Spine.E1.Core	T1-T9	The local Spin/Lorentz core.
+CLAIM-L008	PROVED	THM-L008	SpinCore.spin_double_cover_topological_endpoint	RequestProject.Spine.E1.Core	T1-T9	Topological, not smooth, qualification.
+CLAIM-L009	PROVED	THM-L009	SpinCore.spin_double_cover_local_section_endpoint	RequestProject.Spine.E1.Core	T1-T9	What makes the native projection an InternalProjection instance.
+CLAIM-L010	PROVED	THM-L010	Task37.Deformation.transportState_add	RequestProject.Spine.Deformation.SharedTransport	T37	The single Spin-side source of the Task-37/38 experiment: a selected control slice through the intrinsic Spin structure, not a classification of deformation directions.
+CLAIM-L010	PROVED	THM-L011	Task37.Deformation.projectedTransportState_apply	RequestProject.Spine.Deformation.ProjectedParaAction	T38	The single Spin-side source of the Task-37/38 experiment: a selected control slice through the intrinsic Spin structure, not a classification of deformation directions.
+CLAIM-G001	PROVED	THM-G001	EmergentBase.base_not_determined_by_local_pieces	RequestProject.Spine.Emergent.NonDerivability	T32	Statement about the reconstruction primitive.
+CLAIM-G002	PROVED	THM-G002	EmergentBase.BaseGluingData.isManifold_of_smoothGluing	RequestProject.Spine.Emergent.SmoothStructure	T33	Topological reconstruction step.
+CLAIM-G003	PROVED	THM-G002	EmergentBase.BaseGluingData.isManifold_of_smoothGluing	RequestProject.Spine.Emergent.SmoothStructure	T33	The smooth gate.
+CLAIM-G004	PROVED	THM-G003	EmergentBase.BaseGluingData.smoothEmergentManifoldCertificate	RequestProject.Spine.Emergent.SmoothStructure	T33	The emergent-manifold endpoint.
+CLAIM-G005	PROVED	THM-G004	EmergentBase.BaseGluingData.tangentTransition_eq_derivative_baseTransition	RequestProject.Spine.Emergent.TangentTransition	T34	Genuine tangent geometry, not a postulated model fibre.
+CLAIM-G006	PROVED	THM-G005	SpinNative.tangent_spin_base_data_do_not_force_transition_identification	RequestProject.Spine.Solder.Independence	T34	Isolates the solder primitive.
+CLAIM-G007	NEGATIVE_CONTROL	THM-G007	SpinNative.weak_solder_not_regular	RequestProject.Spine.Solder.WeakInsufficiency	T35	Explicit counterexample on a flat one-chart base.
+CLAIM-G008	PROVED	THM-G008	SpinNative.smooth_solder_iff_regular_bundle_equivalence	RequestProject.Spine.Solder.BundleEquivalence	T35	The coupling primitive has no hidden content beyond a bundle equivalence at this regularity; the certified Lorentz-side smoothness is that of the projected transition representatives in chart coordinates.
+CLAIM-G008	PROVED	THM-G015	Task36.nonempty_regularBundleCertificate_iff	RequestProject.Spine.Task36.SmoothBundlePackaging	T36	The coupling primitive has no hidden content beyond a bundle equivalence at this regularity; the certified Lorentz-side smoothness is that of the projected transition representatives in chart coordinates.
+CLAIM-G009	PROVED	THM-G009	SpinNative.SmoothTangentSolderData.smooth_tangent_lorentz_metric	RequestProject.Spine.Solder.SmoothMetric	T35	The Lorentzian tangent geometry of the regular-solder sector.
+CLAIM-G010	PROVED	THM-G006	SpinNative.TangentSolderData.tangentMetric_wellDefined	RequestProject.Spine.Solder.Solder	T34	Well-definedness of the induced metric.
+CLAIM-G011	PROVED_PROJECT_NATIVE	THM-G010	Task36.smooth_solder_implies_orientation_compatible	RequestProject.Spine.Task36.OrientationGate	T36	Project-native orientation gate.
+CLAIM-G011	PROVED_PROJECT_NATIVE	THM-G014	Task36.classical_reconvergence	RequestProject.Spine.Task36.SpinObstruction	T36	Project-native orientation gate.
+CLAIM-G012	PROVED_PROJECT_NATIVE	THM-G011	Task36.orientation_obstruction_nonzero_implies_no_solder	RequestProject.Spine.Task36.OrientationGate	T36	Contrapositive gate.
+CLAIM-G013	PROVED_PROJECT_NATIVE	THM-G012	Task36.smooth_solder_implies_spin_obstruction_trivial	RequestProject.Spine.Task36.SpinObstruction	T36	Project-native Spin gate.
+CLAIM-G013	PROVED_PROJECT_NATIVE	THM-G014	Task36.classical_reconvergence	RequestProject.Spine.Task36.SpinObstruction	T36	Project-native Spin gate.
+CLAIM-G014	PROVED_PROJECT_NATIVE	THM-G013	Task36.spin_obstruction_nonzero_implies_no_solder	RequestProject.Spine.Task36.SpinObstruction	T36	Contrapositive Spin gate.
+CLAIM-G015	PROVED	THM-G016	Task36.nonempty_timeOrientationReduction_of_solder	RequestProject.Spine.Task36.TimeOrientation	T36	Project-native time-orientation datum.
+CLAIM-G015	PROVED	THM-G017	Task36.loop_timeOrientationReduction_isGlued	RequestProject.Spine.Task36.LoopTimeOrientation	T36	Project-native time-orientation datum.
+CLAIM-G016	PROVED	THM-G018	Task36.regular_solder_is_gauge_torsor	RequestProject.Spine.Task36.GaugeGroup	T36	The exact gauge freedom of the coupling.
+CLAIM-G016	PROVED	THM-G019	SpinNative.SmoothTangentSolderData.regular_solder_torsor	RequestProject.Spine.Solder.RegularGauge	T35	The exact gauge freedom of the coupling.
+CLAIM-G017	NEGATIVE_CONTROL	THM-G022	Task36.orientation_reversing_gluing_no_solder	RequestProject.Spine.Task36.OrientationReversing	T36	Explicit adversarial model.
+CLAIM-G018	PROVED_PROJECT_NATIVE	THM-G020	Task36.one_loop_has_kernel_sign_freedom	RequestProject.Spine.Task36.LoopSpinFreedom	T36	The construction has not accidentally canonized the Spin structure.
+CLAIM-G019	PROVED_PROJECT_NATIVE	THM-G021	Task36.two_loop_spin_choice_family	RequestProject.Spine.Task36.LoopSpinFreedom	T36	Instantiation of the 2^N pattern at N = 2.
+CLAIM-G020	PROVED_PROJECT_NATIVE	THM-G011	Task36.orientation_obstruction_nonzero_implies_no_solder	RequestProject.Spine.Task36.OrientationGate	T36	Sensitivity of the two gates.
+CLAIM-G020	PROVED_PROJECT_NATIVE	THM-G013	Task36.spin_obstruction_nonzero_implies_no_solder	RequestProject.Spine.Task36.SpinObstruction	T36	Sensitivity of the two gates.
+CLAIM-G020	PROVED_PROJECT_NATIVE	THM-G022	Task36.orientation_reversing_gluing_no_solder	RequestProject.Spine.Task36.OrientationReversing	T36	Sensitivity of the two gates.
+CLAIM-G021	PROVED	THM-G026	Task36.adversarial_global_topology_certificate	RequestProject.Spine.Task36.Certificate	T36	Aggregate certificate.
+CLAIM-G022	CONSTRUCTED_CONTROL	THM-G025	Task36.oneChart_positive_control	RequestProject.Spine.Task36.TrivialControl	T36	The control geometry used by Tasks 36-39.
+CLAIM-G022	CONSTRUCTED_CONTROL	THM-G020	Task36.one_loop_has_kernel_sign_freedom	RequestProject.Spine.Task36.LoopSpinFreedom	T36	The control geometry used by Tasks 36-39.
+CLAIM-S001	CONSTRUCTED_CONTROL	THM-S004	Task37.Deformation.controlAAdmissible_zero	RequestProject.Spine.Deformation.FixedBaseSmokeTest	T38	This control base and this family only.
+CLAIM-S001	CONSTRUCTED_CONTROL	THM-S005	Task37.Deformation.controlAAdmissible_all	RequestProject.Spine.Deformation.FixedBaseSmokeTest	T38	This control base and this family only.
+CLAIM-S001	CONSTRUCTED_CONTROL	THM-S013	Task37.Deformation.native_transport_knob_smoketest_certificate	RequestProject.Spine.Deformation.SmokeTestCertificate	T38	This control base and this family only.
+CLAIM-S002	CONSTRUCTED_CONTROL	THM-S006	Task37.Deformation.regularRegion_loopTransportFamily	RequestProject.Spine.Deformation.FixedBaseSmokeTest	T38	This control only.
+CLAIM-S003	CONSTRUCTED_CONTROL	THM-S007	Task37.Deformation.controlAAdmissible_neg_iff	RequestProject.Spine.Deformation.FixedBaseSmokeTest	T38	This control only.
+CLAIM-S004	CONSTRUCTED_CONTROL	THM-S008	Task37.Deformation.spinCocycle_gaugeEquiv	RequestProject.Spine.Deformation.CocycleGaugeOrbit	T38	This control and this family only.
+CLAIM-S005	CONSTRUCTED_CONTROL	THM-S009	Task37.Deformation.projectedCocycle_gaugeEquiv	RequestProject.Spine.Deformation.CocycleGaugeOrbit	T38	This control only.
+CLAIM-S006	CONSTRUCTED_CONTROL	THM-S010	Task37.Deformation.not_kernelGaugeEquiv_of_ne_zero	RequestProject.Spine.Deformation.CocycleGaugeOrbit	T38	This control only.
+CLAIM-S006	CONSTRUCTED_CONTROL	THM-S014	Task37.Deformation.smoketest_negative_records	RequestProject.Spine.Deformation.SmokeTestCertificate	T38	This control only.
+CLAIM-S007	CONSTRUCTED_CONTROL	THM-S005	Task37.Deformation.controlAAdmissible_all	RequestProject.Spine.Deformation.FixedBaseSmokeTest	T38	This control only; a cover without such room is not covered.
+CLAIM-S008	CONSTRUCTED_CONTROL	THM-S011	Task37.Deformation.loopParaSolder_A_comparison	RequestProject.Spine.Deformation.TangentMetricComparison	T38	The explicit certified branch on this control.
+CLAIM-S008	CONSTRUCTED_CONTROL	THM-S012	Task37.Deformation.tangentMetric_loopParaSolder_eq	RequestProject.Spine.Deformation.TangentMetricComparison	T38	The explicit certified branch on this control.
+CLAIM-S009	CONSTRUCTED_CONTROL	THM-S015	Task37.Deformation.loopProjectedGauge_eq	RequestProject.Spine.Deformation.SmoothProjectedGauge	T39	This control only.
+CLAIM-S009	CONSTRUCTED_CONTROL	THM-S016	Task37.Deformation.contDiffOn_loopProjectedGauge	RequestProject.Spine.Deformation.SmoothProjectedGauge	T39	This control only.
+CLAIM-S010	CONSTRUCTED_CONTROL	THM-S019	Task37.Deformation.tangentMetric_loopSolderTransport	RequestProject.Spine.Deformation.SolderTransport	T39	This control only; the transport uses the smoothness of CLAIM-S009. THM-S017 and THM-S018 are the definitions (constructions) the theorems are about; they are listed in supporting_construction_ids and are not proofs.
+CLAIM-S010	CONSTRUCTED_CONTROL	THM-S020	Task37.Deformation.loopSolderSolutionSpace_correspondence	RequestProject.Spine.Deformation.SolderTransport	T39	This control only; the transport uses the smoothness of CLAIM-S009. THM-S017 and THM-S018 are the definitions (constructions) the theorems are about; they are listed in supporting_construction_ids and are not proofs.
+CLAIM-S010	CONSTRUCTED_CONTROL	THM-S021	Task37.Deformation.loopSolderTransport_involutive	RequestProject.Spine.Deformation.SolderTransport	T39	This control only; the transport uses the smoothness of CLAIM-S009. THM-S017 and THM-S018 are the definitions (constructions) the theorems are about; they are listed in supporting_construction_ids and are not proofs.
+CLAIM-S011	DOCUMENTED_ONLY	THM-S013	Task37.Deformation.native_transport_knob_smoketest_certificate	RequestProject.Spine.Deformation.SmokeTestCertificate	T38	An interpretation of the certified statements, scoped to the control.
+CLAIM-S011	DOCUMENTED_ONLY	THM-C004	Closure.smoketest_certificate	RequestProject.Spine.Closure.IntermediateMilestone	T39	An interpretation of the certified statements, scoped to the control.
+CLAIM-N001	NEGATIVE_CONTROL	THM-G007	SpinNative.weak_solder_not_regular	RequestProject.Spine.Solder.WeakInsufficiency	T35	One explicit model.
+CLAIM-N002	NEGATIVE_CONTROL	THM-G007	SpinNative.weak_solder_not_regular	RequestProject.Spine.Solder.WeakInsufficiency	T35	Same model as CLAIM-N001.
+CLAIM-N003	NEGATIVE_CONTROL	THM-G022	Task36.orientation_reversing_gluing_no_solder	RequestProject.Spine.Task36.OrientationReversing	T36	One explicit model.
+CLAIM-N004	NEGATIVE_CONTROL	THM-G020	Task36.one_loop_has_kernel_sign_freedom	RequestProject.Spine.Task36.LoopSpinFreedom	T36	Abstract control over an arbitrary base with a two-patch cover.
+CLAIM-N005	NEGATIVE_CONTROL	THM-G020	Task36.one_loop_has_kernel_sign_freedom	RequestProject.Spine.Task36.LoopSpinFreedom	T36	Fixed cover.
+CLAIM-N005	NEGATIVE_CONTROL	THM-G021	Task36.two_loop_spin_choice_family	RequestProject.Spine.Task36.LoopSpinFreedom	T36	Fixed cover.
+CLAIM-N006	NEGATIVE_CONTROL	THM-S001	Task37.Deformation.not_forall_regularClosureAdmissible	RequestProject.Spine.Deformation.ClosureAdmissibility	T37	Constructed families.
+CLAIM-N006	NEGATIVE_CONTROL	THM-S002	Task37.Deformation.selective_family_not_admissible_of_ne	RequestProject.Spine.Deformation.ClosureAdmissibility	T37	Constructed families.
+CLAIM-N007	NEGATIVE_CONTROL	THM-S010	Task37.Deformation.not_kernelGaugeEquiv_of_ne_zero	RequestProject.Spine.Deformation.CocycleGaugeOrbit	T38	This control only.
+CLAIM-N007	NEGATIVE_CONTROL	THM-S014	Task37.Deformation.smoketest_negative_records	RequestProject.Spine.Deformation.SmokeTestCertificate	T38	This control only.
+CLAIM-N008	NEGATIVE_CONTROL	THM-G024	Task36.spin_foam_labels_do_not_determine_solder	RequestProject.Spine.Task36.SpinFoamControl	T36	The project's own label structure.
+CLAIM-N009	NEGATIVE_CONTROL	THM-G023	Task36.spin_does_not_imply_lorentz_moebius	RequestProject.Spine.Task36.SpinNotLorentz	T36	One explicit model.
+CLAIM-N010	NEGATIVE_CONTROL	THM-G025	Task36.oneChart_positive_control	RequestProject.Spine.Task36.TrivialControl	T36	Trivial topology.
+CLAIM-B001	INFRASTRUCTURE_BLOCKED	-	-	-	-	Regularity boundary of the whole Spin side.
+CLAIM-B002	INFRASTRUCTURE_BLOCKED	-	-	-	-	Interpretation boundary of the reconvergence result.
+CLAIM-B003	OPEN	-	-	-	-	The principal boundary of the present phase.
+CLAIM-B004	OPEN	-	-	-	-	Interpretation boundary of the control geometry.
+CLAIM-B005	OPEN	-	-	-	-	Interpretation boundary of the multiplicity results.
+CLAIM-B006	OPEN	-	-	-	-	Interpretation boundary of CLAIM-G015.
+CLAIM-B007	OPEN	-	-	-	-	Scope boundary of CLAIM-G009 to CLAIM-G015.
+CLAIM-B008	OPEN	-	-	-	-	The outermost boundary of the project.
+CLAIM-B009	OPEN	-	-	-	-	Research direction.
+CLAIM-G023	PROVED	THM-C001	Closure.local_core_certificate	RequestProject.Spine.Closure.IntermediateMilestone	T39	Aggregation only; no new mathematics.
+CLAIM-G023	PROVED	THM-C002	Closure.global_layer_certificate	RequestProject.Spine.Closure.IntermediateMilestone	T39	Aggregation only; no new mathematics.
+CLAIM-G023	PROVED	THM-C003	Closure.fixed_cover_lift_freedom_certificate	RequestProject.Spine.Closure.IntermediateMilestone	T39	Aggregation only; no new mathematics.
+CLAIM-G023	PROVED	THM-C004	Closure.smoketest_certificate	RequestProject.Spine.Closure.IntermediateMilestone	T39	Aggregation only; no new mathematics.
+CLAIM-G023	PROVED	THM-C005	Closure.intermediate_milestone_certificate	RequestProject.Spine.Closure.IntermediateMilestone	T39	Aggregation only; no new mathematics.
+CLAIM-S012	CONSTRUCTED_CONTROL	THM-S003	Task37.Deformation.controlA_interface_certificate	RequestProject.Spine.Deformation.SmokeTestCertificate	T38	This control only.
+CLAIM-L011	PROVED	THM-L012	SpinCore.finrank_gB	RequestProject.Spine.E1.LieAlgebra	T10	An algebraic statement about the intrinsic Lorentz sector; no topology, no smooth structure, no Spin group.
+CLAIM-L011	PROVED	THM-L013	SpinCore.gBLie_bracket	RequestProject.Spine.E1.LieAlgebra	T10	An algebraic statement about the intrinsic Lorentz sector; no topology, no smooth structure, no Spin group.
+CLAIM-L011	PROVED	THM-L014	SpinCore.bivectorEquivSkew_wedge	RequestProject.Spine.E1.LieAlgebra	T10	An algebraic statement about the intrinsic Lorentz sector; no topology, no smooth structure, no Spin group.
+CLAIM-L011	PROVED	THM-L015	SpinCore.gB_bracket_mem	RequestProject.Spine.E1.Bivector	T10	An algebraic statement about the intrinsic Lorentz sector; no topology, no smooth structure, no Spin group.
+CLAIM-B010	OPEN	-	-	-	-	The first open edge of the next phase.
+CLAIM-B011	OPEN	-	-	-	-	A future architectural requirement, not a current theorem.
