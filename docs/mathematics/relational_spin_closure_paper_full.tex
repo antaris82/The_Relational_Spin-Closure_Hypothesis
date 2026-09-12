@@ -1,0 +1,2524 @@
+% !TeX program = pdflatex
+% ======================================================================
+% The Relational Spin-Closure Hypothesis
+% Mathematical paper draft, dependency-ordered and theorem-centred.
+%
+% Source of mathematical truth for this draft:
+% current Lean source in
+% https://github.com/antaris82/The_Relational_Spin-Closure_Hypothesis
+%
+% Editorial attribution:
+% Jan Seeck -- Editor
+% ======================================================================
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=27mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[
+  hidelinks,
+  pdftitle={The Relational Spin-Closure Hypothesis: From Euclidean Three-Space to Conditional Lorentzian Spin Geometry},
+  pdfauthor={Jan Seeck (Editor)},
+  pdfsubject={Conditional reconstruction from Euclidean three-space to Lorentzian Spin geometry}
+]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+
+\setlength{\parindent}{1.4em}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{topsep=.4em,itemsep=.2em}
+\setlist[enumerate]{topsep=.4em,itemsep=.2em}
+
+% ----------------------------------------------------------------------
+% Theorem environments
+% ----------------------------------------------------------------------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{construction}[theorem]{Construction}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{boundary}[theorem]{Boundary statement}
+\newtheorem{control}[theorem]{Control}
+
+% ----------------------------------------------------------------------
+% Notation
+% ----------------------------------------------------------------------
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Ztwo}{\mathbb{Z}/2}
+\newcommand{\Smodel}{\mathcal{S}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\SpinG}{G_{\mathrm{Spin}}}
+\newcommand{\LorG}{G_{\mathrm{Lor}}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\kerop}{\operatorname{ker}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\Int}{\operatorname{Int}}
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\Cech}{\ifmmode\text{\v{C}ech}\else\v{C}ech\fi}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\gB}{\mathfrak{g}_{B}}
+\newcommand{\wedgeS}{\Lambda^{2}\Smodel}
+\newcommand{\dd}{\,\mathrm{d}}
+
+\newcommand{\statusderived}{\textsc{derived}}
+\newcommand{\statusdatum}{\textsc{additional datum}}
+\newcommand{\statusopen}{\textsc{open}}
+\newcommand{\statusinfra}{\textsc{infrastructure-limited}}
+
+\DeclareMathOperator{\detop}{det}
+
+% ----------------------------------------------------------------------
+% Title
+% ----------------------------------------------------------------------
+
+\title{\textbf{The Relational Spin-Closure Hypothesis}\\[0.35em]
+\large From Euclidean Three-Space to Conditional Lorentzian Spin Geometry}
+
+\author{Edited by Jan Seeck}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study a reconstruction problem whose primitive local input is only the
+standard positive-definite Euclidean space \(V=\R^{3}\).
+From this datum one obtains the real spin factor
+\(\Smodel=\R\oplus V\), its quadratic form
+\(N(a,v)=a^{2}-\langle v,v\rangle\) of signature \((1,3)\), the real
+Clifford algebra \(\Cl(V,q)\), an intrinsic Spin group
+\(\SpinG\), and a surjective central double cover
+\[
+   1\longrightarrow\{\pm1\}
+   \longrightarrow \SpinG
+   \overset{\rho}{\longrightarrow}\LorG
+   \longrightarrow 1
+\]
+of an intrinsically defined proper cone-preserving Lorentz group.
+In parallel, the Lorentz-skew endomorphisms of \(\Smodel\) form a
+six-dimensional Lie algebra \(\gB\) linearly equivalent to
+\(\Lambda^{2}\Smodel\).
+
+The passage from this local algebra to a global base is not automatic.
+We exhibit a theorem-level non-derivability result: identical local pieces
+can be assembled by different incidence data into non-homeomorphic quotient
+spaces.  We therefore isolate explicit base-gluing data and prove that,
+under a closed-gluing-graph condition, countability, and a sufficient
+smoothness condition, the quotient is a Hausdorff second-countable smooth
+four-manifold \(M\).
+
+A second non-derivability result separates the internal Lorentz transition
+system from the genuine tangent transition system \(D\phi_{ij}\).
+Their identification requires an additional regular solder datum.  Conditional
+on such a solder, the intrinsic form on \(\Smodel\) descends to a smooth,
+chart-independent, nondegenerate Lorentzian \((0,2)\)-tensor of signature
+\((1,3)\) on \(TM\); a project-native orientation reduction and a coherent
+future-cone reduction follow.  The same solder identifies the tangent
+Lorentz cocycle with the projection of a native Spin cocycle, forcing the
+project-native orientation and Spin-lifting obstructions to vanish.
+No identification of these project-native obstructions with
+\(w_{1}(TM)\) or \(w_{2}(TM)\) is made.
+
+Finally, on one fixed periodic control, we analyse a selected one-parameter
+Spin transition family generated by a chosen Clifford direction.  Every
+finite parameter value is regularly admissible; all parameters lie in one
+full Spin \Cech\ gauge orbit; and the complete regular-solder solution spaces
+at two parameter values are explicitly bijective with identical induced
+tangent metrics under the correspondence.  This is a scoped negative control
+on a transition-cocycle deformation, not a general deformation
+classification and not a construction of connection, holonomy, curvature,
+or dynamics.
+\end{abstract}
+\clearpage
+
+\tableofcontents
+\clearpage
+
+% ======================================================================
+\section{Introduction}
+% ======================================================================
+
+The construction of a Lorentzian spin geometry is usually formulated after
+a smooth manifold, a Lorentz metric, and the associated frame bundle have
+already been supplied; the Spin structure then appears as a lift of an
+orthonormal frame bundle subject to a topological obstruction
+\cite{LawsonMichelsohn,MilnorStasheff,Steenrod}.  Here the order of
+dependence is deliberately reversed.  The starting object is only
+\[
+   V=\R^{3},\qquad
+   \langle u,v\rangle=u_{1}v_{1}+u_{2}v_{2}+u_{3}v_{3},
+\]
+with no four-dimensional base space, tangent bundle, Lorentz form,
+orientation, Spin bundle, connection, or curvature in the input.
+
+There are then three logically separate reconstruction questions.
+
+First, what local Lorentzian and intrinsic Spin-algebraic structures can be
+constructed from the local Euclidean algebra?  Second, what information must be
+added before local copies of the resulting model can be assembled into a
+global smooth manifold?  Third, after such a manifold has been obtained,
+what additional datum is required to identify the internal Lorentz system
+with its genuine tangent geometry?
+
+The separation of these questions is essential.  A local model is not a
+manifold; fibre transition data do not determine which local base points
+are to be identified; and an internal Lorentz cocycle is not, without
+further structure, the derivative cocycle of a manifold atlas.  We make
+each of these boundaries explicit and place the positive reconstruction
+theorems immediately after the relevant missing datum.
+
+The local algebra belongs to the standard circle of ideas around real
+Clifford algebras, Spin groups, spin factors and Lorentz cones
+\cite{Chevalley,LawsonMichelsohn,JordanNeumannWigner,FarautKoranyi}.
+The global steps use standard quotient, manifold, bundle and \Cech\ ideas
+\cite{LeeSmooth,Husemoller,Steenrod,KobayashiNomizu}, but the point of the
+present organization is not to assume the usual global Lorentzian package
+in advance.  Instead, the precise dependency chain is
+\[
+\boxed{
+\begin{array}{c}
+(\R^{3},\langle\cdot,\cdot\rangle)
+\\[0.25em]\Downarrow\\[-0.15em]
+(\Smodel,N,B,\Cl_{3},\SpinG,\rho,\gB)
+\\[0.25em]
++\;\text{base incidence and gluing}
+\\[-0.05em]\Downarrow\\[-0.15em]
+\text{topological four-manifold candidate}
+\\[0.25em]
++\;\text{closed gluing graph + countable index + smooth gluing}
+\\[-0.05em]\Downarrow\\[-0.15em]
+M^{4},\quad TM,\quad D\phi_{ij}
+\\[0.25em]
++\;\text{regular solder}
+\\[-0.05em]\Downarrow\\[-0.15em]
+(TM,g,\text{orientation reduction},
+\text{ future-cone reduction},
+\text{ native Spin reconvergence}).
+\end{array}}
+\tag{1.1}
+\]
+The boxes marked by plus signs are genuine gates: their inhabitance is not
+derived from the preceding local algebra.
+
+The following six statements organize the paper.
+
+\begin{theorem}[Local reconstruction]
+\label{thm:intro-local}
+From the specified Euclidean datum \(V=\R^{3}\), the construction produces:
+\begin{enumerate}
+\item a four-dimensional real spin factor
+      \(\Smodel=\R\oplus V\) with Lorentz form of signature \((1,3)\);
+\item the real Clifford algebra \(\Cl_{3}=\Cl(V,q)\), with the paravector
+      embedding of \(\Smodel\);
+\item an intrinsic Spin group \(\SpinG\), an intrinsic proper
+      cone-preserving Lorentz group \(\LorG\), and a continuous surjective
+      homomorphism \(\rho:\SpinG\to\LorG\) whose central kernel is exactly
+      \(\{\pm1\}\), together with continuous local sections;
+\item a six-dimensional Lorentz-skew Lie algebra \(\gB\) and a linear
+      equivalence \(\Lambda^{2}\Smodel\simeq\gB\).
+\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[Conditional smooth globalization]
+\label{thm:intro-global}
+The local model does not determine a global base.  Given explicit compatible
+base-incidence/gluing data \(B\), a closed gluing graph, a countable index
+set, and the sufficient condition that the base transition maps are
+\(C^\infty\), the quotient \(M_B\) is a Hausdorff second-countable smooth
+four-manifold modelled on \(\Smodel\).
+\end{theorem}
+
+\begin{theorem}[Tangent--internal independence]
+\label{thm:intro-independence}
+For the reconstructed smooth manifold, the tangent transition system is the
+derivative system \(D\phi_{ij}\).  A coherent native Spin cocycle gives,
+independently, an internal Lorentz transition system
+\(\rho(\widetilde g_{ij})\).  Smooth base gluing together with coherent
+native Spin data does not force these two systems to agree.
+\end{theorem}
+
+\begin{theorem}[Regular solder closure]
+\label{thm:intro-solder}
+A regular solder is an additional smooth local family of fibrewise linear
+equivalences satisfying the exact overlap intertwining law between
+\(D\phi_{ij}\) and \(\rho(\widetilde g_{ij})\).
+Conditional on its existence, it yields a bundle-level equivalence
+certificate between the internal Lorentz bundle and \(TM\), with continuous
+total-space maps in both directions and smooth local representatives.  It
+also induces a smooth Lorentzian tangent metric of signature \((1,3)\).
+\end{theorem}
+
+\begin{theorem}[Global reconvergence]
+\label{thm:intro-reconvergence}
+For every regular solder, the tangent Lorentz transition system in solder
+frames equals the projected native Spin cocycle.  Consequently the
+project-native determinant obstruction is a coboundary and the
+project-native fixed-cover Spin-lifting obstruction is trivial.  A regular
+solder also yields a coherent future-cone reduction.
+\end{theorem}
+
+\begin{theorem}[Selected-control gauge absorption]
+\label{thm:intro-deformation}
+On the fixed periodic control and for the selected one-parameter native Spin
+transition family considered in \cref{sec:deformation}, every finite
+parameter value admits a regular solder.  Any two parameter values define
+full-Spin-\Cech-gauge-equivalent cocycles.  Their complete regular-solder
+solution spaces are explicitly bijective, and corresponding solders induce
+the same tangent Lorentz metric.
+\end{theorem}
+
+The hypotheses in \cref{thm:intro-global,thm:intro-solder} are not cosmetic.
+They are exactly where the construction ceases to be intrinsic to the
+initial Euclidean local data.  In particular, this paper does \emph{not}
+prove an implication
+\[
+   \R^{3}\quad\Longrightarrow\quad\text{a canonical spacetime}.
+\]
+It proves the local implication in \cref{thm:intro-local}, identifies the
+additional global data required to continue, and then proves what follows
+from those data.
+
+% ======================================================================
+\clearpage
+\section{The Euclidean primitive and the Lorentzian spin factor}
+\label{sec:local}
+% ======================================================================
+
+\subsection{Primitive input}
+
+Throughout the local part of the paper,
+\[
+   V:=\R^{3}
+\]
+carries only its standard positive-definite bilinear form
+\[
+   \langle u,v\rangle
+   :=u_{1}v_{1}+u_{2}v_{2}+u_{3}v_{3}.
+\]
+Set
+\[
+   q_{3}(v):=\langle v,v\rangle.
+\]
+No Lorentzian structure has yet been introduced.
+
+\begin{definition}[Real spin factor]
+\label{def:spin-factor}
+Define
+\[
+   \Smodel:=\R\oplus V
+\]
+and, for \(x=(a,u)\), \(y=(b,v)\), define
+\[
+   x\circ y
+   :=
+   \bigl(ab+\langle u,v\rangle,\; av+bu\bigr).
+\]
+The distinguished unit is
+\[
+   \mathbf{1}_{\Smodel}:=(1,0).
+\]
+\end{definition}
+
+The product is bilinear and commutative.  As an auxiliary local identity
+for this chosen spin-factor construction one also has the Jordan identity
+\[
+   (x\circ y)\circ(x\circ x)
+   =
+   x\circ\bigl(y\circ(x\circ x)\bigr).
+\]
+Thus \((\Smodel,\circ,\mathbf{1}_{\Smodel})\) is the rank-two real spin
+factor; compare the standard Jordan-algebra treatment in
+\cite{JordanNeumannWigner,FarautKoranyi}.  This local identity is supporting
+algebra, not an additional global reconstruction claim.
+
+\begin{definition}[Intrinsic quadratic and bilinear forms]
+\label{def:NSBS}
+For \(x=(a,u)\in\Smodel\), set
+\[
+   N(x):=a^{2}-\langle u,u\rangle.
+\]
+Its polarization is
+\[
+   B(x,y)
+   :=\frac{N(x+y)-N(x)-N(y)}{2}
+   =ab-\langle u,v\rangle
+\]
+for \(y=(b,v)\).
+\end{definition}
+
+\begin{proposition}[Lorentz signature]
+\label{prop:signature}
+The form \(B\) is symmetric and nondegenerate, and has signature \((1,3)\).
+In the standard basis
+\[
+   \mathbf{1}_{\Smodel},\quad
+   (0,\varepsilon_{0}),\quad(0,\varepsilon_{1}),\quad(0,\varepsilon_{2}),
+\]
+its Gram matrix is
+\[
+   \operatorname{diag}(1,-1,-1,-1).
+\]
+\end{proposition}
+
+\begin{proof}
+The displayed formula
+\(B((a,u),(b,v))=ab-\langle u,v\rangle\)
+gives the Gram matrix directly.  Since the Euclidean form on \(V\) is
+positive definite, the first basis direction is positive and the remaining
+three are negative.  The determinant is nonzero, hence \(B\) is
+nondegenerate.
+\end{proof}
+
+A second auxiliary local identity of the spin-factor construction is the
+Cayley--Hamilton identity
+\[
+   x\circ x-\operatorname{tr}_{\Smodel}(x)\,x
+   +N(x)\mathbf{1}_{\Smodel}=0,
+   \qquad
+   \operatorname{tr}_{\Smodel}(a,u)=2a.
+\tag{2.1}
+\]
+The square cone
+\[
+   C_{\Smodel}:=
+   \{x\in\Smodel:\exists y\in\Smodel,\ x=y\circ y\}
+\tag{2.2}
+\]
+provides an intrinsic time-cone structure at the level of the local model.
+
+\begin{definition}[Intrinsic Lorentz group]
+\label{def:GLor}
+Let \(\LorG\) be the group of real-linear self-equivalences
+\(F:\Smodel\to\Smodel\) satisfying
+\[
+   N(Fx)=N(x),\qquad
+   x\in C_{\Smodel}\Longleftrightarrow Fx\in C_{\Smodel},
+   \qquad
+   \det F=1.
+\tag{2.3}
+\]
+\end{definition}
+
+The definition is internal to \((\Smodel,N,C_{\Smodel})\).  In particular,
+no matrix realization over \(\mathbb C\), no pre-existing Lorentz group on
+a spacetime, and no frame bundle enters the construction.
+
+\begin{boundary}[Local means local]
+\label{bdry:no-manifold-yet}
+At this point \(\Smodel\) is a four-dimensional real vector space with an
+intrinsic Lorentz form.  It is not a tangent space and there is no manifold,
+chart, atlas, base point, or covering space in the construction.
+\end{boundary}
+
+% ======================================================================
+\clearpage
+\section{Clifford envelope and the intrinsic Spin double cover}
+\label{sec:clifford}
+% ======================================================================
+
+\subsection{The Euclidean Clifford algebra}
+
+Let
+\[
+   \Cl_{3}:=\Cl(V,q_{3})
+\]
+be the real Clifford algebra characterized by the relation
+\[
+   \iota(v)^{2}=q_{3}(v)\mathbf{1}.
+\tag{3.1}
+\]
+For the standard Euclidean basis
+\(\varepsilon_{0},\varepsilon_{1},\varepsilon_{2}\) of \(V\), write
+\(\gamma_{i}:=\iota(\varepsilon_{i})\).  Then
+\[
+   \gamma_{i}^{2}=1,\qquad
+   \gamma_{i}\gamma_{j}=-\gamma_{j}\gamma_{i}
+   \quad(i\neq j).
+\tag{3.2}
+\]
+The signs are those of the \emph{positive} Euclidean quadratic form on
+\(V\); the Lorentzian signature has already appeared in the distinct
+four-dimensional spin factor \(\Smodel\).
+
+\begin{definition}[Paravector embedding]
+\label{def:paravector}
+Define
+\[
+   A:\Smodel\longrightarrow\Cl_{3},
+   \qquad
+   A(a,v):=a\,\mathbf{1}+\iota(v).
+\tag{3.3}
+\]
+\end{definition}
+
+Let \(c\) denote the Clifford conjugation used in the construction.  Its
+restriction to paravectors changes the sign of the vector part.  The key
+identity is
+\[
+   A(x)c(A(x))=N(x)\mathbf{1}.
+\tag{3.4}
+\]
+
+\begin{proposition}[Jordan--Clifford compatibility]
+\label{prop:jordan-clifford}
+For all \(x,y\in\Smodel\),
+\[
+   A(x\circ y)
+   =
+   \frac12\bigl(A(x)A(y)+A(y)A(x)\bigr).
+\tag{3.5}\label{eq:jordan-clifford}
+\]
+Moreover, the image \(A(\Smodel)\) generates \(\Cl_{3}\) as a real
+algebra.
+\end{proposition}
+
+\begin{proof}
+Expand the product using
+\[
+   \iota(u)\iota(v)+\iota(v)\iota(u)
+   =2\langle u,v\rangle\mathbf{1}.
+\]
+The scalar part becomes
+\(2(ab+\langle u,v\rangle)\), while the vector part becomes
+\(2(av+bu)\), proving \eqref{eq:jordan-clifford}.  Since \(A(0,v)=\iota(v)\), the image
+contains every Clifford generator; the universal generation property of
+the Clifford algebra then gives the second assertion.
+\end{proof}
+
+As standard background for the Mathlib \texttt{CliffordAlgebra}
+construction used here, \(\Cl_{3}\) carries the usual universal property:
+any real algebra receiving a linear map \(f:V\to\mathcal A\) with
+\(f(v)^{2}=q_{3}(v)\mathbf1\) receives a unique algebra homomorphism from
+\(\Cl_{3}\).  This is a property of the standard Clifford-algebra
+construction rather than an additional registered global claim of the
+present reconstruction; see \cite{Chevalley,LawsonMichelsohn}.
+
+\subsection{Intrinsic Spin elements}
+
+\begin{definition}[Spin element and Spin group]
+\label{def:spingroup}
+An element \(g\in\Cl_{3}\) is a Spin element when
+\[
+    g\,c(g)=c(g)\,g=1.
+\tag{3.6}
+\]
+The corresponding units form a subgroup
+\[
+    \SpinG\subset\Cl_{3}^{\times}.
+\tag{3.7}
+\]
+\end{definition}
+
+The Clifford action used in the construction preserves the paravector
+subspace and defines a real-linear action
+\[
+   \operatorname{spinLor}(g):\Smodel\longrightarrow\Smodel.
+\]
+For every \(g\in\SpinG\), this action belongs to \(\LorG\).
+Hence
+\[
+   \rho:\SpinG\longrightarrow\LorG,
+   \qquad
+   \rho(g)=\operatorname{spinLor}(g),
+\tag{3.8}
+\]
+is a group homomorphism.
+
+\begin{theorem}[Intrinsic double cover]
+\label{thm:double-cover}
+The homomorphism \(\rho\) is surjective and
+\[
+   \ker\rho=\{1,-1\}.
+\tag{3.9}
+\]
+The kernel is central and has two elements.  With the topologies inherited
+from the finite-dimensional Clifford model and the induced topology on
+\(\LorG\), both groups are Hausdorff topological groups, \(\rho\) is
+continuous, the kernel is discrete, and every \(k\in\LorG\) has an open
+neighbourhood \(U\) admitting a continuous local section
+\[
+   s:U\longrightarrow\SpinG,
+   \qquad
+   \rho\circ s=\id_{U}.
+\tag{3.10}
+\]
+\end{theorem}
+
+\begin{proof}
+We separate surjectivity, the kernel calculation, and the local-section
+statement.
+
+\emph{Surjectivity.}  Let \(F\in\LorG\) and put \(p=F(1_{\Smodel})\).
+Because \(F\) preserves both \(N\) and the intrinsic square cone,
+\[
+    N(p)=1,
+    \qquad
+    p\in C_{\Smodel},
+    \qquad
+    p_0\ge 0.
+\]
+Write \(p=(a,u)\).  From \(a^2-\langle u,u\rangle=1\) and \(a\ge0\) one
+has \(a\ge1\).  Hence the forward spin-factor square root
+\[
+ r=\sqrt[\Smodel]{p}
+   :=\left(\sqrt{\frac{a+1}{2}},
+      \frac{u}{2\sqrt{(a+1)/2}}\right)
+\]
+is well defined and satisfies \(r\circ r=p\) and \(N(r)=1\).  Set
+\(\beta=A(r)\in\Cl_3\).  The Clifford norm identity makes \(\beta\) a Spin
+element, and the Jordan--Clifford compatibility gives
+\[
+   \rho(\beta)(1_{\Smodel})=p.
+\]
+Consequently
+\[
+   G:=\rho(\beta)^{-1}F
+\]
+fixes \(1_{\Smodel}\).  The stabilizer of \(1_{\Smodel}\) acts on the
+spatial summand as an element \(R\in SO(3)\).  By Cartan--Dieudonn\'e,
+\(R\) is a product of hyperplane reflections in unit spatial vectors.
+For a unit vector \(u\), the Clifford generator \(\iota(u)\) acts on the
+spatial summand as minus the corresponding hyperplane reflection.  Since
+\(\det R=1\), an even number of reflections occurs; the accumulated minus
+sign therefore disappears, and the product of the corresponding Clifford
+generators is a Spin element \(\gamma\) with \(\rho(\gamma)=G\).  Thus
+\(\rho(\beta\gamma)=F\).
+
+\emph{Kernel.}  Suppose \(g\in\SpinG\) acts trivially on every paravector.
+Evaluating at \(1_{\Smodel}\) first shows that Clifford reversion and
+Clifford conjugation agree on \(g\).  The trivial-action equation then
+implies
+\[
+    gA(x)=A(x)g
+    \qquad\text{for every }x\in\Smodel.
+\]
+Because the paravector image generates \(\Cl_3\) as a real algebra, \(g\)
+commutes with all of \(\Cl_3\).  The intrinsically computed centre is
+\(\R\oplus\R\omega\), where
+\(\omega=\gamma_0\gamma_1\gamma_2\) and \(\omega^2=-1\).  Hence
+\(g=a+b\omega\).  For central elements Clifford conjugation fixes \(g\),
+so the Spin normalization gives
+\[
+   (a+b\omega)^2=1
+   \quad\Longrightarrow\quad
+   a^2-b^2=1,
+   \qquad
+   2ab=0.
+\]
+The first equation excludes \(a=0\); therefore \(b=0\) and
+\(a=\pm1\).  Conversely, \(\pm1\) act trivially.  Thus
+\(\ker\rho=\{\pm1\}\); centrality and cardinality two follow immediately.
+
+\emph{Continuous local sections.}  The construction is also intrinsic.  Define the Clifford contraction
+\[
+   \mathcal F(y)
+   :=y+\sum_{i=0}^{2}\gamma_i y\gamma_i .
+\]
+In the eight-monomial Clifford frame this kills the six noncentral
+monomials and multiplies the two central ones by \(4\), so
+\(\mathcal F(y)\in\R\oplus\R\omega\).  Next define the reconstruction map
+\[
+   \mathcal R(F)
+   :=A(F1_{\Smodel})
+     +\sum_{i=0}^{2}A\!\left(F(0,\varepsilon_i)\right)\gamma_i .
+\]
+For a Spin element \(g\), direct Clifford multiplication gives
+\[
+   \mathcal R(\rho(g))
+   =g\,\mathcal F(\operatorname{rev}g),
+\]
+so reconstruction recovers \(g\) up to a central factor.  Identify the
+centre \(\R\oplus\R\omega\) with \(\mathbb C\) by the real-algebra embedding
+\(\operatorname{cx}:\mathbb C\to\Cl_3\) determined by
+\(\operatorname{cx}(i)=\omega\), and choose the linear retraction
+\(\operatorname{cxRetract}\) used by the reconstruction.  Define the
+continuous discriminant
+\[
+   \Delta(F)
+   :=\operatorname{cxRetract}\!\left(
+      \mathcal R(F)\,c(\mathcal R(F))
+   \right).
+\]
+The key identity is
+\[
+   \mathcal R(\rho(g))=\operatorname{cx}(w)g
+   \quad\Longrightarrow\quad
+   \Delta(\rho(g))=w^2.
+\]
+Thus the central ambiguity is visible only through a square.  At the identity,
+\(\Delta(1)=16\).  On the open neighbourhood where \(\Delta(F)\) lies in
+a slit plane avoiding the branch cut, the principal complex square root is
+continuous.  Dividing the reconstructed Clifford element by this square root
+leaves exactly the two choices differing by \(\{\pm1\}\), and yields a
+continuous Spin-valued section \(s\) with \(\rho(s(F))=F\) and \(s(1)=1\).
+Finally, for arbitrary \(k\in\LorG\), choose one lift \(u_k\) of \(k\) and
+left-translate the identity neighbourhood and its section.  This produces
+an open neighbourhood of \(k\) with a continuous local section.  A
+different choice of \(u_k\) changes that section only by the central
+kernel element \(-1\).
+\end{proof}
+
+Thus one obtains the exact central extension
+\[
+   1\longrightarrow\{\pm1\}
+   \longrightarrow\SpinG
+   \overset{\rho}{\longrightarrow}\LorG
+   \longrightarrow1.
+\tag{3.11}
+\]
+A classical complex-matrix description may be used as a comparison
+endpoint, but it is not an input to \cref{thm:double-cover}.  In particular,
+the construction does not define \(\SpinG\) by first declaring it to be
+\(\mathrm{SL}(2,\mathbb C)\).
+
+% ======================================================================
+\clearpage
+\section{The intrinsic infinitesimal Lorentz sector}
+\label{sec:lie}
+% ======================================================================
+
+The local group construction has a parallel infinitesimal object that can
+be defined without first making \(\SpinG\) into a Lie group.
+
+\begin{definition}[Lorentz-skew endomorphisms]
+\label{def:gB}
+Let
+\[
+   \gB
+   :=
+   \bigl\{
+      T\in\End_{\R}(\Smodel):
+      B(Tx,y)+B(x,Ty)=0
+      \ \text{for all }x,y\in\Smodel
+   \bigr\}.
+\tag{4.1}
+\]
+\end{definition}
+
+For \(u,v\in\Smodel\), define
+\[
+   K_{u,v}(x)
+   :=
+   B(v,x)u-B(u,x)v.
+\tag{4.2}\label{eq:Kuv}
+\]
+Then \(K_{u,v}\in\gB\), the map is alternating in \(u,v\), and it therefore
+induces a linear map
+\[
+   \Phi:\Lambda^{2}\Smodel\longrightarrow\gB,
+   \qquad
+   u\wedge v\longmapsto K_{u,v}.
+\tag{4.3}
+\]
+
+\begin{theorem}[Bivector realization]
+\label{thm:bivector}
+The map \(\Phi\) is a linear equivalence.  Consequently
+\[
+   \dim_{\R}\gB
+   =
+   \dim_{\R}\Lambda^{2}\Smodel
+   =6.
+\tag{4.4}
+\]
+Moreover, \(\gB\) is closed under the commutator
+\[
+   [A,C]:=AC-CA,
+\tag{4.5}
+\]
+so it is a six-dimensional real Lie algebra.
+\end{theorem}
+
+\begin{proof}
+Skewness of \(K_{u,v}\) follows by expanding \eqref{eq:Kuv} and using the
+symmetry of \(B\).  Closure of \(\gB\) under the commutator follows by
+applying the skewness identity twice:
+\[
+  B(ACx,y)=-B(Cx,Ay)=B(x,CAy),
+\]
+and similarly with \(A\) and \(C\) interchanged.
+
+It remains to prove that \(\Phi\) is bijective.  Let
+\[
+   \tau=(1,0),
+   \qquad
+   b_i=(0,\varepsilon_i),\quad i=0,1,2,
+\]
+where \(\varepsilon_0,\varepsilon_1,\varepsilon_2\) is the fixed Euclidean
+basis of \(V\).  For \(A\in\gB\), introduce the six coefficients
+\[
+\begin{aligned}
+   c_0&=(A\tau)_V^{0},&
+   c_1&=(A\tau)_V^{1},&
+   c_2&=(A\tau)_V^{2},\\
+   c_3&=\langle (Ab_0)_V,\varepsilon_1\rangle,&
+   c_4&=\langle (Ab_0)_V,\varepsilon_2\rangle,&
+   c_5&=\langle (Ab_1)_V,\varepsilon_2\rangle.
+\end{aligned}
+\tag{4.6a}\label{eq:gb-six-coordinates}
+\]
+The \(B\)-skew condition determines every other matrix coefficient from
+these six: it forces \((A\tau)_0=0\), determines the scalar component of
+\(A(0,u)\) by \(\langle(A\tau)_V,u\rangle\), and makes the spatial block
+antisymmetric.  Hence if all six numbers in
+\eqref{eq:gb-six-coordinates} vanish, then \(A\tau=0\) and
+\(Ab_i=0\) for \(i=0,1,2\).  Since \(\tau,b_0,b_1,b_2\) span
+\(\Smodel\), one has \(A=0\).  Thus the six coordinates are rigid.
+
+Conversely, for \(c=(c_0,\ldots,c_5)\in\R^6\), define the explicit
+bivector
+\[
+\begin{aligned}
+   z(c):={}&-c_0\,\tau\wedge b_0
+            -c_1\,\tau\wedge b_1
+            -c_2\,\tau\wedge b_2\\
+          &+c_3\,b_0\wedge b_1
+            +c_4\,b_0\wedge b_2
+            +c_5\,b_1\wedge b_2 .
+\end{aligned}
+\tag{4.6b}\label{eq:zmap}
+\]
+A direct evaluation of \(K_{u,v}\) on the four basis vectors shows that
+the six coordinates of \(\Phi(z(c))\) are exactly \(c_0,\ldots,c_5\).
+For any \(A\in\gB\), taking \(c\) to be the six coordinates of \(A\)
+therefore gives an endomorphism \(\Phi(z(c))\) with the same six
+coordinates as \(A\); rigidity yields \(\Phi(z(c))=A\).  Thus \(\Phi\) is
+surjective.
+
+For injectivity, the map \(z:\R^6\to\Lambda^2\Smodel\) in
+\eqref{eq:zmap} is injective because the six coordinates of
+\(\Phi(z(c))\) recover \(c\).  Since
+\[
+   \dim\R^6=6=\dim\Lambda^2\Smodel,
+\]
+this injective linear map is also surjective.  If \(\Phi(z)=\Phi(z')\),
+write \(z=z(c)\) and \(z'=z(c')\); applying the six coordinate functionals
+gives \(c=c'\), hence \(z=z'\).  Therefore \(\Phi\) is injective as well,
+and so it is a linear equivalence.  The dimension statement follows.
+\end{proof}
+
+\begin{boundary}[The first open infinitesimal edge]
+\label{bdry:lie-spin}
+The statement
+\[
+   \operatorname{Lie}(\SpinG)\simeq\gB
+\tag{4.7}
+\]
+is not part of the present construction.  The intrinsic \(\SpinG\) is
+currently certified as a topological group, not as a smooth Lie group.
+Accordingly, the differential
+\[
+   d\rho_{e}:\operatorname{Lie}(\SpinG)
+   \longrightarrow\gB
+\tag{4.8}
+\]
+has not been constructed.  These are theorem-level gaps between the
+group-level double cover and the already available Lie algebra \(\gB\).
+\end{boundary}
+
+% ======================================================================
+\clearpage
+\section{From local model to global base}
+\label{sec:globalization}
+% ======================================================================
+
+The next step is deliberately not phrased as a consequence of the Spin
+group.  The reason is structural: a fibre transition tells us how to
+compare fibres over a point already known to lie in two patches.  It does
+not say which points of two local copies represent the same point of a
+global base.
+
+\subsection{Base-gluing data}
+
+Let \(I\) be an index set.  A local piece is an open subset
+\(D_i\subset\Smodel\).
+
+\begin{definition}[Base-gluing datum]
+\label{def:basegluing}
+A base-gluing datum \(B\) consists of:
+\begin{enumerate}
+\item open sets \(D_i\subset\Smodel\);
+\item open incidence domains \(W_{ij}\subset D_i\);
+\item continuous maps
+      \(\phi_{ij}:\Smodel\to\Smodel\), used on \(W_{ij}\);
+\end{enumerate}
+such that, on the indicated domains,
+\[
+\begin{aligned}
+   &W_{ii}=D_i,
+   &&\phi_{ii}(x)=x,\\
+   &\phi_{ij}(W_{ij})\subset W_{ji},
+   &&\phi_{ji}(\phi_{ij}(x))=x,
+\end{aligned}
+\tag{5.1}
+\]
+and whenever \(x\in W_{ij}\) and
+\(\phi_{ij}(x)\in W_{jk}\),
+\[
+   x\in W_{ik},
+   \qquad
+   \phi_{jk}(\phi_{ij}(x))=\phi_{ik}(x).
+\tag{5.2}
+\]
+\end{definition}
+
+This is an explicit \emph{sufficient} base-gluing primitive.  We do not
+claim that every field in Definition~\ref{def:basegluing} is separately necessary,
+or that this is the unique minimal encoding of incidence information.
+
+Form the tagged disjoint union
+\[
+   X_{0}:=\coprod_{i\in I}D_i
+\tag{5.3}
+\]
+and define
+\[
+   (i,x)\sim(j,y)
+   \quad\Longleftrightarrow\quad
+   x\in W_{ij}\ \text{ and }\ \phi_{ij}(x)=y.
+\tag{5.4}
+\]
+The axioms above make \(\sim\) an equivalence relation.  Define
+\[
+   M_B:=X_{0}/\!\sim
+\tag{5.5}
+\]
+with the quotient topology.
+
+\begin{proposition}[Topological reconstruction]
+\label{prop:top-reconstruct}
+The quotient map \(X_{0}\to M_B\) is open.  Each local piece \(D_i\)
+embeds homeomorphically onto an open subset of \(M_B\), and these images
+cover \(M_B\).  Thus \(M_B\) carries a charted-space structure modelled on
+\(\Smodel\).
+\end{proposition}
+
+\begin{proof}
+The saturation of an open subset of \(X_{0}\) is open because each
+incidence set \(W_{ij}\) is open and \(\phi_{ij}\) is a homeomorphism
+between \(W_{ij}\) and \(W_{ji}\), with inverse \(\phi_{ji}\).  Hence the
+quotient map is open.  Equality of two points from the same tagged piece
+forces equality of their local coordinates by \(\phi_{ii}=\id\), so the
+map from each \(D_i\) is injective.  Openness and continuity then give an
+open embedding.  Surjectivity of the quotient map proves that the chart
+images cover.
+\end{proof}
+
+Hausdorffness is not a formal consequence of Definition~\ref{def:basegluing}; the
+usual line-with-two-origins phenomenon already shows why a separation
+condition is needed.
+
+\begin{definition}[Closed gluing graph]
+\label{def:closedgraph}
+The gluing graph of \(B\) is closed when
+\[
+   \Gamma_B
+   :=
+   \{(p,q)\in X_0\times X_0:p\sim q\}
+\tag{5.6}
+\]
+is closed.
+\end{definition}
+
+\begin{proposition}[Hausdorffness and second countability]
+\label{prop:haus-second}
+If \(\Gamma_B\) is closed, then \(M_B\) is Hausdorff.  If, in addition,
+\(I\) is countable, then \(M_B\) is second countable.
+\end{proposition}
+
+\begin{proof}
+Let \(q:X_0\to M_B\) be the quotient map.  By
+Proposition~\ref{prop:top-reconstruct}, \(q\) is continuous, open, and surjective.
+Consequently
+\[
+   q\times q:X_0\times X_0\longrightarrow M_B\times M_B
+\]
+is again an open quotient map.  The preimage of the diagonal is exactly the
+gluing relation:
+\[
+   (q\times q)^{-1}(\Delta_{M_B})
+   =\{(p,q):p\sim q\}
+   =\Gamma_B.
+\]
+If \(\Gamma_B\) is closed, the quotient property therefore implies that
+\(\Delta_{M_B}\) is closed.  This is equivalent to Hausdorffness.
+
+For second countability, each \(D_i\) is an open subspace of the
+finite-dimensional real vector space \(\Smodel\), hence is second
+countable.  If \(I\) is countable, the tagged disjoint union
+\(X_0=\coprod_i D_i\) is second countable.  An open quotient of a
+second-countable space is second countable: the images under \(q\) of a
+countable basis form a countable basis of \(M_B\).  Hence \(M_B\) is second
+countable.
+\end{proof}
+
+\subsection{Why the global base is additional}
+
+The need for incidence data is itself a theorem, not merely a warning.
+
+\begin{theorem}[Local pieces do not determine the base]
+\label{thm:base-nonderivability}
+There exist two base-gluing data over the same two indexed local domains
+such that the local pieces agree exactly but their quotient bases are not
+homeomorphic.
+\end{theorem}
+
+\begin{proof}
+Take a nonempty connected open local domain \(D\subset\Smodel\) and two
+copies indexed by \(\{\mathsf{false},\mathsf{true}\}\).  In the first
+gluing, make every pair of pieces fully incident and use the identity
+identification.  In the second, take \(W_{ij}=\varnothing\) for \(i\neq j\)
+and again use the identity where defined.  The first quotient is connected;
+the second is the disjoint union of two nonempty open components and is not
+connected.  Hence no homeomorphism can exist between them.
+\end{proof}
+
+\begin{corollary}
+\label{cor:fibre-not-base}
+No datum that only prescribes a fibre transition law over already specified
+overlaps can, by itself, determine the missing cross-piece incidence of the
+base.
+\end{corollary}
+
+\subsection{The smooth gate}
+
+For the reconstructed atlas, the coordinate change from piece \(i\) to
+piece \(j\) is precisely \(\phi_{ij}\) on \(W_{ij}\).
+
+\begin{definition}[Smooth gluing]
+\label{def:smoothgluing}
+A base-gluing datum is smoothly compatible when
+\[
+   \phi_{ij}|_{W_{ij}}
+\]
+is \(C^\infty\) for every \(i,j\).
+\end{definition}
+
+\begin{theorem}[Conditional smooth four-manifold]
+\label{thm:smooth-manifold}
+Suppose:
+\begin{enumerate}
+\item \(B\) is a base-gluing datum over \(\Smodel\);
+\item its gluing graph is closed;
+\item the index set \(I\) is countable;
+\item \(B\) satisfies Definition~\ref{def:smoothgluing}.
+\end{enumerate}
+Then \(M_B\) is Hausdorff, second countable, and a \(C^\infty\)
+four-manifold modelled on \(\Smodel\).
+\end{theorem}
+
+\begin{proof}
+The Hausdorff and second-countable assertions are exactly
+Proposition~\ref{prop:haus-second}.  It remains to identify the smooth structure of
+the actual quotient atlas.
+
+For each inhabited piece \(D_i\), the open embedding of
+Proposition~\ref{prop:top-reconstruct} yields a chart whose target is \(D_i\).  On an
+overlap of the \(i\)- and \(j\)-charts, the source of the coordinate change
+is not merely contained in the primitive incidence set: it is exactly
+\(W_{ij}\).  If \(y\in W_{ij}\), the quotient relation identifies
+\((i,y)\) with \((j,\phi_{ij}(y))\), and therefore the coordinate change is
+literally
+\[
+     y\longmapsto\phi_{ij}(y).
+\]
+Thus every transition map of the reconstructed atlas is a restriction of
+one of the functions already required to be \(C^\infty\) by
+Definition~\ref{def:smoothgluing}.  The atlas consequently takes values in the
+\(C^\infty\) structure groupoid, so \(M_B\) is a smooth manifold.
+Finally, the model space is
+\(\Smodel=\R\oplus\R^3\), hence \(\dim_{\R}\Smodel=4\).
+
+Notice that the argument proves sufficiency of the smooth-gluing
+hypothesis for this reconstructed atlas.  It does not claim the converse or
+necessity of every primitive smoothness field.
+\end{proof}
+
+\begin{control}[Smoothness is not automatic]
+\label{control:nonsmooth}
+There are base-gluing data satisfying the topological gluing axioms whose
+transition is a homeomorphism but not differentiable at the origin.  An
+explicit control is
+\[
+   H(t,x)_0=t,
+   \qquad
+   H(t,x)_k=x_k+|t| \quad(k=1,2,3),
+\]
+with inverse
+\[
+   H^{-1}(t,x)_0=t,
+   \qquad
+   H^{-1}(t,x)_k=x_k-|t|.
+\]
+Both maps are continuous, so the topological reconstruction applies.  But
+along the line \(t\mapsto(t,0)\), every shifted spatial component contains
+\(|t|\), which is not differentiable at \(t=0\).  Hence the smooth-gluing
+condition fails.
+\end{control}
+
+\begin{remark}[Sufficiency, not necessity]
+\label{rem:smooth-sufficient}
+For the specific quotient-atlas packaging used here, smooth gluing is
+proved sufficient.  A converse is not asserted.  In particular, quotient
+representative selection may cause the reconstructed atlas to omit some
+index-labelled chart even when the corresponding primitive
+\(\phi_{ij}\) is non-smooth.
+\end{remark}
+
+% ======================================================================
+\clearpage
+\section{Internal Spin data and the genuine tangent cocycle}
+\label{sec:tangent}
+% ======================================================================
+
+Fix from now on a smooth base gluing \(B\) satisfying the hypotheses needed
+to obtain \(M=M_B\).
+
+\subsection{Genuine tangent transitions}
+
+Because the actual atlas transition is \(\phi_{ij}\), the tangent bundle
+transition is its derivative.
+
+\begin{proposition}[Tangent transition law]
+\label{prop:tangent-transition}
+For \(y\in W_{ij}\), the genuine tangent coordinate change of the
+reconstructed manifold is
+\[
+   T_{ij}(y):=D\phi_{ij}(y):
+   \Smodel\longrightarrow\Smodel.
+\tag{6.1}\label{eq:tangent-transition}
+\]
+It is a linear isomorphism, with inverse
+\[
+   D\phi_{ji}(\phi_{ij}(y)).
+\tag{6.2}\label{eq:tangent-inverse}
+\]
+The transitions satisfy the derivative cocycle law by the chain rule.
+\end{proposition}
+
+The invertibility in \eqref{eq:tangent-inverse} is derived from
+\(\phi_{ji}\circ\phi_{ij}=\id\) on the open incidence domain rather than
+inserted as a separate hypothesis.
+
+\begin{remark}[A type-level shortcut is not a solder]
+In the formal implementation, tangent spaces of a modelled manifold are
+represented using the model vector space, so a type-level identification
+with \(\Smodel\) is available.  This does not identify transition systems
+and plays no role in the geometric coupling below.  The invariant datum is
+\eqref{eq:tangent-transition}.
+\end{remark}
+
+\subsection{Native Spin transitions}
+
+Let \(\cU=\{U_i\}_{i\in I}\) be the cover of \(M\) by the chart images.
+A native Spin transition system consists of continuous maps
+\[
+   \widetilde g_{ij}:U_i\cap U_j\longrightarrow\SpinG
+\tag{6.3}
+\]
+satisfying the \Cech\ cocycle law
+\[
+   \widetilde g_{ij}(x)\widetilde g_{jk}(x)
+   =
+   \widetilde g_{ik}(x)
+\tag{6.4}
+\]
+on triple overlaps.  Projection gives the internal Lorentz cocycle
+\[
+   g_{ij}:=\rho\circ\widetilde g_{ij}:
+   U_i\cap U_j\longrightarrow\LorG.
+\tag{6.5}
+\]
+This is a fibre transition system on the same cover, but it is not the
+tangent transition system by definition.
+
+\begin{theorem}[Raw transition identification is not forced]
+\label{thm:transition-independence}
+There exist a smooth two-chart base gluing \(B\) and a coherent native Spin
+transition system \(\widetilde g\) such that
+\[
+   g_{01}(x)=\id_{\Smodel}
+   \quad\text{for every }x,
+\tag{6.6}
+\]
+while
+\[
+   T_{01}(y)=2\,\id_{\Smodel}
+   \quad\text{for every }y.
+\tag{6.7}
+\]
+Hence the base and native Spin data do not force
+\(T_{ij}=g_{ij}\).
+\end{theorem}
+
+\begin{proof}
+Take two copies of the whole local model with
+\[
+   \phi_{01}(y)=2y,\qquad
+   \phi_{10}(y)=\tfrac12 y.
+\]
+All incidence domains are the whole model, and the gluing is smooth.
+Thus \(D\phi_{01}=2\,\id\).  Independently, choose the pointwise trivial
+native Spin cocycle \(\widetilde g_{ij}=1\); its projection is the identity.
+Evaluating at \(\mathbf1_{\Smodel}\) distinguishes the two transformations.
+\end{proof}
+
+\begin{remark}
+The conclusion is one of non-derivability, not non-existence.  The same
+rescaling example admits a compensating regular solder.  Equality of raw
+transition matrices is therefore not the correct invariant criterion for
+coupling the two bundles.
+\end{remark}
+
+% ======================================================================
+\clearpage
+\section{The regular solder gate}
+\label{sec:solder}
+% ======================================================================
+
+The missing object is a smoothly varying identification between the
+internal Lorentz fibres and tangent fibres that intertwines their
+transition laws.
+
+\subsection{Weak fibrewise soldering}
+
+At the weakest level one may choose, for each chart and each base point, a
+linear equivalence
+\[
+   e_i(x):\Smodel\xrightarrow{\;\sim\;}T_xM
+\tag{7.1}
+\]
+such that on \(U_i\cap U_j\),
+\[
+   e_j(x)v
+   =
+   e_i(x)\bigl(g_{ij}(x)v\bigr).
+\tag{7.2}\label{eq:weak-solder-law}
+\]
+This algebraic condition is sufficient to transport the intrinsic form
+\(B\) to each tangent fibre, but it imposes no regularity on the field
+\(x\mapsto e_i(x)\).
+
+\begin{control}[Weak soldering is insufficient]
+\label{control:weak}
+There exist fibrewise solder data obeying \eqref{eq:weak-solder-law} whose chart
+representative is discontinuous.  Consequently fibrewise linear
+equivalence alone does not produce a regular vector-bundle comparison or
+a smooth tangent metric.
+\end{control}
+
+\begin{proof}[Explicit control]
+Take the one-chart flat base with identity gluing and the pointwise trivial
+Spin cocycle.  In this case \eqref{eq:weak-solder-law} imposes no
+nontrivial overlap constraint.  Let \(x_0\) be the chart point represented
+by the zero vector and define the frame field
+\[
+ e(x)=
+ \begin{cases}
+   2\,\id_{\Smodel}, & x=x_0,\\
+   \id_{\Smodel}, & x\ne x_0.
+ \end{cases}
+\tag{7.2a}\label{eq:bad-solder}
+\]
+Every fibre map is a linear equivalence, so this is a valid weak solder.
+Its local representative, however, jumps from \(\id\) to \(2\id\) at
+\(x_0\), and is therefore discontinuous.  The defect is also visible in
+the transported quadratic form: evaluated on the intrinsic unit, the
+coefficient is \(1\) away from \(x_0\), whereas at \(x_0\) the inverse
+frame contributes a factor \(1/2\), giving \(1/4\).  Thus even the induced
+fibrewise metric coefficient is discontinuous.  No regular solder can
+induce this weak frame field.
+\end{proof}
+
+\subsection{Regular local form}
+
+The regular datum is stated in the actual chart coordinates.  Let
+\[
+   A_i(y)\in\GL(\Smodel)
+\]
+be a continuous linear automorphism for \(y\in D_i\).
+
+\begin{definition}[Regular solder]
+\label{def:regular-solder}
+A regular solder for \((B,\widetilde g)\) is a family
+\[
+   A_i:D_i\longrightarrow\GL(\Smodel)
+\tag{7.3}
+\]
+such that:
+\begin{enumerate}
+\item the map \(y\mapsto A_i(y)\), viewed in the finite-dimensional space
+      of continuous linear maps, is \(C^\infty\) on \(D_i\);
+\item on \(y\in W_{ij}\),
+\[
+  A_j(\phi_{ij}(y))
+  =
+  T_{ij}(y)\circ A_i(y)\circ
+  g_{ij}(x_y),
+\tag{7.4}\label{eq:regular-solder-law}
+\]
+where \(x_y\in M\) is the quotient point represented by \((i,y)\).
+\end{enumerate}
+\end{definition}
+
+Equation \eqref{eq:regular-solder-law} fixes the orientation of the intertwining square.
+The tangent map \(T_{ij}\) converts \(i\)-chart tangent components to
+\(j\)-chart tangent components, while the \Cech\ convention
+\(e_j=e_i\circ g_{ij}\) converts internal \(j\)-components to internal
+\(i\)-components.  The equation is therefore forced by the two pre-existing
+conventions rather than selected by analogy.
+
+The inverse family \(A_i(y)^{-1}\) is automatically smooth; no separate
+inverse-regularity field is needed.
+
+\begin{theorem}[Regular bundle-equivalence certificate]
+\label{thm:bundle-equivalence}
+A regular solder determines a fibrewise linear equivalence between the
+internal Lorentz bundle defined by \(g_{ij}\) and the genuine tangent bundle
+\(TM\), covering \(\id_M\), with:
+\begin{enumerate}
+\item continuous total-space map and continuous inverse;
+\item linear equivalence on each fibre;
+\item \(C^\infty\) local representatives \(A_i\);
+\item \(C^\infty\) local representatives \(A_i^{-1}\) for the inverse;
+\item exact intertwining of the internal and tangent transition systems.
+\end{enumerate}
+Conversely, a bundle-equivalence certificate with these properties yields a
+regular solder.
+\end{theorem}
+
+\begin{proof}
+Write the internal Lorentz bundle in the local trivializations determined by
+the cocycle \(g_{ij}\), and write \(TM\) in the tangent trivializations of
+the reconstructed atlas.  On the \(i\)-th chart define the local total-space
+map
+\[
+   (y,v)\longmapsto (y,A_i(y)v).
+\tag{7.4a}\label{eq:local-bundle-map}
+\]
+If \(y\in W_{ij}\), changing the source trivialization by \(g_{ij}\) and
+the target trivialization by \(T_{ij}\) gives, by
+\eqref{eq:regular-solder-law}, the same point as first applying
+\eqref{eq:local-bundle-map} in chart \(i\).  Hence the local maps agree on
+equivalent representatives and descend to a globally defined map of total
+spaces covering \(\id_M\).  Each fibre map is a linear equivalence because
+each \(A_i(y)\) is.
+
+The local representative of the descended map in the \(i\)-th source and
+target trivializations is exactly \(A_i\).  Since \(A_i\) is smooth, it is
+continuous, and the standard local-trivialization criterion gives
+continuity of the total-space map.  Pointwise inversion on
+\(\GL(\Smodel)\) is smooth; hence \(y\mapsto A_i(y)^{-1}\) is smooth.  The
+same argument applied to these inverse representatives yields a continuous
+inverse total-space map.  This proves the five stated properties.
+
+Conversely, suppose such a bundle-equivalence certificate is given.  Read
+its local representative in the chart trivializations and call it
+\(A_i(y)\).  Fibrewise linear equivalence gives
+\(A_i(y)\in\GL(\Smodel)\), the certificate gives \(C^\infty\)-regularity,
+and equality of the globally defined map when read in the two overlapping
+trivializations is precisely the intertwining identity
+\eqref{eq:regular-solder-law}.  Thus the local representatives form a
+regular solder.  The two constructions are inverse at the level asserted
+in the theorem.
+\end{proof}
+
+\begin{remark}[Exact regularity level]
+We establish a bundle equivalence with continuous total-space maps in both
+directions, fibrewise linear equivalences, and smooth local representatives
+for the map and its inverse.  No stronger smooth total-space equivalence is
+asserted here.  In particular, the limitation concerns the level at which the
+global equivalence is packaged, not the smoothness of the projected Lorentz
+transition representatives, which is forced in chart coordinates by a
+regular solder.
+\end{remark}
+
+Indeed, \eqref{eq:regular-solder-law} can be solved for \(g_{ij}\):
+\[
+   g_{ij}(x_y)
+   =
+   A_i(y)^{-1}\circ T_{ij}(y)^{-1}
+   \circ A_j(\phi_{ij}(y)),
+\tag{7.5}
+\]
+up to the convention used in \eqref{eq:regular-solder-law}.  Hence regular soldering forces
+the projected internal Lorentz transition to possess smooth local
+representatives in chart coordinates even though the underlying native
+Spin cocycle is only assumed continuous.
+
+\subsection{Gauge freedom of the solder}
+
+For fixed \(B\) and fixed native Spin data, a solder is not canonical.
+The regular tangent-gauge group acts on the space of regular solders.
+
+\begin{theorem}[Solder torsor]
+\label{thm:solder-torsor}
+Whenever the regular-solder solution space for fixed \((B,\widetilde g)\)
+is nonempty, the regular tangent-gauge action on it is free and transitive.
+\end{theorem}
+
+\begin{proof}
+Let \(A=\{A_i\}\) and \(A'=\{A_i'\}\) be two regular solders for the same
+base and the same native Spin datum.  Define
+\[
+   a_i(y):=A_i'(y)\,A_i(y)^{-1}.
+\tag{7.6}\label{eq:gauge-between-solders}
+\]
+The field \(a_i\) is smooth because multiplication and inversion in the
+finite-dimensional general linear group are smooth.  Applying the solder
+law once to \(A\) and once to \(A'\), and cancelling the common internal
+transition, gives
+\[
+   a_j(\phi_{ij}(y))\,T_{ij}(y)
+   =T_{ij}(y)\,a_i(y),
+\tag{7.7}\label{eq:tangent-gauge-law}
+\]
+which is exactly the regular tangent-gauge compatibility law.  By
+construction,
+\[
+   (a\cdot A)_i(y)=a_i(y)A_i(y)=A_i'(y),
+\]
+so the action is transitive.
+
+For freeness, if \(a\cdot A=a'\cdot A\), then
+\(a_i(y)A_i(y)=a_i'(y)A_i(y)\) at every point.  Right cancellation by the
+invertible map \(A_i(y)\) gives \(a_i(y)=a_i'(y)\) for all \(i,y\), hence
+\(a=a'\).  Pointwise composition and inversion preserve
+\eqref{eq:tangent-gauge-law}, so these fields form a group and the action
+is free and transitive.
+\end{proof}
+
+Thus existence is a genuine gate, while uniqueness is neither expected nor
+claimed.
+
+% ======================================================================
+\clearpage
+\section{The induced tangent Lorentz geometry}
+\label{sec:metric}
+% ======================================================================
+
+Let \(A=\{A_i\}\) be a regular solder.
+
+\subsection{Metric coefficients}
+
+In chart \(i\), define
+\[
+   g_i(y)(u,v)
+   :=
+   B\bigl(A_i(y)^{-1}u,\;A_i(y)^{-1}v\bigr).
+\tag{8.1}\label{eq:metric-coeff}
+\]
+
+\begin{theorem}[Smooth tangent Lorentz metric]
+\label{thm:smooth-metric}
+The fields \(g_i\) satisfy:
+\begin{enumerate}
+\item for fixed \(u,v\in\Smodel\), the function
+      \(y\mapsto g_i(y)(u,v)\) is \(C^\infty\) on \(D_i\);
+\item \(g_i(y)\) is symmetric and nondegenerate;
+\item on every incidence domain,
+\[
+  g_j(\phi_{ij}(y))
+     \bigl(T_{ij}(y)u,T_{ij}(y)v\bigr)
+  =
+  g_i(y)(u,v);
+\tag{8.2}\label{eq:metric-transform}
+\]
+\item in the \(A_i(y)\)-frame, the form has signature \((1,3)\).
+\end{enumerate}
+Hence the \(g_i\) satisfy the smooth tensor transformation law and
+therefore define a global Lorentzian \((0,2)\)-tensor \(g\) on \(TM\), in
+the standard semi-Riemannian sense \cite{ONeill,Nakahara}.  This conclusion
+uses the smooth local coefficient fields and their exact tensor
+transformation law; no stronger global metric packaging is asserted.
+\end{theorem}
+
+\begin{proof}
+Smoothness follows from smoothness of \(A_i^{-1}\) and bilinearity of
+\(B\).  Symmetry and nondegeneracy are inherited from \(B\) through the
+linear equivalence \(A_i(y)\).  For the transformation law, use
+\eqref{eq:regular-solder-law} to express the inverse \(j\)-frame after application of
+\(T_{ij}\) in terms of the inverse \(i\)-frame and the projected internal
+Lorentz transition.  Since \(g_{ij}(x)\in\LorG\) preserves \(B\), these
+Lorentz factors cancel and yield \eqref{eq:metric-transform}.  Finally,
+\[
+   g_i(y)(A_i(y)a,A_i(y)b)=B(a,b),
+\]
+so Proposition~\ref{prop:signature} transfers the signature.
+\end{proof}
+
+The important logical point is that the metric is \emph{derived after}
+regular soldering.  It is not a field of the base-gluing datum and is not
+inserted into the primitive local data.
+
+\subsection{Orientation reduction}
+
+Let
+\[
+   F_{ij}(y)
+   :=
+   A_j(\phi_{ij}(y))^{-1}
+   \circ T_{ij}(y)\circ A_i(y).
+\tag{8.3}
+\]
+By the solder law this is the appropriate projected internal Lorentz
+transition (with the inverse-index convention induced by
+\eqref{eq:regular-solder-law}).  Therefore
+\[
+   \det F_{ij}(y)=1.
+\tag{8.4}
+\]
+
+\begin{proposition}[Project-native orientation reduction]
+\label{prop:orientation-reduction}
+The regular solder frames form a coherently oriented family: their frame
+changes have determinant \(1\).  Equivalently, the determinant cocycle of
+the genuine tangent transitions is a continuous coboundary determined by
+the solder-frame determinants.
+\end{proposition}
+
+\subsection{Future-cone reduction}
+
+Define the intrinsic interior future cone exactly by
+\[
+   \mathcal C^{+}_{\mathrm{int}}
+   :=
+   \{x\in\Smodel : x\in C_{\Smodel}\ \text{and}\ N(x)>0\}.
+\]
+This uses only the already constructed square cone and intrinsic quadratic
+form.  In chart \(i\), define
+\[
+   \mathcal C^{+}_{i}(y)
+   :=
+   A_i(y)\mathcal C^{+}_{\mathrm{int}}.
+\tag{8.5}
+\]
+
+\begin{proposition}[Project-native future-cone reduction]
+\label{prop:future-cone}
+For \(y\in W_{ij}\),
+\[
+   u\in\mathcal C^{+}_{i}(y)
+   \quad\Longleftrightarrow\quad
+   T_{ij}(y)u
+   \in
+   \mathcal C^{+}_{j}(\phi_{ij}(y)).
+\tag{8.6}\label{eq:future-cone-transform}
+\]
+Thus the regular solder determines a coherent chart-independent field of
+future cones on \(TM\).
+\end{proposition}
+
+The local vector field
+\[
+   \tau_i(y):=A_i(y)\mathbf1_{\Smodel}
+\tag{8.7}
+\]
+is smooth, future-directed, and unit timelike.  It need not glue to a
+single global field.  More precisely, the distinguished fields
+\(\tau_i\) glue across an overlap exactly when the corresponding projected
+Lorentz transition fixes \(\mathbf1_{\Smodel}\).
+
+\begin{boundary}[Time-orientability terminology]
+\label{bdry:timeorientation}
+The conclusion formally established here is the coherent future-cone
+reduction \eqref{eq:future-cone-transform}.  No comparison theorem in the present development
+identifies this project-native structure with every standard equivalent
+definition of time orientability.  Likewise, existence of an arbitrary
+global smooth future-directed timelike section would require an additional
+global section theorem in the present bundle packaging.
+\end{boundary}
+
+% ======================================================================
+\clearpage
+\section{Native \Cech\ lifting and global reconvergence}
+\label{sec:reconvergence}
+% ======================================================================
+
+We now compare the bottom-up construction with the obstruction-theoretic
+language that ordinarily appears in Spin geometry.
+
+\subsection{Fixed-cover lifting obstruction}
+
+Let
+\[
+   g_{ij}:U_i\cap U_j\to\LorG
+\]
+be a visible Lorentz cocycle.  A family of local Spin lifts consists of
+continuous maps
+\[
+   h_{ij}:U_i\cap U_j\to\SpinG,
+   \qquad
+   \rho(h_{ij})=g_{ij}.
+\tag{9.1}
+\]
+Local sections of \(\rho\) make such lifts available locally.  On triple
+overlaps, define the defect
+\[
+   \epsilon_{ijk}
+   :=
+   h_{ij}h_{jk}h_{ik}^{-1}.
+\tag{9.2}
+\]
+Because \(\rho(\epsilon_{ijk})=1\),
+\[
+   \epsilon_{ijk}\in\ker\rho=\{\pm1\}.
+\tag{9.3}
+\]
+This defines a fixed-cover kernel-valued obstruction class.
+The independence from the chosen lift family is elementary at this level.
+If \(h'_{ij}\) is another lift of the same visible Lorentz cocycle, then
+there are kernel-valued functions
+\(\alpha_{ij}:U_i\cap U_j\to\{\pm1\}\) with
+\[
+    h'_{ij}=\alpha_{ij}h_{ij}.
+\]
+Because the kernel is central,
+\[
+\begin{aligned}
+ \epsilon'_{ijk}
+ &=h'_{ij}h'_{jk}(h'_{ik})^{-1}\\
+ &=\alpha_{ij}\alpha_{jk}\alpha_{ik}^{-1}\,
+   \epsilon_{ijk}.
+\end{aligned}
+\tag{9.3a}\label{eq:obstruction-coboundary}
+\]
+Thus two representatives differ by the fixed-cover kernel-valued
+coboundary \(\delta\alpha\), and determine the same project-native class.
+A coherent native Spin cocycle gives \(\epsilon_{ijk}=1\) identically, so
+its class is trivial.
+
+This is the familiar mechanism underlying the usual obstruction theory for
+Spin structures \cite{Steenrod,MilnorStasheff,LawsonMichelsohn}; however,
+the present class is kept at its exact project-native fixed-cover level.
+
+\begin{boundary}[No Stiefel--Whitney identification]
+\label{bdry:no-sw}
+No theorem here identifies the determinant obstruction with \(w_1(TM)\),
+or the fixed-cover kernel-valued lifting obstruction with \(w_2(TM)\).
+No refinement limit or comparison with global
+\(H^{1}(M;\Ztwo)\) or \(H^{2}(M;\Ztwo)\) is used.  Consequently the
+statement \(w_1(TM)=w_2(TM)=0\) is not a theorem of the present paper.
+\end{boundary}
+
+\subsection{Reconvergence under the solder gate}
+
+The regular solder turns the projected internal Lorentz cocycle into the
+actual tangent Lorentz cocycle read in the solder frames.
+
+\begin{theorem}[Solder-induced cocycle identification]
+\label{thm:cocycle-identification}
+For every regular solder and every overlap,
+the Lorentz transformation obtained by comparing tangent components in the
+two solder frames is exactly the projected native transition \(g_{ij}\).
+\end{theorem}
+
+This is a rearrangement of the intertwining equation \eqref{eq:regular-solder-law}, but it is
+the central bridge: it allows the internal double-cover information to be
+read as information about the tangent bundle.
+
+\begin{theorem}[Global reconvergence]
+\label{thm:reconvergence}
+Assume \(B\) is smoothly glued and a regular solder exists for a native Spin
+cocycle \(\widetilde g\).  Then:
+\begin{enumerate}
+\item there are continuous nowhere-zero functions
+      \(a_i:D_i\to\R\) such that
+\[
+  \det T_{ij}(y)\,a_i(y)
+  =
+  a_j(\phi_{ij}(y));
+\tag{9.4}\label{eq:orientation-coboundary}
+\]
+\item the tangent Lorentz cocycle in solder frames equals
+      \(\rho(\widetilde g_{ij})\);
+\item every local lift family of that projected cocycle has trivial
+      project-native fixed-cover Spin-lifting obstruction;
+\item the project-native future-cone reduction of
+      Proposition~\ref{prop:future-cone} exists.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+For (1), take the determinant of the regular-solder intertwining law.
+The internal Lorentz factor has determinant one, so the determinant of the
+tangent transition is the ratio of the solder-frame determinants, giving
+\eqref{eq:orientation-coboundary}.  Statement (2) is
+\cref{thm:cocycle-identification}.  For (3), the native Spin cocycle itself
+is a coherent lift of its projection; the triple-overlap defect is
+therefore trivial.  Independence of the obstruction from the chosen local
+lift family transfers triviality to every lift family.  Statement (4) is
+Proposition~\ref{prop:future-cone}.
+\end{proof}
+
+Two useful contrapositives are immediate.
+
+\begin{corollary}[Orientation gate]
+\label{cor:orientation-gate}
+If no continuous nowhere-zero \(0\)-cochain \(a_i\) can satisfy
+\eqref{eq:orientation-coboundary}, then no regular solder exists for any native Spin datum over
+that base gluing.
+\end{corollary}
+
+\begin{corollary}[Spin-lifting gate]
+\label{cor:spin-gate}
+If a visible Lorentz cocycle has nontrivial project-native lifting
+obstruction, then it admits no coherent native Spin transition datum
+projecting to it.  In particular it cannot arise as the tangent Lorentz
+cocycle of a regularly soldered native Spin datum.
+\end{corollary}
+
+The converse of \cref{thm:reconvergence} is not proved.  Vanishing of these
+two necessary obstructions is therefore not asserted to be sufficient for
+a regular solder.
+
+% ======================================================================
+\clearpage
+\section{Controls and residual global Spin freedom}
+\label{sec:controls}
+% ======================================================================
+
+The previous theorems are accompanied by controls designed to distinguish
+logical necessity from convenient examples.
+
+\subsection{One-chart positive control}
+
+On a one-chart base there are no nontrivial overlap constraints.  The base
+is smooth, a regular solder exists, and there is no artificial sign family
+generated by the cover.  This verifies that the closure machinery does not
+manufacture an obstruction where none is present.
+
+\subsection{Orientation-reversing negative control}
+
+There is a smooth M\"obius-type base gluing whose cross-overlap has two
+relevant components.  On the wrap-around component the genuine tangent
+transition has determinant \(-1\), whereas on the ordinary overlap component
+it has determinant \(+1\).
+
+\begin{control}[Orientation reversal excludes regular solder]
+\label{control:moebius}
+For the orientation-reversing control, no regular solder exists for
+\emph{any} native Spin transition datum.
+\end{control}
+
+\begin{proof}[Reason]
+Every projected native Spin transition lies in \(\LorG\) and hence has
+determinant \(+1\).  If a regular solder existed, the determinant of each
+local solder frame would be a continuous nowhere-zero function on a
+connected chart domain and therefore would have constant sign there.  The
+solder determinant law on the wrap-around component, where the tangent
+determinant is \(-1\), forces opposite signs in the two charts; the same law
+on the ordinary component, where the tangent determinant is \(+1\), forces
+the same signs.  These requirements are incompatible.  This is the concrete
+mechanism behind the orientation gate Corollary~\ref{cor:orientation-gate}; the
+presence of both overlap components is essential.
+\end{proof}
+
+Native Spin transition data nevertheless exist over this same gluing.
+Thus existence of Spin-valued fibre data is strictly weaker than existence
+of a Lorentz solder coupling those data to \(TM\).
+
+\subsection{Combinatorial-label negative control}
+
+Consider also a deliberately abstract Spin-foam-style label structure.  For arbitrary such combinatorial labels,
+the same label input is compatible with the one-chart positive control,
+where a regular solder exists, and with the M\"obius-type control, where no
+regular solder exists for any native Spin datum.  Therefore these
+combinatorial labels do not determine a regular solder.  This is a statement
+about this abstract control structure, not about any published spin-foam
+model or about spin foams in general.
+
+\subsection{Fixed-cover kernel freedom}
+
+Because \(\ker\rho=\{\pm1\}\), a native lift can retain discrete global
+freedom even when the projected Lorentz transition system is fixed.
+
+\begin{proposition}[One-loop sign freedom]
+\label{prop:one-loop-freedom}
+On the fixed one-loop control cover there are two native Spin transition
+systems that:
+\begin{enumerate}
+\item have the same projected Lorentz transition system;
+\item both admit regular solders;
+\item are not equivalent under the project's kernel-valued fixed-cover
+      gauge relation.
+\end{enumerate}
+\end{proposition}
+
+\begin{proposition}[Finite fixed-cover multiplicity]
+\label{prop:multi-loop}
+For \(N\) independent loop labels, the construction gives an injection of
+\(\{\pm1\}^{N}\) into the fixed-cover gauge classes.  In particular, for
+\(N=2\) there are four pairwise distinguished classes, all compatible with
+regular soldering in the control.
+\end{proposition}
+
+\begin{proof}[Proof of Propositions~\ref{prop:one-loop-freedom} and~\ref{prop:multi-loop}]
+For each loop \(n\), the cross-overlap of its two patches has two connected
+components: the wrap-around component and the ordinary component.  Given a
+sign assignment \(\sigma\in\{\pm1\}^{N}\), define a kernel-valued
+\Cech~1-cocycle \(z^\sigma\) which equals \(\sigma_n\) on the
+wrap-around component of loop \(n\) and equals \(1\) on the ordinary
+component and on all unaffected overlaps.  Since every value of
+\(z^\sigma\) lies in \(\ker\rho=\{\pm1\}\), twisting the trivial Spin
+cocycle by \(z^\sigma\) leaves the projected Lorentz cocycle unchanged.
+Consequently the same regular solder for the periodic control works for every
+sign assignment.
+
+It remains to prove that distinct sign assignments are not related by a
+kernel-valued fixed-cover gauge.  Suppose \(\sigma_n\ne\tau_n\) for some
+loop \(n\), and assume that patchwise kernel-valued gauge functions
+\(\lambda_-\) and \(\lambda_+\) relate the corresponding twisted
+cocycles.  The kernel is discrete and each patch is connected, so continuity
+forces \(\lambda_-\) and \(\lambda_+\) to be constant on their patches.
+Evaluating the gauge law at a point of the ordinary overlap, where both sign
+cocycles equal \(1\), gives
+\[
+    \lambda_-\lambda_+^{-1}=1.
+\]
+Evaluating the same law at a point of the wrap-around component gives, using
+centrality of the kernel,
+\[
+    \tau_n
+      =\lambda_-\,\sigma_n\,\lambda_+^{-1}
+      =\sigma_n,
+\]
+contradicting \(\sigma_n\ne\tau_n\).  Hence different sign assignments
+give different fixed-cover gauge classes.  For one loop this yields exactly
+the two classes of Proposition~\ref{prop:one-loop-freedom}; for \(N\)
+independent loops it gives the asserted injection, and for \(N=2\) the four
+sign assignments give four pairwise inequivalent classes.
+\end{proof}
+
+\begin{boundary}
+The preceding statements do not compute \(H^{1}(M;\Ztwo)\).  They are
+fixed-cover statements; no refinement argument identifying them with
+global cohomology is part of the present construction.
+\end{boundary}
+
+This control is important conceptually: bottom-up Spin closure does not
+canonize the Spin lift.
+
+% ======================================================================
+\clearpage
+\section{A selected one-parameter transition deformation}
+\label{sec:deformation}
+% ======================================================================
+
+The static closure structure is now complete enough to perform a first
+deformation smoke test.  The deformation is placed at the strongest
+transition-level object that presently exists: the native Spin cocycle.
+There is no connection one-form, path-ordered transport, holonomy
+functional, curvature two-form, or field equation in the construction.
+
+\subsection{Selected intrinsic one-parameter subgroup}
+
+Choose the first Euclidean basis direction \(\varepsilon_{0}\in V\)
+and its Clifford image
+\[
+    \gamma_{0}:=\iota(\varepsilon_{0}),
+    \qquad \gamma_{0}^{2}=1.
+\]
+The generator \(\gamma_{0}\) is selected for the control; no theorem makes
+this direction canonical.
+
+\begin{definition}[Selected Spin path]
+\label{def:G-lambda}
+For \(\lambda\in\R\), define
+\[
+   G(\lambda)
+   :=
+   \cosh\!\left(\frac{\lambda}{2}\right)
+   +
+   \sinh\!\left(\frac{\lambda}{2}\right)\gamma_{0}
+   \in\Cl_{3}.
+\tag{11.1}\label{eq:selected-spin-path}
+\]
+\end{definition}
+
+The hyperbolic identities and \(\gamma_{0}^{2}=1\) give
+\[
+   G(\lambda)c(G(\lambda))=1,
+\]
+hence \(G(\lambda)\in\SpinG\).  Moreover,
+\[
+   G(0)=1,\qquad
+   G(\lambda+\mu)=G(\lambda)G(\mu),\qquad
+   G(-\lambda)=G(\lambda)^{-1}.
+\tag{11.2}
+\]
+The parameterization is injective.
+
+The projection \(\rho(G(\lambda))\) is nontrivial for
+\(\lambda\neq0\).  On the plane spanned by the intrinsic scalar direction
+and \((0,\varepsilon_{0})\), its action is the standard boost block
+\[
+   \begin{pmatrix}
+      \cosh\lambda & \sinh\lambda\\
+      \sinh\lambda & \cosh\lambda
+   \end{pmatrix},
+\tag{11.3}\label{eq:boost-block}
+\]
+and it acts trivially on the two orthogonal Euclidean directions.
+In particular,
+\[
+   \rho(G(\lambda))\mathbf1_{\Smodel}
+   =
+   \bigl(\cosh\lambda,\sinh\lambda\,\varepsilon_{0}\bigr).
+\tag{11.4}
+\]
+
+\begin{boundary}[Selected control slice]
+\label{bdry:selected}
+The family \eqref{eq:selected-spin-path} is a deliberately selected one-parameter subgroup
+generated by one chosen Clifford direction.  It is neither proved unique
+nor canonical, and it does not exhaust the possible intrinsic Spin
+deformation directions.
+\end{boundary}
+
+\subsection{The fixed periodic control}
+
+Fix the periodic base gluing used by the control, together with its fixed
+cover and two-component periodic overlap.  We make no identification of
+this quotient with \(S^{1}\times\R^{3}\), and no fundamental-group theorem
+is required.
+
+The native Spin transition cocycle is deformed using \(G(\lambda)\).
+The base gluing and hence the tangent transitions are held fixed; the
+projected Lorentz transition is always obtained by applying \(\rho\) to
+the Spin transition.  The regular solder is then the variable to be solved
+for.
+
+Let
+\[
+  \cR_A
+  :=
+  \left\{
+      \lambda\in\R:
+      \text{a regular solder exists for the deformed cocycle at }\lambda
+  \right\}.
+\tag{11.5}
+\]
+
+\begin{theorem}[Admissibility locus]
+\label{thm:admissibility}
+For the fixed periodic control,
+\[
+   \cR_A=\R.
+\tag{11.6}\label{eq:admissibility-region}
+\]
+Thus every finite parameter value admits an explicitly constructed regular
+solder.  In particular admissibility is symmetric under
+\(\lambda\mapsto-\lambda\).
+\end{theorem}
+
+\begin{proof}
+Let \(\chi:\R\to[0,1]\) be a fixed \(C^\infty\) transition profile with
+\(\chi(t)=0\) for \(t\le3\) and \(\chi(t)=1\) for \(t\ge4\).  On the two
+patches of each periodic control loop define
+\[
+  \alpha_\lambda(p,y)=
+  \begin{cases}
+     0, & p\text{ is the first patch},\\
+     \lambda\,\chi(y_0), & p\text{ is the second patch}.
+  \end{cases}
+\tag{11.6a}\label{eq:solder-angle}
+\]
+Let \(P(t)=\rho(G(t))\in\LorG\).  By the one-parameter subgroup law,
+\(P(s+t)=P(s)P(t)\) and \(P(-t)=P(t)^{-1}\), and the closed form
+\eqref{eq:boost-block} makes \(t\mapsto P(t)\) smooth.  Define
+\[
+   A_p^{(\lambda)}(y):=P(\alpha_\lambda(p,y)).
+\tag{11.6b}\label{eq:explicit-solder}
+\]
+This is the identity on the first patch and smoothly interpolates on the
+second patch between the identity and \(P(\lambda)\).
+
+All tangent transitions of the frozen periodic control are the identity.
+The projected deformed Spin transition on an overlap is
+\(P(\beta_{pq}^{(\lambda)}(x))\), where
+\(\beta_{pq}^{(\lambda)}\) is \(\pm\lambda\) on the wrap-around component
+and \(0\) on the ordinary component.  By the defining values of \(\chi\),
+one verifies on each overlap component that
+\[
+   \alpha_\lambda(q,\phi_{pq}(y))
+   =\alpha_\lambda(p,y)+\beta_{pq}^{(\lambda)}(x_y).
+\tag{11.6c}\label{eq:solder-angle-step}
+\]
+Therefore
+\[
+\begin{aligned}
+  A_q^{(\lambda)}(\phi_{pq}(y))
+   &=P(\alpha_\lambda(q,\phi_{pq}(y)))\\
+   &=P(\alpha_\lambda(p,y))
+     P(\beta_{pq}^{(\lambda)}(x_y))\\
+   &=A_p^{(\lambda)}(y)\,g_{pq}^{(\lambda)}(x_y),
+\end{aligned}
+\]
+which is precisely the regular-solder law because the tangent transition is
+\(\id\).  Smoothness and pointwise invertibility follow from those of
+\(P\) and \(\chi\).  Hence a regular solder exists for every
+\(\lambda\in\R\), proving \(\cR_A=\R\).
+\end{proof}
+
+The result is not vacuous: the project also contains closure families for
+which not every parameter is admissible.  Equation \eqref{eq:admissibility-region} is
+therefore a property of this particular control family, not a consequence
+of the definition of admissibility.
+
+\subsection{Full Spin \Cech\ gauge orbit}
+
+Let \(\widetilde g^{(\lambda)}\) denote the native transition cocycle at
+parameter \(\lambda\).
+
+\begin{theorem}[Gauge classification of the selected family]
+\label{thm:gauge-orbit}
+For all \(\lambda_{1},\lambda_{2}\in\R\),
+\[
+   \widetilde g^{(\lambda_{1})}
+   \sim_{\mathrm{full\ Spin\ \Cech}}
+   \widetilde g^{(\lambda_{2})}.
+\tag{11.7}
+\]
+The Spin-side gauge is continuous.  After projection by \(\rho\), its
+Lorentz representative is \(C^\infty\) on every chart domain, and the
+projected Lorentz cocycles also lie in one gauge orbit.
+\end{theorem}
+
+\begin{proof}
+First compare an arbitrary \(\lambda\) with the neutral value.  Using the
+same interpolation function \(\alpha_\lambda\) as in
+\eqref{eq:solder-angle}, define on patch \(p\)
+\[
+   u_p^{(\lambda)}(x)
+   :=G\!\left(-\alpha_\lambda
+       \bigl(p,\operatorname{coord}_p(x)\bigr)\right).
+\tag{11.7a}\label{eq:spin-gauge}
+\]
+The map is continuous because \(G(t)\) is continuous in the intrinsic Spin
+topology and the chart-coordinate profile is continuous.  On an overlap,
+\eqref{eq:solder-angle-step} and the group law of \(G\) give
+\[
+   \widetilde g_{pq}^{(\lambda)}(x)
+   =u_p^{(\lambda)}(x)\,
+      \widetilde g_{pq}^{(0)}(x)\,
+      \bigl(u_q^{(\lambda)}(x)\bigr)^{-1}.
+\tag{11.7b}\label{eq:spin-coboundary}
+\]
+Thus every parameter value is full-Spin-\Cech\ gauge equivalent to zero.
+For two arbitrary values \(\lambda_1,\lambda_2\), compose the inverse gauge
+from \(\lambda_1\) to zero with the gauge from zero to \(\lambda_2\).
+
+Applying \(\rho\) to \eqref{eq:spin-coboundary} gives the corresponding
+Lorentz gauge relation.  Its chartwise representative is
+\(P(-\alpha_\lambda)\); by the explicit hyperbolic formula
+\eqref{eq:boost-block} and smoothness of \(\alpha_\lambda\), this projected
+gauge is \(C^\infty\) on every chart domain.  No smooth structure on the
+intrinsic Spin group is used or claimed.
+\end{proof}
+
+The narrower kernel-valued fixed-cover equivalence behaves differently.
+For \(\lambda\neq0\), the deformed datum is not merely a \(\{\pm1\}\)-lift
+relabeling of the neutral datum, because its Lorentz projection itself
+moves.  There is no contradiction: the two equivalence relations answer
+different questions.
+
+\subsection{All regular solder solutions, not only one branch}
+
+For a parameter \(\lambda\), write
+\[
+   \cE_{\lambda}
+   :=
+   \left\{
+      \text{regular solders for }
+      (B_{\mathrm{per}},\widetilde g^{(\lambda)})
+   \right\}.
+\tag{11.8}
+\]
+
+\begin{theorem}[Solution-space correspondence]
+\label{thm:solution-correspondence}
+For every \(\lambda_{1},\lambda_{2}\in\R\), there is an explicit bijection
+\[
+   \mathcal T_{\lambda_{1},\lambda_{2}}:
+   \cE_{\lambda_{1}}
+   \xrightarrow{\;\sim\;}
+   \cE_{\lambda_{2}},
+\tag{11.9}\label{eq:solution-bijection}
+\]
+obtained by precomposing the local solder comparison with the projected
+gauge relating the two native Spin cocycles.  The inverse is
+\(\mathcal T_{\lambda_{2},\lambda_{1}}\).
+\end{theorem}
+
+\begin{proof}
+Set
+\[
+   \delta_{12}(p,y)
+   :=\alpha_{\lambda_2}(p,y)-\alpha_{\lambda_1}(p,y),
+   \qquad
+   Q_{12,p}(y):=P(\delta_{12}(p,y)).
+\tag{11.9a}\label{eq:gauge-angle}
+\]
+For a regular solder \(A\in\cE_{\lambda_1}\), define
+\[
+   \bigl(\mathcal T_{\lambda_1,\lambda_2}A\bigr)_p(y)
+   :=A_p(y)\circ Q_{12,p}(y).
+\tag{11.9b}\label{eq:solder-transport}
+\]
+The fields \(Q_{12,p}\) are smooth and invertible.  Subtracting the two
+identities \eqref{eq:solder-angle-step} for \(\lambda_1\) and
+\(\lambda_2\) gives exactly the overlap equation needed to convert the
+\(\lambda_1\)-solder law into the \(\lambda_2\)-solder law.  Thus
+\eqref{eq:solder-transport} is a regular solder at \(\lambda_2\).
+
+Since
+\[
+   \delta_{21}=-\delta_{12}
+   \quad\text{and}\quad
+   P(-t)=P(t)^{-1},
+\]
+transporting from \(\lambda_1\) to \(\lambda_2\) and then back composes
+with \(Q_{12}Q_{21}=\id\) pointwise.  Hence
+\(\mathcal T_{\lambda_2,\lambda_1}\) is the inverse of
+\(\mathcal T_{\lambda_1,\lambda_2}\), proving the stated bijection.
+\end{proof}
+
+\begin{theorem}[Metric preservation]
+\label{thm:metric-preservation}
+Let \(A\in\cE_{\lambda_{1}}\), and let
+\(A'=\mathcal T_{\lambda_{1},\lambda_{2}}(A)\).
+Then for every \(x\in M\) and \(X,Y\in T_xM\),
+\[
+   g_{A'}(X,Y)=g_A(X,Y).
+\tag{11.10}
+\]
+\end{theorem}
+
+\begin{proof}
+In a chart, \eqref{eq:solder-transport} gives
+\[
+    A'_p=A_p\circ Q_{12,p},
+    \qquad
+    (A'_p)^{-1}=Q_{12,p}^{-1}\circ A_p^{-1}.
+\]
+Therefore
+\[
+\begin{aligned}
+ g_{A',p}(u,v)
+ &=B\!\left(Q_{12,p}^{-1}A_p^{-1}u,
+            Q_{12,p}^{-1}A_p^{-1}v\right)\\
+ &=B\!\left(A_p^{-1}u,A_p^{-1}v\right)\\
+ &=g_{A,p}(u,v),
+\end{aligned}
+\]
+because \(Q_{12,p}(y)=P(\delta_{12}(p,y))\in\LorG\) preserves \(B\).
+The equality holds in every chart and is compatible with the tangent
+transition law, hence it is the equality of the induced tangent metrics at
+every base point and on every pair of tangent vectors.
+\end{proof}
+
+\begin{corollary}[Scoped negative smoke-test conclusion]
+\label{cor:smoketest}
+On the fixed periodic control, the selected transition-cocycle parameter
+has no closure-selection power and does not change the induced tangent
+Lorentz metric under the certified correspondence of regular-solder
+solutions.
+\end{corollary}
+
+\begin{boundary}[What Corollary~\ref{cor:smoketest} does not say]
+The result does not classify arbitrary native Spin deformations, arbitrary
+covers, co-varying bases, or connection-level deformations.  It does not
+show that ``all transition deformations are pure gauge'', and it carries no
+curvature interpretation.  The parameter \(\lambda\) is the coordinate of
+the selected Spin subgroup \eqref{eq:selected-spin-path}, not a curvature scalar.
+\end{boundary}
+
+% ======================================================================
+\clearpage
+\section{Mathematical boundary and next structural edge}
+\label{sec:boundary}
+% ======================================================================
+
+The construction reaches a sharp stopping point.  It is useful to state it
+positively before listing what remains open.
+
+From the sole local primitive \(V=\R^{3}\) with its Euclidean form, one has
+constructed the Lorentz spin factor, the Euclidean Clifford envelope, the
+intrinsic Spin double cover, and the six-dimensional Lorentz-skew algebra.
+After adding explicit base-gluing data and sufficient topological and smooth
+conditions, one obtains a smooth four-manifold.  After adding a regular
+solder, one obtains a smooth Lorentzian tangent metric, coherent
+orientation and future-cone reductions, and the exact identification of
+the tangent Lorentz cocycle with the projection of native Spin transition
+data.
+
+What is \emph{not} yet part of the mathematical object is equally precise.
+
+\begin{enumerate}
+\item The intrinsic topological group \(\SpinG\) has not been packaged and
+      related to \(\gB\) as a Lie group/Lie algebra pair:
+\[
+   \operatorname{Lie}(\SpinG)\simeq\gB
+   \qquad\text{is open.}
+\tag{12.1}
+\]
+\item The differential \(d\rho_e\) of the native Spin cover has not been
+      constructed.
+\item No Spin or Lorentz connection one-form has been defined.
+\item Consequently there is no covariant derivative, parallel transport,
+      holonomy, curvature, torsion, action functional, or field equation in
+      the present theory.
+\item The fixed-cover obstruction classes have not been compared
+      formally with \(w_1(TM)\) and \(w_2(TM)\).
+\item The project-native future-cone reduction has not been identified by
+      theorem with all standard formulations of time orientability.
+\end{enumerate}
+
+The selected deformation result of \cref{sec:deformation} gives a concrete
+reason not to skip these missing edges.  A nontrivial curve of
+transition-level Spin data can move the projected Lorentz cocycle while
+remaining fully gauge absorbable on the tested control and leaving the
+tangent metric invariant.  Thus, on this control, the first tested transition-level knob has no
+closure-selection power and does not change the induced tangent Lorentz
+metric under the certified solder correspondence.  This does not prove that a
+connection-level theory will be nontrivial; it identifies the next
+mathematically meaningful place at which such a question can be posed.
+
+% ======================================================================
+\clearpage
+\section{Conclusion}
+% ======================================================================
+
+The main structural lesson is a separation theorem for levels of geometric
+information.
+
+At the local level, positive Euclidean three-space already contains enough
+algebraic structure to produce a four-dimensional Lorentz spin factor, its
+Clifford envelope, an intrinsic Spin double cover of an intrinsic Lorentz
+group, and a six-dimensional Lorentz-skew Lie algebra.  This part is
+intrinsic to the local input.
+
+At the global level, incidence is independent information.  Local pieces,
+even when equipped with fibre transitions, do not determine which points
+of different pieces form a common base.  Explicit base gluing is therefore
+a genuine additional primitive.  Under a closed-graph separation condition,
+countability, and smooth compatibility, it reconstructs a smooth
+four-manifold.
+
+At the tangent level, a second independent gap appears.  The derivative
+cocycle \(D\phi_{ij}\) of that manifold is not forced to equal the internal
+Lorentz cocycle.  A regular solder is the additional gate that identifies
+them in the correct bundle-theoretic sense.  Once supplied, it yields a
+smooth Lorentzian tangent metric and forces the project-native orientation,
+future-cone, and Spin-lifting compatibility conditions.
+
+The resulting implication is therefore conditional and exact:
+\[
+\begin{array}{c}
+(\R^{3},\langle\cdot,\cdot\rangle)
+\Longrightarrow
+(\Smodel,N,\Cl_{3},\SpinG\!\to\!\LorG,\gB)
+\\[0.5em]
+\begin{gathered}
+\text{local core}+\text{base gluing}\\
++\text{closed gluing graph}+\text{countable index}+\text{smoothness}
+\end{gathered}
+\Longrightarrow M^{4}
+\\[0.5em]
+M^{4}+\text{native Spin cocycle}+\text{regular solder}
+\\[-0.1em]
+\Downarrow
+\\[-0.1em]
+(TM,g),
+\\
+\text{project-native orientation compatibility},
+\\
+\text{project-native future-cone reduction},
+\\
+\text{tangent Lorentz cocycle = projected native Spin cocycle},
+\\
+\text{trivial project-native fixed-cover Spin-lifting obstruction}.
+\end{array}
+\tag{13.1}\label{eq:final-chain}
+\]
+No arrow in \eqref{eq:final-chain} hides a missing global existence theorem.
+
+The first deformation smoke test is correspondingly modest but sharp.  On
+the selected fixed periodic control, the chosen one-parameter Spin
+transition family is globally admissible and gauge absorbable for all
+finite parameters, and its entire regular-solder solution spaces are
+identified without changing the induced tangent Lorentz metric.  This
+closes that specific control question and leaves the infinitesimal
+Spin-to-Lorentz bridge, and only thereafter connection-level geometry, as
+the next structural problem.
+
+% ======================================================================
+\appendix
+\clearpage
+\section{Dependency and status table}
+\label{app:status}
+% ======================================================================
+
+\begin{center}
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.30\textwidth}
+                >{\raggedright\arraybackslash}p{0.23\textwidth}
+                >{\raggedright\arraybackslash}p{0.37\textwidth}}
+\toprule
+Object or statement & Status & Dependency \\
+\midrule
+\(V=\R^{3}\), Euclidean form & primitive input & none \\
+\(\Smodel,N,B\), signature \((1,3)\) & \statusderived & Euclidean input \\
+\(\Cl_{3}\), paravectors & \statusderived & \(q_{3}\) \\
+\(\SpinG\to\LorG\), kernel \(\{\pm1\}\) & \statusderived & Clifford core \\
+\(\gB\simeq\Lambda^{2}\Smodel\) & \statusderived & \(B\) \\
+Base incidence/gluing & \statusdatum & not determined by local pieces \\
+Closed gluing graph & additional hypothesis & needed for certified Hausdorffness \\
+Countable index set & additional hypothesis & needed for certified second countability \\
+Smooth gluing & sufficient additional hypothesis & base transitions \(\phi_{ij}\) \\
+Smooth \(M^{4}\) & \statusderived & preceding global hypotheses \\
+Tangent transitions \(D\phi_{ij}\) & \statusderived & smooth atlas \\
+Native Spin cocycle & global datum & fixed cover of \(M\) \\
+Regular solder & \statusdatum & not generally inhabited \\
+Smooth Lorentz tangent metric & \statusderived & regular solder \\
+Orientation reduction & \statusderived & regular solder \\
+Future-cone reduction & \statusderived & regular solder \\
+Project-native Spin obstruction trivial & \statusderived & regular solder + native cocycle \\
+\(w_1,w_2\) comparison & \statusopen & characteristic-class comparison theorem \\
+\(\operatorname{Lie}(\SpinG)\simeq\gB\) & \statusopen & smooth intrinsic Spin theory \\
+\(d\rho_e\) & \statusopen & preceding infinitesimal bridge \\
+Connection, holonomy, curvature & \statusopen & connection-level extension \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% ======================================================================
+\clearpage
+\section{Formal source map}
+\label{app:source-map}
+% ======================================================================
+
+This appendix is a reproducibility map, not part of the mathematical
+dependency argument.  The human-readable theorem statements above are tied
+to the current formal source by the following principal declarations.
+
+\begin{center}
+\footnotesize
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.28\textwidth}
+                >{\raggedright\arraybackslash}p{0.64\textwidth}}
+\toprule
+Paper statement & Principal formal endpoint(s) \\
+\midrule
+Spin factor and Lorentz form &
+\path{SpinCore.sJ_jordan},
+\path{SpinCore.lorentz_quadratic_form} \\
+Jordan--Clifford bridge &
+\path{SpinCore.clifford_jordan},
+\path{SpinCore.adjoin_spinToCl_eq_top} \\
+Intrinsic double cover &
+\path{SpinCore.spin_double_cover_bundled},
+\path{SpinCore.spin_double_cover_topological_endpoint},
+\path{SpinCore.spin_double_cover_local_section_endpoint} \\
+Bivector/Lorentz-skew algebra &
+\path{SpinCore.bivectorEquivSkew},
+\path{SpinCore.finrank_gB},
+\path{SpinCore.gBLie_bracket} \\
+Base non-derivability &
+\path{EmergentBase.base_not_determined_by_local_pieces} \\
+Topological reconstruction &
+\path{EmergentBase.BaseGluingData.emergentManifoldCertificate} \\
+Smooth manifold &
+\path{EmergentBase.BaseGluingData.isManifold_of_smoothGluing},
+\path{EmergentBase.BaseGluingData.smoothEmergentManifoldCertificate} \\
+Genuine tangent transition &
+\path{EmergentBase.BaseGluingData.tangentTransition_eq_derivative_baseTransition} \\
+Tangent/internal independence &
+\path{SpinNative.tangent_spin_base_data_do_not_force_transition_identification} \\
+Regular solder &
+\path{SpinNative.SmoothTangentSolderData};
+\path{SpinNative.smooth_solder_iff_regular_bundle_equivalence} \\
+Smooth tangent metric &
+\path{SpinNative.SmoothTangentSolderData.smooth_tangent_lorentz_metric} \\
+Orientation/future cone &
+\path{SpinNative.SmoothTangentSolderData.orientation_time_orientation_status} \\
+Global reconvergence &
+\path{Task36.classical_reconvergence},
+\path{Task36.spin_obstruction_nonzero_implies_no_solder} \\
+Adversarial controls &
+\path{Task36.adversarial_global_topology_certificate},
+\path{Task36.spin_foam_labels_do_not_determine_solder} \\
+Selected deformation path &
+\path{Task37.Deformation.transportState_add},
+\path{Task37.Deformation.projectedTransportState_apply} \\
+Fixed-control admissibility &
+\path{Task37.Deformation.loopParaSolder} (construction),
+\path{Task37.Deformation.controlAAdmissible_all},
+\path{Task37.Deformation.regularRegion_loopTransportFamily} \\
+Full Spin \Cech\ gauge orbit &
+\path{Task37.Deformation.loopGaugeFun} (construction),
+\path{Task37.Deformation.spinCocycle_gaugeEquiv},
+\path{Task37.Deformation.projectedCocycle_gaugeEquiv} \\
+Selected deformation smoke test &
+\path{Task37.Deformation.native_transport_knob_smoketest_certificate} \\
+Whole solution-space transport &
+\path{Task37.Deformation.loopSolderEquiv} (construction),
+\path{Task37.Deformation.loopSolderTransport_involutive},
+\path{Task37.Deformation.loopSolderSolutionSpace_correspondence},
+\path{Task37.Deformation.tangentMetric_loopSolderTransport} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The formal development is available at
+\url{https://github.com/antaris82/The_Relational_Spin-Closure_Hypothesis}
+\cite{RSCHFormal}.
+The main development is written in Lean~4 and uses Mathlib
+\cite{LeanSystem,Mathlib2020}.  The mathematical claims of this paper should
+be read at the strength of the displayed hypotheses above; the formal
+artifact supplies machine-checked proofs of the corresponding registered
+source statements.
+
+% ======================================================================
+\clearpage
+\section*{Acknowledgments}
+\addcontentsline{toc}{section}{Acknowledgments}
+% ======================================================================
+
+The editor thanks Thomas Stoer and Thomas Klimpel for sustained, critical,
+and constructive discussions.  These exchanges repeatedly helped clarify
+assumptions, expose weak formulations, and sharpen the mathematical
+questions addressed in this work.
+
+% ======================================================================
+\section*{AI and formalization disclosure}
+\addcontentsline{toc}{section}{AI and formalization disclosure}
+% ======================================================================
+
+ChatGPT (OpenAI), acting as AI Assistant, was used for mathematical
+exploration, source-level analysis, organization, consistency checking, and
+editorial drafting.  Aristotle was used as Lean Agent for prover-assisted
+formalization and verification.  The editor curated the scope and the
+presentation.  Mathematical claims are asserted only at the strength stated
+in the paper and are tied, where applicable, to the referenced formal Lean
+endpoints.  The formal artifact, rather than the language-model prose, is
+the machine-checked source for the certified statements.
+
+% ======================================================================
+\small
+\setlength{\emergencystretch}{2em}
+\begin{thebibliography}{99}
+
+\bibitem{Chevalley}
+C.~Chevalley,
+\emph{The Algebraic Theory of Spinors},
+Columbia University Press, New York, 1954.
+
+\bibitem{FarautKoranyi}
+J.~Faraut and A.~Kor\'anyi,
+\emph{Analysis on Symmetric Cones},
+Oxford Mathematical Monographs,
+Oxford University Press, Oxford, 1994.
+doi:10.1093/oso/9780198534778.001.0001.
+
+\bibitem{Husemoller}
+D.~Husemoller,
+\emph{Fibre Bundles},
+3rd ed., Graduate Texts in Mathematics 20,
+Springer, New York, 1994.
+
+\bibitem{JordanNeumannWigner}
+P.~Jordan, J.~von Neumann, and E.~Wigner,
+On an algebraic generalization of the quantum mechanical formalism,
+\emph{Annals of Mathematics} \textbf{35} (1934), 29--64.
+doi:10.2307/1968117.
+
+\bibitem{KobayashiNomizu}
+S.~Kobayashi and K.~Nomizu,
+\emph{Foundations of Differential Geometry, Vol.~I},
+Interscience Publishers, New York, 1963.
+
+\bibitem{LawsonMichelsohn}
+H.~B.~Lawson, Jr. and M.-L.~Michelsohn,
+\emph{Spin Geometry},
+Princeton Mathematical Series 38,
+Princeton University Press, Princeton, 1989.
+
+\bibitem{LeeSmooth}
+J.~M.~Lee,
+\emph{Introduction to Smooth Manifolds},
+2nd ed., Graduate Texts in Mathematics 218,
+Springer, New York, 2013.
+
+\bibitem{MilnorStasheff}
+J.~W.~Milnor and J.~D.~Stasheff,
+\emph{Characteristic Classes},
+Annals of Mathematics Studies 76,
+Princeton University Press, Princeton, 1974.
+
+\bibitem{Nakahara}
+M.~Nakahara,
+\emph{Geometry, Topology and Physics},
+2nd ed., CRC Press, Boca Raton, 2003.
+ISBN 978-0-7503-0606-5.
+
+\bibitem{ONeill}
+B.~O'Neill,
+\emph{Semi-Riemannian Geometry with Applications to Relativity},
+Pure and Applied Mathematics 103,
+Academic Press, New York, 1983.
+
+\bibitem{Steenrod}
+N.~Steenrod,
+\emph{The Topology of Fibre Bundles},
+Princeton Mathematical Series 14,
+Princeton University Press, Princeton, 1951.
+
+\bibitem{LeanSystem}
+L.~de Moura, S.~Kong, J.~Avigad, F.~van Doorn, and J.~von Raumer,
+The Lean theorem prover (system description),
+in A.~P.~Felty and A.~Middeldorp (eds.),
+\emph{Automated Deduction -- CADE-25},
+Lecture Notes in Computer Science 9195,
+Springer, Cham, 2015, pp.~378--388.
+
+\bibitem{Mathlib2020}
+The mathlib Community,
+The Lean mathematical library,
+in \emph{Proceedings of the 9th ACM SIGPLAN International Conference
+on Certified Programs and Proofs (CPP 2020)},
+ACM, 2020, pp.~367--381.
+doi:10.1145/3372885.3373824.
+
+\bibitem{RSCHFormal}
+{\raggedright
+\emph{The Relational Spin-Closure Hypothesis: formal Lean development},
+source repository, commit
+\path{e89832ec0e1f301c051b01a0a4118d9082118a60},
+\url{https://github.com/antaris82/The_Relational_Spin-Closure_Hypothesis},
+accessed 12 September 2026.\par}
+
+\end{thebibliography}
+
+\end{document}
