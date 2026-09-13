@@ -138,13 +138,14 @@ Each local spin factor contains the distinguished unit \(e_x=(1,0)\) with \(N(e_
 \]
 The same local Lorentz-boost subgroup is to be compared in three settings: special-relativistic kinematics, a future comparison with Levi--Civita parallel transport and timelike geodesics, and the composition of kinematic and transport contributions.  The distinguishing geometric information is not a deformation of the local Minkowski model but the path dependence, holonomy and, in a continuum formulation, curvature of the transport law.
 
-Subsequent formal work has now constructed the \((-1)\)-eigenspace \(\mathfrak s\subset\Cl_3\) of Clifford conjugation, the bracket-preserving real-linear isomorphism \(D_B:\mathfrak s\xrightarrow{\sim}\soB\), and, for every \(X\in\mathfrak s\), the algebraic one-parameter subgroup \(t\mapsto\exp(tX)\in\SpinG\).  It also proves that the derivative at \(t=0\) of the projected action on \(\Smodel\) is exactly \(D_B(X)\).  The immediate formal verification is the explicit grade-one rapidity relation
+Subsequent machine-checked work has now constructed the \((-1)\)-eigenspace \(\mathfrak s\subset\Cl_3\) of Clifford conjugation, the bracket-preserving real-linear isomorphism \(D_B:\mathfrak s\xrightarrow{\sim}\soB\), and, for every \(X\in\mathfrak s\), the algebraic one-parameter subgroup \(t\mapsto\exp(tX)\in\SpinG\).  It proves that the derivative at \(t=0\) of the projected action on \(\Smodel\) is exactly \(D_B(X)\).  For every unit vector \(v\in V\), it also proves the exact grade-one rapidity relation
 \[
   \rho\!\left(\exp\!\left(\frac{\eta}{2}\,\iota(v)\right)\right)e
-  =(\cosh\eta,\sinh\eta\,v)
-  \qquad (\langle v,v\rangle=1),
+  =(\cosh\eta,\sinh\eta\,v),
+  \qquad
+  N(\cosh\eta,\sinh\eta\,v)=1,
 \]
-including the factor \(\eta=2t\) between the Clifford exponential parameter and Lorentz rapidity.  The smooth Lie-group identification \(\operatorname{Lie}(\SpinG)\cong\mathfrak s\), the differential \(d\rho_e\), connections, parallel transport, holonomy, curvature and torsion remain open in the present development.
+including the factor \(\eta=2t\) between the Clifford exponential parameter and Lorentz rapidity.  Thus the local Clifford exponential, the standard Lorentz boost and the future unit mass shell are now linked by a formally verified identity.  The next open mathematical step is to construct a smooth Lie-group structure on \(\SpinG\), identify its tangent Lie algebra with \(\mathfrak s\), and prove that the differential of \(\rho\) at the identity is \(D_B\).  Connections, parallel transport, holonomy, curvature and torsion remain subsequent structures.
 
 The Relational Spin-Closure Hypothesis begins only after these distinctions.  It proposes that a future classical configuration space carries a gauge-equivariant constraint whose solution set couples state and geometric variables nontrivially.  The finite-dimensional research programme is deliberately staged: first test algebraic transport compatibility and frustration on a graph; then introduce a controlled driven dynamics with fixed link variables; only afterwards promote the transport variables themselves to dynamical degrees of freedom and test nonlinear back-reaction.  A continuum limit, an effective geometric description, and large-scale gravitational phenomenology come later.  Rotation curves, gravitational lensing, dark-matter phenomenology and MOND-type scaling are therefore late falsification benchmarks, not ingredients of the defining equations.  Quantization and particle interpretations are later still.
 \end{abstract}
@@ -161,7 +162,7 @@ The labels used below have the following meanings:
 \begin{tabular}{cl}
 \toprule
 \statusPaper & proved or constructed in Paper I;\\
-\statusFormal & proved in the subsequent formal Lean development;\\
+\statusFormal & proved in the accompanying machine-checked formalization;\\
 \statusStandard & standard external mathematics;\\
 \statusOpen & open mathematical problem;\\
 \statusHypothesis & hypothesis introduced here;\\
@@ -587,13 +588,13 @@ Hence, for an oriented one-dimensional boost subgroup,
 \end{equation}
 This gives an inverse kinematic reconstruction: a normalized state on \(\mathcal H_x^+\) determines the rapidity of the corresponding one-dimensional Lorentz boost, subject to the stated orientation convention.
 
-The formal Clifford development has already proved, for \(X\in\mathfrak s\), that \(\exp(tX)\in\SpinG\) is an algebraic one-parameter subgroup and that the derivative at \(t=0\) of its projected action is \(D_B(X)\).  For a unit vector \(v\in V\), it also proves
+The accompanying machine-checked formalization has proved, for \(X\in\mathfrak s\), that \(\exp(tX)\in\SpinG\) is an algebraic one-parameter subgroup and that the derivative at \(t=0\) of its projected action is \(D_B(X)\).  For a unit vector \(v\in V\), it also proves
 \begin{equation}
   \exp(t\,\iota(v))
   =\cosh t\,1+\sinh t\,\iota(v).
 \tag{3.11}\label{eq:grade-one-exp}
 \end{equation}
-The immediate formal verification is to identify this curve with the standard boost normalization by proving
+The exact comparison with the standard boost normalization has now also been formally verified:
 \begin{equation}
   \rho\!\left(\exp\!\left(\frac{\eta}{2}\,\iota(v)\right)\right)e_x
   =L_v(\eta)e_x
@@ -602,12 +603,16 @@ The immediate formal verification is to identify this curve with the standard bo
   \langle v,v\rangle=1.
 \tag{3.12}\label{eq:spin-rapidity-target}
 \end{equation}
-Thus the expected relation between the Clifford exponential parameter \(t\) and Lorentz rapidity is
+The projected state satisfies
+\[
+  N\!\left(\rho\!\left(\exp\!\left(\frac{\eta}{2}\,\iota(v)\right)\right)e_x\right)=1,
+\]
+and the Clifford exponential parameter \(t\) and Lorentz rapidity \(\eta\) obey the exact relation
 \begin{equation}
   \eta=2t.
 \tag{3.13}\label{eq:factor-two}
 \end{equation}
-Equations \eqref{eq:spin-rapidity-target}--\eqref{eq:factor-two} are stated here as the next formal bridge to be verified; they are not yet counted as formal results of the current development.
+For the oriented one-dimensional subgroup the inverse relations in \eqref{eq:rapidity-inversion} are formally verified with the standard domain qualifications; in particular \(\operatorname{arsinh}(\sinh\eta)=\eta\) and \(\operatorname{arcosh}(\cosh\eta)=|\eta|\), with \(\operatorname{arcosh}(\cosh\eta)=\eta\) for \(\eta\ge0\).  The tangent vector of the explicit boost curve is Lorentz-orthogonal to the state, so the curve remains tangent to the unit hyperboloid.  These statements concern finite-dimensional Lorentz kinematics only; they do not yet use a smooth Lie-group structure on \(\SpinG\).
 
 The same local Lorentz-boost subgroup then has two distinct standard roles in the comparison programme:
 \begin{center}
@@ -797,7 +802,7 @@ No particular action functional is assumed.
 
 \subsection{The \texorpdfstring{$(-1)$}{-1}-eigenspace of Clifford conjugation and the induced Lie-algebra map}
 
-Subsequent formal work defines the \((-1)\)-eigenspace of Clifford conjugation
+The accompanying machine-checked formalization defines the \((-1)\)-eigenspace of Clifford conjugation
 \begin{equation}
   \mathfrak s
   :=\{X\in\Cl_3:c(X)=-X\}
@@ -828,7 +833,7 @@ These are algebraic results.  They do not by themselves identify \(\mathfrak s\)
 
 \subsection{Algebraic one-parameter subgroups and projected derivatives}
 
-For every \(X\in\mathfrak s\), the formal development proves
+For every \(X\in\mathfrak s\), the machine-checked formalization proves
 \begin{equation}
   \gamma_X(t):=\exp(tX)\in\SpinG,
 \tag{4.5}
@@ -869,7 +874,7 @@ For a unit vector \(v\in V\), the grade-one exponential is proved in closed form
   =\cosh t\,1+\sinh t\,\iota(v).
 \tag{4.10}\label{eq:formal-grade-one-exp}
 \end{equation}
-This result provides the Clifford-algebra side of the standard boost parametrization.  The immediate formal verification is equation \eqref{eq:spin-rapidity-target}, including the relation \(\eta=2t\), and the corresponding proof of \(N=1\) for the projected rest state.
+This result provides the Clifford-algebra side of the standard boost parametrization.  Equation \eqref{eq:spin-rapidity-target}, the relation \(\eta=2t\), and preservation of the unit Lorentz norm for the projected rest state are now formally verified.  Thus the selected boost family of Paper I is recovered as the specialization of the same grade-one Clifford exponential to the chosen unit spatial direction.
 
 The same development computes the directional derivative at the identity of the norm-one constraint
 \[
@@ -884,7 +889,7 @@ as
 \end{equation}
 The \(+1\)-eigenspace appearing as the image of \(\id+c\) is the fixed subspace of \emph{Clifford conjugation}; it must not be confused with the fixed subspace of reversion.  No regular-value or submanifold theorem has yet been applied.
 
-\subsection{Remaining smooth Lie-group identification}
+\subsection{Smooth Lie-group and tangent-space problem}
 
 The next structural statements are
 \begin{equation}
@@ -903,7 +908,25 @@ and
   \quad\text{under this identification}.
 \tag{4.13}\label{eq:drho-open}
 \end{equation}
-A smooth manifold structure compatible with the group operations on \(\SpinG\) must be constructed before \eqref{eq:lie-open}--\eqref{eq:drho-open} can be interpreted literally in the standard Lie-theoretic sense.  The explicit one-parameter subgroups and equation \eqref{eq:projected-exp-derivative} provide strong compatibility data but do not substitute for that construction.
+A natural route is to regard the Clifford norm-one group as a regular level set in the finite-dimensional real vector space \(\Cl_3\).  Let
+\[
+  \mathfrak c_+:=\{Y\in\Cl_3:c(Y)=Y\},
+  \qquad
+  \Phi:\Cl_3\to\mathfrak c_+,
+  \qquad
+  \Phi(g)=g\,c(g).
+\]
+Then \(\SpinG=\Phi^{-1}(1)\), and the differential is expected to have the explicit form
+\[
+  D\Phi_g(H)=H\,c(g)+g\,c(H),
+  \qquad
+  D\Phi_1(H)=H+c(H).
+\]
+Consequently
+\[
+  \ker D\Phi_1=\mathfrak s.
+\]
+On the level set, surjectivity of \(D\Phi_g\) can be tested by the explicit candidate \(H=\tfrac12Yg\) for \(Y\in\mathfrak c_+\).  If the regular-level-set construction is completed and the group operations and \(\rho\) are shown to be smooth, the standard tangent-space identification would make \eqref{eq:lie-open} literal and would permit the comparison of the genuine differential \(d\rho_e\) with the already constructed map \(D_B\).  None of these smooth statements is assumed in the preceding algebraic results.
 
 \subsection{Connection, curvature and torsion}
 
@@ -918,7 +941,7 @@ With a solder form \(e:TM\to E_g\), torsion is
   T=D_{\omega}e.
 \tag{4.15}
 \end{equation}
-These are standard definitions \cite{KobayashiNomizu,Nakahara2003}; neither object has yet been constructed in the present formal development.
+These are standard definitions \cite{KobayashiNomizu,Nakahara2003}; neither object has yet been constructed in the present formalization.
 
 A group homomorphism cannot be applied directly to a Lie-algebra-valued one-form.  In particular,
 \begin{equation}
@@ -1225,7 +1248,7 @@ The current geometric construction is
 This stage supplies the fixed local Lorentz/Clifford structure and the conditional global Lorentzian geometry.  It does not supply a connection or dynamics.
 
 \paragraph{2. Formalized infinitesimal and exponential algebra.}
-The Lean development has established
+The machine-checked formalization has established
 \begin{equation}
 \begin{gathered}
 \mathfrak s=\{X:c(X)=-X\},
@@ -1243,21 +1266,19 @@ For unit \(v\in V\), the closed formula
 \]
 is also formalized.
 
-\paragraph{3. Immediate finite-dimensional rapidity bridge.}
-The next formal task is the exact identity
+\paragraph{3. Finite-dimensional rapidity and mass-shell bridge.}
+The exact identity
 \begin{equation}
   \rho\!\left(\exp\!\left(\frac{\eta}{2}\,\iota(v)\right)\right)e
-  \stackrel{?}{=}
+  =
   (\cosh\eta,\sinh\eta\,v),
-  \qquad N=1,
+  \qquad
+  N(\cosh\eta,\sinh\eta\,v)=1,
 \tag{7.3}
 \end{equation}
-which fixes the factor \(\eta=2t\) between the Spin exponential parameter and Lorentz rapidity.  This step closes the local special-relativistic kinematic bridge without introducing gravitation.
+is now formally verified for every unit \(v\in V\).  It fixes the factor \(\eta=2t\) between the Spin exponential parameter and Lorentz rapidity and closes the local special-relativistic kinematic bridge without introducing gravitation.
 
-\paragraph{4. Algebraic finite-graph transport and frustration.}
-Before a continuum connection is introduced, one may study a finite graph with link variables \(U_{xy}\in\SpinG\), gauge transformations at vertices, discrete holonomy, and the compatibility conditions \(u_y=\rho(U_{xy})u_x\).  The first questions are purely algebraic: determine when globally compatible state assignments exist, classify the common fixed-point set of the discrete holonomy group, and identify frustrated compatibility systems by \eqref{eq:frustrated-fixed-point}.  The nonnegative functional \(\mathcal J\) in \eqref{eq:compatibility-functional} may be used diagnostically, but it is not an energy.
-
-\paragraph{5. Smooth Lie-group identification.}
+\paragraph{4. Smooth Lie-group and infinitesimal representation.}
 The next structural problem is to construct a compatible smooth Lie-group structure and prove
 \begin{equation}
   \operatorname{Lie}(\SpinG)
@@ -1266,7 +1287,10 @@ The next structural problem is to construct a compatible smooth Lie-group struct
   d\rho_e\stackrel{?}{=}D_B.
 \tag{7.4}
 \end{equation}
-This identification is required before general differential equations for the transport variables or a principal \(\SpinG\)-connection are used intrinsically.
+The intended route is the regular-level-set description \(\SpinG=\Phi^{-1}(1)\) for \(\Phi(g)=g\,c(g)\), followed by smoothness of multiplication, inversion and \(\rho\), identification of the tangent space at the identity with \(\ker D\Phi_1=\mathfrak s\), and comparison of the Lie bracket with the Clifford commutator.  This stage is required before differential equations for the transport variables or a principal \(\SpinG\)-connection are used intrinsically.
+
+\paragraph{5. Algebraic finite-graph transport and frustration.}
+Independently of the later continuum connection, one may study a finite graph with link variables \(U_{xy}\in\SpinG\), gauge transformations at vertices, discrete holonomy, and the compatibility conditions \(u_y=\rho(U_{xy})u_x\).  The first questions are algebraic: determine when globally compatible state assignments exist, classify the common fixed-point set of the discrete holonomy group, and identify frustrated compatibility systems by \eqref{eq:frustrated-fixed-point}.  The nonnegative functional \(\mathcal J\) in \eqref{eq:compatibility-functional} may be used diagnostically, but it is not an energy.
 
 \paragraph{6. Controlled driven finite dynamics.}
 With the transport assignment held fixed, use a family such as
@@ -1347,6 +1371,9 @@ Orthogonal Lie algebra & \(\soB\cong\Lambda^2\Smodel\), dimension \(6\) & \statu
 Bracket-preserving linear isomorphism & \(D_B:\mathfrak s\xrightarrow{\sim}\soB\) & \statusFormal \\
 Algebraic one-parameter subgroup & \(\gamma_X(t)=\exp(tX)\in\SpinG\) for \(X\in\mathfrak s\) & \statusFormal \\
 Derivative of projected exponential action & \(\left.\frac{\dd}{\dd t}\rho(\exp(tX))x\right|_{0}=D_B(X)x\) & \statusFormal \\
+Explicit grade-one boost correspondence & \(\rho(\exp((\eta/2)\iota(v)))e=(\cosh\eta,\sinh\eta\,v)\), \(\|v\|=1\) & \statusFormal \\
+Spin parameter / Lorentz rapidity relation & \(\eta=2t\) for the grade-one boost subgroup & \statusFormal \\
+Unit mass-shell preservation & \(N(\rho(\exp((\eta/2)\iota(v)))e)=1\) & \statusFormal \\
 Smooth four-manifold & obtained from additional gluing data and smoothness hypotheses & \statusPaper \\
 Tangent transition cocycle & \(D\phi_{ij}\) & \statusPaper \\
 Group-valued \Cech\ 1-cocycle & \(\widetilde g_{ij}:U_i\cap U_j\to\SpinG\) & \statusPaper \\
@@ -1356,8 +1383,9 @@ Lorentzian metric & \(g_x(X,Y)=B(s_x^{-1}X,s_x^{-1}Y)\) & \statusPaper \\
 \Cech\ lifting class on \(\cU\) & \([\epsilon]\in\check H^2(\cU;\Ztwo)\) for chosen lifts & \statusPaper \\
 Identification with \(w_2(TM)\) & not proved in Paper I & \statusOpen \\
 Identification with \(w_1(TM)\) & not proved in Paper I & \statusOpen \\
-Lie algebra of \(\SpinG\) & \(\operatorname{Lie}(\SpinG)\) & \statusOpen \\
-Differential at the identity & \(d\rho_e\) & \statusOpen \\
+Smooth Lie-group structure on \(\SpinG\) & regular-level-set construction and smooth group operations & \statusOpen \\
+Tangent Lie algebra identification & \(T_1\SpinG\cong\mathfrak s\), with Clifford commutator as Lie bracket & \statusOpen \\
+Differential at the identity & \(d\rho_e=D_B\) under the tangent-space identifications & \statusOpen \\
 Principal connection & \(\omega\) & \statusOpen \\
 Curvature and torsion & \(F_\omega\), \(T=D_\omega e\) & \statusOpen \\
 Discrete connection on a finite graph & \(U_{xy}\in\SpinG\), \(U_{yx}=U_{xy}^{-1}\), vertex gauge action & \statusHypothesis \\
@@ -1414,20 +1442,21 @@ X\in\mathfrak s
 \end{gathered}
 \tag{10.1}
 \end{equation}
-For a unit vector \(v\), the formal development additionally proves
+For a unit vector \(v\), the machine-checked formalization additionally proves
 \begin{equation}
   \exp(t\,\iota(v))=\cosh t\,1+\sinh t\,\iota(v).
 \tag{10.2}
 \end{equation}
-The immediate formal verification is the explicit comparison with standard Lorentz rapidity,
+The exact comparison with standard Lorentz rapidity is now also formally verified:
 \begin{equation}
   \rho\!\left(\exp\!\left(\frac{\eta}{2}\,\iota(v)\right)\right)e
-  \stackrel{?}{=}
+  =
   (\cosh\eta,\sinh\eta\,v),
-  \qquad N=1,
+  \qquad
+  N(\cosh\eta,\sinh\eta\,v)=1.
 \tag{10.3}
 \end{equation}
-which makes the expected relation \(\eta=2t\) explicit.  The next structural questions are
+The corresponding relation between the Clifford exponential parameter and Lorentz rapidity is exactly \(\eta=2t\).  The next structural questions are
 \begin{equation}
   \operatorname{Lie}(\SpinG)
   \stackrel{?}{\cong}\mathfrak s,
@@ -1435,7 +1464,7 @@ which makes the expected relation \(\eta=2t\) explicit.  The next structural que
   d\rho_e\stackrel{?}{=}D_B,
 \tag{10.4}
 \end{equation}
-followed, if successful, by connection-level geometry.
+followed, if successful, by principal connections and connection-level geometry.
 
 The symmetric geometry studied so far is an intentional reference configuration.  The local spin-factor, Clifford, and Lorentz structures are held fixed, and the graph model begins with trivial discrete holonomy.  The hypothesis does not obtain gravitation by deforming the local Minkowski model or by freely prescribing a position-dependent soldering field, scalar field, connection, or curvature.  Each local spin factor retains the normalization \(e_x=(1,0)\), \(N(e_x)=1\); the future unit hyperboloid is therefore a dimensionless mass-shell normalization, not a generated mass scale.
 
@@ -1501,7 +1530,7 @@ companion mathematical paper, 13 September 2026.
 \url{https://raw.githubusercontent.com/antaris82/The_Relational_Spin-Closure_Hypothesis/main/docs/mathematics/A_Conditional_Construction_of_Lorentzian_Geometry.pdf}.
 
 \bibitem{FormalRepo}
-\emph{The Relational Spin-Closure Hypothesis: formal Lean development}.
+\emph{The Relational Spin-Closure Hypothesis: machine-checked formalization}.
 \url{https://github.com/antaris82/The_Relational_Spin-Closure_Hypothesis}.
 
 \bibitem{Nakahara2003}
