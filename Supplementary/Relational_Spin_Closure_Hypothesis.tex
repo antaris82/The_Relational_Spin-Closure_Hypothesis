@@ -1,30 +1,37 @@
+% !TeX program = pdflatex
+% ======================================================================
+% The Relational Spin-Closure Hypothesis
+% Mathematical baseline, open problems, and falsification criteria
+%
+% Editorial attribution:
+% Jan Seeck -- Editor
+% ======================================================================
+
 \documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=26mm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage{microtype}
-\usepackage{geometry}
-\geometry{margin=24mm}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage{booktabs,tabularx,longtable,array}
 \usepackage{enumitem}
 \usepackage{xcolor}
 \usepackage{hyperref}
-\usepackage[nameinlink,capitalize,noabbrev]{cleveref}
+\usepackage[nameinlink,noabbrev]{cleveref}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
-\usepackage{bm}
-\usepackage{mathrsfs}
 
 \hypersetup{
   colorlinks=true,
   linkcolor=blue!45!black,
   citecolor=blue!45!black,
   urlcolor=blue!55!black,
-  pdftitle={The Relational Spin-Closure Hypothesis - Post-Paper-I Revision},
-  pdfauthor={Jan Seeck (Editor); ChatGPT (AI Assistant); Aristotle (AI Lean Agent)},
-  pdfsubject={Updated falsifiable research programme after the conditional Lorentzian Spin-geometry reconstruction of Paper I},
-  pdfkeywords={relational spin closure, Clifford algebra, Spin geometry, soldering, Lorentz geometry, formalization, Lean}
+  pdftitle={The Relational Spin-Closure Hypothesis: Mathematical Baseline, Open Problems, and Falsification Criteria},
+  pdfauthor={Jan Seeck (Editor)},
+  pdfsubject={Hypothesis paper aligned with A Conditional Construction of Lorentzian Geometry from Euclidean Three-Space},
+  pdfkeywords={Clifford algebra, Lorentz geometry, Cech cocycle, soldering isomorphism, connection, reciprocity, falsification}
 }
 
 \pagestyle{fancy}
@@ -37,668 +44,785 @@
 
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{corollary}[theorem]{Corollary}
-\theoremstyle{definition}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{hypothesis}[theorem]{Hypothesis}
-\newtheorem{criterion}[theorem]{Research criterion}
-\newtheorem{falsifier}[theorem]{Falsification criterion}
-\newtheorem{benchmark}[theorem]{Benchmark}
-\newtheorem{remark}[theorem]{Remark}
-\newtheorem{warning}[theorem]{Warning}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{hypothesis}[definition]{Hypothesis}
+\newtheorem{criterion}[definition]{Criterion}
+\theoremstyle{remark}
+\newtheorem{remark}[definition]{Remark}
 
 \newcommand{\R}{\mathbb{R}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Cl}{\mathrm{Cl}}
+\newcommand{\Ztwo}{\mathbb{Z}/2}
+\newcommand{\Cl}{\operatorname{Cl}}
 \newcommand{\SpinG}{G_{\mathrm{Spin}}}
 \newcommand{\LorG}{G_{\mathrm{Lor}}}
 \newcommand{\Smodel}{\mathcal S}
-\newcommand{\gB}{\mathfrak g_B}
-\newcommand{\States}{\mathscr X}
-\newcommand{\Geom}{\mathscr G}
-\newcommand{\GaugeGroup}{\mathscr H}
+\newcommand{\soB}{\mathfrak{so}(B)}
+\newcommand{\Cech}{\ifmmode\text{\v{C}ech}\else\v{C}ech\fi}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cQ}{\mathcal Q}
+\newcommand{\tQ}{\widetilde{\mathcal Q}}
+\newcommand{\cG}{\mathcal G}
+\newcommand{\cY}{\mathcal Y}
+\newcommand{\cZ}{\mathcal Z}
 \newcommand{\dd}{\mathrm d}
-\newcommand{\statusFormal}{\textsf{F}}
-\newcommand{\statusStd}{\textsf{S}}
-\newcommand{\statusHyp}{\textsf{H}}
-\newcommand{\statusTarget}{\textsf{T}}
-\newcommand{\statusOpen}{\textsf{O}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\Hol}{\operatorname{Hol}}
+\newcommand{\statusP}{\textsf{P}}
+\newcommand{\statusS}{\textsf{S}}
+\newcommand{\statusH}{\textsf{H}}
+\newcommand{\statusO}{\textsf{O}}
+\newcommand{\statusT}{\textsf{T}}
 
 \title{\textbf{The Relational Spin-Closure Hypothesis}\\[0.35em]
-\large A falsifiable research programme after Paper I}
+\large Mathematical baseline, open problems, and falsification criteria}
 \author{\textbf{Editor:} Jan Seeck\\
 \textbf{AI Assistant:} ChatGPT 5.6 Sol\\
 \textbf{AI Lean Agent:} Aristotle}
-\date{Post-Paper-I revision --- 13 September 2026}
+\date{Revised after the companion mathematical paper --- 13 September 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-This paper states a research hypothesis and a falsification programme, not a completed physical theory.  Its mathematical baseline has changed substantially after the companion reconstruction paper, hereafter Paper I \cite{PaperI}.  The primitive local input is no longer a pre-existing Minkowski space or Lorentzian Spin bundle.  Paper I starts only from the standard positive-definite Euclidean space $V=\R^3$ and constructs the four-dimensional spin factor $\Smodel=\R\oplus V$, the Lorentzian quadratic form $N(a,v)=a^2-\langle v,v\rangle$, the real Clifford algebra $\Cl_3$, an intrinsic Spin group $\SpinG$, a surjective central double cover $\rho:\SpinG\to\LorG$ with kernel $\{\pm1\}$, and a six-dimensional Lorentz-skew Lie algebra $\gB\simeq\Lambda^2\Smodel$.
+This document formulates a hypothesis and a falsification programme.  Its mathematical baseline is the companion paper \emph{A Conditional Construction of Lorentzian Geometry from Euclidean Three-Space: Clifford Double-Cover Data, Gluing, and a Soldering Isomorphism} \cite{PaperI}.  Starting from the positive-definite Euclidean space
+\[
+  V=\R^3,
+\]
+that paper constructs
+\[
+  \Smodel=\R\oplus V,
+  \qquad
+  N(a,v)=a^2-\langle v,v\rangle,
+  \qquad
+  \Cl_3=\Cl(V,q),
+\]
+a Clifford norm-one group \(\SpinG\), a proper orthochronous Lorentz group \(\LorG\subset O(B)\), and a central two-fold covering
+\[
+  1\longrightarrow\{\pm1\}
+  \longrightarrow\SpinG
+  \overset{\rho}{\longrightarrow}\LorG
+  \longrightarrow1.
+\]
+It also constructs the orthogonal Lie algebra
+\[
+  \soB\cong\Lambda^2\Smodel,
+  \qquad \dim\soB=6.
+\]
 
-Paper I also fixes two dependency errors that any mature Relational Spin-Closure Hypothesis must respect.  First, local algebra does not determine a global spacetime base: explicit incidence/gluing data are additional.  Under a closed-gluing-graph condition, countability and smooth gluing, those data yield a smooth four-manifold $M$.  Second, the internal Lorentz cocycle is not automatically the derivative cocycle of $TM$: a regular solder is an additional gate.  Conditional on such a solder, one obtains a smooth Lorentzian tensor on $TM$, project-native orientation and future-cone reductions, and exact reconvergence of the tangent Lorentz cocycle with the projection of native Spin transition data.  These project-native obstruction statements are not identified with $w_1(TM)$ or $w_2(TM)$.
+Global Lorentzian geometry requires additional data.  A gluing datum yields a smooth four-manifold only under explicit topological and smoothness hypotheses.  Independently, a \(\SpinG\)-valued \Cech\ 1-cocycle \(\widetilde g_{ij}\) projects to
+\[
+  g_{ij}=\rho(\widetilde g_{ij}).
+\]
+Local soldering data \(A_i\) satisfy
+\[
+  A_j(\phi_{ij}(y))
+  =D\phi_{ij}(y)\,A_i(y)\,g_{ij}(x_y),
+\]
+and determine a vector-bundle isomorphism
+\[
+  s:E_g\xrightarrow{\sim}TM.
+\]
+The induced Lorentzian metric is
+\[
+  g_x(X,Y)=B\!\left(s_x^{-1}X,s_x^{-1}Y\right).
+\]
+The existence of such soldering data is not a consequence of the Euclidean input or of the group-valued cocycle alone.
 
-A selected transition-level deformation in Paper I gives an equally important negative result.  On a fixed periodic control, every finite deformation parameter is regularly admissible, all parameters lie in one full Spin Cech gauge orbit, and the complete regular-solder solution spaces are explicitly equivalent with unchanged induced tangent metric.  Thus a transition parameter that looks nontrivial before quotienting can have no closure-selection power on the tested control.  The updated RSCH therefore cannot take a raw transition parameter, or a gauge-dependent ``mismatch'', as a physical closure variable merely by declaration.
+For one explicit periodic one-parameter family, every finite parameter admits soldering data; any two parameters are gauge equivalent under \(\SpinG\)-valued \Cech\ 0-cochains; and corresponding soldering data induce the same Lorentzian metric.  No general statement about arbitrary cocycle families follows.
 
-The hypothesis is now sharpened accordingly.  The next native mathematical edge is the infinitesimal Spin-to-Lorentz bridge: a Lie-group/Lie-algebra identification for the intrinsic Spin group and the differential $d\rho_e$.  Only thereafter can a native connection, parallel transport, holonomy, curvature and torsion be introduced without importing them as unexplained background structures.  The central physical question is then whether the currently exogenous global gates and the future connection-level geometry can be selected or constrained by one classical gauge-covariant reciprocal closure linking local/core state and relational geometry.  Quantization remains a later conditional extension and may not rescue failure of the classical closure.
+The next open mathematical problem is the infinitesimal bridge
+\[
+  \operatorname{Lie}(\SpinG)\stackrel{?}{\cong}\soB,
+  \qquad
+  d\rho_e:\operatorname{Lie}(\SpinG)\stackrel{?}{\longrightarrow}\soB.
+\]
+Connections, parallel transport, holonomy, curvature and torsion lie beyond this open step.  The Relational Spin-Closure Hypothesis begins only after these distinctions: it proposes that a future classical configuration space carries a gauge-equivariant equation whose solution set couples state and geometric variables nontrivially.  Quantization and particle interpretations are later tests, not premises.
 \end{abstract}
 
-\clearpage
 \tableofcontents
 \clearpage
 
-\section{Purpose of this revision}
+% ======================================================================
+\section{Status convention}
+% ======================================================================
 
-The original hypothesis paper was written while the formal programme still treated a Lorentzian local core as the practical starting object and while the global manifold, solder and obstruction layers were only partially separated.  Paper I changes that situation.  The research programme must now be written around what has actually been reconstructed, what remains an explicit gate, and what is still only standard target geometry.
+The labels used below have the following meanings:
+\begin{center}
+\begin{tabular}{cl}
+\toprule
+\statusP & proved or constructed in Paper I;\\
+\statusS & standard external mathematics;\\
+\statusO & open mathematical problem;\\
+\statusH & hypothesis introduced here;\\
+\statusT & later mathematical or empirical benchmark.\\
+\bottomrule
+\end{tabular}
+\end{center}
+No statement labelled \statusO, \statusH\ or \statusT\ is asserted as a theorem of Paper I.
 
-This revision has four purposes:
-\begin{enumerate}[leftmargin=2.2em]
-\item to replace the former Minkowski-first baseline by the proved Euclidean-to-Lorentzian local reconstruction;
-\item to make base gluing and regular soldering explicit additional gates rather than hidden consequences of the local Spin algebra;
-\item to incorporate the gauge-absorption result of the selected deformation smoke test as a negative design constraint on future closure variables;
-\item to move connection, holonomy, curvature, torsion and dynamics to the correct future layer of the programme.
-\end{enumerate}
+% ======================================================================
+\section{Mathematical results used from Paper I}
+% ======================================================================
 
-The hypothesis itself remains deliberately stronger than Paper I.  Paper I proves a conditional geometric reconstruction.  RSCH asks whether a deeper law can explain or select part of the additional relational structure that Paper I must presently supply as input.
+\subsection{Local algebraic construction}
 
-\subsection{Claim-status convention}
-Every substantive statement in this paper belongs to one of five classes:
-\begin{description}[leftmargin=3.3cm,style=multiline]
-\item[\statusFormal] theorem-level or construction-level baseline established in Paper I and its Lean development;
-\item[\statusStd] established external mathematics or physics used as a control target;
-\item[\statusHyp] a new RSCH hypothesis;
-\item[\statusTarget] a future empirical or mathematical benchmark;
-\item[\statusOpen] an explicitly missing structural edge in the native reconstruction.
-\end{description}
-No \statusHyp, \statusTarget\ or \statusOpen\ statement is presented as a theorem of Paper I.
-
-\section{The certified baseline after Paper I}
-
-\subsection{Primitive local input}
-The local primitive is
+The primitive local datum is
 \begin{equation}
-V=\R^3,
-\qquad
-\langle u,v\rangle=\sum_{i=1}^3 u_i v_i,
-\label{eq:primitive}
+  V=\R^3,
+  \qquad
+  \langle u,v\rangle>0\quad(u\neq0).
+\tag{2.1}
 \end{equation}
-with its standard positive-definite Euclidean form.  No four-dimensional manifold, tangent bundle, Lorentz metric, orientation, Spin bundle, connection, holonomy or curvature is included in \eqref{eq:primitive}.
+No manifold, tangent bundle, Lorentzian metric, orientation, principal bundle or connection is part of this datum.
 
-From this datum Paper I constructs the real spin factor
+Paper I constructs the real spin factor
 \begin{equation}
-\Smodel=\R\oplus V,
-\qquad
-N(a,v)=a^2-\langle v,v\rangle,
-\label{eq:spinfactor}
+  \Smodel=\R\oplus V,
+  \qquad
+  N(a,v)=a^2-\langle v,v\rangle,
+\tag{2.2}
 \end{equation}
-with signature $(1,3)$, together with the associated bilinear Lorentz form.  In parallel, the Euclidean Clifford algebra $\Cl(V,q)\cong\Cl_3$ is built from the same three-dimensional input.  The paravector embedding identifies the quadratic structure of \eqref{eq:spinfactor} with the Clifford construction in the precise sense proved in Paper I \cite{PaperI,Chevalley,LawsonMichelsohn}.
-
-\subsection{Intrinsic Spin cover and infinitesimal Lorentz algebra}
-Inside $\Cl_3$, Paper I defines an intrinsic Spin group $\SpinG$ and an intrinsically characterized proper cone-preserving Lorentz group $\LorG$.  The Clifford action gives a surjective group homomorphism
+with polarized bilinear form \(B\) of signature \((1,3)\), together with the real Clifford algebra
 \begin{equation}
-1\longrightarrow\{\pm1\}
-\longrightarrow\SpinG
-\overset{\rho}{\longrightarrow}\LorG
-\longrightarrow1,
-\label{eq:cover}
-\end{equation}
-with exact central kernel $\{\pm1\}$.  Both sides are established as Hausdorff topological groups, the cover is continuous, the kernel is discrete, and continuous local sections exist.
-
-Independently, the Lorentz-skew endomorphisms of $\Smodel$ form a six-dimensional Lie algebra $\gB$ under commutator, and Paper I constructs a linear equivalence
-\begin{equation}
-\Lambda^2\Smodel\simeq\gB,
-\qquad
-\dim\gB=6.
-\label{eq:bivector}
-\end{equation}
-A crucial boundary remains:
-\begin{equation}
-\operatorname{Lie}(\SpinG)\simeq\gB
-\qquad\text{has not yet been established.}
-\label{eq:lieopen}
-\end{equation}
-Consequently the differential $d\rho_e$ of the native cover is also open.
-
-\subsection{Global base is additional information}
-Local copies of $\Smodel$ do not determine which local points belong to one global base.  Paper I therefore introduces explicit base-gluing data: local domains, incidence domains and compatible identification maps.  The quotient constructed from these data is not automatically a manifold.  With a closed gluing graph and a countable index set it is Hausdorff and second countable; with an additional smooth-gluing condition the reconstructed atlas yields a smooth four-manifold $M$.
-
-The key conceptual consequence is
-\begin{equation}
-\text{local Lorentz/Spin algebra}
-\not\Longrightarrow
-\text{unique global base}.
-\label{eq:nobase}
-\end{equation}
-This is not a philosophical preference but a theorem-level non-derivability control: different admissible gluing data can assemble the same local pieces into different global spaces.
-
-\subsection{Internal Lorentz data and tangent geometry are distinct}
-Once a smooth base exists, its true tangent transitions are derivatives of chart changes,
-\begin{equation}
-T_{ij}=D\phi_{ij}.
-\label{eq:tangenttransition}
-\end{equation}
-Native Spin transition data project through \eqref{eq:cover} to an internal Lorentz cocycle $g_{ij}$.  Paper I proves that these systems are not automatically identical.  A simple rescaling control already separates them.  Therefore
-\begin{equation}
-\text{internal Lorentz cocycle}
-\not\Longrightarrow
-\text{tangent cocycle}.
-\label{eq:notangent}
+  \Cl_3=\Cl(V,q),
+  \qquad q(v)=\langle v,v\rangle.
+\tag{2.3}
 \end{equation}
 
-\subsection{Regular solder as the closure gate of Paper I}
-The additional structure that identifies the two transition systems is a regular solder datum.  In local form it is a smooth field of linear equivalences $A_i$ satisfying the exact overlap relation
+The Clifford norm-one group \(\SpinG\) acts on the paravector model and yields
 \begin{equation}
-A_j(\phi_{ij}(y))
-=
-T_{ij}(y)\,A_i(y)\,g_{ij}(x_y).
-\label{eq:solderlaw}
+  1\longrightarrow\{\pm1\}
+  \longrightarrow\SpinG
+  \overset{\rho}{\longrightarrow}\LorG
+  \longrightarrow1,
+\tag{2.4}
 \end{equation}
-Its existence is a gate.  Paper I does not prove that every admissible base and native Spin datum admits such a solder.  Explicit negative controls show that this would be false in the project-native setting.
+where \(\LorG\subset O(B)\) is the proper orthochronous Lorentz group defined by the determinant and future-cone conditions used in Paper I.  The homomorphism \(\rho\) is continuous and admits local continuous sections.  No smooth Lie-group structure on \(\SpinG\) is asserted there.
 
-Conditional on a regular solder, the internal Lorentz form induces local tangent coefficients
+The \(B\)-skew-adjoint endomorphisms form
 \begin{equation}
-g_i(y)(u,v)
-=
-B\bigl(A_i(y)^{-1}u,A_i(y)^{-1}v\bigr),
-\label{eq:metric}
+  \soB
+  =\left\{
+       A\in\operatorname{End}_{\R}(\Smodel):
+       B(Ax,y)+B(x,Ay)=0
+    \right\},
+\tag{2.5}
 \end{equation}
-which satisfy the smooth tensor transformation law and therefore define a global Lorentzian $(0,2)$-tensor of signature $(1,3)$.  The same gate yields project-native orientation compatibility and a coherent future-cone reduction, and it makes the tangent Lorentz cocycle exactly the projected native Spin cocycle.
-
-\begin{warning}[No $w_1/w_2$ identification]
-The project-native orientation and fixed-cover Spin-lifting obstructions play roles analogous to familiar characteristic-class obstructions, but Paper I does not prove that they are $w_1(TM)$ and $w_2(TM)$.  Those comparisons remain open.  Likewise the project-native future-cone reduction has not been proved equivalent to every standard formulation of time orientability.
-\end{warning}
-
-\subsection{Controls that constrain the hypothesis}
-Paper I includes positive and negative controls that are mathematically part of the programme, not merely engineering tests:
-\begin{itemize}[leftmargin=2em]
-\item topological gluing does not imply smooth gluing;
-\item a weak fibrewise solder can be discontinuous and need not induce smooth geometry;
-\item an orientation-reversing gluing can prevent every regular solder for the tested native Spin data;
-\item combinatorial labels do not determine a solder;
-\item distinct fixed-cover $\{\pm1\}$ Spin lifts can project to the same Lorentz cocycle and remain gauge-inequivalent under the project's kernel-valued equivalence;
-\item a one-chart positive control does admit the expected regular structure.
-\end{itemize}
-These controls prevent the hypothesis paper from silently assuming the global conclusions it is supposed to explain.
-
-\section{The first deformation result and its consequence}
-
-\subsection{Selected one-parameter family}
-Paper I studies one deliberately chosen one-parameter Spin family generated by a Clifford direction $\gamma_0$.  On the fixed periodic control, its projection acts as the expected one-parameter Lorentz boost in a selected scalar-spatial plane.  The direction is a control choice, not a canonical physical axis and not a classification of all Spin deformations.
-
-For each parameter $\lambda\in\R$, an explicit regular solder is constructed.  Hence the admissible parameter region is
+and Paper I proves a linear isomorphism
 \begin{equation}
-\mathcal R_A=\R.
-\label{eq:alladmissible}
+  \Lambda^2\Smodel\xrightarrow{\sim}\soB,
+  \qquad
+  \dim_{\R}\soB=6.
+\tag{2.6}
 \end{equation}
-Moreover the deformed native Spin cocycles all lie in one full-group continuous Cech gauge orbit.  Finally, for any two parameters $\lambda_1,\lambda_2$, the complete regular-solder solution spaces are related by an explicit bijection that preserves the induced tangent Lorentz metric.
+The identification
+\begin{equation}
+  \operatorname{Lie}(\SpinG)\cong\soB
+\tag{2.7}
+\end{equation}
+is \emph{not} a result of Paper I.
 
-\subsection{A design constraint for RSCH}
-The result is negative in exactly the useful sense: on this control the chosen transition-level parameter is not a physical closure selector.  It can be moved by a full Spin Cech gauge transformation, and the solder-space correspondence removes its apparent geometric effect on the tangent metric.
+\subsection{Global quotient and tangent transitions}
 
-\begin{criterion}[Gauge-quotient criterion]
-A candidate RSCH closure observable must descend to the relevant gauge quotient and survive the certified solder-equivalence relation.  A raw transition parameter, a coordinate mismatch, or a chart-dependent ``imbalance'' is not physical merely because it varies continuously or produces a nontrivial representative before quotienting.
-\end{criterion}
+Let \(\{D_i\}_{i\in I}\) be local four-dimensional pieces.  A gluing datum specifies overlap domains and homeomorphisms
+\begin{equation}
+  \phi_{ij}:W_{ij}\longrightarrow W_{ji}
+\tag{2.8}
+\end{equation}
+satisfying the stated identity, inverse and cocycle conditions.  Under the closed-gluing-relation and countability hypotheses of Paper I, the quotient is Hausdorff and second countable.  If the transition maps are smooth, the resulting atlas defines a smooth four-manifold \(M\).
 
-\begin{falsifier}[Pure-gauge closure variable]
-If a proposed fundamental closure variable changes along a family that is entirely gauge equivalent while all induced tangent metrics are preserved under the certified solution-space correspondence, that variable cannot by itself represent a physical geometric response on that family.
-\end{falsifier}
+The local pieces alone do not determine a unique quotient:
+\begin{equation}
+  \{D_i\}_{i\in I}
+  \not\Longrightarrow
+  \text{a unique }M.
+\tag{2.9}
+\end{equation}
 
-This result does not prove that every transition deformation is gauge redundant, nor that connection-level geometry will be trivial.  It identifies the next layer at which nontriviality must be tested.
+The tangent transition cocycle is
+\begin{equation}
+  T_{ij}(y)=D\phi_{ij}(y).
+\tag{2.10}
+\end{equation}
+Independently, let
+\begin{equation}
+  \widetilde g_{ij}:U_i\cap U_j\longrightarrow\SpinG
+\tag{2.11}
+\end{equation}
+be a \(\SpinG\)-valued \Cech\ 1-cocycle, and set
+\begin{equation}
+  g_{ij}:=\rho\circ\widetilde g_{ij}:U_i\cap U_j\longrightarrow\LorG.
+\tag{2.12}
+\end{equation}
+In general,
+\begin{equation}
+  D\phi_{ij}\neq g_{ij}.
+\tag{2.13}
+\end{equation}
+Thus the tangent and Lorentz-valued transition cocycles are distinct data before an additional compatibility condition is imposed.
 
-\section{Updated statement of the Relational Spin-Closure Hypothesis}
+\subsection{Soldering isomorphism and induced Lorentzian metric}
 
-\subsection{Why the hypothesis must now be layered}
-The mathematical reconstruction separates three levels:
+Let \(E_g\to M\) be the Lorentz vector bundle defined by the cocycle \(g_{ij}\).  Local soldering data are smooth maps
+\begin{equation}
+  A_i:D_i\longrightarrow\operatorname{GL}(\Smodel)
+\tag{2.14}
+\end{equation}
+satisfying
+\begin{equation}
+  A_j(\phi_{ij}(y))
+  =D\phi_{ij}(y)\,A_i(y)\,g_{ij}(x_y).
+\tag{2.15}\label{eq:soldering-law-hyp}
+\end{equation}
+They determine a vector-bundle isomorphism
+\begin{equation}
+  s:E_g\xrightarrow{\sim}TM.
+\tag{2.16}
+\end{equation}
+The inverse
+\begin{equation}
+  s^{-1}:TM\xrightarrow{\sim}E_g
+\tag{2.17}
+\end{equation}
+has the conventional direction of an \(E_g\)-valued solder form.
+
+The induced metric
+\begin{equation}
+  g_x(X,Y)
+  :=B\!\left(s_x^{-1}X,s_x^{-1}Y\right)
+\tag{2.18}
+\end{equation}
+is a smooth Lorentzian metric on \(M\).
+
+The logical dependence is therefore
 \begin{equation}
 \boxed{
-\begin{array}{c}
-\text{Euclidean local primitive}
-\\[0.2em]\Downarrow\\[-0.1em]
-\text{local Lorentz/Clifford/Spin core}
-\\[0.2em]
-+\;\text{base gluing}
-\\[-0.1em]\Downarrow\\[-0.1em]
-M^4,\ TM
-\\[0.2em]
-+\;\text{native Spin cocycle}+\text{regular solder}
-\\[-0.1em]\Downarrow\\[-0.1em]
-(TM,g)\text{ with project-native Spin reconvergence.}
-\end{array}}
-\label{eq:certifiedchain}
+  (V,\langle\ ,\ \rangle)
+  \Longrightarrow
+  (\Smodel,B,\Cl_3,\SpinG,\rho,\soB)
+}
+\tag{2.19}\label{eq:local-chain}
 \end{equation}
-The plus signs in \eqref{eq:certifiedchain} are genuine gates.  RSCH is not allowed to erase them from the proven dependency graph.  Instead, the physical hypothesis is that a deeper relational law may eventually \emph{select, constrain, or dynamically relate} some of the presently additional structures.
+locally, but globally
+\begin{equation}
+\boxed{
+  \text{gluing datum}
+  +\widetilde g
+  +\text{soldering data}
+  \Longrightarrow
+  (M,TM,g).
+}
+\tag{2.20}\label{eq:global-chain}
+\end{equation}
+Neither additional term on the left of \eqref{eq:global-chain} is derived solely from \eqref{eq:local-chain}.
 
-\begin{hypothesis}[Relational Spin-Closure Hypothesis, revised]
-There exists a classical gauge-covariant relational closure on an extension of the certified Paper-I configuration space with the following properties.
-\begin{enumerate}[label=\textbf{RSCH\arabic*.},leftmargin=3.2em]
-\item \textbf{Primitive fidelity.}  The local algebraic core ultimately descends from the fixed positive Euclidean three-space of \eqref{eq:primitive}; no position-dependent deformation of that primitive is used to imitate gravity.
-\item \textbf{Gate visibility.}  Base gluing, native Spin transition data and regular soldering are treated as logically distinct layers.  A future deeper theory may select or constrain them, but their existence is not retroactively declared to have been proved from $\R^3$ alone.
-\item \textbf{Gauge covariance.}  Physical closure data live on the appropriate quotient.  Candidate observables must be invariant under the relevant local Spin/frame gauge action and must not depend on a representative eliminated by the Paper-I gauge-absorption control.
-\item \textbf{Reciprocity.}  Classical local/core state and relational geometry are not coupled by two unrelated constitutive rules.  They occur in one solution relation whose admissible state-side perturbations require compatible geometric readjustment and whose admissible geometry-side perturbations alter state propagation or evolution through the same law.
-\item \textbf{Connection-level nontriviality.}  If nontrivial gravitational response resides beyond transition-level gauge redundancy, it must appear only after the native infinitesimal Spin--Lorentz bridge and connection layer are constructed, or in another rigorously identified gauge-invariant layer.  Curvature and holonomy may not be inserted by name as primitive explanations.
-\item \textbf{No target smuggling.}  Einstein's field equations, a Schwarzschild lapse, geodesic motion, Maxwell/Yang--Mills equations, particle masses, generation count, confinement criteria or quantum postulates are terminal benchmarks or later structures, not definitions of the closure.
-\item \textbf{Classical-first gate.}  The existence, covariance, reciprocity, flat-sector behaviour and endogenous-geometry behaviour of the closure must be established classically.  Quantization is a later conditional extension.
+\subsection{Lifting obstruction on the chosen cover}
+
+For a Lorentz-valued \Cech\ 1-cocycle \(g_{ij}\), assume continuous lifts
+\begin{equation}
+  h_{ij}:U_i\cap U_j\longrightarrow\SpinG,
+  \qquad
+  \rho(h_{ij})=g_{ij}
+\tag{2.21}
+\end{equation}
+have been chosen on the double overlaps.  On triple overlaps define
+\begin{equation}
+  \epsilon_{ijk}
+  :=h_{jk}h_{ij}h_{ik}^{-1}
+  \in\{\pm1\}.
+\tag{2.22}
+\end{equation}
+This defines the \(\Ztwo\)-valued \Cech\ 2-cocycle class used in Paper I.  The paper does not identify this class with the classical characteristic class \(w_2(TM)\).  Likewise the determinant condition obtained from \eqref{eq:soldering-law-hyp} is not identified there with \(w_1(TM)\).
+
+In particular, the following identifications are not part of the mathematical baseline:
+\begin{equation}
+  [\epsilon]=w_2(TM),
+  \qquad
+  [\det D\phi]=w_1(TM).
+\tag{2.23}
+\end{equation}
+
+\subsection{Examples and nonuniqueness}
+
+Paper I establishes the following limitations:
+\begin{align}
+  \text{topological gluing}
+  &\not\Longrightarrow \text{smooth gluing},
+\tag{2.24a}\\
+  \text{pointwise fibre isomorphisms}
+  &\not\Longrightarrow \text{continuous soldering},
+\tag{2.24b}\\
+  \text{orientation-reversing two-chart gluing}
+  &\Longrightarrow \text{no soldering data},
+\tag{2.24c}\\
+  \text{combinatorial labels}
+  &\not\Longrightarrow \text{existence of soldering data}.
+\tag{2.24d}
+\end{align}
+On the chosen periodic cover, distinct lifts may have the same Lorentz projection; this is a statement about the chosen cover and the specified equivalence relation, not a computation of \(H^1(M;\Ztwo)\).
+
+\subsection{One-parameter \Cech\ 1-cocycle family}
+
+For the explicit periodic family of Paper I, let \(\widetilde g^{(\lambda)}\) denote the \(\SpinG\)-valued \Cech\ 1-cocycle and let
+\begin{equation}
+  \cE_\lambda
+  :=\{\text{local soldering data for }\widetilde g^{(\lambda)}\}.
+\tag{2.25}\label{eq:E-lambda}
+\end{equation}
+Then
+\begin{equation}
+  \forall\lambda\in\R,
+  \qquad
+  \cE_\lambda\neq\varnothing.
+\tag{2.26}\label{eq:all-admissible}
+\end{equation}
+Moreover, for all \(\lambda_1,\lambda_2\in\R\), there are continuous
+\(\SpinG\)-valued \Cech\ 0-cochains \(u_i\) such that
+\begin{equation}
+  \widetilde g_{ij}^{(\lambda_2)}
+  =u_i\,\widetilde g_{ij}^{(\lambda_1)}\,u_j^{-1},
+\tag{2.27}\label{eq:gauge-family}
+\end{equation}
+and there is an explicit bijection
+\begin{equation}
+  \mathcal T_{\lambda_1,\lambda_2}:
+  \cE_{\lambda_1}\xrightarrow{\sim}\cE_{\lambda_2}
+\tag{2.28}\label{eq:solder-bijection}
+\end{equation}
+with
+\begin{equation}
+  g_{\mathcal T_{\lambda_1,\lambda_2}(A)}=g_A.
+\tag{2.29}\label{eq:metric-preserved}
+\end{equation}
+No statement quantified over arbitrary covers, arbitrary cocycle families or arbitrary one-parameter subgroups follows from \eqref{eq:all-admissible}--\eqref{eq:metric-preserved}.
+
+% ======================================================================
+\section{The Relational Spin-Closure Hypothesis}
+% ======================================================================
+
+The constructions above determine the present mathematical boundary.  The hypothesis begins beyond that boundary.
+
+\subsection{Configuration space and gauge symmetry}
+
+The future classical variables have not yet been fully constructed.  Accordingly, their final product structure is not assumed.  Let
+\begin{equation}
+  \tQ
+\tag{3.1}
+\end{equation}
+denote a future space of admissible classical configurations extending the geometric structures already constructed, and let \(\cG\) be its gauge group.  If a quotient is mathematically well behaved, write
+\begin{equation}
+  \cQ:=\tQ/\cG.
+\tag{3.2}
+\end{equation}
+No manifold structure on \(\cQ\) is assumed at this stage.
+
+\begin{hypothesis}[Relational Spin-Closure Hypothesis]
+There exist a classical configuration space \(\tQ\), a gauge group \(\cG\), a target space \(\cY\), and a map
+\begin{equation}
+  \mathfrak C:\tQ\longrightarrow\cY
+\tag{3.3}
+\end{equation}
+such that:
+\begin{enumerate}[label=(\roman*),leftmargin=2.4em]
+\item \(\mathfrak C\) is gauge equivariant and \(0\in\cY\) is fixed by the gauge action;
+\item the physical solution set
+\begin{equation}
+  \cZ:=\mathfrak C^{-1}(0)/\cG
+\tag{3.4}
+\end{equation}
+is nonempty and contains nontrivial gauge classes;
+\item the geometric variables entering \(\tQ\) are solved jointly with the state variables rather than prescribed as fixed external functions;
+\item the local Euclidean/Clifford/Lorentz construction of Paper I is not altered in order to obtain a desired macroscopic equation.
 \end{enumerate}
 \end{hypothesis}
 
-\subsection{A deliberately noncommittal closure notation}
-The previous notation $\mathfrak C(\Phi,e,\omega)=0$ is too specific for the current formal stage because a native connection $\omega$ has not yet been constructed and the regular solder represented by $e$ is presently an additional gate.  We therefore write more cautiously
+The notation \(\mathfrak C\) names the proposed equation only.  It is not identified with torsion, curvature, a \Cech\ cocycle, a connection, or any previously constructed object.
+
+\subsection{Reciprocity}
+
+Suppose a future differentiable formulation admits a local splitting
 \begin{equation}
-\mathfrak C(\Phi;\mathcal B,\mathcal S,E,\mathcal A)=0,
-\label{eq:genericclosure}
+  T_q\tQ=X_{\Phi}\oplus X_G,
+\tag{3.5}
 \end{equation}
-where
-\begin{itemize}[leftmargin=2em]
-\item $\Phi$ denotes whatever classical local/core state survives the eventual representation analysis;
-\item $\mathcal B$ denotes admissible base-incidence/gluing data or a deeper object from which they are derived;
-\item $\mathcal S$ denotes native Spin transition data;
-\item $E$ denotes a regular solder when it exists;
-\item $\mathcal A$ denotes the future native infinitesimal/connection-level data, if such data are constructed.
-\end{itemize}
-Equation \eqref{eq:genericclosure} is schematic.  It does not assert that every listed argument is fundamental or independent.  A major goal of the programme is precisely to determine the smallest gauge-invariant argument list on which a nontrivial reciprocal closure can exist.
-
-\begin{criterion}[Minimality after quotienting]
-Minimality is assessed only after quotienting gauge redundancy and separating derived objects from independent data.  Removing an argument that is only a gauge representative does not count as a loss of physical content; removing a genuinely independent gate may.
-\end{criterion}
-
-
-\section{Terminology, reciprocity and the no-clock constraint}
-
-\subsection{Relational Spin comparison}
-The historical heuristic that motivated RSCH used language of ``synchronization''.  That word is too easily confused with Einstein clock synchronization, a scalar time variable, oscillator phase locking or a preferred foliation.  None of those objects is part of the certified baseline or the revised hypothesis.
-
-At the present formal level, \emph{relational Spin comparison} means the gauge-covariant information carried by native Spin transition data together with whatever solder information is required to compare that internal system with tangent geometry.  After the connection layer exists, the term may extend to connection-level comparison data.  In every case, the physical object is the appropriate equivalence class, not an arbitrary representative.
-
-\begin{warning}[No clock variable]
-RSCH contains no primitive clock reading, proper-time scalar, lapse function, simultaneity convention, preferred foliation or absolute temporal phase.  If a later implementation requires such an object, its mathematical type, transformation law and status must be stated independently; it may not be introduced covertly under the word ``synchronization''.
-\end{warning}
-
-\subsection{Reciprocity is constitutive, not retrocausal}
-The word \emph{reciprocal} means that one solution relation constrains local/core state and relational geometry jointly.  It does not mean backward causation in an external time variable.  Near a regular classical solution $z_0=(\Phi_0,G_0)$ of a future closure law, with $G$ denoting the surviving geometric variables after all gauge reductions, one may linearize schematically as
+where \(X_{\Phi}\) denotes state variations and \(X_G\) denotes geometric variations.  At a solution \(q\in\mathfrak C^{-1}(0)\), write
 \begin{equation}
-D\mathfrak C_{z_0}(\delta\Phi,\delta G)
-=C_\Phi\,\delta\Phi+C_G\,\delta G.
-\label{eq:linearclosure}
+  D\mathfrak C_q(\delta\Phi,\delta G)=0.
+\tag{3.6}
 \end{equation}
-After gauge zero-modes and boundary conditions are handled, a strong local reciprocity test asks whether state-driven perturbations admit compensating geometric responses and geometry-driven perturbations admit compensating state responses within the same solution manifold.  When the relevant partial operators are invertible on the tested subspaces, the linear template is
+
+\begin{definition}[Linearized reciprocity]
+A solution \(q\) is \emph{linearly reciprocal} if
+\begin{equation}
+  \ker D\mathfrak C_q
+  \cap
+  \bigl((X_{\Phi}\setminus\{0\})\times(X_G\setminus\{0\})\bigr)
+  \neq\varnothing.
+\tag{3.7}
+\end{equation}
+Thus the linearized solution space contains at least one nontrivial variation in which both sectors vary.
+\end{definition}
+
+A stronger local condition may be imposed on specified subspaces when the partial linearizations
+\begin{equation}
+  C_{\Phi}:=D_{\Phi}\mathfrak C_q,
+  \qquad
+  C_G:=D_G\mathfrak C_q
+\tag{3.8}
+\end{equation}
+are invertible there.  Then
+\begin{equation}
+  \delta G=-C_G^{-1}C_{\Phi}\delta\Phi,
+  \qquad
+  \delta\Phi=-C_{\Phi}^{-1}C_G\delta G.
+\tag{3.9}\label{eq:reciprocal-inverse}
+\end{equation}
+Equation \eqref{eq:reciprocal-inverse} is a possible regularity condition, not part of the present mathematical baseline.
+
+\subsection{Classical-first restriction}
+
+The hypothesis is classical at its defining stage.  No Hilbert-space state axiom, Born rule, canonical commutation or anticommutation relation, Fock-space construction, path integral, or quantum-statistical postulate is used to define \(\mathfrak C\).
+
+No clock scalar, lapse, preferred foliation or simultaneity convention belongs to the primitive data.  If such an object is introduced later, it requires an independent definition and status.
+
+A variational realization, if it exists, would be a stronger statement:
+\begin{equation}
+  \mathcal A:\tQ\longrightarrow\R,
+  \qquad
+  D\mathcal A=0
+  \Longrightarrow
+  \mathfrak C=0.
+\tag{3.10}
+\end{equation}
+No particular action functional is assumed.
+
+% ======================================================================
+\section{Open mathematical problems before a connection theory}
+% ======================================================================
+
+\subsection{The infinitesimal Spin--Lorentz bridge}
+
+Paper I provides the group-level map \(\rho:\SpinG\to\LorG\) and the Lie algebra \(\soB\), but not the missing infinitesimal identification.  The next open statements are
+\begin{equation}
+  \operatorname{Lie}(\SpinG)
+  \stackrel{?}{\cong}
+  \soB,
+\tag{4.1}\label{eq:lie-open}
+\end{equation}
+and
+\begin{equation}
+  d\rho_e:
+  \operatorname{Lie}(\SpinG)
+  \stackrel{?}{\longrightarrow}
+  \soB.
+\tag{4.2}\label{eq:drho-open}
+\end{equation}
+A smooth Lie-group structure on \(\SpinG\) must be supplied before \eqref{eq:lie-open}--\eqref{eq:drho-open} can be interpreted literally in the standard sense.
+
+An intermediate algebraic construction may be studied first.  For Clifford conjugation \(c\), the tangent condition suggested by
+\(gc(g)=1\) at the identity is
+\begin{equation}
+  X+c(X)=0.
+\tag{4.3}
+\end{equation}
+A future formalization may define the corresponding linear subspace of \(\Cl_3\), construct its infinitesimal action on \(\Smodel\), and compare that action with \(\soB\).  Until the relevant comparison theorem is proved, this subspace is not denoted \(\operatorname{Lie}(\SpinG)\).
+
+\subsection{Connection, curvature and torsion}
+
+Only after an infinitesimal bridge is available does the standard connection-level architecture become applicable.  If \(P\to M\) is a principal \(\SpinG\)-bundle with a principal connection \(\omega\), then standard differential geometry gives the curvature
+\begin{equation}
+  F_{\omega}
+  =\dd\omega+\frac12[\omega\wedge\omega].
+\tag{4.4}
+\end{equation}
+With a solder form \(e:TM\to E_g\), torsion is
+\begin{equation}
+  T=D_{\omega}e.
+\tag{4.5}
+\end{equation}
+These are standard definitions \cite{KobayashiNomizu,Nakahara2003}; neither object has yet been constructed in the present formal development.
+
+A group homomorphism cannot be applied directly to a Lie-algebra-valued one-form.  In particular,
+\begin{equation}
+  \rho\circ\omega
+\tag{4.6}
+\end{equation}
+is not a definition of a Lorentz connection.  Projection of a connection requires the infinitesimal map \(d\rho_e\) or an explicitly proved equivalent representation.
+
+% ======================================================================
+\section{Finite graph model}
+% ======================================================================
+
+A discrete model may be used before the continuum connection theory is complete, provided its observables are not identified with continuum objects by name alone.
+
+Let
+\begin{equation}
+  \Gamma=(\mathcal V,\mathcal E)
+\tag{5.1}
+\end{equation}
+be an oriented graph.  Assign
+\begin{equation}
+  U_{xy}\in\SpinG,
+  \qquad
+  U_{yx}=U_{xy}^{-1}
+\tag{5.2}
+\end{equation}
+to each oriented edge.  A vertex gauge transformation \(h_x\in\SpinG\) acts by
+\begin{equation}
+  U_{xy}\longmapsto h_yU_{xy}h_x^{-1}.
+\tag{5.3}
+\end{equation}
+For a closed path \(C=(x_0,\ldots,x_n=x_0)\), define
+\begin{equation}
+  H_C:=U_{x_{n-1}x_n}\cdots U_{x_0x_1}.
+\tag{5.4}
+\end{equation}
+Then
+\begin{equation}
+  H_C\longmapsto h_{x_0}H_Ch_{x_0}^{-1},
+\tag{5.5}
+\end{equation}
+so its conjugacy class \([H_C]\) is gauge invariant.
+
+The object \([H_C]\) is a graph observable.  No equality
+\begin{equation}
+  [H_C]=[\Hol_{\omega}(C)]
+\tag{5.6}
+\end{equation}
+is asserted before a continuum-limit and comparison theorem is constructed.
+
+% ======================================================================
+\section{Falsification criteria and later benchmarks}
+% ======================================================================
+
+\subsection{Mathematical falsification criteria}
+
+The following implications are excluded by the current mathematics:
 \begin{align}
-\delta G&=-C_G^{-1}C_\Phi\,\delta\Phi,\\
-\delta\Phi&=-C_\Phi^{-1}C_G\,\delta G.
+  V=\R^3
+  &\not\Longrightarrow M,
+\tag{6.1a}\\
+  (B,\widetilde g)
+  &\not\Longrightarrow
+  \exists\,s:E_g\xrightarrow{\sim}TM,
+\tag{6.1b}\\
+  \text{group-level }\rho
+  &\not\Longrightarrow d\rho_e,
+\tag{6.1c}\\
+  \prod_{e\in C}U_e
+  &\not\equiv\Hol_{\omega}(C)
+  \quad\text{without a comparison theorem}.
+\tag{6.1d}
 \end{align}
-This is a diagnostic template, not a claim that the eventual nonlinear theory has globally invertible derivatives.
 
-\begin{criterion}[One-law criterion]
-Different boundary or initial perturbations are allowed.  Two unrelated fundamental response laws, one for state-to-geometry and one for geometry-to-state, do not satisfy the central RSCH unification claim.
+\begin{criterion}[Nontriviality modulo gauge]
+A proposed closure variable fails if every member of the tested family belongs to one gauge orbit and all observables used by the proposal are constant on that orbit.
 \end{criterion}
 
-\subsection{Variational closure is a stronger candidate, not an assumption}
-A particularly economical future realization would be a single classical gauge-invariant action whose simultaneous stationarity equations determine the state and geometric sectors.  Such a variational formulation would automatically package reciprocity into one constitutive principle.  It is, however, a stronger subhypothesis.  The programme must not insert the Einstein--Hilbert, Palatini, Einstein--Cartan or Yang--Mills action and then advertise the resulting equations as a derivation of RSCH.  Kibble's gauge-gravity construction is therefore a benchmark and control, not a premise \cite{Kibble1961}.
+The one-parameter family \eqref{eq:E-lambda}--\eqref{eq:metric-preserved} is an explicit example of such a negative result at the transition-cocycle level.  It does not imply the same conclusion for connection-level families.
 
-\section{The next mathematical edge: from topological Spin cover to connection geometry}
-
-\subsection{What is still absent}
-Paper I does not contain a native Spin or Lorentz connection.  Therefore it also does not contain native covariant differentiation, pathwise parallel transport, holonomy, curvature, torsion, an action functional or a field equation.  The standard differential-geometric relations
-\begin{equation}
-\Omega=\dd\omega+\tfrac12[\omega\wedge\omega],
-\qquad
-T=D_\omega e,
-\label{eq:standardconnection}
-\end{equation}
-are external control architecture, not present RSCH results \cite{Nakahara2003,KobayashiNomizu}.
-
-The immediate native task is instead
-\begin{equation}
-\SpinG\ \leadsto\ \operatorname{Lie}(\SpinG)
-\overset{?}{\simeq}\gB,
-\qquad
-\rho\ \leadsto\ d\rho_e.
-\label{eq:nextedge}
-\end{equation}
-Only after \eqref{eq:nextedge} is available can a Spin-valued transition description be connected rigorously to an infinitesimal principal-connection description without importing a matrix-model Lie algebra by fiat.
-
-\subsection{Standard target architecture}
-Once a smooth principal Spin bundle and connection are available, standard geometry supplies a well-known chain.  A solder/coframe field identifies internal Lorentz fibres with tangent fibres and induces
-\begin{equation}
-g=e^*\eta.
-\label{eq:stdmetric}
-\end{equation}
-A principal connection defines parallel transport, holonomy and curvature; together connection and solder define torsion.  These are textbook structures, reviewed for example by Nakahara \cite{Nakahara2003} and in standard bundle references \cite{KobayashiNomizu,Husemoller}.  Their mathematical existence does not select a physical background.
-
-\begin{warning}[Standard geometry is not RSCH dynamics]
-Constructing a connection and then computing its curvature is not yet a relational closure.  Conversely, naming a transition cocycle ``holonomy'' before a connection-level comparison theorem exists would skip a required dependency edge.  The new content must be a selection or consistency law, not a relabelling of standard geometry.
-\end{warning}
-
-\section{Revised discrete prototype}
-
-The original programme used Spin-valued edge variables on a graph as an intentionally coarse search model.  That remains useful, but its interpretation must be narrowed by Paper I.
-
-Let $\Gamma=(\mathcal V,\mathcal E)$ be a connected oriented graph and attach one copy of the local algebraic core to each vertex.  Let
-\begin{equation}
-U_{xy}\in\SpinG,
-\qquad U_{yx}=U_{xy}^{-1},
-\end{equation}
-with local gauge action
-\begin{equation}
-U_{xy}\mapsto h_yU_{xy}h_x^{-1}.
-\end{equation}
-For a closed graph loop $C$, the product of edge variables transforms by conjugation, so its conjugacy class is gauge invariant.  This is a legitimate discrete gauge observable.  It is not yet the holonomy of a native continuum connection.
-
-If one also introduces discrete displacement/solder variables, those variables belong to an enlarged hypothesis, not to the proven local core.  Likewise the graph itself is additional incidence data, in direct analogy with the base-gluing gate isolated in Paper I.
-
-\begin{criterion}[Discrete prototype discipline]
-A graph prototype is admissible only if it keeps three ingredients separate: incidence, Spin comparison and solder-like metric data.  A candidate law that hides one of these by definition does not test the dependency structure discovered in Paper I.
+\begin{criterion}[No target equation as a definition]
+A candidate \(\mathfrak C\) does not establish RSCH if it is defined by inserting the Einstein equation, a prescribed Schwarzschild field, a geodesic equation, Maxwell/Yang--Mills equations, an externally prescribed redshift/lapse profile, or a desired particle mass as a primitive constitutive law.
 \end{criterion}
 
-\subsection{What the deformation control teaches the graph search}
-The full-group Cech gauge result shows that nontrivial edge/transition representatives can remain physically redundant.  Therefore a discrete closure functional should be built from genuinely gauge-invariant information and should be tested against explicit gauge-absorption controls before any geometric meaning is assigned to its parameters.
-
-A generic search functional may still have the schematic form
-\begin{equation}
-\mathcal E[U,\ell,\Phi]
-=
-\sum_C f([H_C])
-+
-\sum_{(xy)}V(\Phi_y,U_{xy}\Phi_x,\ell_{xy})
-+\cdots,
-\label{eq:searchfunctional}
-\end{equation}
-but \eqref{eq:searchfunctional} is a search family, not a proposed law.  It earns further study only if its nontriviality survives gauge quotienting and if its continuum interpretation can be proved rather than asserted.
-
-\section{Flat-sector benchmark: what is already kinematic and what remains dynamical}
-
-Paper I already supplies a local Lorentzian carrier and an intrinsic Spin double cover.  The selected one-parameter subgroup projects to the expected boost form on the chosen plane.  This establishes substantial local kinematic infrastructure.
-
-It does not yet establish a physical theory of moving states.  There is no current native state equation whose solutions define clocks, rods, wave packets, particles or detectors.  Therefore the SRT benchmark is now split into two levels.
-
-\begin{benchmark}[Kinematic SRT benchmark]
-The intrinsic Spin/Lorentz structure must continue to reproduce the exact Lorentz-group relations, invariant cone and invariant quadratic form without a preferred frame.  This part is already strongly constrained by Paper I.
-\end{benchmark}
-
-\begin{benchmark}[Dynamical SRT benchmark]
-After a classical state sector and reciprocal closure are defined, relationally prepared states in the neutral flat sector must reproduce the observable content of special relativity -- including boost composition, time-dilation/length-contraction relations and relativity of simultaneity where operational clock/rod observables have actually been constructed.  These formulas may not be inserted as the closure law.
-\end{benchmark}
-
-\begin{falsifier}[Preferred-frame falsifier]
-If an observable depends on a distinguished representative of a neutral gauge class rather than on gauge-invariant relational data, the proposed implementation fails its relativity benchmark.
-\end{falsifier}
-
-\section{Collective geometry benchmark: gravity remains an output}
-
-The present formal reconstruction proves how a Lorentzian tangent metric follows from a regular solder; it does not explain why a particular soldered geometry is physically realized.  This is exactly where the physical hypothesis begins.
-
-A mature many-core model should therefore distinguish at least three questions:
-\begin{enumerate}[leftmargin=2.2em]
-\item which global base/incidence structures are admissible or dynamically selected;
-\item which native Spin data and regular solders are jointly admissible;
-\item after the connection layer exists, which connection-level states and local/core states are mutually self-consistent.
-\end{enumerate}
-
-\begin{benchmark}[Endogenous weak-geometry benchmark]
-A localized many-core configuration must generate, through the same classical closure used elsewhere, a nontrivial long-range geometric response without inserting a Newton potential, Schwarzschild lapse, Einstein tensor relation or primitive point-mass source.  A remote test configuration must respond through the derived geometry rather than an added direct gravitational force law.
-\end{benchmark}
-
-\begin{benchmark}[Macroscopic gravity benchmark]
-In the appropriate long-distance low-curvature regime, the effective theory must agree with observed gravitational phenomenology or provide a quantitatively viable alternative.  If Einstein's equation emerges, it must appear as an effective consequence of the closure rather than as its definition \cite{Einstein1916,Schwarzschild1916}.
-\end{benchmark}
-
-The standard torsion-free Levi--Civita/geodesic branch is a terminal comparison, not a premise.  A future connection-level RSCH may instead contain torsion or other degrees of freedom, but any surviving branch must satisfy observational constraints.
-
-\section{Scale provenance and classical-first discipline}
-
-\begin{criterion}[Scale-provenance principle]
-Every dimensionful output must have a traceable dimensionful origin.  The Euclidean primitive, group structure, incidence relations and topological classes do not by themselves determine numerical masses, lengths, times or Newton's constant in physical units.
+\begin{criterion}[Scale provenance]
+Every dimensionful quantity must have an explicit mathematical source: boundary or initial data, a dimensionful parameter, a normalization of a classical solution, or a later quantum/renormalization mechanism after quantization has independently been justified.
 \end{criterion}
 
-Before quantization, any scale must arise from classical boundary/initial data, a dimensionful classical parameter, a stable solution normalization or a deeper pre-quantum layer.  Renormalization and dimensional transmutation belong only to a later quantum branch.  They cannot be invoked to repair a classical closure that otherwise lacks its required scale.
+\subsection{Benchmark hierarchy}
 
-\begin{falsifier}[Scale laundering]
-If a target mass or gravitational coupling is inserted under a renamed parameter or hidden by a unit convention and is later advertised as emergent, the emergence claim fails.
-\end{falsifier}
-
-\section{Localized structures, radiation and later particle language}
-
-If a classical reciprocal closure is found, one may search its solution space for stable localized configurations.  A classical localized-solution candidate must be non-gauge, finite in the conserved quantities defined by the theory, asymptotic to an admissible background and stable or metastable under the actual dynamics.  Skyrme's nonlinear field model provides a historical example of particle-like classical solitons, but not evidence that RSCH possesses them \cite{Skyrme1961}.
-
-Mass should be assigned only after a solution and suitable asymptotic Poincare charges exist.  In an asymptotically Poincare-invariant sector, the invariant extracted from total four-momentum is then a classifier of the solution, not a primitive source used to create it.
-
-Likewise, a propagating classical mode is not yet a photon.  The sequence must be
-\begin{equation}
-\begin{aligned}
-\text{classical physical mode}
-&\longrightarrow \text{consistent quantization}\\
-&\longrightarrow \text{quantum representation/statistics}\\
-&\longrightarrow \text{particle interpretation}.
-\end{aligned}
-\end{equation}
-A longitudinal feature of an internal classical variable is not by itself a longitudinal observed photon.
-
-\section{Generation and strong-sector extensions are late branches}
-
-The hypothesis does not predict three generations at the present stage.  A generation mechanism would require a mature solution/classification problem in which distinct stable branches with otherwise matching observable quantum numbers arise without inserting the number three.
-
-Similarly, the Lorentz Spin group is not a colour gauge group.  A QCD comparison is admissible only if an independent non-Abelian internal gauge sector is derived and equipped with gauge-invariant observables.  Wilson loops, confinement criteria, asymptotic freedom and dense/deconfined phases then become demanding benchmarks \cite{YangMills1954,Wilson1974,GrossWilczek1973,Politzer1973,Shuryak1978}.  Formal resemblance to non-Abelian transport does not establish QCD.
-
-
-\section{The two-sided smoke test after Paper I}
-
-The original RSCH programme proposed a deliberately small reciprocity test before attempting a full continuum dynamics.  Paper I now supplies an important preliminary result: one selected transition-level family has already failed to provide an independent physical closure knob because it is fully gauge absorbable on the tested periodic control.  The smoke-test protocol is therefore refined rather than discarded.
-
-\subsection{Control 0: transition-level gauge absorption -- completed negative control}
-The selected one-parameter Spin transition family must remain in the test suite permanently.  Any future closure functional that reports a physical geometric distinction along this family must explain why that distinction survives the explicit full-group Cech gauge equivalence and the metric-preserving solder-space correspondence.  If it cannot, the proposed observable is reading gauge redundancy.
-
-\subsection{Control 1: state-side perturbation}
-After a classical state sector $\Phi$ has been defined, begin from a neutral soldered/connection-level background and perturb only admissible state-side boundary or initial data.  Do not input a velocity law, redshift profile or target force law.  The closure must determine whether and how the relational geometry readjusts.  In the flat branch, the terminal comparison is special-relativistic kinematics and, once operational state observables exist, special-relativistic dynamics.
-
-\subsection{Control 2: geometry-side perturbation}
-On the same candidate closure law, perturb admissible geometric boundary data while applying no independent direct force impulse to the local/core state.  The state response must arise through the same constitutive relation.  At this stage an externally imposed geometric perturbation is permitted only as a diagnostic boundary condition; it is not yet the claimed endogenous background.
-
-\subsection{Control 3: many-body endogenous replacement}
-Replace the externally imposed geometric perturbation by a localized many-core configuration and solve the state and geometric sectors simultaneously.  A remote test configuration is then evolved in the resulting self-consistent geometry.  This is the first smoke test that addresses the intended gravitational mechanism rather than a programmed background.
-
-\begin{criterion}[Smoke-test consistency]
-Controls 1--3 must use one and the same closure law and one and the same gauge quotient.  Retuning the constitutive law between the flat, geometry-driven and many-body tests invalidates the unification claim.  Control 0 remains a mandatory negative control for every candidate transition-level observable.
-\end{criterion}
-
-\section{Updated research programme}
-
-The post-Paper-I programme is best organized by structural edges rather than historical task numbers.
-
-\subsection{Stage A: certified conditional Lorentzian Spin geometry -- complete}
-Paper I establishes:
-\begin{enumerate}[leftmargin=2.2em]
-\item Euclidean $\R^3$ primitive $\to$ Lorentz spin factor, Clifford algebra, intrinsic Spin cover and $\gB$;
-\item explicit base-gluing layer and sufficient topological/smooth gates $\to M^4$;
-\item exact separation of internal Lorentz and genuine tangent cocycles;
-\item regular solder as the additional gate $\to$ Lorentzian tangent metric and project-native reconvergence;
-\item positive and negative global controls;
-\item a selected transition deformation whose apparent parameter is fully gauge absorbable on the tested control and metrically inert under the full solder-space correspondence.
-\end{enumerate}
-
-\subsection{Stage B: intrinsic infinitesimal Spin--Lorentz bridge -- next}
-\textbf{Goal:} construct the missing native infinitesimal bridge without importing an external matrix Lie group.
-\begin{enumerate}[leftmargin=2.2em]
-\item package the intrinsic $\SpinG$ with sufficient smooth/Lie structure;
-\item prove or refute $\operatorname{Lie}(\SpinG)\simeq\gB$;
-\item construct $d\rho_e$ and verify its action on the intrinsic Lorentz algebra;
-\item keep the distinction between the proven abstract $\gB$ and the not-yet-proven Lie algebra of $\SpinG$ explicit.
-\end{enumerate}
-\textbf{Failure signal:} if the native topological Spin group cannot support the required smooth/Lie structure or its Lie algebra fails to match the expected six-dimensional sector, the intended connection branch must be reformulated.
-
-\subsection{Stage C: native connection geometry}
-\textbf{Goal:} introduce a principal Spin/Lorentz connection only after Stage B.
-\begin{enumerate}[leftmargin=2.2em]
-\item define native connection data on the certified global bundle structure;
-\item construct covariant derivative and parallel transport;
-\item prove the finite-holonomy and infinitesimal-curvature relations in the native setting;
-\item introduce torsion only after solder and connection coexist;
-\item compare project-native orientation/Spin obstructions with standard characteristic classes where possible.
-\end{enumerate}
-This stage is standard geometry adapted to the native reconstruction.  It is still not RSCH dynamics.
-
-\subsection{Stage D: closure-variable audit}
-\textbf{Goal:} determine what survives the gauge quotient and is capable of nontrivial reciprocal selection.
-\begin{enumerate}[leftmargin=2.2em]
-\item classify gauge-invariant transition-, solder- and connection-level observables;
-\item reuse the Paper-I deformation as a mandatory negative control;
-\item reject candidate variables that are pure gauge or metrically inert on the relevant quotient;
-\item determine the minimal argument list for a possible $\mathfrak C$.
-\end{enumerate}
-
-\subsection{Stage E: finite reciprocal closure search}
-\textbf{Goal:} search a constrained classical family of closure laws in a finite or otherwise controllable many-core setting.
-\begin{enumerate}[leftmargin=2.2em]
-\item vary relational/core state and geometric data independently at the boundary;
-\item require both responses to arise from one law;
-\item demand a neutral gauge-invariant sector and a genuinely nontrivial collective sector;
-\item record negative results rather than retuning the target into the law.
-\end{enumerate}
-
-\subsection{Stage F: classical flat-sector dynamics}
-\textbf{Goal:} add a genuine classical state sector and recover special-relativistic observables in the neutral geometry without a preferred frame.
-
-\subsection{Stage G: self-generated weak geometry}
-\textbf{Goal:} demonstrate that many-core configurations can generate a viable long-range geometric response and free-fall phenomenology without importing GR field equations.
-
-\subsection{Stage H: localized states and scales}
-\textbf{Goal:} classify stable classical localized solutions, conserved charges and scale provenance; only then ask whether invariant mass and repeated branches emerge.
-
-\subsection{Stage I: conditional quantization}
-\textbf{Goal:} identify a reduced phase space or equivalent structure and attempt quantization only after the classical closure has independently survived the flat and gravitational gates.
-
-\subsection{Stage J: quantum/strong-sector extensions}
-\textbf{Goal:} particle, generation, radiation, confinement and dense-phase questions are opened only if the required intermediate structures have actually emerged.
-
-\subsection{Dependency diagram}
 \begin{center}
-\fbox{\begin{minipage}{0.88\textwidth}
-\centering
-Euclidean primitive $\R^3$\\[0.4em]
-$\Downarrow$\\[-0.1em]
-Paper-I local core: $\Smodel,\Cl_3,\SpinG\to\LorG,\gB$\\[0.4em]
-$+\;$ base gluing $\Downarrow M^4,TM$\\[0.4em]
-$+\;$ native Spin data $+\;$ regular solder $\Downarrow (TM,g)$\\[0.6em]
-$\Downarrow$\\[-0.1em]
-\textbf{OPEN:} $\operatorname{Lie}(\SpinG)$, $d\rho_e$, native connection geometry\\[0.5em]
-$\Downarrow$\\[-0.1em]
-\textbf{HYPOTHESIS:} classical reciprocal relational Spin closure\\[0.5em]
-$\swarrow\qquad\searrow$\\[-0.1em]
-neutral/flat dynamics \qquad collective endogenous geometry\\[0.5em]
-$\searrow\qquad\swarrow$\\[-0.1em]
-\textbf{Classical Closure Gate:} SRT and endogenous geometry survive\\[0.5em]
-$\Downarrow$\\[-0.1em]
-conditional quantization $\dashrightarrow$ later particle/generation/strong-sector tests
-\end{minipage}}
+\small
+\begin{tabularx}{\textwidth}{@{}L{0.31\textwidth}L{0.29\textwidth}X@{}}
+\toprule
+Required mathematical structure & Later comparison & Status \\
+\midrule
+Classical state space and evolution law & Lorentz-covariant flat-sector dynamics & \statusT \\
+Connection and a mathematically defined flat sector & special-relativistic observables & \statusT \\
+Coupled non-flat classical solutions & weak-field gravitational phenomenology & \statusT \\
+Stable localized finite-energy solutions & energy, momentum and invariant mass & \statusT \\
+Reduced phase space / Hamiltonian or symplectic structure & possible quantization & \statusT \\
+Consistent quantized physical modes & particle/statistics/radiation interpretation & \statusT \\
+Independent internal non-Abelian gauge sector & confinement / QCD comparisons & \statusT \\
+\bottomrule
+\end{tabularx}
 \end{center}
 
-\section{Current object/status map}
+No row may be used as an assumption to prove an earlier row.
 
-\scriptsize
-\setlength{\tabcolsep}{3pt}
-\begin{longtable}{@{}L{2.8cm}L{4.0cm}L{0.8cm}L{6.35cm}@{}}
-\caption{Post-Paper-I status of the principal objects.}\label{tab:status}\\
+% ======================================================================
+\section{Research order}
+% ======================================================================
+
+The present dependency order is
+\begin{equation}
+\boxed{\text{P}}
+\quad
+\begin{gathered}
+(V,\langle\ ,\ \rangle)
+\Longrightarrow
+(\Smodel,B,\Cl_3,\SpinG,\rho,\soB),\\
+\text{gluing datum}+\widetilde g+\text{soldering data}
+\Longrightarrow
+(M,TM,g).
+\end{gathered}
+\tag{7.1}
+\end{equation}
+This is the mathematical content supplied by Paper I.
+
+The first open layer is
+\begin{equation}
+\boxed{\text{O}_1}
+\qquad
+\operatorname{Lie}(\SpinG)
+\stackrel{?}{\cong}\soB,
+\qquad
+ d\rho_e.
+\tag{7.2}
+\end{equation}
+
+The second open layer is
+\begin{equation}
+\boxed{\text{O}_2}
+\qquad
+\omega,
+\quad
+\text{parallel transport},
+\quad
+\Hol_{\omega},
+\quad
+F_{\omega},
+\quad
+T.
+\tag{7.3}
+\end{equation}
+
+Only after the variables needed for a classical configuration space have been constructed does the hypothesis become a concrete mathematical problem:
+\begin{equation}
+\boxed{\text{H}}
+\qquad
+(\tQ,\cG,\cY,\mathfrak C),
+\qquad
+\cZ=\mathfrak C^{-1}(0)/\cG.
+\tag{7.4}
+\end{equation}
+
+Physical comparisons are subsequent tests:
+\begin{equation}
+\boxed{\text{T}}
+\qquad
+\text{SRT},\quad
+\text{gravity},\quad
+\text{localized states},\quad
+\text{quantization},\quad
+\text{strong-sector tests}.
+\tag{7.5}
+\end{equation}
+
+Thus
+\begin{equation}
+  \boxed{
+  \text{P}\ \longrightarrow\ \text{O}_1\ \longrightarrow\ \text{O}_2
+  \ \longrightarrow\ \text{H}\ \longrightarrow\ \text{T}.}
+\tag{7.6}
+\end{equation}
+
+% ======================================================================
+\section{Object and status table}
+% ======================================================================
+
+\small
+\begin{longtable}{@{}L{0.27\textwidth}L{0.52\textwidth}L{0.09\textwidth}@{}}
 \toprule
-Object & Mathematical form & Status & Exact role \\
+Object or statement & Mathematical form & Status \\
 \midrule
 \endfirsthead
 \toprule
-Object & Mathematical form & Status & Exact role \\
+Object or statement & Mathematical form & Status \\
 \midrule
 \endhead
-Euclidean primitive & $V=\R^3$, positive definite & \statusFormal & Sole local primitive of Paper I. \\
-Lorentz spin factor & $\Smodel=\R\oplus V$, $N(a,v)=a^2-\langle v,v\rangle$ & \statusFormal & Derived local Lorentzian carrier; not an input Minkowski spacetime. \\
-Clifford envelope & $\Cl_3$ & \statusFormal & Euclidean Clifford algebra linked to the paravector Lorentz carrier. \\
-Intrinsic Spin cover & $\SpinG\overset{\rho}{\twoheadrightarrow}\LorG$, kernel $\{\pm1\}$ & \statusFormal & Topological central double cover with local continuous sections. \\
-Lorentz-skew algebra & $\gB\simeq\Lambda^2\Smodel$, $\dim=6$ & \statusFormal & Commutator Lie algebra of $B$-skew endomorphisms; not yet identified as Lie$(\SpinG)$. \\
-Lie$(\SpinG)$ and $d\rho_e$ & intrinsic infinitesimal cover & \statusOpen & Immediate next structural edge. \\
-Base gluing & domains, incidences, identifications & \statusFormal & Explicit additional global primitive in the certified reconstruction. \\
-Smooth four-manifold & $M^4$ & \statusFormal & Conditional on closed gluing graph, countability and smooth gluing. \\
-Tangent cocycle & $D\phi_{ij}$ & \statusFormal & Genuine derivative cocycle of the reconstructed atlas. \\
-Native Spin cocycle & $\widetilde g_{ij}$ and $g_{ij}=\rho(\widetilde g_{ij})$ & \statusFormal & Internal transition system; independent of $D\phi_{ij}$ before soldering. \\
-Regular solder & local $A_i$ satisfying \eqref{eq:solderlaw} & \statusFormal & Additional gate; existence is not universal. \\
-Tangent Lorentz metric & $g$ from \eqref{eq:metric} & \statusFormal & Derived conditionally from regular solder. \\
-Project-native orientation/future reduction & solder-induced global compatibility & \statusFormal & Proved in project-native sense; not identified with all standard obstruction formulations. \\
-Fixed-cover Spin-lift obstruction & kernel-valued Cech defect & \statusFormal & Trivial under the regular-solder reconvergence theorem; not identified with $w_2(TM)$. \\
-Selected transition deformation & one chosen $\gamma_0$ family & \statusFormal & Control family: all finite values admissible, one full Spin Cech gauge orbit, metric-preserving solder-space equivalence. \\
-Connection, holonomy,\newline curvature, torsion & standard differential-geometric layer & \statusStd/\statusOpen & Standard mathematics externally; not yet native RSCH construction. \\
-Classical state sector & $\Phi$ & \statusHyp & Future physical configuration variable; no quantum interpretation assumed. \\
-Relational closure & $\mathfrak C=0$ & \statusHyp & Unknown reciprocal selection law sought by RSCH. \\
-Gravity/SRT dynamics & effective observables & \statusTarget & Classical falsification benchmarks. \\
-Quantization & phase-space or Hamiltonian route & \statusTarget & Conditional later branch only. \\
-Particle, generation,\newline QCD sectors & mature emergent observables & \statusTarget & Late extensions; not implied by the present geometry. \\
+Euclidean input & \(V=\R^3\) with positive-definite inner product & \statusP \\
+Real spin factor & \(\Smodel=\R\oplus V\), \(N(a,v)=a^2-\langle v,v\rangle\) & \statusP \\
+Real Clifford algebra & \(\Cl_3=\Cl(V,q)\) & \statusP \\
+Clifford norm-one group & \(\SpinG\) as defined in Paper I & \statusP \\
+Central two-fold covering & \(1\to\{\pm1\}\to\SpinG\overset{\rho}{\to}\LorG\to1\) & \statusP \\
+Orthogonal Lie algebra & \(\soB\cong\Lambda^2\Smodel\), dimension \(6\) & \statusP \\
+Smooth four-manifold & obtained from additional gluing data and smoothness hypotheses & \statusP \\
+Tangent transition cocycle & \(D\phi_{ij}\) & \statusP \\
+Group-valued \Cech\ 1-cocycle & \(\widetilde g_{ij}:U_i\cap U_j\to\SpinG\) & \statusP \\
+Lorentz-valued cocycle & \(g_{ij}=\rho(\widetilde g_{ij})\) & \statusP \\
+Soldering isomorphism & \(s:E_g\xrightarrow{\sim}TM\), when local soldering data exist & \statusP \\
+Lorentzian metric & \(g_x(X,Y)=B(s_x^{-1}X,s_x^{-1}Y)\) & \statusP \\
+\Cech\ lifting class on \(\cU\) & \([\epsilon]\in\check H^2(\cU;\Ztwo)\) for chosen lifts & \statusP \\
+Identification with \(w_2(TM)\) & not proved in Paper I & \statusO \\
+Identification with \(w_1(TM)\) & not proved in Paper I & \statusO \\
+Lie algebra of \(\SpinG\) & \(\operatorname{Lie}(\SpinG)\) & \statusO \\
+Infinitesimal covering map & \(d\rho_e\) & \statusO \\
+Principal connection & \(\omega\) & \statusO \\
+Curvature and torsion & \(F_\omega\), \(T=D_\omega e\) & \statusO \\
+Classical configuration space & \((\tQ,\cG)\) & \statusH \\
+Closure equation & \(\mathfrak C:\tQ\to\cY\), \(\mathfrak C=0\) & \statusH \\
+Reciprocity & mixed state/geometric directions in \(\ker D\mathfrak C\) & \statusH \\
+Quantum theory & conditional later extension & \statusT \\
 \bottomrule
 \end{longtable}
 \normalsize
-\setlength{\tabcolsep}{6pt}
 
-\section{Hard falsifiers}
+% ======================================================================
+\section{Relation to established mathematics}
+% ======================================================================
 
-\begin{falsifier}[No nontrivial quotient-level closure]
-If every candidate classical closure on the correctly quotient configuration space is either trivial, pure gauge, or equivalent to importing the target field equations, the central RSCH fails.
-\end{falsifier}
+The algebraic terminology follows standard Clifford and spinor literature \cite{Chevalley,LawsonMichelsohn}.  Smooth manifolds, vector bundles, principal bundles, connections, solder forms, curvature and torsion are used in their standard differential-geometric meanings \cite{LeeSmooth,Husemoller,KobayashiNomizu,Nakahara2003}.  No claim of novelty is attached to those structures.
 
-\begin{falsifier}[Two-law failure]
-If state-to-geometry and geometry-to-state responses require irreducibly independent fundamental laws with unrelated parameters rather than two boundary realizations of one constitutive structure, the reciprocal-unification claim fails.
-\end{falsifier}
+The specific new proposal of this paper is restricted to the existence and physical adequacy of a future classical equation \(\mathfrak C=0\) with the properties stated in Section~3.  General relativity, gauge theory, soliton models and non-Abelian strong-interaction theory are comparison targets only \cite{Einstein1916,Kibble1961,Skyrme1961,YangMills1954,Wilson1974}.
 
-\begin{falsifier}[Gate erasure]
-If the programme can proceed only by pretending that global base gluing or regular solder existence follows automatically from the local Spin/Clifford algebra, it contradicts the certified dependency structure and the proposed derivation fails.
-\end{falsifier}
-
-\begin{falsifier}[Connection-by-relabeling]
-If finite transition products are simply renamed holonomy or curvature without constructing the native connection-level bridge and proving the required continuum comparison, the claimed geometric derivation has not occurred.
-\end{falsifier}
-
-\begin{falsifier}[Quantum rescue]
-If the classical closure fails its existence, reciprocity, SRT or endogenous-geometry tests and target behaviour appears only after adding quantum postulates or a different quantum dynamical law, the classical RSCH has failed.
-\end{falsifier}
-
-\begin{falsifier}[Matter extension failure]
-If the eventual closure has no stable localized finite-energy solutions, the proposed matter branch fails even if the geometric branch survives.
-\end{falsifier}
-
-\begin{falsifier}[Strong-sector extension failure]
-If no appropriate independent internal non-Abelian gauge sector emerges, no confinement or QGP claim follows from RSCH.  If such a sector emerges but fails its gauge-invariant strong-interaction benchmarks, that extension is falsified.
-\end{falsifier}
-
-\section{Relation to established literature}
-
-Paper I is the immediate mathematical baseline for this revision \cite{PaperI}.  Its local constructions sit in the standard mathematical landscape of spin factors, Clifford algebras and Spin groups \cite{Chevalley,LawsonMichelsohn,FarautKoranyi}.  Its global reconstruction uses standard quotient/manifold and bundle ideas while reversing the usual order of assumptions \cite{LeeSmooth,Husemoller,Steenrod}.
-
-Nakahara's \emph{Geometry, Topology and Physics} is used here as a standard-control source for the later geometric target architecture -- principal bundles, connections, holonomy, curvature, coframes and Spin geometry -- and not as evidence for the new closure \cite{Nakahara2003}.  Kobayashi and Nomizu provide the corresponding differential-geometric bundle framework \cite{KobayashiNomizu}.  Cartan, Fock, Weyl and Kibble are historical controls for torsion, local frames, spinorial gravity and gauge-gravity constructions \cite{Cartan1923,Fock1929,Weyl1929,Kibble1961}.  The proposed novelty is not any one of these structures; it is the still-unproved possibility of an endogenous reciprocal selection law native to the reconstructed dependency chain.
-
-Einstein and Schwarzschild define central macroscopic gravity benchmarks, not premises \cite{Einstein1916,Schwarzschild1916}.  Yang--Mills, Wilson, Gross--Wilczek, Politzer and Shuryak delimit what would have to be recovered before later strong-interaction language becomes legitimate \cite{YangMills1954,Wilson1974,GrossWilczek1973,Politzer1973,Shuryak1978}.
-
+% ======================================================================
 \section{Conclusion}
+% ======================================================================
 
-Paper I substantially narrows and strengthens the Relational Spin-Closure Hypothesis.  The verified local starting point is not Minkowski space but positive Euclidean three-space.  From it one can reconstruct a four-dimensional Lorentz spin factor, a Clifford envelope, an intrinsic Spin double cover and a six-dimensional Lorentz-skew algebra.  A global base still requires explicit gluing information.  Tangent geometry still requires a regular solder.  These are not defects of the reconstruction; they are the precise places where genuinely global information enters.
-
-The first transition-deformation smoke test then adds a second lesson.  Nontrivial-looking Spin transition data can be globally gauge absorbable on a concrete control, while the complete solder solution spaces remain equivalent and the induced tangent metric remains unchanged.  Therefore transition-level variation is not automatically physical geometry.  Future closure variables must be defined after the relevant gauge quotient and tested against this negative control.
-
-The current mathematical frontier is consequently sharp:
+The current mathematical construction ends at
 \begin{equation}
-\boxed{
-\begin{aligned}
-\text{Paper-I conditional Lorentzian Spin geometry}
-&\longrightarrow \operatorname{Lie}(\SpinG),\ d\rho_e\\
-&\longrightarrow \text{native connection geometry}\\
-&\longrightarrow \text{candidate reciprocal closure}.
-\end{aligned}}
-\label{eq:frontier}
+\begin{gathered}
+V=\R^3
+\Longrightarrow
+(\Smodel,B,\Cl_3,\SpinG,\rho,\soB),\\[0.4em]
++\ \text{gluing datum}
+\Longrightarrow M,TM,\\[0.4em]
++\ \widetilde g_{ij},A_i
+\Longrightarrow
+s:E_g\xrightarrow{\sim}TM
+\Longrightarrow
+(TM,g).
+\end{gathered}
+\tag{10.1}
 \end{equation}
-Only the first box in \eqref{eq:frontier} is currently complete.  The central RSCH conjecture begins beyond it: that one classical gauge-covariant law can eventually select or constrain the relational background and local/core state reciprocally, without inserting known gravitational equations and without relying on quantum postulates.
+The next mathematical questions are
+\begin{equation}
+  \operatorname{Lie}(\SpinG)
+  \stackrel{?}{\cong}\soB,
+  \qquad
+  d\rho_e,
+\tag{10.2}
+\end{equation}
+followed, if successful, by connection-level geometry.
 
-This formulation is deliberately falsifiable.  The hypothesis may fail because no nontrivial quotient-level closure exists, because the missing Lie/connection bridge cannot be made native, because the flat sector fails special relativity, because collective configurations fail to generate viable geometry, or because later matter and quantum extensions do not exist.  Each failure is allowed to terminate the corresponding branch rather than being repaired by redefining the target.
+The hypothesis is the later existence of
+\begin{equation}
+  (\tQ,\cG,\cY,\mathfrak C),
+  \qquad
+  \mathfrak C:\tQ\to\cY,
+  \qquad
+  \mathfrak C^{-1}(0)/\cG\neq\varnothing,
+\tag{10.3}\label{eq:final-hyp}
+\end{equation}
+with nontrivial gauge classes and reciprocal coupling between the state and geometric sectors.  Failure to construct such a nontrivial classical equation, or failure of its later benchmarks, falsifies the corresponding RSCH claim.  Nothing in Paper I by itself establishes \eqref{eq:final-hyp}.
 
-\clearpage
 \section*{Acknowledgments}
-The editor thanks Thomas Stoer and Thomas Klimpel for sustained, critical, and constructive discussions.  These exchanges repeatedly helped expose hidden assumptions, sharpen dependency distinctions, and separate formal results from physical interpretation.
+The editor thanks the contributors to the mathematical and physical discussions that motivated the separation between established construction, open mathematics and conjectural dynamics.
 
 \section*{AI and formalization disclosure}
-ChatGPT (OpenAI) was used for mathematical exploration, source-level comparison, organization and editorial drafting.  Aristotle was used as a prover-assisted Lean agent in the formal development.  Mathematical claims attributed to Paper I are asserted only at the strength stated there and in the referenced formal endpoints.  The present document is a hypothesis and research-programme paper; its \statusHyp\ and \statusTarget\ statements are not promoted to theorems by AI assistance.
+ChatGPT (OpenAI) was used for mathematical exploration, terminology comparison, organization and editorial drafting.  Aristotle was used as a prover-assisted Lean agent in the formal development.  Claims attributed to Paper I are stated only at the strength given in that paper and the corresponding Lean declarations.  The hypothesis and benchmark statements of the present document are not converted into theorems by AI assistance.
 
 \clearpage
 \sloppy
@@ -707,21 +831,19 @@ ChatGPT (OpenAI) was used for mathematical exploration, source-level comparison,
 
 \bibitem{PaperI}
 J. Seeck (ed.),
-\emph{The Relational Spin-Closure Hypothesis: From Euclidean Three-Space to Conditional Lorentzian Spin Geometry},
-companion mathematics paper, 12 September 2026.
-\url{https://github.com/antaris82/The_Relational_Spin-Closure_Hypothesis/blob/main/docs/mathematics/relational_spin_closure_paper_full.pdf}.
-Formal source snapshot used by the paper: repository commit \texttt{e89832ec0e1f301c051b01a0a4118d9082118a60}.
+\emph{A Conditional Construction of Lorentzian Geometry from Euclidean Three-Space: Clifford Double-Cover Data, Gluing, and a Soldering Isomorphism},
+companion mathematical paper, 13 September 2026.
+\url{https://raw.githubusercontent.com/antaris82/The_Relational_Spin-Closure_Hypothesis/main/docs/mathematics/A_Conditional_Construction_of_Lorentzian_Geometry.pdf}.
 
 \bibitem{FormalRepo}
-The Relational Spin-Closure Hypothesis formal development,
-Lean sources and audit material.
+\emph{The Relational Spin-Closure Hypothesis: formal Lean development}.
 \url{https://github.com/antaris82/The_Relational_Spin-Closure_Hypothesis}.
 
 \bibitem{Nakahara2003}
 M. Nakahara,
 \emph{Geometry, Topology and Physics}, 2nd ed.,
 Institute of Physics Publishing, Bristol and Philadelphia, 2003.
-ISBN-13: 978-0-7503-0606-5; ISBN-10: 0-7503-0606-8.
+ISBN-13: 978-0-7503-0606-5.
 
 \bibitem{Chevalley}
 C. Chevalley,
@@ -733,11 +855,6 @@ H. B. Lawson Jr. and M.-L. Michelsohn,
 \emph{Spin Geometry},
 Princeton University Press, Princeton, 1989.
 
-\bibitem{FarautKoranyi}
-J. Faraut and A. Kor\'anyi,
-\emph{Analysis on Symmetric Cones},
-Oxford University Press, 1994.
-
 \bibitem{LeeSmooth}
 J. M. Lee,
 \emph{Introduction to Smooth Manifolds}, 2nd ed.,
@@ -748,39 +865,10 @@ D. Husemoller,
 \emph{Fibre Bundles}, 3rd ed.,
 Springer, 1994.
 
-\bibitem{Steenrod}
-N. Steenrod,
-\emph{The Topology of Fibre Bundles},
-Princeton University Press, 1951.
-
 \bibitem{KobayashiNomizu}
 S. Kobayashi and K. Nomizu,
 \emph{Foundations of Differential Geometry, Vol. I},
 Interscience, New York, 1963.
-
-\bibitem{Cartan1923}
-E. Cartan,
-\emph{Sur les vari\'et\'es \`a connexion affine et la th\'eorie de la relativit\'e g\'en\'eralis\'ee (premi\`ere partie)},
-Annales scientifiques de l'\'Ecole Normale Sup\'erieure 40 (1923), 325--412.
-DOI: \href{https://doi.org/10.24033/asens.751}{10.24033/asens.751}.
-
-\bibitem{Fock1929}
-V. Fock,
-\emph{Geometrisierung der Diracschen Theorie des Elektrons},
-Zeitschrift f\"ur Physik 57 (1929), 261--277.
-DOI: \href{https://doi.org/10.1007/BF01339714}{10.1007/BF01339714}.
-
-\bibitem{Weyl1929}
-H. Weyl,
-\emph{Gravitation and the Electron},
-Proceedings of the National Academy of Sciences 15(4) (1929), 323--334.
-DOI: \href{https://doi.org/10.1073/pnas.15.4.323}{10.1073/pnas.15.4.323}.
-
-\bibitem{Kibble1961}
-T. W. B. Kibble,
-\emph{Lorentz Invariance and the Gravitational Field},
-Journal of Mathematical Physics 2(2) (1961), 212--221.
-DOI: \href{https://doi.org/10.1063/1.1703702}{10.1063/1.1703702}.
 
 \bibitem{Einstein1916}
 A. Einstein,
@@ -788,10 +876,11 @@ A. Einstein,
 Annalen der Physik 354(7) (1916), 769--822.
 DOI: \href{https://doi.org/10.1002/andp.19163540702}{10.1002/andp.19163540702}.
 
-\bibitem{Schwarzschild1916}
-K. Schwarzschild,
-\emph{\"Uber das Gravitationsfeld eines Massenpunktes nach der Einsteinschen Theorie},
-Sitzungsberichte der K\"oniglich Preussischen Akademie der Wissenschaften (1916), 189--196.
+\bibitem{Kibble1961}
+T. W. B. Kibble,
+\emph{Lorentz Invariance and the Gravitational Field},
+Journal of Mathematical Physics 2(2) (1961), 212--221.
+DOI: \href{https://doi.org/10.1063/1.1703702}{10.1063/1.1703702}.
 
 \bibitem{Skyrme1961}
 T. H. R. Skyrme,
@@ -810,24 +899,6 @@ K. G. Wilson,
 \emph{Confinement of Quarks},
 Physical Review D 10 (1974), 2445--2459.
 DOI: \href{https://doi.org/10.1103/PhysRevD.10.2445}{10.1103/PhysRevD.10.2445}.
-
-\bibitem{GrossWilczek1973}
-D. J. Gross and F. Wilczek,
-\emph{Ultraviolet Behavior of Non-Abelian Gauge Theories},
-Physical Review Letters 30 (1973), 1343--1346.
-DOI: \href{https://doi.org/10.1103/PhysRevLett.30.1343}{10.1103/PhysRevLett.30.1343}.
-
-\bibitem{Politzer1973}
-H. D. Politzer,
-\emph{Reliable Perturbative Results for Strong Interactions?},
-Physical Review Letters 30 (1973), 1346--1349.
-DOI: \href{https://doi.org/10.1103/PhysRevLett.30.1346}{10.1103/PhysRevLett.30.1346}.
-
-\bibitem{Shuryak1978}
-E. V. Shuryak,
-\emph{Quark-Gluon Plasma and Hadronic Production of Leptons, Photons and Psions},
-Physics Letters B 78(1) (1978), 150--153.
-DOI: \href{https://doi.org/10.1016/0370-2693(78)90370-2}{10.1016/0370-2693(78)90370-2}.
 
 \end{thebibliography}
 \fussy
