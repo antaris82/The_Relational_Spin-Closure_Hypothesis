@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'Supplementary/Relational_Spin_Closure_Hypothesis.tex'
+      - '.github/workflows/build-supplementary-hypothesis.yml'
   workflow_dispatch:
 
 permissions:
@@ -18,6 +18,12 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Reconstruct revised source
+        shell: bash
+        run: |
+          cat .hypothesis-payload/part* | base64 -d > Supplementary/Relational_Spin_Closure_Hypothesis.tex
+          echo "5843e2869af45775c19eab90814f3aab70705c6199d93d0c0d37f2ddb2b8ea40  Supplementary/Relational_Spin_Closure_Hypothesis.tex" | sha256sum -c -
+
       - name: Compile hypothesis paper
         uses: xu-cheng/latex-action@v3
         with:
@@ -25,15 +31,15 @@ jobs:
           working_directory: Supplementary
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
 
-      - name: Commit compiled PDF
+      - name: Commit synchronized source and PDF
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add Supplementary/Relational_Spin_Closure_Hypothesis.pdf
+          git add Supplementary/Relational_Spin_Closure_Hypothesis.tex Supplementary/Relational_Spin_Closure_Hypothesis.pdf
           if git diff --cached --quiet; then
-            echo "Compiled PDF is unchanged."
+            echo "Hypothesis paper is unchanged."
             exit 0
           fi
-          git commit -m "Build updated hypothesis paper PDF"
+          git commit -m "Update hypothesis paper after Paper I"
           git push
