@@ -18,10 +18,25 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Reconstruct revised source
+      - name: Diagnose staged payload
         shell: bash
         run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib
+          p = Path('.hypothesis-payload/part03').read_bytes()
+          print('part03_len', len(p))
+          print('part03_sha256', hashlib.sha256(p).hexdigest())
+          for i in range(0, len(p), 1000):
+              b = p[i:i+1000]
+              print(f'BLOCK {i//1000:02d} {i:05d}-{i+len(b)-1:05d} {hashlib.sha256(b).hexdigest()}')
+          PY
           cat .hypothesis-payload/part* | base64 -d > Supplementary/Relational_Spin_Closure_Hypothesis.tex
+          sha256sum Supplementary/Relational_Spin_Closure_Hypothesis.tex
+
+      - name: Verify exact revised source
+        shell: bash
+        run: |
           echo "5843e2869af45775c19eab90814f3aab70705c6199d93d0c0d37f2ddb2b8ea40  Supplementary/Relational_Spin_Closure_Hypothesis.tex" | sha256sum -c -
 
       - name: Compile hypothesis paper
