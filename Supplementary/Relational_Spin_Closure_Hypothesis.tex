@@ -24,6 +24,7 @@
 \usepackage{lastpage}
 
 \hypersetup{
+  hypertexnames=false,
   colorlinks=true,
   linkcolor=blue!45!black,
   citecolor=blue!45!black,
@@ -31,7 +32,7 @@
   pdftitle={The Relational Spin-Closure Hypothesis: Mathematical Baseline, Open Problems, and Falsification Criteria},
   pdfauthor={Jan Seeck (Editor)},
   pdfsubject={Hypothesis paper aligned with A Conditional Construction of Lorentzian Geometry from Euclidean Three-Space},
-  pdfkeywords={Clifford algebra, Lorentz geometry, Cech cocycle, soldering isomorphism, connection, reciprocity, falsification}
+  pdfkeywords={Clifford algebra, Lorentz geometry, Cech cocycle, soldering isomorphism, connection, holonomy, constrained dynamics, falsification}
 }
 
 \pagestyle{fancy}
@@ -68,11 +69,12 @@
 \newcommand{\dd}{\mathrm d}
 \newcommand{\id}{\operatorname{id}}
 \newcommand{\Hol}{\operatorname{Hol}}
-\newcommand{\statusP}{\textsf{P}}
-\newcommand{\statusS}{\textsf{S}}
-\newcommand{\statusH}{\textsf{H}}
-\newcommand{\statusO}{\textsf{O}}
-\newcommand{\statusT}{\textsf{T}}
+\newcommand{\statusPaper}{\textsf{Paper I}}
+\newcommand{\statusFormal}{\textsf{Formalized}}
+\newcommand{\statusStandard}{\textsf{Standard}}
+\newcommand{\statusHypothesis}{\textsf{Hypothesis}}
+\newcommand{\statusOpen}{\textsf{Open}}
+\newcommand{\statusBenchmark}{\textsf{Benchmark}}
 
 \title{\textbf{The Relational Spin-Closure Hypothesis}\\[0.35em]
 \large Mathematical baseline, open problems, and falsification criteria}
@@ -97,7 +99,7 @@ that paper constructs
   \qquad
   \Cl_3=\Cl(V,q),
 \]
-a Clifford norm-one group \(\SpinG\), a proper orthochronous Lorentz group \(\LorG\subset O(B)\), and a central two-fold covering
+the subgroup \(\SpinG\) defined in Paper I by the Clifford norm-one condition, a proper orthochronous Lorentz group \(\LorG\subset O(B)\), and a central two-fold covering
 \[
   1\longrightarrow\{\pm1\}
   \longrightarrow\SpinG
@@ -110,34 +112,41 @@ It also constructs the orthogonal Lie algebra
   \qquad \dim\soB=6.
 \]
 
-Global Lorentzian geometry requires additional data.  A gluing datum yields a smooth four-manifold only under explicit topological and smoothness hypotheses.  Independently, a \(\SpinG\)-valued \Cech\ 1-cocycle \(\widetilde g_{ij}\) projects to
+Global Lorentzian geometry requires additional data.  A gluing datum yields a smooth four-manifold only under explicit topological and smoothness hypotheses.  Independently, a \(\SpinG\)-valued \Cech\ 1-cocycle \(\widetilde g_{ij}\) projects to \(g_{ij}=\rho(\widetilde g_{ij})\).  Local soldering data determine a vector-bundle isomorphism
 \[
-  g_{ij}=\rho(\widetilde g_{ij}).
+  s:E_g\xrightarrow{\sim}TM
 \]
-Local soldering data \(A_i\) satisfy
-\[
-  A_j(\phi_{ij}(y))
-  =D\phi_{ij}(y)\,A_i(y)\,g_{ij}(x_y),
-\]
-and determine a vector-bundle isomorphism
-\[
-  s:E_g\xrightarrow{\sim}TM.
-\]
-The induced Lorentzian metric is
+and hence the Lorentzian metric
 \[
   g_x(X,Y)=B\!\left(s_x^{-1}X,s_x^{-1}Y\right).
 \]
-The existence of such soldering data is not a consequence of the Euclidean input or of the group-valued cocycle alone.
+Neither the global gluing datum nor the soldering isomorphism follows from the local Euclidean input alone.
 
-For one explicit periodic one-parameter family, every finite parameter admits soldering data; any two parameters are gauge equivalent under \(\SpinG\)-valued \Cech\ 0-cochains; and corresponding soldering data induce the same Lorentzian metric.  No general statement about arbitrary cocycle families follows.
-
-The next open mathematical problem is the infinitesimal bridge
+The explicit periodic one-parameter family studied in Paper I is used here as a deliberately symmetric reference family: its members are gauge equivalent under \(\SpinG\)-valued \Cech\ 0-cochains and corresponding soldering data induce the same Lorentzian metric.  The hypothesis therefore does not treat that family as an attempted construction of curvature.  The local spin-factor, Clifford and Lorentz structures are to remain fixed.  A later finite transport model may instead use one global scalar \(\lambda\) to scale an edge-dependent generator assignment,
 \[
-  \operatorname{Lie}(\SpinG)\stackrel{?}{\cong}\soB,
-  \qquad
-  d\rho_e:\operatorname{Lie}(\SpinG)\stackrel{?}{\longrightarrow}\soB.
+  U_{xy}(\lambda)=\exp(\lambda K_{xy}),
+  \qquad K_{yx}=-K_{xy},
+  \qquad K_{xy}\in\mathfrak s,
 \]
-Connections, parallel transport, holonomy, curvature and torsion lie beyond this open step.  The Relational Spin-Closure Hypothesis begins only after these distinctions: it proposes that a future classical configuration space carries a gauge-equivariant equation whose solution set couples state and geometric variables nontrivially.  Quantization and particle interpretations are later tests, not premises.
+without introducing independent local parameters.  This is a comparison family for nontrivial discrete holonomy; it is not a dynamical law.
+
+Each local spin factor contains the distinguished unit \(e_x=(1,0)\) with \(N(e_x)=1\).  The future unit hyperboloid \(N(u)=1\) therefore supplies an intrinsic dimensionless mass-shell normalization.  No dimensionful mass or energy scale is thereby generated.  If a later scale \(m>0\) is independently supplied or derived, the standard dimensionless variables are
+\[
+  \varepsilon=E/(mc^2),\qquad
+  \boldsymbol\pi=\mathbf p/(mc),\qquad
+  \varepsilon^2-\|\boldsymbol\pi\|^2=1.
+\]
+The same local Lorentz-boost subgroup is to be compared in three settings: special-relativistic kinematics, a future comparison with Levi--Civita parallel transport and timelike geodesics, and the composition of kinematic and transport contributions.  The distinguishing geometric information is not a deformation of the local Minkowski model but the path dependence, holonomy and, in a continuum formulation, curvature of the transport law.
+
+Subsequent formal work has now constructed the \((-1)\)-eigenspace \(\mathfrak s\subset\Cl_3\) of Clifford conjugation, the bracket-preserving real-linear isomorphism \(D_B:\mathfrak s\xrightarrow{\sim}\soB\), and, for every \(X\in\mathfrak s\), the algebraic one-parameter subgroup \(t\mapsto\exp(tX)\in\SpinG\).  It also proves that the derivative at \(t=0\) of the projected action on \(\Smodel\) is exactly \(D_B(X)\).  The immediate formal verification is the explicit grade-one rapidity relation
+\[
+  \rho\!\left(\exp\!\left(\frac{\eta}{2}\,\iota(v)\right)\right)e
+  =(\cosh\eta,\sinh\eta\,v)
+  \qquad (\langle v,v\rangle=1),
+\]
+including the factor \(\eta=2t\) between the Clifford exponential parameter and Lorentz rapidity.  The smooth Lie-group identification \(\operatorname{Lie}(\SpinG)\cong\mathfrak s\), the differential \(d\rho_e\), connections, parallel transport, holonomy, curvature and torsion remain open in the present development.
+
+The Relational Spin-Closure Hypothesis begins only after these distinctions.  It proposes that a future classical configuration space carries a gauge-equivariant constraint whose solution set couples state and geometric variables nontrivially.  Quantization and particle interpretations are later tests, not premises.
 \end{abstract}
 
 \tableofcontents
@@ -151,15 +160,16 @@ The labels used below have the following meanings:
 \begin{center}
 \begin{tabular}{cl}
 \toprule
-\statusP & proved or constructed in Paper I;\\
-\statusS & standard external mathematics;\\
-\statusO & open mathematical problem;\\
-\statusH & hypothesis introduced here;\\
-\statusT & later mathematical or empirical benchmark.\\
+\statusPaper & proved or constructed in Paper I;\\
+\statusFormal & proved in the subsequent formal Lean development;\\
+\statusStandard & standard external mathematics;\\
+\statusOpen & open mathematical problem;\\
+\statusHypothesis & hypothesis introduced here;\\
+\statusBenchmark & later mathematical or empirical benchmark.\\
 \bottomrule
 \end{tabular}
 \end{center}
-No statement labelled \statusO, \statusH\ or \statusT\ is asserted as a theorem of Paper I.
+No statement labelled \statusOpen, \statusHypothesis\ or \statusBenchmark\ is asserted as a theorem of Paper I.
 
 % ======================================================================
 \section{Mathematical results used from Paper I}
@@ -397,6 +407,21 @@ with
 \end{equation}
 No statement quantified over arbitrary covers, arbitrary cocycle families or arbitrary one-parameter subgroups follows from \eqref{eq:all-admissible}--\eqref{eq:metric-preserved}.
 
+The selected one-parameter subgroup used in Paper I is explicitly a Lorentz-boost subgroup,
+\[
+  G(\lambda)
+  =\cosh\!\left(\frac{\lambda}{2}\right)
+   +\sinh\!\left(\frac{\lambda}{2}\right)\gamma_0,
+\]
+whose Lorentz projection acts on the distinguished timelike--spacelike plane by
+\[
+  \begin{pmatrix}
+    \cosh\lambda & \sinh\lambda\\
+    \sinh\lambda & \cosh\lambda
+  \end{pmatrix}.
+\]
+The direction \(\gamma_0\) is selected, not canonical.  In the present hypothesis this local one-parameter Lorentz-boost subgroup is not assigned exclusively to either special-relativistic momentum or gravitation.  The intended distinction lies in the transport structure: special-relativistic kinematics may coexist with path-independent transport and trivial loop products, whereas a future connection-theoretic gravitational comparison would require path-dependent transport with nontrivial holonomy or curvature after those objects have been constructed.
+
 % ======================================================================
 \section{The Relational Spin-Closure Hypothesis}
 % ======================================================================
@@ -439,48 +464,317 @@ is nonempty and contains nontrivial gauge classes;
 
 The notation \(\mathfrak C\) names the proposed equation only.  It is not identified with torsion, curvature, a \Cech\ cocycle, a connection, or any previously constructed object.
 
-\subsection{Reciprocity}
+\subsection{Symmetric reference configuration}
+
+The flat and homogeneous family studied in Paper I is an intentional reference configuration.  It is not evidence that every admissible configuration must be flat.  The local algebraic model is held fixed:
+\[
+  (V_x,\langle\ ,\ \rangle_x,\Smodel_x,B_x,\Cl_x)
+  \cong
+  (\R^3,\langle\ ,\ \rangle,\Smodel,B,\Cl_3)
+\]
+for every local copy under consideration.  No gravitational degree of freedom is introduced by deforming this local Clifford/Lorentz model.
+
+The previously studied one-parameter family is homogeneous at the level of the transition data: the same parameter changes the transition cocycle coherently, and
+\[
+  \widetilde g^{(\lambda_1)}
+  \sim_{\cG}
+  \widetilde g^{(\lambda_2)},
+  \qquad
+  g_{\lambda_1}=g_{\lambda_2}.
+\]
+Its gauge equivalence therefore characterizes that particular family; it is not a theorem that all inhomogeneous or path-dependent transport assignments are gauge equivalent.
+
+Later extensions are required to preserve the local Clifford/Spin and Lorentz structures while allowing transport data between local frames to vary subject to explicitly stated compatibility and evolution equations.  In particular, a non-flat geometry must not be obtained merely by prescribing
+\[
+  s=s(x),
+  \qquad
+  \lambda=\lambda(x),
+  \qquad
+  \omega=\omega(x)
+\]
+as independent external functions and then computing the resulting curvature.  Such fields may enter only after they have been constructed or constrained by the mathematical variables of the model.
+
+For a finite graph model with identical local spin-factor/Clifford structures and edge transport variables
+\[
+  U_{xy}\in\SpinG,
+  \qquad
+  U_{yx}=U_{xy}^{-1},
+\]
+the reference configuration is characterized by trivial ordered products around every closed path,
+\[
+  H_C=1
+  \qquad
+  \text{for every closed path }C.
+\]
+A nontrivial conjugacy class
+\[
+  [H_C]\neq[1]
+\]
+is therefore a gauge-invariant indication of path dependence in the graph transport data.
+
+In a continuum theory based on a principal connection \(\omega\), the corresponding standard notions must be distinguished carefully.  The curvature two-form is
+\[
+  F_\omega
+  =\dd\omega+\frac12[\omega\wedge\omega].
+\]
+The condition \(F_\omega=0\) means that the connection is flat, whereas \(F_\omega\neq0\) is local curvature of that connection.  Nontrivial holonomy can nevertheless occur for a flat connection on a topologically nontrivial base.  Consequently, a nontrivial graph loop product is not identified either with continuum curvature or with continuum holonomy until an explicit comparison theorem has been proved.
+
+The mathematical question is therefore whether the coupled compatibility and evolution equations for several locally identical spin-factor/Clifford structures admit or require gauge-inequivalent transport data while preserving the local Lorentzian model.
+
+\subsection{One-parameter transport families and constrained dynamics}
+
+A one-parameter family used for comparison may be written
+\begin{equation}
+  U_{xy}(\lambda)=\exp(\lambda K_{xy}),
+  \qquad
+  K_{xy}\in\mathfrak s,
+  \qquad
+  K_{yx}=-K_{xy},
+\tag{3.5}\label{eq:edge-family}
+\end{equation}
+with one global amplitude \(\lambda\in\R\) and a fixed edge-dependent generator assignment \(K_{xy}\).  Hence
+\[
+  U_{xy}(0)=1,
+  \qquad
+  \left.\frac{\dd}{\dd\lambda}U_{xy}(\lambda)\right|_{\lambda=0}=K_{xy}.
+\]
+The scalar \(\lambda\) scales a prescribed family of transport variables; it does not create independent local degrees of freedom.  Equation \eqref{eq:edge-family} is therefore a comparison family, not an explanation of dynamics.
+
+\subsubsection*{Intrinsic unit normalization and the dual role of Lorentz boosts}
+
+Every local spin factor has the distinguished unit
+\begin{equation}
+  e_x=(1,0),
+  \qquad
+  N(e_x)=1.
+\tag{3.6}\label{eq:local-unit}
+\end{equation}
+Define the future unit hyperboloid
+\begin{equation}
+  \mathcal H_x^+
+  :=\{u=(\varepsilon,\boldsymbol\pi)\in\Smodel_x:
+      N(u)=1,\ \varepsilon>0\}.
+\tag{3.7}\label{eq:unit-hyperboloid}
+\end{equation}
+The equation \(N(u)=1\) is an intrinsic dimensionless normalization.  It is not a dimensional energy law and does not generate a mass scale.  If a positive mass scale \(m\) is later independently supplied or dynamically derived, the standard dimensionless comparison is
+\begin{equation}
+  \varepsilon=\frac{E}{mc^2},
+  \qquad
+  \boldsymbol\pi=\frac{\mathbf p}{mc},
+  \qquad
+  \varepsilon^2-\|\boldsymbol\pi\|^2=1.
+\tag{3.8}\label{eq:dimensionless-mass-shell}
+\end{equation}
+Thus the local rest state is represented by \(u=e_x\), for which the dimensionless rest-energy ratio under this later physical identification is \(E_{\rm rest}/(mc^2)=1\).  Equation \eqref{eq:dimensionless-mass-shell} is a later physical interpretation of the already present Lorentzian unit normalization, not a derivation of \(m\), \(E\), or \(\mathbf p\).
+
+For a unit spatial direction \(n\), let \(L_n(\eta)\) denote the standard proper orthochronous Lorentz boost of rapidity \(\eta\) in direction \(n\).  Its action on the rest vector is
+\begin{equation}
+  L_n(\eta)e_x
+  =(\cosh\eta,\sinh\eta\,n),
+  \qquad
+  N(L_n(\eta)e_x)=1.
+\tag{3.9}\label{eq:standard-boost-mass-shell}
+\end{equation}
+Hence, for an oriented one-dimensional boost subgroup,
+\begin{equation}
+  \varepsilon=\cosh\eta,
+  \qquad
+  \pi_{\parallel}=\sinh\eta,
+  \qquad
+  \eta=\operatorname{arcosh}\varepsilon
+       =\operatorname{arsinh}\pi_{\parallel}.
+\tag{3.10}\label{eq:rapidity-inversion}
+\end{equation}
+This gives an inverse kinematic reconstruction: a normalized state on \(\mathcal H_x^+\) determines the rapidity of the corresponding one-dimensional Lorentz boost, subject to the stated orientation convention.
+
+The formal Clifford development has already proved, for \(X\in\mathfrak s\), that \(\exp(tX)\in\SpinG\) is an algebraic one-parameter subgroup and that the derivative at \(t=0\) of its projected action is \(D_B(X)\).  For a unit vector \(v\in V\), it also proves
+\begin{equation}
+  \exp(t\,\iota(v))
+  =\cosh t\,1+\sinh t\,\iota(v).
+\tag{3.11}\label{eq:grade-one-exp}
+\end{equation}
+The immediate formal verification is to identify this curve with the standard boost normalization by proving
+\begin{equation}
+  \rho\!\left(\exp\!\left(\frac{\eta}{2}\,\iota(v)\right)\right)e_x
+  =L_v(\eta)e_x
+  =(\cosh\eta,\sinh\eta\,v),
+  \qquad
+  \langle v,v\rangle=1.
+\tag{3.12}\label{eq:spin-rapidity-target}
+\end{equation}
+Thus the expected relation between the Clifford exponential parameter \(t\) and Lorentz rapidity is
+\begin{equation}
+  \eta=2t.
+\tag{3.13}\label{eq:factor-two}
+\end{equation}
+Equations \eqref{eq:spin-rapidity-target}--\eqref{eq:factor-two} are stated here as the next formal bridge to be verified; they are not yet counted as formal results of the current development.
+
+The same local Lorentz-boost subgroup then has two distinct standard roles in the comparison programme:
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{@{}l>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+Comparison & Mathematical form & Interpretation \\
+\midrule
+Special-relativistic kinematics & \(u=L_n(\eta_{\rm kin})e_x\), trivial discrete holonomy & relative velocity, rapidity and momentum \\
+General-relativistic free fall & \(u=\dot\gamma\), \(\nabla^g_u u=0\) for the Levi--Civita connection & boost component of orthonormal-frame parallel transport \\
+Combined comparison & \(L_{\rm obs}=L_{\rm tr}L_{\rm kin}\) & composition of kinematic and transport contributions \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{center}
+The second and third rows are comparison targets for a future connection theory, not present theorems of the hypothesis.
+
+At the finite level, for an oriented closed path \(C\), define the ordered product
+\begin{equation}
+  H_C(\lambda)=\prod_{e\in C}U_e(\lambda).
+\tag{3.14}\label{eq:finite-loop-product}
+\end{equation}
+The condition \(H_C=1\) for every closed path is the path-independent reference case for this finite model.  A nontrivial conjugacy class \([H_C]\neq[1]\) is a gauge-invariant obstruction to such path independence.  A nonzero special-relativistic rapidity therefore does not by itself imply curvature or nontrivial holonomy: one may have \(\eta_{\rm kin}\neq0\) while all loop products remain trivial.
+
+For comparison with general relativity, a future connection constructed by the model must first be related to the Levi--Civita connection \(\nabla^g\) of the induced Lorentzian metric \(g\), or any torsion and non-metricity must be stated explicitly.  Standard timelike free fall in general relativity is then described by a geodesic \(\gamma\) with four-velocity \(u=\dot\gamma\) satisfying
+\begin{equation}
+  \nabla^g_u u=0.
+\tag{3.15}\label{eq:geodesic-target}
+\end{equation}
+In a local orthonormal frame, the Levi--Civita connection has the standard component form
+\begin{equation}
+  \frac{\dd u^a}{\dd\tau}
+  +\omega^a{}_{b\mu}\,\dot x^\mu u^b=0.
+\tag{3.16}\label{eq:frame-parallel-target}
+\end{equation}
+In a one-generator boost reduction \(u(\tau)=L_n(\eta(\tau))e_x\), the boost component would reduce, after fixing the sign and generator conventions, to an equation of the form
+\begin{equation}
+  \frac{\dd\eta}{\dd\tau}
+  =-\omega_K(\dot\gamma).
+\tag{3.17}\label{eq:rapidity-transport-target}
+\end{equation}
+Equations \eqref{eq:geodesic-target}--\eqref{eq:rapidity-transport-target} are standard comparison equations.  They are not yet derived from the hypothesis, and no identification of a future \(\SpinG\)-connection with the Levi--Civita connection is assumed.
+
+\subsubsection*{Composition of kinematic and transport contributions}
+
+Write a local comparison between an initially boosted state and a transported frame as
+\begin{equation}
+  L_{\rm obs}=L_{\rm tr}L_{\rm kin}.
+\tag{3.18}\label{eq:boost-composition}
+\end{equation}
+For collinear boosts along the same unit direction \(n\),
+\begin{equation}
+  L_{\rm kin}=L_n(\eta_{\rm kin}),
+  \qquad
+  L_{\rm tr}=L_n(\eta_{\rm tr}),
+  \qquad
+  L_{\rm tr}L_{\rm kin}=L_n(\eta_{\rm kin}+\eta_{\rm tr}),
+\tag{3.19}\label{eq:rapidity-addition}
+\end{equation}
+so that \(\eta_{\rm obs}=\eta_{\rm kin}+\eta_{\rm tr}\).  Consequently,
+\begin{equation}
+  \eta_{\rm tr}
+  =\operatorname{arcosh}(\varepsilon_{\rm obs})-\eta_{\rm kin}
+\tag{3.20}\label{eq:transport-rapidity-inversion}
+\end{equation}
+under the same oriented one-dimensional convention.  This is the simplest inverse reconstruction relevant to the combined comparison: once the kinematic rapidity is specified, the normalized observed state fixes the collinear transport rapidity required by the model.
+
+For noncollinear \(K_1,K_2\in\mathfrak s\), set \(A_i:=D_BK_i\in\soB\).  If \([A_1,A_2]\neq0\), scalar rapidity addition is invalid.  On the Lorentz-algebra side the Baker--Campbell--Hausdorff expansion gives
+\begin{equation}
+  \log\bigl(e^{\xi A_2}e^{\eta A_1}\bigr)
+  =\eta A_1+\xi A_2
+   +\frac12\eta\xi[A_2,A_1]+\cdots.
+\tag{3.21}\label{eq:bch-combined}
+\end{equation}
+The commutator term contains the additional Lorentz-algebra component determined by the chosen generators; for two noncollinear boost generators this includes the familiar rotational contribution.  Such terms are consequences of the noncommutative composition law, not additional variables introduced by definition.
+
+If a differentiable trajectory satisfies the invariant normalization \(N(u(\tau))=1\), then differentiation gives
+\begin{equation}
+  B(u,\dot u)=0,
+  \qquad
+  \dot u\in T_u\mathcal H_x^+.
+\tag{3.22}\label{eq:tangent-mass-shell}
+\end{equation}
+Thus any future dynamical mechanism compatible with the local normalization must move the normalized state tangentially to the unit hyperboloid or modify the transport relation between such states; it must not change the defining Lorentzian normalization of the local spin factor.
+
+A one-parameter group-commutator comparison family may use \(K_1,K_2\in\mathfrak s\):
+\begin{equation}
+  H(\lambda)
+  =e^{\lambda K_1}e^{\lambda K_2}
+   e^{-\lambda K_1}e^{-\lambda K_2}.
+\tag{3.23}\label{eq:group-commutator-family}
+\end{equation}
+Formally near \(\lambda=0\),
+\begin{equation}
+  H(0)=1,
+  \qquad
+  H(\lambda)=1+\lambda^2[K_1,K_2]+O(\lambda^3).
+\tag{3.24}\label{eq:group-commutator-leading}
+\end{equation}
+The first nontrivial term is therefore produced by the noncommutativity of the transport generators while the local spin-factor/Clifford structures remain unchanged.  This is a prescribed family of group elements; it does not define an evolution equation.
+
+The dynamical hypothesis requires more than a prescribed one-parameter family.  Suppose a future formulation provides a \(\cG\)-equivariant evolution vector field \(\mathcal V\) on the constraint surface \(\mathfrak C^{-1}(0)\), so that an admissible trajectory satisfies
+\begin{equation}
+  \mathfrak C(q)=0,
+  \qquad
+  \dot q=\mathcal V(q).
+\tag{3.25}\label{eq:constrained-evolution}
+\end{equation}
+At a configuration \(q\), evolution tangent to the gauge orbit,
+\begin{equation}
+  \mathcal V(q)\in T_q(\cG\!\cdot q),
+\tag{3.26}\label{eq:stationary-mod-gauge}
+\end{equation}
+represents no change of the corresponding gauge-equivalence class.  Accordingly, a configuration is stationary modulo gauge when \eqref{eq:stationary-mod-gauge} holds.
+
+The hypothesis requires the existence of admissible configurations for which gauge-invariant transport data differ from the reference configuration and for which the evolution is not tangent to the gauge orbit,
+\begin{equation}
+  \mathcal V(q)\notin T_q(\cG\!\cdot q).
+\tag{3.27}\label{eq:nonstationary-mod-gauge}
+\end{equation}
+The vector field \(\mathcal V\) and its dependence on the transport and geometric variables must be determined by the coupled equations of the model; they may not be supplied by prescribing the time dependence of \(\lambda\), \(U_{xy}\), \(\omega\), or the metric.
+
+In the heuristic discussion below, the phrase \emph{non-equilibrium} refers only to this dynamical-systems notion of a nonstationary gauge-equivalence class.  No thermodynamic interpretation, entropy functional, statistical ensemble, or irreversible dynamics is assumed.
+
+\begin{remark}[Heuristic picture]
+One may picture each local copy as carrying the same Lorentzian unit hyperboloid and the same local spin-factor/Clifford structure.  Special-relativistic motion changes the normalized state by a Lorentz boost.  A gravitational comparison, if a later connection theory realizes it, would instead involve parallel transport between local orthonormal frames and the possible path dependence of that transport.  The hypothesis is that the coupled equations can admit nonstationary gauge-equivalence classes while leaving the local Minkowski model unchanged.  This picture is explanatory only; the mathematical content is expressed by Lorentz transformations, transport variables, gauge transformations, the constraint surface, and the evolution vector field defined above.
+\end{remark}
+
+\subsection{Linearized coupling between state and geometric variables}
 
 Suppose a future differentiable formulation admits a local splitting
 \begin{equation}
   T_q\tQ=X_{\Phi}\oplus X_G,
-\tag{3.5}
+\tag{3.28}
 \end{equation}
-where \(X_{\Phi}\) denotes state variations and \(X_G\) denotes geometric variations.  At a solution \(q\in\mathfrak C^{-1}(0)\), write
+where \(X_{\Phi}\) denotes variations of the state variables and \(X_G\) denotes variations of the geometric variables.  At a solution \(q\in\mathfrak C^{-1}(0)\), the linearized constraint is
 \begin{equation}
   D\mathfrak C_q(\delta\Phi,\delta G)=0.
-\tag{3.6}
+\tag{3.29}
 \end{equation}
-
-\begin{definition}[Linearized reciprocity]
-A solution \(q\) is \emph{linearly reciprocal} if
+A minimal form of linearized coupling is the existence of a tangent vector in the linearized solution space with nonzero components in both summands:
 \begin{equation}
   \ker D\mathfrak C_q
   \cap
   \bigl((X_{\Phi}\setminus\{0\})\times(X_G\setminus\{0\})\bigr)
   \neq\varnothing.
-\tag{3.7}
+\tag{3.30}
 \end{equation}
-Thus the linearized solution space contains at least one nontrivial variation in which both sectors vary.
-\end{definition}
+This states only that some infinitesimal solution variations change both sets of variables; it does not assert a constitutive law or a dynamical equation.
 
-A stronger local condition may be imposed on specified subspaces when the partial linearizations
+A stronger local statement can be formulated on specified subspaces when the partial derivatives
 \begin{equation}
   C_{\Phi}:=D_{\Phi}\mathfrak C_q,
   \qquad
   C_G:=D_G\mathfrak C_q
-\tag{3.8}
+\tag{3.31}
 \end{equation}
-are invertible there.  Then
+are invertible there.  Then the linearized constraint can be solved in either direction,
 \begin{equation}
   \delta G=-C_G^{-1}C_{\Phi}\delta\Phi,
   \qquad
   \delta\Phi=-C_{\Phi}^{-1}C_G\delta G.
-\tag{3.9}\label{eq:reciprocal-inverse}
+\tag{3.32}\label{eq:linearized-coupling-inverse}
 \end{equation}
-Equation \eqref{eq:reciprocal-inverse} is a possible regularity condition, not part of the present mathematical baseline.
+This is an implicit-function-type regularity condition and is not part of the present mathematical baseline.
 
-\subsection{Classical-first restriction}
+\subsection{Classical formulation prior to quantization}
 
 The hypothesis is classical at its defining stage.  No Hilbert-space state axiom, Born rule, canonical commutation or anticommutation relation, Fock-space construction, path integral, or quantum-statistical postulate is used to define \(\mathfrak C\).
 
@@ -493,68 +787,158 @@ A variational realization, if it exists, would be a stronger statement:
   D\mathcal A=0
   \Longrightarrow
   \mathfrak C=0.
-\tag{3.10}
+\tag{3.33}
 \end{equation}
 No particular action functional is assumed.
 
 % ======================================================================
-\section{Open mathematical problems before a connection theory}
+\section{Current infinitesimal results and the open connection problem}
 % ======================================================================
 
-\subsection{The infinitesimal Spin--Lorentz bridge}
+\subsection{The \texorpdfstring{$(-1)$}{-1}-eigenspace of Clifford conjugation and the induced Lie-algebra map}
 
-Paper I provides the group-level map \(\rho:\SpinG\to\LorG\) and the Lie algebra \(\soB\), but not the missing infinitesimal identification.  The next open statements are
+Subsequent formal work defines the \((-1)\)-eigenspace of Clifford conjugation
+\begin{equation}
+  \mathfrak s
+  :=\{X\in\Cl_3:c(X)=-X\}
+  =\ker(\id+c).
+\tag{4.1}
+\end{equation}
+It proves
+\begin{equation}
+  \mathfrak s
+  =\Cl_3^{(1)}\oplus\Cl_3^{(2)},
+  \qquad
+  \dim_{\R}\mathfrak s=6,
+  \qquad
+  [\mathfrak s,\mathfrak s]\subseteq\mathfrak s.
+\tag{4.2}
+\end{equation}
+For the paravector embedding \(A:\Smodel\to\Cl_3\), the associated real-linear map is characterized by
+\begin{equation}
+  A(D_Xx)=X A(x)+A(x)\widetilde X,
+\tag{4.3}
+\end{equation}
+where \(\widetilde X\) denotes reversion.  The resulting map is a bracket-preserving real-linear isomorphism
+\begin{equation}
+  D_B:\mathfrak s\xrightarrow{\sim}\soB.
+\tag{4.4}
+\end{equation}
+These are algebraic results.  They do not by themselves identify \(\mathfrak s\) with the tangent Lie algebra of \(\SpinG\).
+
+\subsection{Algebraic one-parameter subgroups and projected derivatives}
+
+For every \(X\in\mathfrak s\), the formal development proves
+\begin{equation}
+  \gamma_X(t):=\exp(tX)\in\SpinG,
+\tag{4.5}
+\end{equation}
+with
+\begin{equation}
+  \gamma_X(0)=1,
+  \qquad
+  \gamma_X(t+s)=\gamma_X(t)\gamma_X(s),
+  \qquad
+  \gamma_X(-t)=\gamma_X(t)^{-1}.
+\tag{4.6}
+\end{equation}
+It also proves
+\begin{equation}
+  c(\exp(tX))=\exp(-tX)
+\tag{4.7}
+\end{equation}
+and the exact projected paravector action
+\begin{equation}
+  A\!\left(\rho(\exp(tX))x\right)
+  =\exp(tX)A(x)\exp(t\widetilde X).
+\tag{4.8}
+\end{equation}
+The derivative at the origin of this explicit projected curve is the previously constructed bracket-preserving linear map:
+\begin{equation}
+  \left.\frac{\dd}{\dd t}\rho(\exp(tX))x\right|_{t=0}
+  =D_B(X)x.
+\tag{4.9}\label{eq:projected-exp-derivative}
+\end{equation}
+This is a derivative of an explicit curve acting on the finite-dimensional Lorentz vector space \(\Smodel\).  It is not yet the differential \(d\rho_e\) of a smooth Lie-group homomorphism.
+
+For a unit vector \(v\in V\), the grade-one exponential is proved in closed form:
+\begin{equation}
+  \langle v,v\rangle=1
+  \quad\Longrightarrow\quad
+  \exp(t\,\iota(v))
+  =\cosh t\,1+\sinh t\,\iota(v).
+\tag{4.10}\label{eq:formal-grade-one-exp}
+\end{equation}
+This result provides the Clifford-algebra side of the standard boost parametrization.  The immediate formal verification is equation \eqref{eq:spin-rapidity-target}, including the relation \(\eta=2t\), and the corresponding proof of \(N=1\) for the projected rest state.
+
+The same development computes the directional derivative at the identity of the norm-one constraint
+\[
+  F(g)=g\,c(g)-1
+\]
+as
+\begin{equation}
+  D F_1(X)=X+c(X),
+  \qquad
+  \ker D F_1=\mathfrak s.
+\tag{4.11}
+\end{equation}
+The \(+1\)-eigenspace appearing as the image of \(\id+c\) is the fixed subspace of \emph{Clifford conjugation}; it must not be confused with the fixed subspace of reversion.  No regular-value or submanifold theorem has yet been applied.
+
+\subsection{Remaining smooth Lie-group identification}
+
+The next structural statements are
 \begin{equation}
   \operatorname{Lie}(\SpinG)
   \stackrel{?}{\cong}
+  \mathfrak s
+  \xrightarrow{D_B}
   \soB,
-\tag{4.1}\label{eq:lie-open}
+\tag{4.12}\label{eq:lie-open}
 \end{equation}
 and
 \begin{equation}
-  d\rho_e:
-  \operatorname{Lie}(\SpinG)
-  \stackrel{?}{\longrightarrow}
-  \soB.
-\tag{4.2}\label{eq:drho-open}
+  d\rho_e
+  \stackrel{?}{=}
+  D_B
+  \quad\text{under this identification}.
+\tag{4.13}\label{eq:drho-open}
 \end{equation}
-A smooth Lie-group structure on \(\SpinG\) must be supplied before \eqref{eq:lie-open}--\eqref{eq:drho-open} can be interpreted literally in the standard sense.
-
-An intermediate algebraic construction may be studied first.  For Clifford conjugation \(c\), the tangent condition suggested by
-\(gc(g)=1\) at the identity is
-\begin{equation}
-  X+c(X)=0.
-\tag{4.3}
-\end{equation}
-A future formalization may define the corresponding linear subspace of \(\Cl_3\), construct its infinitesimal action on \(\Smodel\), and compare that action with \(\soB\).  Until the relevant comparison theorem is proved, this subspace is not denoted \(\operatorname{Lie}(\SpinG)\).
+A smooth manifold structure compatible with the group operations on \(\SpinG\) must be constructed before \eqref{eq:lie-open}--\eqref{eq:drho-open} can be interpreted literally in the standard Lie-theoretic sense.  The explicit one-parameter subgroups and equation \eqref{eq:projected-exp-derivative} provide strong compatibility data but do not substitute for that construction.
 
 \subsection{Connection, curvature and torsion}
 
-Only after an infinitesimal bridge is available does the standard connection-level architecture become applicable.  If \(P\to M\) is a principal \(\SpinG\)-bundle with a principal connection \(\omega\), then standard differential geometry gives the curvature
+Only after the required smooth principal-bundle and infinitesimal representation structures are available can the standard theory of principal connections be applied.  If \(P\to M\) is a principal \(\SpinG\)-bundle with a principal connection \(\omega\), then standard differential geometry gives the curvature
 \begin{equation}
   F_{\omega}
   =\dd\omega+\frac12[\omega\wedge\omega].
-\tag{4.4}
+\tag{4.14}
 \end{equation}
 With a solder form \(e:TM\to E_g\), torsion is
 \begin{equation}
   T=D_{\omega}e.
-\tag{4.5}
+\tag{4.15}
 \end{equation}
 These are standard definitions \cite{KobayashiNomizu,Nakahara2003}; neither object has yet been constructed in the present formal development.
 
 A group homomorphism cannot be applied directly to a Lie-algebra-valued one-form.  In particular,
 \begin{equation}
   \rho\circ\omega
-\tag{4.6}
+\tag{4.16}
 \end{equation}
-is not a definition of a Lorentz connection.  Projection of a connection requires the infinitesimal map \(d\rho_e\) or an explicitly proved equivalent representation.
+is not a definition of a Lorentz connection.  Projection of a connection requires \(d\rho_e\) or an explicitly proved equivalent infinitesimal representation.
+
+The intended flat reference case is
+\begin{equation}
+  F_\omega=0.
+\tag{4.17}
+\end{equation}
+Any nonzero curvature in the hypothesis must be produced by the coupled constraint and evolution equations, not prescribed as input.
 
 % ======================================================================
-\section{Finite graph model}
+\section{Discrete connection on a graph}
 % ======================================================================
 
-A discrete model may be used before the continuum connection theory is complete, provided its observables are not identified with continuum objects by name alone.
+A discrete connection on a graph may be studied before the continuum connection theory is complete, provided that no continuum-limit identification is assumed without proof.
 
 Let
 \begin{equation}
@@ -568,12 +952,12 @@ be an oriented graph.  Assign
   U_{yx}=U_{xy}^{-1}
 \tag{5.2}
 \end{equation}
-to each oriented edge.  A vertex gauge transformation \(h_x\in\SpinG\) acts by
+to each oriented edge; these group elements play the role of link variables.  A vertex gauge transformation \(h_x\in\SpinG\) acts by
 \begin{equation}
   U_{xy}\longmapsto h_yU_{xy}h_x^{-1}.
 \tag{5.3}
 \end{equation}
-For a closed path \(C=(x_0,\ldots,x_n=x_0)\), define
+For a closed path \(C=(x_0,\ldots,x_n=x_0)\), define the ordered product (discrete holonomy)
 \begin{equation}
   H_C:=U_{x_{n-1}x_n}\cdots U_{x_0x_1}.
 \tag{5.4}
@@ -583,14 +967,28 @@ Then
   H_C\longmapsto h_{x_0}H_Ch_{x_0}^{-1},
 \tag{5.5}
 \end{equation}
-so its conjugacy class \([H_C]\) is gauge invariant.
+so its conjugacy class \([H_C]\) is gauge invariant, as expected for based holonomy under a change of local frame.
 
-The object \([H_C]\) is a graph observable.  No equality
+The reference configuration has trivial discrete holonomy,
 \begin{equation}
-  [H_C]=[\Hol_{\omega}(C)]
+  H_C=1
+  \qquad
+  \text{for every closed path }C.
 \tag{5.6}
 \end{equation}
-is asserted before a continuum-limit and comparison theorem is constructed.
+Nontrivial discrete holonomy is detected by
+\begin{equation}
+  [H_C]\neq[1]
+\tag{5.7}
+\end{equation}
+for at least one closed path.  This condition leaves the local Clifford/Lorentz structure unchanged and concerns only the discrete connection.
+
+No identification
+\begin{equation}
+  [H_C]=[\Hol_{\omega}(C)]
+\tag{5.8}
+\end{equation}
+is asserted before a continuum limit and an explicit comparison theorem have been constructed.
 
 % ======================================================================
 \section{Falsification criteria and later benchmarks}
@@ -607,7 +1005,7 @@ The following implications are excluded by the current mathematics:
   &\not\Longrightarrow
   \exists\,s:E_g\xrightarrow{\sim}TM,
 \tag{6.1b}\\
-  \text{group-level }\rho
+  \text{group homomorphism }\rho
   &\not\Longrightarrow d\rho_e,
 \tag{6.1c}\\
   \prod_{e\in C}U_e
@@ -617,16 +1015,24 @@ The following implications are excluded by the current mathematics:
 \end{align}
 
 \begin{criterion}[Nontriviality modulo gauge]
-A proposed closure variable fails if every member of the tested family belongs to one gauge orbit and all observables used by the proposal are constant on that orbit.
+A proposed constraint variable fails if every member of the tested family belongs to one gauge orbit and all observables used by the proposal are constant on that orbit.
 \end{criterion}
 
 The one-parameter family \eqref{eq:E-lambda}--\eqref{eq:metric-preserved} is an explicit example of such a negative result at the transition-cocycle level.  It does not imply the same conclusion for connection-level families.
 
-\begin{criterion}[No target equation as a definition]
-A candidate \(\mathfrak C\) does not establish RSCH if it is defined by inserting the Einstein equation, a prescribed Schwarzschild field, a geodesic equation, Maxwell/Yang--Mills equations, an externally prescribed redshift/lapse profile, or a desired particle mass as a primitive constitutive law.
+\begin{criterion}[Independence from benchmark field equations]
+A candidate \(\mathfrak C\) does not establish the hypothesis if it is defined by inserting the Einstein equation, a prescribed Schwarzschild field, a geodesic equation, Maxwell/Yang--Mills equations, an externally prescribed redshift/lapse profile, or a desired particle mass as a primitive constitutive law.
 \end{criterion}
 
-\begin{criterion}[Scale provenance]
+\begin{criterion}[No prescribed geometric field as explanatory input]
+A proposed non-flat geometric configuration does not establish the hypothesis if it is obtained merely by prescribing a position-dependent soldering field, scalar field, connection, or curvature and then computing the desired geometry from that prescription.  A global scalar \(\lambda\) may parameterize a fixed edge-dependent transport assignment \(K_{xy}\), but such a family is only a comparison family.  Any physical departure from the symmetric reference configuration must instead be determined by the transport variables together with the coupled constraint and evolution equations.
+\end{criterion}
+
+\begin{criterion}[No prescribed time dependence as a dynamical explanation]
+A nonzero comparison parameter or a nontrivial loop observable is not by itself a dynamical explanation.  The hypothesis requires an evolution equation on the admissible configuration space for which some configuration with nontrivial gauge-invariant transport data has evolution not tangent to its gauge orbit.  If the same behavior is obtained solely by prescribing the time dependence of \(\lambda\), \(U_{xy}\), \(\omega\), or the metric, no intrinsic dynamical mechanism has been established.
+\end{criterion}
+
+\begin{criterion}[Origin of dimensionful scales]
 Every dimensionful quantity must have an explicit mathematical source: boundary or initial data, a dimensionful parameter, a normalization of a classical solution, or a later quantum/renormalization mechanism after quantization has independently been justified.
 \end{criterion}
 
@@ -638,13 +1044,13 @@ Every dimensionful quantity must have an explicit mathematical source: boundary 
 \toprule
 Required mathematical structure & Later comparison & Status \\
 \midrule
-Classical state space and evolution law & Lorentz-covariant flat-sector dynamics & \statusT \\
-Connection and a mathematically defined flat sector & special-relativistic observables & \statusT \\
-Coupled non-flat classical solutions & weak-field gravitational phenomenology & \statusT \\
-Stable localized finite-energy solutions & energy, momentum and invariant mass & \statusT \\
-Reduced phase space / Hamiltonian or symplectic structure & possible quantization & \statusT \\
-Consistent quantized physical modes & particle/statistics/radiation interpretation & \statusT \\
-Independent internal non-Abelian gauge sector & confinement / QCD comparisons & \statusT \\
+Classical state space and evolution law & Lorentz-covariant dynamics on a flat Lorentzian background & \statusBenchmark \\
+Connection and a mathematically defined flat reference configuration & special-relativistic observables & \statusBenchmark \\
+Coupled non-flat classical solutions & weak-field gravitational phenomenology & \statusBenchmark \\
+Stable localized finite-energy solutions & energy, momentum and invariant mass & \statusBenchmark \\
+Reduced phase space / Hamiltonian or symplectic structure & possible quantization & \statusBenchmark \\
+Consistent quantized physical modes & particle/statistics/radiation interpretation & \statusBenchmark \\
+Independent internal non-Abelian gauge sector & confinement / QCD comparisons & \statusBenchmark \\
 \bottomrule
 \end{tabularx}
 \end{center}
@@ -655,10 +1061,11 @@ No row may be used as an assumption to prove an earlier row.
 \section{Research order}
 % ======================================================================
 
-The present dependency order is
+The logical order of the programme is stated without using later structures as premises for earlier ones.
+
+\paragraph{Established baseline from Paper I.}
+The current geometric construction is
 \begin{equation}
-\boxed{\text{P}}
-\quad
 \begin{gathered}
 (V,\langle\ ,\ \rangle)
 \Longrightarrow
@@ -669,63 +1076,88 @@ The present dependency order is
 \end{gathered}
 \tag{7.1}
 \end{equation}
-This is the mathematical content supplied by Paper I.
 
-The first open layer is
+\paragraph{Subsequent formalized algebraic results.}
+The Lean development has established
 \begin{equation}
-\boxed{\text{O}_1}
+\begin{gathered}
+\mathfrak s=\{X:c(X)=-X\},
 \qquad
-\operatorname{Lie}(\SpinG)
-\stackrel{?}{\cong}\soB,
+D_B:\mathfrak s\xrightarrow{\sim}\soB,\\
+\gamma_X(t)=\exp(tX)\in\SpinG,
 \qquad
- d\rho_e.
+\left.\frac{\dd}{\dd t}\rho(\gamma_X(t))x\right|_{t=0}=D_B(X)x.
+\end{gathered}
 \tag{7.2}
 \end{equation}
-
-The second open layer is
+For unit \(v\in V\), the closed formula
+\[
+  \exp(t\,\iota(v))=\cosh t\,1+\sinh t\,\iota(v)
+\]
+is also formalized.  The immediate next verification is the finite-dimensional rapidity identity
 \begin{equation}
-\boxed{\text{O}_2}
-\qquad
-\omega,
-\quad
-\text{parallel transport},
-\quad
-\Hol_{\omega},
-\quad
-F_{\omega},
-\quad
-T.
+  \rho\!\left(\exp\!\left(\frac{\eta}{2}\,\iota(v)\right)\right)e
+  \stackrel{?}{=}
+  (\cosh\eta,\sinh\eta\,v),
+  \qquad N=1.
 \tag{7.3}
 \end{equation}
+This comparison does not require a smooth Lie-group structure on \(\SpinG\).
 
-Only after the variables needed for a classical configuration space have been constructed does the hypothesis become a concrete mathematical problem:
+\paragraph{Open Lie-group step.}
+The next structural problem is to construct a compatible smooth Lie-group structure and prove
 \begin{equation}
-\boxed{\text{H}}
-\qquad
-(\tQ,\cG,\cY,\mathfrak C),
-\qquad
-\cZ=\mathfrak C^{-1}(0)/\cG.
+  \operatorname{Lie}(\SpinG)
+  \stackrel{?}{\cong}\mathfrak s,
+  \qquad
+  d\rho_e\stackrel{?}{=}D_B.
 \tag{7.4}
 \end{equation}
 
-Physical comparisons are subsequent tests:
+\paragraph{Open connection-theoretic step.}
+Only after the preceding identification can the programme introduce a principal connection \(\omega\), parallel transport, holonomy, curvature \(F_\omega\), and torsion.  In the finite graph model the symmetric reference configuration has
 \begin{equation}
-\boxed{\text{T}}
-\qquad
-\text{SRT},\quad
-\text{gravity},\quad
-\text{localized states},\quad
-\text{quantization},\quad
-\text{strong-sector tests}.
+  H_C=1
+  \qquad\text{for every closed path }C.
 \tag{7.5}
 \end{equation}
-
-Thus
+For a continuum principal connection, flatness is the separate condition
 \begin{equation}
-  \boxed{
-  \text{P}\ \longrightarrow\ \text{O}_1\ \longrightarrow\ \text{O}_2
-  \ \longrightarrow\ \text{H}\ \longrightarrow\ \text{T}.}
+  F_\omega=0.
 \tag{7.6}
+\end{equation}
+These statements must not be identified without a comparison theorem; in particular, a flat connection may have nontrivial global holonomy.
+
+A one-parameter comparison family may retain one global scalar parameter while assigning different generators to different oriented edges,
+\[
+  U_{xy}(\lambda)=e^{\lambda K_{xy}},
+  \qquad K_{xy}\in\mathfrak s.
+\]
+The same local Lorentz-boost subgroup can then be compared in special-relativistic kinematics, in a future connection-theoretic description of frame transport, and in the composition of the two.  Throughout these comparisons the local normalization \(N(u)=1\) remains fixed.
+
+\paragraph{Hypothesized coupled classical dynamics.}
+Only after the required variables have been constructed does the main hypothesis become a concrete mathematical problem: construct a configuration space \(\tQ\), a gauge group \(\cG\), a gauge-equivariant constraint map \(\mathfrak C\), and an evolution law on the constraint surface such that the quotient contains nontrivial solutions and some admissible configurations are nonstationary modulo gauge.
+
+\paragraph{Physical benchmarks.}
+Special-relativistic observables, gravitational phenomenology, localized finite-energy solutions, quantization, and strong-interaction comparisons are subsequent tests.  None of them is used as a definition of the preceding mathematical structures.
+
+The logical dependence is therefore
+\begin{equation}
+\boxed{
+\begin{gathered}
+\text{local and global geometric construction}
+\longrightarrow
+\text{Clifford--Lorentz algebraic structure}\\
+\longrightarrow
+\text{smooth Lie-group structure}
+\longrightarrow
+\text{principal connection and transport}\\
+\longrightarrow
+\text{constrained dynamics}
+\longrightarrow
+\text{physical comparisons}.
+\end{gathered}}
+\tag{7.7}
 \end{equation}
 
 % ======================================================================
@@ -733,7 +1165,7 @@ Thus
 % ======================================================================
 
 \small
-\begin{longtable}{@{}L{0.27\textwidth}L{0.52\textwidth}L{0.09\textwidth}@{}}
+\begin{longtable}{@{}L{0.26\textwidth}L{0.47\textwidth}L{0.13\textwidth}@{}}
 \toprule
 Object or statement & Mathematical form & Status \\
 \midrule
@@ -742,29 +1174,35 @@ Object or statement & Mathematical form & Status \\
 Object or statement & Mathematical form & Status \\
 \midrule
 \endhead
-Euclidean input & \(V=\R^3\) with positive-definite inner product & \statusP \\
-Real spin factor & \(\Smodel=\R\oplus V\), \(N(a,v)=a^2-\langle v,v\rangle\) & \statusP \\
-Real Clifford algebra & \(\Cl_3=\Cl(V,q)\) & \statusP \\
-Clifford norm-one group & \(\SpinG\) as defined in Paper I & \statusP \\
-Central two-fold covering & \(1\to\{\pm1\}\to\SpinG\overset{\rho}{\to}\LorG\to1\) & \statusP \\
-Orthogonal Lie algebra & \(\soB\cong\Lambda^2\Smodel\), dimension \(6\) & \statusP \\
-Smooth four-manifold & obtained from additional gluing data and smoothness hypotheses & \statusP \\
-Tangent transition cocycle & \(D\phi_{ij}\) & \statusP \\
-Group-valued \Cech\ 1-cocycle & \(\widetilde g_{ij}:U_i\cap U_j\to\SpinG\) & \statusP \\
-Lorentz-valued cocycle & \(g_{ij}=\rho(\widetilde g_{ij})\) & \statusP \\
-Soldering isomorphism & \(s:E_g\xrightarrow{\sim}TM\), when local soldering data exist & \statusP \\
-Lorentzian metric & \(g_x(X,Y)=B(s_x^{-1}X,s_x^{-1}Y)\) & \statusP \\
-\Cech\ lifting class on \(\cU\) & \([\epsilon]\in\check H^2(\cU;\Ztwo)\) for chosen lifts & \statusP \\
-Identification with \(w_2(TM)\) & not proved in Paper I & \statusO \\
-Identification with \(w_1(TM)\) & not proved in Paper I & \statusO \\
-Lie algebra of \(\SpinG\) & \(\operatorname{Lie}(\SpinG)\) & \statusO \\
-Infinitesimal covering map & \(d\rho_e\) & \statusO \\
-Principal connection & \(\omega\) & \statusO \\
-Curvature and torsion & \(F_\omega\), \(T=D_\omega e\) & \statusO \\
-Classical configuration space & \((\tQ,\cG)\) & \statusH \\
-Closure equation & \(\mathfrak C:\tQ\to\cY\), \(\mathfrak C=0\) & \statusH \\
-Reciprocity & mixed state/geometric directions in \(\ker D\mathfrak C\) & \statusH \\
-Quantum theory & conditional later extension & \statusT \\
+Euclidean input & \(V=\R^3\) with positive-definite inner product & \statusPaper \\
+Real spin factor & \(\Smodel=\R\oplus V\), \(N(a,v)=a^2-\langle v,v\rangle\) & \statusPaper \\
+Distinguished unit and unit hyperboloid & \(e=(1,0)\), \(N(e)=1\), \(\mathcal H^+=\{u:N(u)=1,\ u_0>0\}\) & \statusPaper \\
+Dimensionless mass-shell interpretation & \(\varepsilon=E/(mc^2)\), \(\boldsymbol\pi=\mathbf p/(mc)\) if a scale \(m\) is later supplied & \statusBenchmark \\
+Real Clifford algebra & \(\Cl_3=\Cl(V,q)\) & \statusPaper \\
+Subgroup defined by the Clifford norm-one condition & \(\SpinG\) as defined in Paper I & \statusPaper \\
+Central two-fold covering & \(1\to\{\pm1\}\to\SpinG\overset{\rho}{\to}\LorG\to1\) & \statusPaper \\
+Orthogonal Lie algebra & \(\soB\cong\Lambda^2\Smodel\), dimension \(6\) & \statusPaper \\
+\((-1)\)-eigenspace of Clifford conjugation & \(\mathfrak s=\{X:c(X)=-X\}\), a six-dimensional Lie algebra under the commutator & \statusFormal \\
+Bracket-preserving linear isomorphism & \(D_B:\mathfrak s\xrightarrow{\sim}\soB\) & \statusFormal \\
+Algebraic one-parameter subgroup & \(\gamma_X(t)=\exp(tX)\in\SpinG\) for \(X\in\mathfrak s\) & \statusFormal \\
+Derivative of projected exponential action & \(\left.\frac{\dd}{\dd t}\rho(\exp(tX))x\right|_{0}=D_B(X)x\) & \statusFormal \\
+Smooth four-manifold & obtained from additional gluing data and smoothness hypotheses & \statusPaper \\
+Tangent transition cocycle & \(D\phi_{ij}\) & \statusPaper \\
+Group-valued \Cech\ 1-cocycle & \(\widetilde g_{ij}:U_i\cap U_j\to\SpinG\) & \statusPaper \\
+Lorentz-valued cocycle & \(g_{ij}=\rho(\widetilde g_{ij})\) & \statusPaper \\
+Soldering isomorphism & \(s:E_g\xrightarrow{\sim}TM\), when local soldering data exist & \statusPaper \\
+Lorentzian metric & \(g_x(X,Y)=B(s_x^{-1}X,s_x^{-1}Y)\) & \statusPaper \\
+\Cech\ lifting class on \(\cU\) & \([\epsilon]\in\check H^2(\cU;\Ztwo)\) for chosen lifts & \statusPaper \\
+Identification with \(w_2(TM)\) & not proved in Paper I & \statusOpen \\
+Identification with \(w_1(TM)\) & not proved in Paper I & \statusOpen \\
+Lie algebra of \(\SpinG\) & \(\operatorname{Lie}(\SpinG)\) & \statusOpen \\
+Differential at the identity & \(d\rho_e\) & \statusOpen \\
+Principal connection & \(\omega\) & \statusOpen \\
+Curvature and torsion & \(F_\omega\), \(T=D_\omega e\) & \statusOpen \\
+Classical configuration space & \((\tQ,\cG)\) & \statusHypothesis \\
+Gauge-equivariant constraint & \(\mathfrak C:\tQ\to\cY\), \(\mathfrak C=0\) & \statusHypothesis \\
+Linearized state--geometry coupling & mixed state/geometric directions in \(\ker D\mathfrak C\) & \statusHypothesis \\
+Quantum theory & conditional later extension & \statusBenchmark \\
 \bottomrule
 \end{longtable}
 \normalsize
@@ -773,15 +1211,17 @@ Quantum theory & conditional later extension & \statusT \\
 \section{Relation to established mathematics}
 % ======================================================================
 
-The algebraic terminology follows standard Clifford and spinor literature \cite{Chevalley,LawsonMichelsohn}.  Smooth manifolds, vector bundles, principal bundles, connections, solder forms, curvature and torsion are used in their standard differential-geometric meanings \cite{LeeSmooth,Husemoller,KobayashiNomizu,Nakahara2003}.  No claim of novelty is attached to those structures.
+The algebraic terminology follows standard Clifford, Jordan-algebra, and spin-geometry usage \cite{Chevalley,LawsonMichelsohn}.  Smooth manifolds, vector bundles, principal bundles, gauge transformations, connections, parallel transport, holonomy, solder forms, curvature, torsion, geodesics, and constrained dynamical systems are used in their standard mathematical meanings \cite{LeeSmooth,Husemoller,KobayashiNomizu,Nakahara2003}.  No claim of novelty is attached to those structures or terms.
 
-The specific new proposal of this paper is restricted to the existence and physical adequacy of a future classical equation \(\mathfrak C=0\) with the properties stated in Section~3.  General relativity, gauge theory, soliton models and non-Abelian strong-interaction theory are comparison targets only \cite{Einstein1916,Kibble1961,Skyrme1961,YangMills1954,Wilson1974}.
+The title ``Relational Spin-Closure Hypothesis'' is a name for the proposal, not the introduction of a new mathematical operation called ``spin closure.''  The actual hypothesis is formulated only in terms of standard objects: configuration spaces, gauge group actions, equivariant constraint maps, evolution vector fields, discrete connections, holonomy, and, if later constructed, principal connections and curvature.  Heuristic passages are explicitly marked as such and do not define additional mathematical structures.
+
+The specific new proposal is restricted to the existence and physical adequacy of a future coupled classical system with the properties stated in Section~3.  General relativity, gauge theory, soliton models, and non-Abelian strong-interaction theory are comparison targets only \cite{Einstein1916,Kibble1961,Skyrme1961,YangMills1954,Wilson1974}.
 
 % ======================================================================
 \section{Conclusion}
 % ======================================================================
 
-The current mathematical construction ends at
+The current construction contains the chain
 \begin{equation}
 \begin{gathered}
 V=\R^3
@@ -793,39 +1233,78 @@ V=\R^3
 \Longrightarrow
 s:E_g\xrightarrow{\sim}TM
 \Longrightarrow
-(TM,g).
+(TM,g),\\[0.4em]
+\mathfrak s=\{X:c(X)=-X\}
+\xrightarrow{\;D_B\;}\soB,
+\qquad D_B\ \text{an algebraic isomorphism},\\[0.4em]
+X\in\mathfrak s
+\Longrightarrow
+\gamma_X(t)=\exp(tX)\in\SpinG,
+\qquad
+\left.\frac{\dd}{\dd t}\rho(\gamma_X(t))x\right|_{t=0}=D_B(X)x.
 \end{gathered}
 \tag{10.1}
 \end{equation}
-The next mathematical questions are
+For a unit vector \(v\), the formal development additionally proves
+\begin{equation}
+  \exp(t\,\iota(v))=\cosh t\,1+\sinh t\,\iota(v).
+\tag{10.2}
+\end{equation}
+The immediate formal verification is the explicit comparison with standard Lorentz rapidity,
+\begin{equation}
+  \rho\!\left(\exp\!\left(\frac{\eta}{2}\,\iota(v)\right)\right)e
+  \stackrel{?}{=}
+  (\cosh\eta,\sinh\eta\,v),
+  \qquad N=1,
+\tag{10.3}
+\end{equation}
+which makes the expected relation \(\eta=2t\) explicit.  The next structural questions are
 \begin{equation}
   \operatorname{Lie}(\SpinG)
-  \stackrel{?}{\cong}\soB,
+  \stackrel{?}{\cong}\mathfrak s,
   \qquad
-  d\rho_e,
-\tag{10.2}
+  d\rho_e\stackrel{?}{=}D_B,
+\tag{10.4}
 \end{equation}
 followed, if successful, by connection-level geometry.
 
-The hypothesis is the later existence of
+The symmetric geometry studied so far is an intentional reference configuration.  The local spin-factor, Clifford, and Lorentz structures are held fixed, and the graph model begins with trivial discrete holonomy.  The hypothesis does not obtain gravitation by deforming the local Minkowski model or by freely prescribing a position-dependent soldering field, scalar field, connection, or curvature.  Each local spin factor retains the normalization \(e_x=(1,0)\), \(N(e_x)=1\); the future unit hyperboloid is therefore a dimensionless mass-shell normalization, not a generated mass scale.
+
+A single global scalar may parameterize the comparison family
+\[
+  U_{xy}(\lambda)=e^{\lambda K_{xy}},
+\]
+with an edge-dependent generator assignment \(K_{xy}\).  The same local Lorentz-boost subgroup can then be compared with special-relativistic kinematics, with a future connection-theoretic description of orthonormal-frame transport, and with the composition of the two.  Collinear rapidities add, whereas noncollinear boosts are governed by the noncommutative Lorentz composition law and its commutator terms.  These are standard kinematic and group-theoretic facts; they do not constitute an evolution equation.
+
+The dynamical hypothesis requires a coupled constrained evolution law on \(\mathfrak C^{-1}(0)\).  Some admissible configurations with nontrivial gauge-invariant transport data must have an evolution vector field that is not tangent to the gauge orbit, while the local Lorentzian normalization remains fixed.  The time dependence of \(\lambda\), \(U_{xy}\), a connection, or the metric may not be prescribed merely to obtain this behavior.
+
+In the graph model the distinction between trivial and nontrivial discrete holonomy is
+\begin{equation}
+  H_C=1
+  \quad\text{for every closed path }C,
+  \qquad\text{versus}\qquad
+  [H_C]\neq[1]
+  \quad\text{for some }C.
+\tag{10.6}
+\end{equation}
+For a future continuum principal connection, flatness is instead the local condition
+\begin{equation}
+  F_\omega=0,
+\tag{10.7}
+\end{equation}
+and nonzero \(F_\omega\) is curvature of that connection.  Flatness does not exclude nontrivial global holonomy.  Consequently, the discrete and continuum statements remain distinct until an explicit continuum-limit comparison has been proved.
+
+The later hypothesis is the existence of
 \begin{equation}
   (\tQ,\cG,\cY,\mathfrak C),
   \qquad
   \mathfrak C:\tQ\to\cY,
   \qquad
   \mathfrak C^{-1}(0)/\cG\neq\varnothing,
-\tag{10.3}\label{eq:final-hyp}
+\tag{10.8}\label{eq:final-hyp}
 \end{equation}
-with nontrivial gauge classes and reciprocal coupling between the state and geometric sectors.  Failure to construct such a nontrivial classical equation, or failure of its later benchmarks, falsifies the corresponding RSCH claim.  Nothing in Paper I by itself establishes \eqref{eq:final-hyp}.
+with nontrivial gauge classes and nontrivial coupling between state and geometric variables in the linearized solution space.  Failure to derive nontrivial gauge-invariant transport data, failure to construct such a classical constraint and evolution law, or failure of the later physical benchmarks falsifies the corresponding claim.  Nothing in Paper I by itself establishes \eqref{eq:final-hyp}.
 
-\section*{Acknowledgments}
-The editor thanks the contributors to the mathematical and physical discussions that motivated the separation between established construction, open mathematics and conjectural dynamics.
-
-\section*{AI and formalization disclosure}
-ChatGPT (OpenAI) was used for mathematical exploration, terminology comparison, organization and editorial drafting.  Aristotle was used as a prover-assisted Lean agent in the formal development.  Claims attributed to Paper I are stated only at the strength given in that paper and the corresponding Lean declarations.  The hypothesis and benchmark statements of the present document are not converted into theorems by AI assistance.
-
-\clearpage
-\sloppy
 \begin{thebibliography}{99}
 \raggedright
 
