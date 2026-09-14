@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   sodipodi:docname="Perforated_Strips_Symmetric.svg"
+   inkscape:export-filename="Lochbänder_symmetrisch.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.50583233"
+     inkscape:cx="-52.388901"
+     inkscape:cy="477.43093"
+     inkscape:window-width="1849"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="ArrowWideHeavy"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide, heavy arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="m 1,0 -3,3 h -2 l 3,-3 -3,-3 h 2 z"
+         id="path3" />
+    </marker>
+    <linearGradient
+       id="swatch1"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.662;stroke-dasharray:none;stroke-opacity:1"
+       id="rect60"
+       width="210"
+       height="297"
+       x="0"
+       y="0" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#3fa045;stroke-width:1.662;stroke-dasharray:none;stroke-opacity:1"
+       d="m 4.7014804,117.45469 45.0183566,5.57892"
+       id="path37" />
+    <g
+       id="g35"
+       transform="matrix(0.96710478,-0.74269806,0.02900506,1.5151927,-37.937028,71.312611)">
+      <rect
+         style="fill:#3e27be;fill-opacity:1;stroke:#000000;stroke-width:0.362;stroke-dasharray:none"
+         id="rect1"
+         width="245.6692"
+         height="14.362174"
+         x="7.7382245"
+         y="77.424721" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="path1"
+         cx="20.530312"
+         cy="84.605812"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle1"
+         cx="40.530312"
+         cy="84.605812"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle2"
+         cx="60.530312"
+         cy="84.605812"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle3"
+         cx="80.530312"
+         cy="84.605812"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle4"
+         cx="100.53031"
+         cy="84.605812"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle5"
+         cx="120.53031"
+         cy="84.605812"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle6"
+         cx="140.5303"
+         cy="84.605812"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle7"
+         cx="160.5303"
+         cy="84.605812"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle8"
+         cx="180.5303"
+         cy="84.605812"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle9"
+         cx="200.5303"
+         cy="84.605812"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle10"
+         cx="220.5303"
+         cy="84.605812"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle11"
+         cx="240.5303"
+         cy="84.605812"
+         r="4.0537558" />
+    </g>
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.362;stroke-dasharray:none"
+       id="rect35"
+       width="39.205479"
+       height="15.571239"
+       x="154.13171"
+       y="113.64477"
+       transform="rotate(4.8697549)" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;writing-mode:lr-tb;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.362;stroke-dasharray:none"
+       x="155.33202"
+       y="125.06892"
+       id="text35"
+       transform="rotate(4.8697549)"><tspan
+         sodipodi:role="line"
+         id="tspan35"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.362"
+         x="155.33202"
+         y="125.06892">Laser</tspan></text>
+    <path
+       style="fill:none;fill-opacity:1;stroke:#3fa045;stroke-width:1.662;stroke-dasharray:none;stroke-opacity:1"
+       d="m 58.280213,124.40191 10.544005,1.23349"
+       id="path36" />
+    <g
+       id="g34"
+       transform="matrix(0.96710478,-0.74269806,0.02900506,1.5151927,-17.493755,117.11696)">
+      <rect
+         style="fill:#be274d;fill-opacity:1;stroke:#000000;stroke-width:0.362;stroke-dasharray:none"
+         id="rect23"
+         width="245.6692"
+         height="14.362174"
+         x="7.7382245"
+         y="48.656128" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle23"
+         cx="20.530312"
+         cy="55.837219"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle24"
+         cx="40.530312"
+         cy="55.837219"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle25"
+         cx="60.530312"
+         cy="55.837219"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle26"
+         cx="80.530312"
+         cy="55.837219"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle27"
+         cx="100.53031"
+         cy="55.837219"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle28"
+         cx="120.53031"
+         cy="55.837219"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle29"
+         cx="140.5303"
+         cy="55.837219"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle30"
+         cx="160.5303"
+         cy="55.837219"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle31"
+         cx="180.5303"
+         cy="55.837219"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle32"
+         cx="200.5303"
+         cy="55.837219"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle33"
+         cx="220.5303"
+         cy="55.837219"
+         r="4.0537558" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none"
+         id="circle34"
+         cx="240.5303"
+         cy="55.837219"
+         r="4.0537558" />
+    </g>
+    <path
+       style="fill:none;fill-opacity:1;stroke:#3fa045;stroke-width:1.662;stroke-dasharray:none;stroke-opacity:1"
+       d="m 77.850548,126.7616 64.529342,7.48081"
+       id="path35" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;writing-mode:lr-tb;direction:ltr;fill:none;fill-opacity:1;stroke:#3fa045;stroke-width:1.662;stroke-dasharray:none;stroke-opacity:1"
+       x="15.595212"
+       y="227.87285"
+       id="text37"><tspan
+         sodipodi:role="line"
+         id="tspan37"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.662"
+         x="15.595212"
+         y="227.87285">Laser pulse sequence: Δτ = T = const.</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.662"
+         x="15.595212"
+         y="238.45619"
+         id="tspan56">Velocities perforated strips v<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan78">blue</tspan> = -v<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan79">red </tspan>&gt; 0</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.662"
+         x="15.595212"
+         y="249.03952"
+         id="tspan72">Velocity Laser v<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan60">Laser</tspan> = 0</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.662"
+         x="15.595212"
+         y="259.62286"
+         id="tspan57">Hole spacing a = b</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.662"
+         x="15.595212"
+         y="270.20621"
+         id="tspan61">x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan76">blue,n</tspan>​(τ<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan65">n</tspan>​) = x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan77">red,n</tspan>​(τ<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan66">n</tspan>​) = x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan64">L​aser</tspan>       ∀n</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.662"
+         x="15.595212"
+         y="280.78955"
+         id="tspan67">τ<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan68">n</tspan> ​= τ<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan69">0</tspan> ​+ nT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;writing-mode:lr-tb;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.662;stroke-dasharray:none;stroke-opacity:1"
+       x="180.71817"
+       y="126.33485"
+       id="text38"
+       transform="rotate(4.6341329)"><tspan
+         sodipodi:role="line"
+         id="tspan38"
+         style="stroke-width:1.662;fill:#ffffff;fill-opacity:1"
+         x="180.71817"
+         y="126.33485">Δτ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;writing-mode:lr-tb;direction:ltr;fill:#3e27be;fill-opacity:1;stroke:none;stroke-width:1.662;stroke-dasharray:none;stroke-opacity:1"
+       x="118.64793"
+       y="33.865246"
+       id="text39"><tspan
+         sodipodi:role="line"
+         id="tspan39"
+         style="fill:#3e27be;fill-opacity:1;stroke-width:1.662"
+         x="118.64793"
+         y="33.865246">v<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan75">blue</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;writing-mode:lr-tb;direction:ltr;fill:#be274d;fill-opacity:1;stroke:none;stroke-width:1.662;stroke-dasharray:none;stroke-opacity:1"
+       x="54.059975"
+       y="182.48764"
+       id="text41"><tspan
+         sodipodi:role="line"
+         id="tspan41"
+         style="fill:#be274d;fill-opacity:1;stroke-width:1.662"
+         x="54.059975"
+         y="182.48764">v<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan74">red</tspan></tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#3e27be;stroke-width:1.662;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWideHeavy)"
+       d="M 119.90821,56.294897 170.34596,16.159655"
+       id="path42" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#be274d;stroke-width:1.662;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWideHeavy)"
+       d="M 66.087934,160.74616 15.650184,200.8814"
+       id="path43" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.662;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWideHeavy)"
+       d="m 154.13488,146.00979 -30.09072,23.78532"
+       id="path45" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.662;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWideHeavy)"
+       d="m 175.87667,125.47136 30.44179,-24.06974"
+       id="path46" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.662;stroke-dasharray:none;stroke-opacity:1"
+       d="M 67.969996,107.06225 16.82644,99.968161"
+       id="path47"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.662;stroke-dasharray:none;stroke-opacity:1"
+       d="M 87.312092,91.588099 36.168536,84.494013"
+       id="path48"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.762;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#ArrowWideHeavy);marker-end:url(#ArrowWideHeavy)"
+       d="M 25.265784,98.413291 40.122385,88.209365"
+       id="path49" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;writing-mode:lr-tb;direction:ltr;fill:#3e27be;fill-opacity:1;stroke:#000000;stroke-width:1.662;stroke-dasharray:none;stroke-opacity:1"
+       x="28.010975"
+       y="92.78289"
+       id="text49"><tspan
+         sodipodi:role="line"
+         id="tspan49"
+         style="fill:#3e27be;fill-opacity:1;stroke:none;stroke-width:1.662"
+         x="28.010975"
+         y="92.78289">a</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.662;stroke-dasharray:none;stroke-opacity:1"
+       d="m 158.17351,68.078362 51.14356,7.094084"
+       id="path50"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.662;stroke-dasharray:none;stroke-opacity:1"
+       d="m 138.83142,83.552516 51.14355,7.09408"
+       id="path51"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.762;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#ArrowWideHeavy);marker-end:url(#ArrowWideHeavy)"
+       d="m 200.69264,76.865873 -13.788,9.436313"
+       id="path52" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;writing-mode:lr-tb;direction:ltr;fill:#be274d;fill-opacity:1;stroke:#000000;stroke-width:1.662;stroke-dasharray:none;stroke-opacity:1"
+       x="196.41014"
+       y="87.208069"
+       id="text52"><tspan
+         sodipodi:role="line"
+         id="tspan52"
+         style="fill:#be274d;fill-opacity:1;stroke:none;stroke-width:1.662"
+         x="196.41014"
+         y="87.208069">b</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;writing-mode:lr-tb;direction:ltr;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.662;stroke-dasharray:none;stroke-opacity:1"
+       x="146.12256"
+       y="162.39314"
+       id="text54"><tspan
+         sodipodi:role="line"
+         id="tspan54"
+         style="fill:#000000;fill-opacity:1;stroke-width:1.662"
+         x="146.12256"
+         y="162.39314">v<tspan
+   style="font-size:65%;baseline-shift:sub;fill:#000000;fill-opacity:1"
+   id="tspan55">Laser</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;writing-mode:lr-tb;direction:ltr;fill:#ffffff;fill-opacity:1;stroke:#3e27be;stroke-width:1.662;stroke-dasharray:none;stroke-opacity:1"
+       x="4.9871516"
+       y="22.230356"
+       id="text70"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.662"
+         x="4.9871516"
+         y="22.230356"
+         id="tspan71">symmetrical</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.662"
+         x="4.9871516"
+         y="32.813694"
+         id="tspan73">initial state</tspan></text>
+  </g>
+</svg>
