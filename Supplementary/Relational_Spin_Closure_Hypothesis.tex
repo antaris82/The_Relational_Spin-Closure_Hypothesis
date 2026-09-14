@@ -145,7 +145,7 @@ Subsequent machine-checked work has now constructed the \((-1)\)-eigenspace \(\m
   \qquad
   N(\cosh\eta,\sinh\eta\,v)=1,
 \]
-including the factor \(\eta=2t\) between the Clifford exponential parameter and Lorentz rapidity.  Thus the local Clifford exponential, the standard Lorentz boost and the future unit mass shell are now linked by a formally verified identity.  The next open mathematical step is to construct a smooth Lie-group structure on \(\SpinG\), identify its tangent Lie algebra with \(\mathfrak s\), and prove that the differential of \(\rho\) at the identity is \(D_B\).  Connections, parallel transport, holonomy, curvature and torsion remain subsequent structures.
+including the factor \(\eta=2t\) between the Clifford exponential parameter and Lorentz rapidity.  Thus the local Clifford exponential, the standard Lorentz boost and the future unit mass shell are now linked by a formally verified identity.  Subsequent machine-checked work has also constructed compatible smooth Lie-group structures on \(\SpinG\) and \(\LorG\), identified their tangent Lie algebras with \(\mathfrak s\) and \(\soB\), proved that the Lie bracket on the Spin side is the Clifford commutator, proved smoothness of \(\rho\), and established the genuine differential identity \(d\rho_e=D_B\) under the canonical tangent-space identifications.  The next open mathematical layer is the standard local connection-one-form formalism and its functorial passage from the Spin group to the Lorentz group.  Parallel transport, holonomy, curvature and torsion remain subsequent structures.
 
 The Relational Spin-Closure Hypothesis begins only after these distinctions.  It proposes that a future classical configuration space carries a gauge-equivariant constraint whose solution set couples state and geometric variables nontrivially.  The finite-dimensional research programme is deliberately staged: first test algebraic transport compatibility and frustration on a graph; then introduce a controlled driven dynamics with fixed link variables; only afterwards promote the transport variables themselves to dynamical degrees of freedom and test nonlinear back-reaction.  A continuum limit, an effective geometric description, and large-scale gravitational phenomenology come later.  Rotation curves, gravitational lensing, dark-matter phenomenology and MOND-type scaling are therefore late falsification benchmarks, not ingredients of the defining equations.  Quantization and particle interpretations are later still.
 \end{abstract}
@@ -612,7 +612,7 @@ and the Clifford exponential parameter \(t\) and Lorentz rapidity \(\eta\) obey 
   \eta=2t.
 \tag{3.13}\label{eq:factor-two}
 \end{equation}
-For the oriented one-dimensional subgroup the inverse relations in \eqref{eq:rapidity-inversion} are formally verified with the standard domain qualifications; in particular \(\operatorname{arsinh}(\sinh\eta)=\eta\) and \(\operatorname{arcosh}(\cosh\eta)=|\eta|\), with \(\operatorname{arcosh}(\cosh\eta)=\eta\) for \(\eta\ge0\).  The tangent vector of the explicit boost curve is Lorentz-orthogonal to the state, so the curve remains tangent to the unit hyperboloid.  These statements concern finite-dimensional Lorentz kinematics only; they do not yet use a smooth Lie-group structure on \(\SpinG\).
+For the oriented one-dimensional subgroup the inverse relations in \eqref{eq:rapidity-inversion} are formally verified with the standard domain qualifications; in particular \(\operatorname{arsinh}(\sinh\eta)=\eta\) and \(\operatorname{arcosh}(\cosh\eta)=|\eta|\), with \(\operatorname{arcosh}(\cosh\eta)=\eta\) for \(\eta\ge0\).  The tangent vector of the explicit boost curve is Lorentz-orthogonal to the state, so the curve remains tangent to the unit hyperboloid.  These statements are finite-dimensional Lorentz-kinematic results.  A compatible smooth Lie-group structure on \(\SpinG\) is now available independently, but no connection or dynamical interpretation is used in these identities.
 
 The same local Lorentz-boost subgroup then has two distinct standard roles in the comparison programme:
 \begin{center}
@@ -797,7 +797,7 @@ A variational realization, if it exists, would be a stronger statement:
 No particular action functional is assumed.
 
 % ======================================================================
-\section{Current infinitesimal results and the open connection problem}
+\section{Current local Lie-theoretic results and the open connection problem}
 % ======================================================================
 
 \subsection{The \texorpdfstring{$(-1)$}{-1}-eigenspace of Clifford conjugation and the induced Lie-algebra map}
@@ -829,9 +829,8 @@ where \(\widetilde X\) denotes reversion.  The resulting map is a bracket-preser
   D_B:\mathfrak s\xrightarrow{\sim}\soB.
 \tag{4.4}
 \end{equation}
-These are algebraic results.  They do not by themselves identify \(\mathfrak s\) with the tangent Lie algebra of \(\SpinG\).
 
-\subsection{Algebraic one-parameter subgroups and projected derivatives}
+\subsection{Exponential curves and the explicit boost sector}
 
 For every \(X\in\mathfrak s\), the machine-checked formalization proves
 \begin{equation}
@@ -858,13 +857,12 @@ and the exact projected paravector action
   =\exp(tX)A(x)\exp(t\widetilde X).
 \tag{4.8}
 \end{equation}
-The derivative at the origin of this explicit projected curve is the previously constructed bracket-preserving linear map:
+The derivative at the origin of this explicit projected curve is
 \begin{equation}
   \left.\frac{\dd}{\dd t}\rho(\exp(tX))x\right|_{t=0}
   =D_B(X)x.
 \tag{4.9}\label{eq:projected-exp-derivative}
 \end{equation}
-This is a derivative of an explicit curve acting on the finite-dimensional Lorentz vector space \(\Smodel\).  It is not yet the differential \(d\rho_e\) of a smooth Lie-group homomorphism.
 
 For a unit vector \(v\in V\), the grade-one exponential is proved in closed form:
 \begin{equation}
@@ -874,88 +872,127 @@ For a unit vector \(v\in V\), the grade-one exponential is proved in closed form
   =\cosh t\,1+\sinh t\,\iota(v).
 \tag{4.10}\label{eq:formal-grade-one-exp}
 \end{equation}
-This result provides the Clifford-algebra side of the standard boost parametrization.  Equation \eqref{eq:spin-rapidity-target}, the relation \(\eta=2t\), and preservation of the unit Lorentz norm for the projected rest state are now formally verified.  Thus the selected boost family of Paper I is recovered as the specialization of the same grade-one Clifford exponential to the chosen unit spatial direction.
+Equation \eqref{eq:spin-rapidity-target}, the relation \(\eta=2t\), and preservation of the unit Lorentz norm for the projected rest state are formally verified.  The selected boost family of Paper I is therefore the specialization of this grade-one Clifford exponential to the chosen unit spatial direction.
 
-The same development computes the directional derivative at the identity of the norm-one constraint
-\[
-  F(g)=g\,c(g)-1
-\]
-as
+\subsection{Smooth Lie groups and the differential of the Spin--Lorentz homomorphism}
+
+The smooth local Spin--Lorentz bridge is now machine-checked.  The Clifford norm-one group is equipped with a smooth Lie-group structure compatible with its finite-dimensional Clifford-algebra realization.  The corresponding Lorentz group is likewise equipped with a smooth Lie-group structure.  At the identity the tangent Lie algebras are canonically identified as
 \begin{equation}
-  D F_1(X)=X+c(X),
+  T_1\SpinG\cong\mathfrak s,
   \qquad
-  \ker D F_1=\mathfrak s.
-\tag{4.11}
+  T_1\LorG\cong\soB.
+\tag{4.11}\label{eq:tangent-identifications}
 \end{equation}
-The \(+1\)-eigenspace appearing as the image of \(\id+c\) is the fixed subspace of \emph{Clifford conjugation}; it must not be confused with the fixed subspace of reversion.  No regular-value or submanifold theorem has yet been applied.
-
-\subsection{Smooth Lie-group and tangent-space problem}
-
-The next structural statements are
+Under the first identification, the Lie bracket is the Clifford commutator,
+\begin{equation}
+  [X,Y]_{\operatorname{Lie}(\SpinG)}
+  \longleftrightarrow
+  XY-YX.
+\tag{4.12}\label{eq:spin-bracket-commutator}
+\end{equation}
+The existing homomorphism
+\[
+  \rho:\SpinG\to\LorG
+\]
+is smooth, and its genuine differential at the identity satisfies
+\begin{equation}
+  \boxed{\;d\rho_e=D_B\;}
+\tag{4.13}\label{eq:drho-equals-DB}
+\end{equation}
+under the tangent-space identifications \eqref{eq:tangent-identifications}.  Thus
 \begin{equation}
   \operatorname{Lie}(\SpinG)
-  \stackrel{?}{\cong}
-  \mathfrak s
-  \xrightarrow{D_B}
-  \soB,
-\tag{4.12}\label{eq:lie-open}
+  \xrightarrow[\sim]{\ d\rho_e\ }
+  \operatorname{Lie}(\LorG)
+  \cong\soB
+\tag{4.14}
 \end{equation}
-and
-\begin{equation}
-  d\rho_e
-  \stackrel{?}{=}
-  D_B
-  \quad\text{under this identification}.
-\tag{4.13}\label{eq:drho-open}
-\end{equation}
-A natural route is to regard the Clifford norm-one group as a regular level set in the finite-dimensional real vector space \(\Cl_3\).  Let
+is a Lie-algebra isomorphism, and the algebraic map constructed before the smooth structure was available is exactly the differential of the smooth Spin--Lorentz homomorphism.
+
+A regular-level-set description underlies the Spin-side tangent identification.  For
 \[
   \mathfrak c_+:=\{Y\in\Cl_3:c(Y)=Y\},
   \qquad
-  \Phi:\Cl_3\to\mathfrak c_+,
-  \qquad
-  \Phi(g)=g\,c(g).
+  \Phi(g)=g\,c(g),
 \]
-Then \(\SpinG=\Phi^{-1}(1)\), and the differential is expected to have the explicit form
-\[
+one has \(\SpinG=\Phi^{-1}(1)\) and
+\begin{equation}
   D\Phi_g(H)=H\,c(g)+g\,c(H),
   \qquad
-  D\Phi_1(H)=H+c(H).
-\]
-Consequently
-\[
+  D\Phi_1(H)=H+c(H),
+  \qquad
   \ker D\Phi_1=\mathfrak s.
-\]
-On the level set, surjectivity of \(D\Phi_g\) can be tested by the explicit candidate \(H=\tfrac12Yg\) for \(Y\in\mathfrak c_+\).  If the regular-level-set construction is completed and the group operations and \(\rho\) are shown to be smooth, the standard tangent-space identification would make \eqref{eq:lie-open} literal and would permit the comparison of the genuine differential \(d\rho_e\) with the already constructed map \(D_B\).  None of these smooth statements is assumed in the preceding algebraic results.
-
-\subsection{Connection, curvature and torsion}
-
-Only after the required smooth principal-bundle and infinitesimal representation structures are available can the standard theory of principal connections be applied.  If \(P\to M\) is a principal \(\SpinG\)-bundle with a principal connection \(\omega\), then standard differential geometry gives the curvature
-\begin{equation}
-  F_{\omega}
-  =\dd\omega+\frac12[\omega\wedge\omega].
-\tag{4.14}
-\end{equation}
-With a solder form \(e:TM\to E_g\), torsion is
-\begin{equation}
-  T=D_{\omega}e.
 \tag{4.15}
 \end{equation}
-These are standard definitions \cite{KobayashiNomizu,Nakahara2003}; neither object has yet been constructed in the present formalization.
+For \(Y\in\mathfrak c_+\), the explicit choice \(H=\tfrac12Yg\) gives a right inverse of \(D\Phi_g\) along the norm-one level set.  These facts justify the tangent-space description rather than merely postulating it.
+
+\subsection{Local Spin and Lorentz connection one-forms}
+
+The next open mathematical layer is the standard local connection-one-form formalism.  Let \(U\subseteq M\) be open.  A local Spin connection form is a smooth Lie-algebra-valued one-form
+\begin{equation}
+  \omega\in\Omega^1(U,\mathfrak s).
+\tag{4.16}
+\end{equation}
+For a smooth map \(g:U\to\SpinG\), the left Maurer--Cartan pullback is
+\begin{equation}
+  \theta_g:=g^{-1}\dd g\in\Omega^1(U,\mathfrak s).
+\tag{4.17}
+\end{equation}
+With the convention used here, local Spin connection forms on an overlap are related by
+\begin{equation}
+  \omega_j
+  =\operatorname{Ad}_{g_{ij}^{-1}}\omega_i
+  +g_{ij}^{-1}\dd g_{ij}.
+\tag{4.18}\label{eq:spin-connection-gauge-law}
+\end{equation}
+Because \(d\rho_e=D_B\) is now established, the corresponding Lorentz-algebra-valued one-form is
+\begin{equation}
+  \Omega_i:=D_B\circ\omega_i
+  \in\Omega^1(U_i,\soB).
+\tag{4.19}\label{eq:induced-lorentz-connection-form}
+\end{equation}
+The standard naturality statements to be formalized next are
+\begin{equation}
+  D_B\!\left(\operatorname{Ad}^{\mathrm{Spin}}_{g}X\right)
+  =\operatorname{Ad}^{\mathrm{Lor}}_{\rho(g)}D_B(X),
+\tag{4.20}\label{eq:adjoint-equivariance-target}
+\end{equation}
+and
+\begin{equation}
+  D_B(g^{-1}\dd g)
+  =(\rho\circ g)^{-1}\dd(\rho\circ g).
+\tag{4.21}\label{eq:maurer-cartan-naturality-target}
+\end{equation}
+Together these imply, for \(h_{ij}:=\rho\circ g_{ij}\), the Lorentz gauge-transformation law
+\begin{equation}
+  \Omega_j
+  =\operatorname{Ad}_{h_{ij}^{-1}}\Omega_i
+  +h_{ij}^{-1}\dd h_{ij}.
+\tag{4.22}\label{eq:lorentz-connection-gauge-law-target}
+\end{equation}
+Equations \eqref{eq:spin-connection-gauge-law}--\eqref{eq:lorentz-connection-gauge-law-target} are standard Lie-group connection formulas; their machine-checked realization is the current open formalization problem.  No curvature, parallel transport or gravitational interpretation is assumed at this stage.
 
 A group homomorphism cannot be applied directly to a Lie-algebra-valued one-form.  In particular,
 \begin{equation}
   \rho\circ\omega
-\tag{4.16}
+\tag{4.23}
 \end{equation}
-is not a definition of a Lorentz connection.  Projection of a connection requires \(d\rho_e\) or an explicitly proved equivalent infinitesimal representation.
+is not a definition of a Lorentz connection.  The mathematically correct infinitesimal map is the now-established differential \(d\rho_e=D_B\), as in \eqref{eq:induced-lorentz-connection-form}.
 
-The intended flat reference case is
+\subsection{Curvature, torsion and later connection geometry}
+
+Only after the local connection-one-form layer is in place should curvature, parallel transport and holonomy be introduced.  For a principal \(\SpinG\)-connection \(\omega\), standard differential geometry gives
 \begin{equation}
-  F_\omega=0.
-\tag{4.17}
+  F_{\omega}
+  =\dd\omega+\frac12[\omega\wedge\omega].
+\tag{4.24}
 \end{equation}
-Any nonzero curvature in the hypothesis must be produced by the coupled constraint and evolution equations, not prescribed as input.
+With a solder form \(e:TM\to E_g\), torsion is
+\begin{equation}
+  T=D_{\omega}e.
+\tag{4.25}
+\end{equation}
+These are standard definitions \cite{KobayashiNomizu,Nakahara2003}; neither curvature nor torsion has yet been constructed in the present formalization.  A nonzero connection one-form is not by itself curvature and is not by itself a gravitational field.  The intended flat reference case remains \(F_\omega=0\), while any nonzero curvature attributed to the hypothesis must arise from the later coupled equations rather than being prescribed as input.
 
 % ======================================================================
 \section{Discrete connection on a graph}
@@ -1094,7 +1131,7 @@ Frustration of the compatibility conditions does not by itself imply motion.  A 
 
 \subsection{Dynamical transport and nonlinear back-reaction}
 
-Only after the smooth Lie-group structure of \(\SpinG\) and its Lie algebra have been established should the link variables themselves be promoted to dynamical degrees of freedom.  In a local trivialization, a later coupled system may have the schematic standard form
+With the smooth Lie-group structure of \(\SpinG\) and its Lie algebra now established, the link variables can in principle be treated as dynamical group-valued degrees of freedom.  The hypothesis nevertheless postpones this step until the simpler fixed-transport dynamics has been tested.  In a local trivialization, a later coupled system may have the schematic standard form
 \begin{equation}
   \dot u_x=F_x(u,U),
   \qquad
@@ -1130,7 +1167,7 @@ The following implications are excluded by the current mathematics:
   &\not\Longrightarrow
   \exists\,s:E_g\xrightarrow{\sim}TM,
 \tag{6.1b}\\
-  \text{group homomorphism }\rho
+  \text{bare group homomorphism}
   &\not\Longrightarrow d\rho_e,
 \tag{6.1c}\\
   \prod_{e\in C}U_e
@@ -1138,6 +1175,7 @@ The following implications are excluded by the current mathematics:
   \quad\text{without a comparison theorem}.
 \tag{6.1d}
 \end{align}
+The present Spin--Lorentz homomorphism is now separately proved smooth, and its differential is computed as \(d\rho_e=D_B\); the excluded implication concerns a group homomorphism without that additional smooth structure and proof.
 
 \begin{criterion}[Nontriviality modulo gauge]
 A proposed constraint variable fails if every member of the tested family belongs to one gauge orbit and all observables used by the proposal are constant on that orbit.
@@ -1279,45 +1317,64 @@ The exact identity
 is now formally verified for every unit \(v\in V\).  It fixes the factor \(\eta=2t\) between the Spin exponential parameter and Lorentz rapidity and closes the local special-relativistic kinematic bridge without introducing gravitation.
 
 \paragraph{4. Smooth Lie-group and infinitesimal representation.}
-The next structural problem is to construct a compatible smooth Lie-group structure and prove
+The smooth local Spin--Lorentz bridge is now formally verified:
 \begin{equation}
-  \operatorname{Lie}(\SpinG)
-  \stackrel{?}{\cong}\mathfrak s,
+  \operatorname{Lie}(\SpinG)\cong\mathfrak s,
   \qquad
-  d\rho_e\stackrel{?}{=}D_B.
+  \operatorname{Lie}(\LorG)\cong\soB,
+  \qquad
+  d\rho_e=D_B.
 \tag{7.4}
 \end{equation}
-The intended route is the regular-level-set description \(\SpinG=\Phi^{-1}(1)\) for \(\Phi(g)=g\,c(g)\), followed by smoothness of multiplication, inversion and \(\rho\), identification of the tangent space at the identity with \(\ker D\Phi_1=\mathfrak s\), and comparison of the Lie bracket with the Clifford commutator.  This stage is required before differential equations for the transport variables or a principal \(\SpinG\)-connection are used intrinsically.
+Under the Spin-side tangent identification, the Lie bracket is the Clifford commutator.  The homomorphism \(\rho:\SpinG\to\LorG\) is smooth and its differential is a Lie-algebra isomorphism.  This closes the finite-dimensional differential-geometric bridge needed for connection theory.
 
-\paragraph{5. Algebraic finite-graph transport and frustration.}
+\paragraph{5. Local connection-one-form layer.}
+The next open mathematical step is to formalize smooth \(\mathfrak s\)-valued one-forms \(\omega_i\in\Omega^1(U_i,\mathfrak s)\), the Maurer--Cartan term \(g^{-1}\dd g\), and the standard gauge-transformation law
+\begin{equation}
+  \omega_j
+  =\operatorname{Ad}_{g_{ij}^{-1}}\omega_i
+  +g_{ij}^{-1}\dd g_{ij}.
+\tag{7.5}
+\end{equation}
+Using the proved identity \(d\rho_e=D_B\), define \(\Omega_i=D_B\circ\omega_i\) and establish adjoint equivariance and Maurer--Cartan naturality so that
+\begin{equation}
+  \Omega_j
+  =\operatorname{Ad}_{h_{ij}^{-1}}\Omega_i
+  +h_{ij}^{-1}\dd h_{ij},
+  \qquad h_{ij}=\rho\circ g_{ij}.
+\tag{7.6}
+\end{equation}
+This stage introduces neither curvature nor gravitational dynamics.
+
+\paragraph{6. Algebraic finite-graph transport and frustration.}
 Independently of the later continuum connection, one may study a finite graph with link variables \(U_{xy}\in\SpinG\), gauge transformations at vertices, discrete holonomy, and the compatibility conditions \(u_y=\rho(U_{xy})u_x\).  The first questions are algebraic: determine when globally compatible state assignments exist, classify the common fixed-point set of the discrete holonomy group, and identify frustrated compatibility systems by \eqref{eq:frustrated-fixed-point}.  The nonnegative functional \(\mathcal J\) in \eqref{eq:compatibility-functional} may be used diagnostically, but it is not an energy.
 
-\paragraph{6. Controlled driven finite dynamics.}
+\paragraph{7. Controlled driven finite dynamics.}
 With the transport assignment held fixed, use a family such as
 \begin{equation}
   U_{xy}(\lambda)=e^{\lambda K_{xy}}
-\tag{7.5}
+\tag{7.7}
 \end{equation}
 as an externally controlled perturbation of the symmetric configuration.  Evolve only the normalized states \(u_x\in\mathcal H_x^+\).  The reference case \(\lambda=0\) must be stationary modulo gauge.  For \(\lambda\ne0\), the decisive test is whether relative rapidities are generated by the evolution equations from initially identical rest states rather than inserted as velocities or local parameters.  This stage is intentionally a driven system.
 
-\paragraph{7. Coupled finite dynamics and back-reaction.}
+\paragraph{8. Coupled finite dynamics and back-reaction.}
 Only after the preceding test succeeds should the link variables become dynamical.  The target is a gauge-covariant constrained system of the schematic form \eqref{eq:coupled-graph-dynamics}, preserving \(N(u_x)=1\) and the group-valued link constraints.  The central questions are then whether state evolution modifies transport, whether the modified transport feeds back into the state evolution, whether noncommutative boost composition generates rotational components, and whether the resulting nonlinear system has nontrivial stationary, recurrent, or persistent states modulo gauge.  Persistence after removal of the external driving distinguishes autonomous collective dynamics from a driven response.
 
-\paragraph{8. Continuum limit and connection-theoretic geometry.}
-Only after a controlled scaling or continuum limit has been defined should the finite transport variables be compared with a principal connection \(\omega\), parallel transport, holonomy and curvature
+\paragraph{9. Curvature, transport and continuum comparison.}
+After the local connection-one-form layer is established, curvature, parallel transport and holonomy can be formalized on the continuum side.  Only after a controlled scaling or continuum limit has also been defined should the finite transport variables be compared with those continuum objects
 \begin{equation}
   F_\omega=\dd\omega+\frac12[\omega\wedge\omega].
-\tag{7.6}
+\tag{7.8}
 \end{equation}
 The relation to the soldering isomorphism and the induced Lorentzian metric must then be established.  A gravitational interpretation additionally requires a theorem relating the induced connection to the Levi--Civita connection of \(g\), or an explicit statement of torsion and non-metricity.  Discrete holonomy and continuum curvature remain distinct until this comparison is proved.
 
-\paragraph{9. Coarse graining and macroscopic stationary solutions.}
+\paragraph{10. Coarse graining and macroscopic stationary solutions.}
 If a continuum theory exists, derive rather than prescribe any effective source term, stress--energy tensor, constitutive relation, or modified geometric equation.  Only then study stationary and axisymmetric solutions, circular geodesics, lensing, and collective rotational behaviour.  The small-rapidity sum in \eqref{eq:small-rapidity-functional} may motivate a scaling analysis, but it is not itself an effective mass density.
 
-\paragraph{10. Galactic dark-matter and MOND benchmarks.}
-Only after Step 9 may one ask whether the derived macroscopic theory reproduces phenomena conventionally attributed to dark matter or yields MOND-type low-acceleration scaling such as \eqref{eq:deep-mond-benchmark} and the baryonic Tully--Fisher relation \eqref{eq:btfr-benchmark}.  The acceleration scale \(a_0\), if it appears, must have an independently derived dimensionful origin.  Neither a dark-matter halo profile nor a MOND interpolation law may be used as an input to earlier steps.
+\paragraph{11. Galactic dark-matter and MOND benchmarks.}
+Only after the preceding coarse-graining stage may one ask whether the derived macroscopic theory reproduces phenomena conventionally attributed to dark matter or yields MOND-type low-acceleration scaling such as \eqref{eq:deep-mond-benchmark} and the baryonic Tully--Fisher relation \eqref{eq:btfr-benchmark}.  The acceleration scale \(a_0\), if it appears, must have an independently derived dimensionful origin.  Neither a dark-matter halo profile nor a MOND interpolation law may be used as an input to earlier steps.
 
-\paragraph{11. Localized excitations, quantization and additional interactions.}
+\paragraph{12. Localized excitations, quantization and additional interactions.}
 Only after a successful classical continuum theory and its gravitational benchmarks should the programme ask whether it possesses stable localized finite-energy solutions, a reduced phase space, a consistent quantization, particle/statistics interpretations, or additional internal gauge sectors.  Confinement, Standard-Model-like structure, and related strong-interaction questions are long-range comparison problems and are not assumptions of the gravitational programme.
 
 The logical dependence is therefore
@@ -1328,13 +1385,15 @@ The logical dependence is therefore
 \Downarrow\\
 \text{Clifford--Lorentz algebra and rapidity bridge}\\
 \Downarrow\\
-\text{finite discrete transport and frustration}\\
+\text{smooth Spin--Lorentz Lie-group bridge}\\
 \Downarrow\\
-\text{smooth Lie-group structure}\\
+\text{local connection-one-form layer}\\
+\Downarrow\\
+\text{finite discrete transport and frustration}\\
 \Downarrow\\
 \text{driven finite dynamics and finite back-reaction}\\
 \Downarrow\\
-\text{continuum connection and effective geometry}\\
+\text{curvature, transport and continuum comparison}\\
 \Downarrow\\
 \text{coarse-grained macroscopic solutions}\\
 \Downarrow\\
@@ -1342,7 +1401,7 @@ The logical dependence is therefore
 \Downarrow\\
 \text{later quantum and interaction tests}.
 \end{gathered}}
-\tag{7.7}
+\tag{7.9}
 \end{equation}
 
 % ======================================================================
@@ -1383,10 +1442,12 @@ Lorentzian metric & \(g_x(X,Y)=B(s_x^{-1}X,s_x^{-1}Y)\) & \statusPaper \\
 \Cech\ lifting class on \(\cU\) & \([\epsilon]\in\check H^2(\cU;\Ztwo)\) for chosen lifts & \statusPaper \\
 Identification with \(w_2(TM)\) & not proved in Paper I & \statusOpen \\
 Identification with \(w_1(TM)\) & not proved in Paper I & \statusOpen \\
-Smooth Lie-group structure on \(\SpinG\) & regular-level-set construction and smooth group operations & \statusOpen \\
-Tangent Lie algebra identification & \(T_1\SpinG\cong\mathfrak s\), with Clifford commutator as Lie bracket & \statusOpen \\
-Differential at the identity & \(d\rho_e=D_B\) under the tangent-space identifications & \statusOpen \\
-Principal connection & \(\omega\) & \statusOpen \\
+Smooth Lie-group structure on \(\SpinG\) & smooth finite-dimensional Lie-group structure compatible with the Clifford realization & \statusFormal \\
+Smooth Lie-group structure on \(\LorG\) & smooth finite-dimensional Lie-group structure compatible with the Lorentz realization & \statusFormal \\
+Smooth Spin--Lorentz homomorphism & \(\rho:\SpinG\to\LorG\) is smooth & \statusFormal \\
+Tangent Lie algebra identification & \(T_1\SpinG\cong\mathfrak s\), with Clifford commutator as Lie bracket & \statusFormal \\
+Differential at the identity & \(d\rho_e=D_B\) under the tangent-space identifications & \statusFormal \\
+Local Spin/Lorentz connection one-forms & \(\omega_i\in\Omega^1(U_i,\mathfrak s)\), \(\Omega_i=D_B\circ\omega_i\), standard gauge laws & \statusOpen \\
 Curvature and torsion & \(F_\omega\), \(T=D_\omega e\) & \statusOpen \\
 Discrete connection on a finite graph & \(U_{xy}\in\SpinG\), \(U_{yx}=U_{xy}^{-1}\), vertex gauge action & \statusHypothesis \\
 Discrete holonomy and compatible state assignment & \(H_C\), \(u_y=\rho(U_{xy})u_x\) & \statusHypothesis \\
@@ -1456,15 +1517,16 @@ The exact comparison with standard Lorentz rapidity is now also formally verifie
   N(\cosh\eta,\sinh\eta\,v)=1.
 \tag{10.3}
 \end{equation}
-The corresponding relation between the Clifford exponential parameter and Lorentz rapidity is exactly \(\eta=2t\).  The next structural questions are
+The corresponding relation between the Clifford exponential parameter and Lorentz rapidity is exactly \(\eta=2t\).  The smooth local Spin--Lorentz bridge is now also formally closed:
 \begin{equation}
-  \operatorname{Lie}(\SpinG)
-  \stackrel{?}{\cong}\mathfrak s,
+  \operatorname{Lie}(\SpinG)\cong\mathfrak s,
   \qquad
-  d\rho_e\stackrel{?}{=}D_B,
+  \operatorname{Lie}(\LorG)\cong\soB,
+  \qquad
+  d\rho_e=D_B,
 \tag{10.4}
 \end{equation}
-followed, if successful, by principal connections and connection-level geometry.
+with the Spin-side Lie bracket represented by the Clifford commutator.  The next structural problem is therefore no longer the existence of the infinitesimal representation, but the standard local connection-one-form layer: Spin-valued gauge transformations, the Maurer--Cartan term, and the induced Lorentz connection form \(\Omega=D_B\circ\omega\).  Curvature, parallel transport, holonomy and torsion remain subsequent structures.
 
 The symmetric geometry studied so far is an intentional reference configuration.  The local spin-factor, Clifford, and Lorentz structures are held fixed, and the graph model begins with trivial discrete holonomy.  The hypothesis does not obtain gravitation by deforming the local Minkowski model or by freely prescribing a position-dependent soldering field, scalar field, connection, or curvature.  Each local spin factor retains the normalization \(e_x=(1,0)\), \(N(e_x)=1\); the future unit hyperboloid is therefore a dimensionless mass-shell normalization, not a generated mass scale.
 
